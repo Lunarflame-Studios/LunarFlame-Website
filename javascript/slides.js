@@ -1,4 +1,4 @@
-const header = document.querySelector('.header');
+const header = document.querySelector('.home-header');
 const imagePaths = ['images/Nexo_SS_1.png', 'images/Nexo_SS_2.png'];
 let currentIndex = 0;
 

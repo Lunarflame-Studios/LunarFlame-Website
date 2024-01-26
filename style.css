@@ -9,8 +9,10 @@
     src: url(fonts/MontserratAlt1-SemiBold.ttf);
 }
 
+/*HOME PAGE-----------------------------------------------------------*/
+
 /*Main Color Overlay and Image*/
-.header {
+.home-header {
     /*background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Nexo_SS_1.png); */
     min-height: 100vh;
     width: 100%;
@@ -153,4 +155,27 @@ nav .fa{
     border: 1px solid blueviolet;
     background: blueviolet;
     transition: 1s;
+}
+
+/*ABOUT US---------------------------------------------------*/
+
+.about-header {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+}
+
+.about-body {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7));
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.about-body h1{
+    font-size: 64px;
+    color: #fff;
+}
+
+.about-body p{
+    font-size: 22px;
+    color: #fff;
 }
