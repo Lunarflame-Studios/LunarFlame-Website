@@ -4,12 +4,15 @@
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Lunarflame Studios</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="javascript/slides.js" defer></script>
 </head>
 <body>
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/Lunarflame_Logo.png"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -17,6 +20,7 @@
                     <li><a href="">BLOG</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -25,6 +29,22 @@
             <a href="" class="hero-btn">About Us</a>
         </div>
     </section>
+
+<!--course-->>
+ 
+<section></section>
+
+<!------JavaScript for Toggle Menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
 
 </body>
 </html>
