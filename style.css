@@ -36,10 +36,11 @@ nav img {
 }
 
 /*Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)*/
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
+.nav-links { flex: 1; }
+
+.header { text-align: right; }
+
+.footer { text-align: left; }
 
 .nav-links ul li {
     list-style: none;
@@ -50,7 +51,7 @@ nav img {
 
 
 .nav-links ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 24px;
 }
@@ -72,7 +73,7 @@ nav img {
 /*Home page Center Text Box*/
 .text-box {
     width: 90%;
-    color: #fff;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,7 +88,7 @@ nav img {
 .text-box p {
     margin: 10px 0 40px;
     font-size: 20px;
-    color: #fff;
+    color: white;
 }
 
 nav .fa{
@@ -107,7 +108,7 @@ nav .fa{
     .text-box p {
         margin: 10px 0 40px;
         font-size: 14px;
-        color: #fff;
+        color: white;
     }
 
     .nav-links ul li{
@@ -128,7 +129,7 @@ nav .fa{
 
     nav .fa{
         display: block;
-        color: #fff;
+        color: white;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
@@ -142,8 +143,8 @@ nav .fa{
 .hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
+    color: white;
+    border: 1px solid white;
     padding: 12px 34px;
     font-size: 20px;
     background: transparent;
@@ -157,25 +158,131 @@ nav .fa{
     transition: 1s;
 }
 
-/*ABOUT US---------------------------------------------------*/
-
-.about-header {
+/*GENERAL HEADER AND FOOTER----------------------------------*/
+.sub-header {
     background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
 }
 
+.sub-footer {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px 80px;
+}
+
+.sub-footer h1 {
+    color: #ad72ff;
+    font-size: 50px;
+    padding-bottom: 5%;
+}
+
+.sub-footer h2 {
+    color: white;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+.copyright {
+    background-color: black;
+    text-align: center;
+}
+
+.copyright h1 {
+    color: #6d5a85;
+    padding: 1%;
+}
+
+/*ABOUT US---------------------------------------------------*/
+
 .about-body {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7));
+    background-color: #0a0a30;
     width: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
     text-align: center;
 }
 
 .about-body h1{
     font-size: 64px;
-    color: #fff;
+    color: #f3bafd;
+    /*color: white; */
+    padding-top: 5%;
 }
 
 .about-body p{
     font-size: 22px;
-    color: #fff;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
+
+.about-devs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-dev {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25%;
+    padding: 5%;
+}
+
+.about-dev:nth-child(odd) {
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0.1);
+} 
+
+/*Name*/
+.about-dev h2 {
+    color: white;
+    font-size: 44px;
+    padding-bottom: 25%;
+}
+
+/*Quote*/
+.about-devs h3 {
+    color: white;
+    padding-bottom: 25%;
+}
+
+/*Text is part of .about-body p, listed above*/
+
+.about-dev img {
+    max-width: 20%;
+    border-radius: 8px;
+}
+
+.about-body hr {
+    width: 75%;
+    border: 1px solid blueviolet;
+    margin: 20px auto;
+}
+
+.about-devs hr {
+    width: 40%;
+    border: 3px solid #f3bafd;
+    margin: 20px auto;
+    position: relative;
+}
+
+.hr-odd { left: 60px; }
+
+.hr-even { right: 60px; }
+
+/*OTHER-------------------------------------------*/
+
+.page-image {
+    max-width: 80%;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
