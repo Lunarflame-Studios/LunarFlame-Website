@@ -81,9 +81,7 @@ nav img {
     text-align: center;
 }
 
-.text-box h1 {
-    font-size: 62px;
-}
+.text-box h1 { font-size: 62px; }
 
 .text-box p {
     margin: 10px 0 40px;
@@ -97,13 +95,9 @@ nav .fa{
 
 /*Mobile Devices*/
 @media(max-width: 700px) {
-    nav img {
-        width: 200px;
-    }
+    nav img { width: 200px; }
 
-    .text-box h1 {
-        font-size: 22px;
-    }
+    .text-box h1 { font-size: 22px; }
 
     .text-box p {
         margin: 10px 0 40px;
@@ -111,9 +105,7 @@ nav .fa{
         color: white;
     }
 
-    .nav-links ul li{
-        display: block;
-    }
+    .nav-links ul li{ display: block; }
 
     .nav-links{
         position: absolute;
@@ -135,9 +127,7 @@ nav .fa{
         cursor: pointer;
     }
 
-    .nav-links ul{
-        padding: 30px;
-    }
+    .nav-links ul{ padding: 30px; }
 }
 
 .hero-btn {
@@ -195,21 +185,21 @@ nav .fa{
 
 /*ABOUT US---------------------------------------------------*/
 
-.about-body {
+.about-body, .projects-body {
     background-color: #0a0a30;
     width: 100%;
     min-height: 70vh;
     text-align: center;
 }
 
-.about-body h1{
+.about-body h1, .projects-body h1{
     font-size: 64px;
     color: #f3bafd;
     /*color: white; */
     padding-top: 5%;
 }
 
-.about-body p{
+.about-body p, .projects-body p{
     font-size: 22px;
     color: white;
     padding-top: 2%;
@@ -238,7 +228,7 @@ nav .fa{
 } 
 
 /*Name*/
-.about-dev h2 {
+.about-dev h2, .project-links h2 {
     color: white;
     font-size: 44px;
     padding-bottom: 25%;
@@ -273,6 +263,27 @@ nav .fa{
 .hr-odd { left: 60px; }
 
 .hr-even { right: 60px; }
+
+/*PROJECTS*/
+.project-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-links nav ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-body hr {
+    width: 90%;
+    border: 1px solid blueviolet;
+    margin: 20px auto;
+}
 
 /*OTHER-------------------------------------------*/
 
