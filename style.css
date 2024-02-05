@@ -148,7 +148,7 @@ nav .fa{
     transition: 1s;
 }
 
-/*GENERAL HEADER AND FOOTER----------------------------------*/
+/*GENERAL, HEADER, AND FOOTER----------------------------------*/
 .sub-header {
     background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
 }
@@ -183,25 +183,34 @@ nav .fa{
     padding: 1%;
 }
 
-/*ABOUT US---------------------------------------------------*/
-
-.about-body, .projects-body {
+.page-body {
     background-color: #0a0a30;
     width: 100%;
     min-height: 70vh;
     text-align: center;
 }
 
-.about-body h1, .projects-body h1{
+.page-body h1{
     font-size: 64px;
     color: #f3bafd;
-    /*color: white; */
     padding-top: 5%;
 }
 
-.about-body p, .projects-body p{
+.page-body h2 {
+    font-size: 56px;
+    color: #ed88ff;
+    padding-top: 5%;
+}
+
+.page-body p{
     font-size: 22px;
     color: white;
+    line-height: 150%;
+}
+
+/*ABOUT US---------------------------------------------------*/
+
+.about-general p {
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -219,53 +228,59 @@ nav .fa{
     justify-content: center;
     align-items: center;
     column-gap: 25%;
-    padding: 5%;
+    text-align: left;
+    padding: 5% 15%;
 }
 
 .about-dev:nth-child(odd) {
     flex-direction: row-reverse;
     background-color: rgba(255, 255, 255, 0.1);
+    padding: 5% 15%;
+    text-align: right;
 } 
 
 /*Name*/
-.about-dev h2, .project-links h2 {
-    color: white;
-    font-size: 44px;
-    padding-bottom: 25%;
+.about-dev h2 {
+    color: #d883ff;
+    font-size: 56px;
+    padding-bottom: 15%;
 }
 
 /*Quote*/
 .about-devs h3 {
-    color: white;
-    padding-bottom: 25%;
+    color: #cbbcff;
+    padding-bottom: 15%;
+    font-size: 30px;
+    line-height: 150%;
 }
 
 /*Text is part of .about-body p, listed above*/
 
 .about-dev img {
-    max-width: 20%;
+    max-width: 30%;
     border-radius: 8px;
 }
 
-.about-body hr {
+.page-body hr {
     width: 75%;
     border: 1px solid blueviolet;
     margin: 20px auto;
 }
 
 .about-devs hr {
-    width: 40%;
+    width: 120px;
     border: 3px solid #f3bafd;
     margin: 20px auto;
     position: relative;
 }
 
-.hr-odd { left: 60px; }
+.hr-odd { left: 150px; }
 
-.hr-even { right: 60px; }
+.hr-even { right: 150px; }
 
-/*PROJECTS*/
-.project-links {
+/*PROJECTS----------------------------------------------*/
+
+.project-links, .release-logs {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -279,13 +294,121 @@ nav .fa{
     align-items: center;
 }
 
-.projects-body hr {
-    width: 90%;
-    border: 1px solid blueviolet;
-    margin: 20px auto;
+.project-links h2 {
+    color: white;
+    font-size: 62px;
+}
+/*TODO: Set background images*/
+.project-links nav ul li {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.project-links img {
+    width: 50%;
+}
+
+/*BLOG--------------------------------------------*/
+
+.blog-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.blog-box {
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease 0.3s;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.blog-box:hover {
+    background-color: #010116;
+    box-shadow: 16px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.blog-img-container {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-text {
+    display: flex;
+    flex-direction:  column;
+    padding: 30px 10px 20px 10px;
+}
+
+.blog-text strong {
+    font-size: 2.5rem;
+    color: #ed88ff;
+    font-weight: 400;
+}
+
+.blog-text a {
+    font-size:  1.4rem;
+    color: #ad72ff;
+    line-height: 1.8rem;
+    margin: 5px 0px 10px 0px;
+}
+
+.blog-text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+}
+
+.blog-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blog-author-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-author-text strong {
+    color: #f3bafd;
+    font-size: 1.8rem;
+}
+
+.blog-author-text span {
+    padding-top: 5%;
+    color: white;
+    font-size: 1.2rem;
 }
 
 /*OTHER-------------------------------------------*/
+
+.release-logs nav ul li {
+    padding: 2% 0;
+}
 
 .page-image {
     max-width: 80%;
