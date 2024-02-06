@@ -1,0 +1,64 @@
+/*General About Us Info*/
+.about-general p {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/*Container for list of devs*/
+.about-devs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*Style for all dev boxes*/
+.about-dev {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25%;
+    text-align: left;
+    padding: 5% 15%;
+}
+
+.about-dev:nth-child(odd) {
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5% 15%;
+    text-align: right;
+} 
+
+/*Name*/
+.about-dev h2 {
+    color: #d883ff;
+    font-size: 56px;
+    padding-bottom: 15%;
+}
+
+/*Quote*/
+.about-dev h3 {
+    color: #cbbcff;
+    padding-bottom: 15%;
+    font-size: 30px;
+    line-height: 150%;
+}
+
+/*Text is part of .about-body p, listed in style.css*/
+
+.about-dev img {
+    max-width: 30%;
+    border-radius: 8px;
+}
+
+.about-dev hr {
+    width: 120px;
+    border: 3px solid #f3bafd;
+    margin: 20px auto;
+    position: relative;
+}
+
+.hr-odd { left: 150px; }
+
+.hr-even { right: 150px; }
