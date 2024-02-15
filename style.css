@@ -30,7 +30,6 @@ nav {
 /*Lunarflame Logo Image*/
 nav img {
     width: 400px;
-
 }
 
 /*Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)*/
@@ -122,8 +121,6 @@ nav .fa{ display: none; }
     }
 
     .nav-links ul{ padding: 30px; }
-
-    
 }
 
 .hero-btn {
@@ -214,6 +211,7 @@ nav .fa{ display: none; }
     margin: 20px auto;
 }
 
+/*MOBILE UI------------------------*/
 @media(max-width: 700px) {
     .page-body h1 {
         font-size: 48px;
@@ -233,6 +231,10 @@ nav .fa{ display: none; }
         font-size: 16px;
         padding: 2%;
         line-height: 110%;
+    }
+
+    .sub-footer {
+        display: none;
     }
 }
 

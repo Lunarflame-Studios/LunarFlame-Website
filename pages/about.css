@@ -12,23 +12,6 @@
     padding: 20px;
 }
 
-/*Style for all dev boxes*/
-.about-dev {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 25%;
-    text-align: left;
-    padding: 5% 15%;
-}
-
-.about-dev:nth-child(odd) {
-    flex-direction: row-reverse;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5% 15%;
-    text-align: right;
-} 
 
 /*Name*/
 .about-dev h2 {
@@ -40,7 +23,6 @@
 /*Quote*/
 .about-dev h3 {
     color: #cbbcff;
-    padding-bottom: 15%;
     font-size: 30px;
     line-height: 150%;
 }
@@ -58,17 +40,48 @@
     position: relative;
 }
 
-.hr-odd { left: 150px; }
+/*PC/DESKTOP UI---------------------------*/
+@media(min-width: 701px) {
 
-.hr-even { right: 150px; }
+    /*Style for all dev boxes*/
+    .about-dev {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 25%;
+        text-align: left;
+        padding: 5% 15%;
+    }
 
+    .about-dev:nth-child(odd) {
+        flex-direction: row-reverse;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5% 15%;
+        text-align: right;
+    }
+
+    .hr-odd {
+        left: 150px;
+    }
+    
+    .hr-even {
+        right: 150px;
+    }
+
+    .about-dev h3 {
+        padding-bottom: 15%;
+    }
+}
+
+
+/*MOBILE UI----------------------------------------*/
 @media(max-width: 700px) {
     .about-devs {
         padding: 0;
     }
 
     .about-dev h2 {
-        margin: 0 0 25%;
         font-size: 48px;
     }
 
@@ -79,11 +92,28 @@
 
     .about-dev {
         text-align: center;
+        position: relative;
     }
 
+    .about-dev img {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 40%;
+    }
+
+    .about-dev h3 {
+        margin-top: 50%;
+        padding-bottom: 5%;
+    }
 
     .about-dev:nth-child(odd) {
-        
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-btn {
+        margin-bottom: 5%;
     }
 
 }

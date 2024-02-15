@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Lunarflame Studios</title>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="animations.css">
     <script src="javascript/home.js" defer></script>
 </head>
+
 <body>
     <section class="home-header">
         <nav>
@@ -31,22 +33,28 @@
         </div>
     </section>
 
-<!--Project Quick Links-->
-<section class="page-body">
-    <h1>Play Nexosphere</h1><br><br>
-    <a href="pages/nexosphere.html" class="hero-btn">Play</a>
-</section>
+    <!--Project Quick Links-->
+    <section class="page-body">
+        <div class="recent-releases">
+            <h1>Play Nexosphere</h1><br><br>
+            <a href="pages/nexosphere.html" class="hero-btn">Play</a>
+        </div><br><hr>
+        <div class="recent-blog">
+            <h1>Read the Latest Posts</h1>
+        </div>
+    </section>
 
-<!------JavaScript for Toggle Menu---->
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu() {
-        navLinks.style.right = "0";
-    }
-    function hideMenu() {
-        navLinks.style.right = "-200px";
-    }
-</script>
+    <!------JavaScript for Toggle Menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 
 </body>
+
 </html>

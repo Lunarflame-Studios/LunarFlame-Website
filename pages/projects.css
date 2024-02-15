@@ -14,24 +14,7 @@
     align-items: center;
 }
 
-.project-links h2 {
-    color: white;
-    font-size: 62px;
-}
 /*TODO: Set background images*/
-.project-links nav ul li {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 5%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.project-links img {
-    width: 50%;
-}
-
 .page-body p {
     padding-top: 3%;
 }
@@ -41,3 +24,48 @@
 .release-logs nav ul li {
     padding: 2% 0;
 }
+
+/*DESKTOP UI------------------------------------*/
+@media(min-width: 701px) {
+    .project-links img {
+        width: 50%;
+    }
+    
+    .project-links nav ul li {
+        padding: 5%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .project-links h2 {
+        color: white;
+        font-size: 62px;
+    }
+}
+
+/*MOBILE UI-------------------------------------*/
+@media(max-width: 700px) {
+    .project-links img {
+        width: 90%;
+    }
+
+    .project-links h2 {
+        color: white;
+        font-size: 36px;
+        line-height: 120%;
+    }
+
+    .project-links nav ul li {
+        padding: 15% 2%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .release-logs h2 {
+        font-size: 36px;
+    }
+}
+
