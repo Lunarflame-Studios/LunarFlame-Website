@@ -103,7 +103,7 @@ nav .fa{ display: none; }
 
     .nav-links{
         position: absolute;
-        background: blueviolet;
+        background-color:#490596;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -122,6 +122,8 @@ nav .fa{ display: none; }
     }
 
     .nav-links ul{ padding: 30px; }
+
+    
 }
 
 .hero-btn {
@@ -210,6 +212,28 @@ nav .fa{ display: none; }
     width: 75%;
     border: 1px solid blueviolet;
     margin: 20px auto;
+}
+
+@media(max-width: 700px) {
+    .page-body h1 {
+        font-size: 48px;
+        padding-top: 10%;
+    }
+
+    .page-body p {
+        font-size: 14px;
+        margin: 5%;
+    }
+
+    .sub-footer h1 {
+        font-size: 32px;
+    }
+
+    .copyright h1 {
+        font-size: 16px;
+        padding: 2%;
+        line-height: 110%;
+    }
 }
 
 /*OTHER-------------------------------------------*/
