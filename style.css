@@ -211,6 +211,42 @@ nav .fa{ display: none; }
     margin: 20px auto;
 }
 
+/*DROPDOWNS------------------------*/
+
+.drop-btn {
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    align-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #25124d;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transform: translateX(-18%);
+    padding: 0 20px;
+}
+
+.dropdown-content a {
+    padding: 0% 20%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn { background-color: rgba(255, 255, 255, 0.1);}
+
 /*MOBILE UI------------------------*/
 @media(max-width: 700px) {
     .page-body h1 {

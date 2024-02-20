@@ -56,9 +56,12 @@
 
     .about-dev:nth-child(odd) {
         flex-direction: row-reverse;
-        background-color: rgba(255, 255, 255, 0.1);
         padding: 5% 15%;
         text-align: right;
+    }
+
+    .phantom {
+        background-color: #ffffff1a;
     }
 
     .hr-odd {

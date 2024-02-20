@@ -22,7 +22,7 @@
 /*PROJECTS SPECIFIC-----------------------------*/
 
 .release-logs nav ul li {
-    padding: 2% 0;
+    padding: 10% 0;
 }
 
 /*DESKTOP UI------------------------------------*/
@@ -43,6 +43,15 @@
         color: white;
         font-size: 62px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2:hover {
+    color: #924af1;
 }
 
 /*MOBILE UI-------------------------------------*/
