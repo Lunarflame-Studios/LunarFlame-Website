@@ -92,43 +92,6 @@ nav img {
 
 nav .fa{ display: none; }
 
-/*Mobile Devices*/
-@media(max-width: 700px) {
-    nav img { width: 200px; }
-
-    .text-box h1 { font-size: 22px; }
-
-    .text-box p {
-        margin: 10px 0 40px;
-        font-size: 14px;
-        color: white;
-    }
-
-    .nav-links ul li{ display: block; }
-
-    .nav-links{
-        position: absolute;
-        background-color:#490596;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-
-    nav .fa{
-        display: block;
-        color: white;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul{ padding: 30px; }
-}
-
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -150,36 +113,6 @@ nav .fa{ display: none; }
 /*HEADER, FOOTER, AND GENERAL STRUCTURE--------------------*/
 .sub-header {
     background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
-}
-
-.sub-footer {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 50px 80px;
-}
-
-.sub-footer h1 {
-    color: #ad72ff;
-    font-size: 50px;
-    padding-bottom: 5%;
-}
-
-.sub-footer h2 {
-    color: white;
-    font-size: 18px;
-    line-height: 175%;
-}
-
-.copyright {
-    background-color: black;
-    text-align: center;
-}
-
-.copyright h1 {
-    color: #6d5a85;
-    padding: 1%;
 }
 
 .page-body {
@@ -217,6 +150,43 @@ nav .fa{ display: none; }
     margin: 20px auto;
 }
 
+.sub-footer {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 50px 80px;
+}
+
+.sub-footer h1 {
+    color: #ad72ff;
+    font-size: 50px;
+    padding-bottom: 5%;
+}
+
+.sub-footer h2 {
+    color: white;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+.copyright {
+    background-color: black;
+    text-align: center;
+}
+
+.copyright h1 {
+    color: #6d5a85;
+    padding: 1%;
+}
+
+.social-links a {
+    color: white;
+    font-size: 36px;
+}
+
+
+
 /*DROPDOWNS------------------------*/
 
 .drop-btn {
@@ -253,8 +223,50 @@ nav .fa{ display: none; }
 
 .dropdown:hover .drop-btn { background-color: rgba(255, 255, 255, 0.1);}
 
+/*OTHER-------------------------------------------*/
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
 /*MOBILE UI------------------------*/
 @media(max-width: 700px) {
+    nav img { width: 200px; }
+
+    .text-box h1 { font-size: 22px; }
+
+    .text-box p {
+        margin: 10px 0 40px;
+        font-size: 14px;
+        color: white;
+    }
+
+    .nav-links ul li{ display: block; }
+
+    .nav-links{
+        position: absolute;
+        background-color:#490596;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{ padding: 30px; }
+
     .page-body h1 {
         font-size: 48px;
         padding-top: 10%;
@@ -278,12 +290,4 @@ nav .fa{ display: none; }
     .sub-footer {
         display: none;
     }
-}
-
-/*OTHER-------------------------------------------*/
-
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
 }
