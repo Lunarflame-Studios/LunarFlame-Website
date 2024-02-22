@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 
-nav {
+.sub-header nav, .home-header nav {
     display: flex;
     padding: 1% 2%;
     justify-content: space-between;
@@ -29,7 +29,7 @@ nav {
 }
 
 /*Lunarflame Logo Image*/
-nav img {
+.sub-header nav img, .home-header nav img {
     width: 400px;
 }
 
@@ -38,7 +38,7 @@ nav img {
 
 .header { text-align: right; }
 
-.footer { text-align: left; }
+.footer .social-links { text-align: left; }
 
 .nav-links ul li {
     list-style: none;
@@ -90,7 +90,7 @@ nav img {
     font-size: 36px;
 }
 
-nav .fa{ display: none; }
+.sub-header nav .fa, .home-header nav .fa{ display: none; }
 
 .hero-btn {
     display: inline-block;
@@ -172,12 +172,28 @@ nav .fa{ display: none; }
 
 .copyright {
     background-color: black;
-    text-align: center;
+    text-align: right;
+    padding: 15px;
 }
 
 .copyright h1 {
+    font-size: 24px;
     color: #6d5a85;
-    padding: 1%;
+    padding: 0% 3%;
+}
+
+.copyright nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-container {
+    background-color: #490596;
+    border-radius: 8px;
+    margin: 0px;
+    display: inline-block;
+    padding: 15px 20px;
 }
 
 .social-links a {
@@ -185,7 +201,13 @@ nav .fa{ display: none; }
     font-size: 36px;
 }
 
+.social-links a i {
+    font-size: 140%;
+}
 
+.social-links {
+    display: flex;
+}
 
 /*DROPDOWNS------------------------*/
 
@@ -217,9 +239,7 @@ nav .fa{ display: none; }
     color: inherit;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+.dropdown:hover .dropdown-content { display: block; }
 
 .dropdown:hover .drop-btn { background-color: rgba(255, 255, 255, 0.1);}
 
@@ -231,9 +251,10 @@ nav .fa{ display: none; }
     justify-content: space-between;
 }
 
+
 /*MOBILE UI------------------------*/
 @media(max-width: 700px) {
-    nav img { width: 200px; }
+    .sub-header nav img, .home-header nav img { width: 200px; }
 
     .text-box h1 { font-size: 22px; }
 
@@ -257,7 +278,7 @@ nav .fa{ display: none; }
         transition: 1s;
     }
 
-    nav .fa{
+    .sub-header nav .fa, .home-header nav .fa{
         display: block;
         color: white;
         margin: 10px;

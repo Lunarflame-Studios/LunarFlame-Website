@@ -28,10 +28,6 @@
 }
 
 /*Text is part of .about-body p, listed in style.css*/
-.about-dev img {
-    max-width: 30%;
-    border-radius: 8px;
-}
 
 .about-dev hr {
     width: 120px;
@@ -39,6 +35,14 @@
     margin: 20px auto;
     position: relative;
 }
+
+/*Adrian----------------------------------*/
+.phantom {
+    background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
+}
+
+
+/*Daniel*/
 
 /*PC/DESKTOP UI---------------------------*/
 @media(min-width: 701px) {
@@ -61,16 +65,36 @@
     }
 
     .phantom {
-        background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
         background-size: 100%;
+    }
+
+    .pfp-phantom {
+        display: inline-block;
+        position: relative;
+        width: 900px;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .pfp-phantom img {
+        width: auto;
+        height: 130%;
+        margin-left: -50px;
+        margin-top: -40px;
+    }
+
+    .pfp-kapeepa img {
+        max-width: 100%;
+        border-radius: 50%;
     }
 
     .hr-odd {
         left: 150px;
     }
-    
+
     .hr-even {
-        right: 150px;
+        right: 190px;
     }
 
     .about-dev h3 {
@@ -112,12 +136,14 @@
         padding-bottom: 5%;
     }
 
-    .about-dev:nth-child(odd) {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
 
     .hero-btn {
         margin-bottom: 5%;
+    }
+
+    .phantom {
+        background-size: 320%;
+        background-position-x: -200px;
     }
 
 }
