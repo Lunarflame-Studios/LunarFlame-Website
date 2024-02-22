@@ -1,5 +1,5 @@
 const header = document.querySelector('.home-header');
-const imagePaths = ['images/Nexo_SS_1.png', 'images/Nexo_SS_2.png'];
+const imagePaths = ['images/Nexo_SS_1.png', 'images/Nexo_SS_2.png', 'images/Horizon_Skyline_1.png', 'images/Nexo_SS_5.png'];
 let currentIndex = 0;
 
 function changeBackground() {

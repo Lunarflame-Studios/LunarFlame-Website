@@ -61,7 +61,8 @@
     }
 
     .phantom {
-        background-color: #ffffff1a;
+        background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
+        background-size: 100%;
     }
 
     .hr-odd {

@@ -18,6 +18,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 
 nav {
@@ -82,6 +83,11 @@ nav img {
     margin: 10px 0 40px;
     font-size: 20px;
     color: white;
+}
+
+.text-box a {
+    margin-top: 2%;
+    font-size: 36px;
 }
 
 nav .fa{ display: none; }
