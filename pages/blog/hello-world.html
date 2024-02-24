@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Hello World - Blog</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="../../index.html"><img src="../../images/Lunarflame_Logo.png"></a>
+                <div class="nav-links header" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="../../index.html">HOME</a></li>
+                        <li><a href="../about.html">ABOUT</a></li>
+                        <li><a href="../projects.html">PROJECTS</a></li>
+                        <li><a href="../blog.html">BLOG</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+        <section class="page-body">
+            <h1>Hello World; An Introduction</h1>
+            <h3>Phantom</h3>
+            <h4>Feb 4, 2024</h4>
+
+            <p>Blog Content</p>
+        </section>
+
+        <section class="sub-footer">
+            <div class="footer-about-us">
+                <h1>About Us</h1>
+                <h2>Welcome to LunarFlame Studios, where creativity meets innovation in the world of interactive
+                    entertainment!</h2>
+            </div>
+            <div class="footer-quick-links">
+                <h1>Quick Links</h1>
+                <div class="nav-links footer" id="navLinks">
+                    <ul>
+                        <li><a href="../../index.html">HOME</a></li>
+                        <li><a href="../about.html">ABOUT</a></li>
+                        <li><a href="../projects.html">PROJECTS</a></li>
+                        <li><a href="../blog.html">BLOG</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact-us">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <section class="copyright">
+            <nav>
+                <div class="nav-links social-links">
+                    <ul>
+                        <li>
+                            <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
+                                <i class="fa fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-container discord" href="https://discord.gg/khKCJyjKSm">
+                                <i class="fa fa-bars fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-container insta" href="https://www.instagram.com/phantomforce26/">
+                                <i class="fa fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-container soundcloud" href="https://soundcloud.com/k4p33p4">
+                                <i class="fa fa-soundcloud fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
+            </nav>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>

@@ -16,14 +16,14 @@
 /*Name*/
 .about-dev h2 {
     color: #d883ff;
-    font-size: 56px;
+    font-size: 3.9vw;
     padding-bottom: 2%;
 }
 
 /*Quote*/
 .about-dev h3 {
     color: #cbbcff;
-    font-size: 30px;
+    font-size: 2.1vw;
     line-height: 150%;
     padding-top: 5%;
 }
@@ -31,22 +31,21 @@
 /*Nicknames*/
 .about-dev h4 {
     color: white;
-    font-size: 24px;
+    font-size: 1.69vw;
     padding-bottom: 8%;
 }
 
 .about-dev h5 {
-    color:#f3bafd;
-    font-size: 28px;
+    color: #f3bafd;
+    font-size: 2vw;
     padding-top: 3%;
-    padding-bottom: 8%;
 
 }
 
 /*Text is part of .about-body p, listed in style.css*/
 
 .about-dev hr {
-    width: 120px;
+    width: 8.43vw;
     border: 3px solid #f3bafd;
     margin: 20px auto;
     position: relative;
@@ -55,11 +54,22 @@
 /*Adrian----------------------------------*/
 .phantom {
     background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-
-
 /*Daniel*/
+.kapeepa {
+    background: linear-gradient(rgb(202, 210, 221, 0.5), rgb(75, 115, 151, 0.5)), url("../images/Nordic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.kapeepa h2 { color: #7a18a7; }
+
+.kapeepa h5 { color: #c447da; }
 
 /*PC/DESKTOP UI---------------------------*/
 @media(min-width: 701px) {
@@ -72,17 +82,13 @@
         align-items: center;
         column-gap: 25%;
         text-align: left;
-        padding: 5% 15%;
+        padding: 5% 10%;
     }
 
     .about-dev:nth-child(odd) {
         flex-direction: row-reverse;
-        padding: 5% 15%;
+        padding: 5% 10%;
         text-align: right;
-    }
-
-    .phantom {
-        background-size: 110%;
     }
 
     .pfp-phantom {
@@ -105,21 +111,32 @@
     }
 
     .pfp-kapeepa img {
-        max-width: 100%;
+        display: inline-block;
+        position: relative;
+        width: 18vw;
+        height: 18vw;
+        min-width: 18vw;
+        min-height: 18vw;
+        overflow: hidden;
         border-radius: 50%;
+        object-fit: cover;
     }
 
     .hr-odd {
-        left: 14vw;
+        left: 16.5vw;
     }
 
     .hr-even {
-        right: 190px;
+        right: 15vw;
     }
 
     .about-dev h3 {
         padding-bottom: 15%;
     }
+
+    .about-dev h5 { padding-bottom: 8%; }
+
+    .about-devs p { padding-bottom: 5%; }
 }
 
 
@@ -129,13 +146,24 @@
         padding: 0;
     }
 
-    .about-dev h2 {
-        font-size: 48px;
-    }
+    .about-dev h2 { font-size: 10.125vw; }
 
     .about-dev h3 {
         margin: 5%;
-        font-size: 20px;
+        font-size: 4.22vw;
+        padding-bottom: 5%;
+
+    }
+
+    .about-dev h4 { 
+        font-size: 4vw;
+        padding-bottom: 5%; 
+    }
+
+    .about-dev h5 { 
+        font-size: 4vw; 
+        margin-top: 50%;
+        padding-top: 8%;
     }
 
     .about-dev {
@@ -149,17 +177,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: 40%;
-    } 
-
-    .about-dev h3 {
-        margin-top: 50%;
-        padding-bottom: 5%;
     }
 
-
-    .hero-btn {
-        margin-bottom: 5%;
+    .hero-btn { 
+        font-size: 4vw;
+        margin-bottom: 5%; 
     }
+
+    .about-devs p { padding-bottom: 2%; }
 
     .phantom {
         background-size: 320%;

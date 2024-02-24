@@ -14,16 +14,35 @@
     align-items: center;
 }
 
+.project-links nav ul li {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 2%;
+}
+
 /*TODO: Set background images*/
 .page-body p {
     padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 /*PROJECTS SPECIFIC-----------------------------*/
 
-.release-logs nav ul li {
-    padding: 10% 0;
+.nexosphere {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/Nexo_SS_2.png);
 }
+
+strong { color: rgb(128, 0, 0);}
+
+.page-image { max-width: 60%; }
+
+.moonshadow {background-color: rgba(255, 255, 255, 0.1);}
+
+.release-logs nav ul li { padding: 8% 0; }
+
+.summary { margin: 0% 5%;}
 
 /*DESKTOP UI------------------------------------*/
 @media(min-width: 701px) {
@@ -31,17 +50,12 @@
         width: 50%;
     }
     
-    .project-links nav ul li {
-        padding: 5%;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-    }
+    .project-links nav ul li { padding: 5%; }
     
     .project-links h2 {
         color: white;
-        font-size: 62px;
+        font-size: 4.36vw;
+        padding: 2%;
     }
 }
 
@@ -66,12 +80,7 @@ a {
         line-height: 120%;
     }
 
-    .project-links nav ul li {
-        padding: 15% 2%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-    }
+    .project-links nav ul li { padding: 15% 2%; }
 
     .release-logs h2 {
         font-size: 36px;
