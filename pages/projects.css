@@ -25,7 +25,11 @@
 /*TODO: Set background images*/
 .page-body p {
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
+}
+
+.title {
+    max-width: 50%;
 }
 
 /*PROJECTS SPECIFIC-----------------------------*/
@@ -34,15 +38,42 @@
     background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/Nexo_SS_2.png);
 }
 
-strong { color: rgb(128, 0, 0);}
+.page-image {
+    border-radius: 2%;
+    max-width: 50%;
+}
 
-.page-image { max-width: 60%; }
+strong { color: rgb(128, 0, 0);}
 
 .moonshadow {background-color: rgba(255, 255, 255, 0.1);}
 
-.release-logs nav ul li { padding: 8% 0; }
+.release-logs nav ul li { padding: 5% 0; }
 
 .summary { margin: 0% 5%;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+iframe {
+    margin-top: 3%;
+}
+
+h3 {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    color: #9192fc;
+    font-size: 2vw;
+}
+
+.widget-container h3:hover {
+    color: #5663f0;
+}
+
+.release-logs h2:hover {
+    color: #924af1;
+}
 
 /*DESKTOP UI------------------------------------*/
 @media(min-width: 701px) {
@@ -57,15 +88,11 @@ strong { color: rgb(128, 0, 0);}
         font-size: 4.36vw;
         padding: 2%;
     }
-}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.release-logs h2:hover {
-    color: #924af1;
+    .widget {
+        width: 39vw;
+        height: 9.5vw;
+    }
 }
 
 /*MOBILE UI-------------------------------------*/
@@ -84,6 +111,11 @@ a {
 
     .release-logs h2 {
         font-size: 36px;
+    }
+
+    .widget {
+        width: 70vw;
+        height: 30vw;
     }
 }
 

@@ -10,6 +10,7 @@
 }
 
 /*HOME PAGE-----------------------------------------------------------*/
+/*px --> vw conversion: 0.0703125x*/
 
 /*Main Color Overlay and Image*/
 .home-header {
@@ -116,7 +117,7 @@
 }
 
 .page-body {
-    background-color: #0a0a30;
+    background: linear-gradient(#00021f, #020131);
     width: 100%;
     min-height: 70vh;
     text-align: center;
@@ -142,6 +143,18 @@
 
 .page-image {
     max-width: 80%;
+}
+
+.scroll-container {
+    background-color: #00010c;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll-container img {
+    padding: 10px;
+    max-width: 50%;
 }
 
 .page-body hr {
@@ -251,6 +264,9 @@
     justify-content: space-between;
 }
 
+.margin-top {
+    margin-top: 4%;
+}
 
 /*MOBILE UI------------------------*/
 @media(max-width: 700px) {
