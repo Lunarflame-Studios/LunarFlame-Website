@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <script src="javascript/blog.js" defer></script>
+    <script src="../javascript/blog.js"></script>
 </head>
 
 <body>
@@ -29,26 +29,75 @@
 
     <section class="page-body">
         <h1>Latest Posts</h1>
-        
-        <div class="blog-body">
-            <div class="blog-box">
-                <div class="blog-img-container">
-                    <img class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
-                    <a href="blog/hello-world.html" class="blog-img-link"></a>
-                </div>
-                <div class="blog-text">
-                    <strong>Misc.</strong>
-                    <a href="blog/hello-world.html">Hello World; An Introduction.</a>
-                    <p>What is LunarFlame Studios? A little bit about us and our goals.</p>
-                    <div class="blog-author">
-                        <div class="blog-author-text">
-                            <strong>Phantom</strong>
-                            <span>Feb 4, 2024</span>
+        <a id="subscribe" href="../rss.xml"><h4>Subscribe!</h4></a>
+
+        <div class="recent-body">
+
+            <div class="recent-box" id="recent-box-1">
+                <a id="link" href="">
+                    <div class="recent-img-container">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                    </div>
+                    <div class="recent-text">
+                        <h2 id="category">Category</h2>
+                        <h3 id="title">Title</h3>
+                        <p id="description">Description</p>
+                        <div class="blog-author">
+                            <div class="blog-author-text">
+                                <strong id="author">Author</strong>
+                                <span id="pubDate">Jan 1, 2024</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
+
+            <div class="recent-box" id="recent-box-2">
+                <a id="link" href="">
+                    <div class="recent-img-container">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                    </div>
+                    <div class="recent-text">
+                        <h2 id="category">Category</h2>
+                        <h3 id="title">Title</h3>
+                        <p id="description">Description</p>
+                        <div class="blog-author">
+                            <div class="blog-author-text">
+                                <strong id="author">Author</strong>
+                                <span id="pubDate">Jan 1, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <hr id="spacing">
+
+        <h1>All Posts</h1>
+
+        <div class="blog-body">
+
+            <div class="blog-box" id="blog-box-1">
+                <a id="link" href="">
+                    <div class="blog-img-container">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                    </div>
+                    <div class="blog-text">
+                        <h2 id="category">Category</h2>
+                        <h3 id="title">Title</h3>
+                        <p id="description">Description</p>
+                        <div class="blog-author">
+                            <div class="blog-author-text">
+                                <strong id="author">Author</strong>
+                                <span id="pubDate">Jan 1, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+        <h1></h1>
     </section>
 
     <section class="sub-footer">
@@ -102,15 +151,18 @@
             <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
         </nav>
     </section>
-
     <script>
-        var navLinks = document.getElementById("navLinks");
+        const navLinks = document.getElementById("navLinks");
         function showMenu() {
             navLinks.style.right = "0";
         }
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
+
+        updateRecent('recent-box-1', 0);
+        //updateRecent('recent-box-2', 1);
+        updateRecent('blog-box-1', 0);
     </script>
 </body>
 

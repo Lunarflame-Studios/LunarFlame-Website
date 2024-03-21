@@ -5,7 +5,13 @@
         <link>https://lunarflamestudios.com</link>
         <description>Articles, Opinions, and Updates from LunarFlame Studios</description>
         <language>en-us</language>
-        
+
+        <item>
+            <title>Hello World; An Introduction.</title>
+            <link>https://lunarflamestudios.com/pages/blog/hello-world.html</link>
+            <description>What is LunarFlame Studios? A little bit about us and our goals.</description>
+            <pubDate>Mon, 18 Mar 2024</pubDate>
+        </item>
            
     </channel>
 </rss>
