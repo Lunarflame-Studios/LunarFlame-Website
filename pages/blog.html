@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <script src="../javascript/blog.js"></script>
 </head>
 
 <body>
     <section class="sub-header">
         <nav>
-            <a href="../index.html"><img class="page-image" src="../images/Lunarflame_Logo.png"></a>
+            <a href="../index.html"><img src="../images/Lunarflame_Logo.png" alt="LunarFlame Logo"></a>
             <div class="nav-links header" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -151,6 +150,7 @@
             <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
         </nav>
     </section>
+    <script src="../javascript/blog.js"></script>
     <script>
         const navLinks = document.getElementById("navLinks");
         function showMenu() {
@@ -159,10 +159,6 @@
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
-
-        updateRecent('recent-box-1', 0);
-        updateRecent('recent-box-2', 1);
-        updateRecent('blog-box-1', 0);
     </script>
 </body>
 

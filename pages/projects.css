@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .project-links nav ul li {
@@ -20,6 +21,11 @@
     background-size: cover;
     position: relative;
     margin: 2%;
+    transition: all ease 0.3s;
+}
+
+.project-links nav ul li:hover {
+    width: 120%;
 }
 
 /*TODO: Set background images*/
@@ -28,15 +34,11 @@
     padding-bottom: 2%;
 }
 
-.title {
-    max-width: 50%;
-}
+.title { max-width: 50%; }
 
 /*PROJECTS SPECIFIC-----------------------------*/
 
-.nexosphere {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/Nexo_SS_2.png);
-}
+.nexosphere { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/Nexo_SS_2.png); }
 
 .page-image {
     border-radius: 2%;
@@ -65,15 +67,14 @@ h3 {
     padding-bottom: 2%;
     color: #9192fc;
     font-size: 2vw;
+    transition: all ease 0.3s;
 }
 
-.widget-container h3:hover {
-    color: #5663f0;
-}
+.widget-container h3:hover { color: #5663f0; }
 
-.release-logs h2:hover {
-    color: #924af1;
-}
+.release-logs h2 { transition: all ease 0.3s; }
+
+.release-logs h2:hover { color: #924af1; }
 
 /*DESKTOP UI------------------------------------*/
 @media(min-width: 701px) {
