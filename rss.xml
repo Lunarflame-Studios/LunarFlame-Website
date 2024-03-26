@@ -10,7 +10,14 @@
             <title>Hello World; An Introduction.</title>
             <link>https://lunarflamestudios.com/pages/blog/hello-world.html</link>
             <description>What is LunarFlame Studios? A little bit about us and our goals.</description>
-            <pubDate>Mon, 18 Mar 2024</pubDate>
+            <pubDate>Sun, 04 Feb 2024</pubDate>
+        </item>
+
+        <item>
+            <title>My Curiosity Moment</title>
+            <link>https://lunarflamestudios.com/pages/blog/curiosity-moment.html</link>
+            <description>I believe that video games are the future of storytelling. Here's why.</description>
+            <pubDate>Fri, 19 Mar 2024</pubDate>
         </item>
            
     </channel>

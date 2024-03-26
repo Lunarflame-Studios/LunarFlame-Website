@@ -11,7 +11,7 @@ const pages = [
     [
         'My Curiosity Moment',
         'curiosity-moment.html',
-        'My name is Adrian, and this is my curiosity moment.',
+        'I believe that video games are the future of storytelling. Here\'s why.',
         'Mar 19, 2024',
         'Phantom',
         'Misc.',

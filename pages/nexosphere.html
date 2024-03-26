@@ -26,6 +26,9 @@
     </section>
 
     <section class="page-body">
+        <div id="overlay"></div>
+        <img id="zoom-in" src="" alt="">
+
         <img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere">
         <p>Nexosphere, codenamed "Project Leo", is a game under development by LunarFlame Studios.</p>
 
@@ -40,12 +43,12 @@
         <div class="nexosphere-summary">
             <hr>
             <p class="summary">"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
-            <img class="page-image" src="../images/NetherSpawn.jpg" alt="">
+            <img class="page-image gallery-img" src="../images/NetherSpawn.jpg" alt="">
             <p class="summary">Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
             <div class="scroll-container">
-                <img src="../images/Nexo_SS_5.png" alt="">
-                <img src="../images/Nexo_SS_4.png" alt="">
-                <img src="../images/Nexo_SS_3.png" alt="">
+                <img class="gallery-img" src="../images/Nexo_SS_5.png" alt="">
+                <img class="gallery-img" src="../images/Nexo_SS_4.png" alt="">
+                <img class="gallery-img" src="../images/Nexo_SS_3.png" alt="">
             </div>
         </div>
 
@@ -104,7 +107,7 @@
 
     <section class="copyright">
         <nav>
-        <div class="nav-links social-links">
+        <div class="social-links" id="socialLinks">
             <ul>
                 <li>
                     <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
@@ -132,13 +135,17 @@
     </nav>
     </section>
 
+    <script src="../javascript/images.js"></script>
     <script>
         var navLinks = document.getElementById("navLinks");
+        var socialLinks = document.getElementById("socialLinks");
         function showMenu() {
             navLinks.style.right = "0";
+            socialLinks.style.right = "0";
         }
         function hideMenu() {
             navLinks.style.right = "-200px";
+            socialLinks.style.right = "-200px";
         }
     </script>
 </body>

@@ -122,17 +122,11 @@
         object-fit: cover;
     }
 
-    .hr-odd {
-        left: 16.5vw;
-    }
+    .hr-odd { left: 16.5vw; }
 
-    .hr-even {
-        right: 15vw;
-    }
+    .hr-even { right: 15vw; }
 
-    .about-dev h3 {
-        padding-bottom: 15%;
-    }
+    .about-dev h3 { padding-bottom: 15%; }
 
     .about-dev h5 { padding-bottom: 8%; }
 

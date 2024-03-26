@@ -28,6 +28,9 @@
     </section>
 
     <section class="page-body">
+        <div id="overlay"></div>
+        <img id="zoom-in" src="" alt="">
+
         <h1>Projects</h1>
         <p>A collection of LunarFlame Studios' current projects.</p>
         <div class="project-links">
@@ -69,7 +72,7 @@
 
     <section class="copyright">
         <nav>
-            <div class="nav-links social-links">
+            <div class="social-links" id="socialLinks">
                 <ul>
                     <li>
                         <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
@@ -97,13 +100,17 @@
         </nav>
     </section>
 
+    <script src="../javascript/images.js"></script>
     <script>
         var navLinks = document.getElementById("navLinks");
+        var socialLinks = document.getElementById("socialLinks");
         function showMenu() {
             navLinks.style.right = "0";
+            socialLinks.style.right = "0";
         }
         function hideMenu() {
             navLinks.style.right = "-200px";
+            socialLinks.style.right = "-200px";
         }
     </script>
 </body>
