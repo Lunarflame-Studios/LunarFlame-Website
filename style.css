@@ -169,7 +169,6 @@
 }
 
 .icon-container {
-    background-color: #490596;
     border-radius: 8px;
     margin: 0px;
     display: inline-block;
@@ -310,7 +309,7 @@
 
     .nav-links {
         position: absolute;
-        background-color:#490596;
+        background: linear-gradient(#03002e, #0a0068);
         height: 100vh;
         width: 200px;
         top: 0;
@@ -389,6 +388,8 @@
         text-decoration: none;
         font-size: 1.68vw;
     }
+
+    .icon-container { background-color: #490596; }
     
     .icon-container:hover {
         background-color: #2b005c;
