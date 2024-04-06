@@ -98,9 +98,7 @@ h3 {
 
 /*MOBILE UI-------------------------------------*/
 @media(max-width: 700px) {
-    .project-links img {
-        width: 90%;
-    }
+    .project-links img { width: 90%; }
 
     .project-links h2 {
         color: white;
@@ -110,13 +108,17 @@ h3 {
 
     .project-links nav ul li { padding: 15% 2%; }
 
-    .release-logs h2 {
-        font-size: 36px;
-    }
+    .release-logs h2 { font-size: 36px; }
 
     .widget {
         width: 70vw;
         height: 30vw;
+    }
+
+    #not-available {
+        margin: 5%;
+        line-height: 125%;
+        font-size: 4vw;
     }
 }
 

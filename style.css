@@ -12,6 +12,9 @@
 /*HOME PAGE-----------------------------------------------------------*/
 /*px --> vw conversion: 0.0703125x*/
 
+/*Prevent sidebar from creating whitespace*/
+body { overflow-x: hidden; }
+
 /*Main Color Overlay and Image*/
 .home-header {
     min-height: 100vh;
@@ -30,16 +33,12 @@
 }
 
 /*Lunarflame Logo Image*/
-.sub-header nav img, .home-header nav img {
-    width: 28.125vw;
-}
+.sub-header nav img, .home-header nav img { width: 28.125vw; }
 
 /*Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)*/
 .nav-links, .social-links { flex: 1; }
 
 .header { text-align: right; }
-
-/*.social-links { text-align: left; }*/
 
 .nav-links ul li, .social-links ul li {
     list-style: none;
@@ -342,13 +341,9 @@
 
     .social-links ul { padding: 50px; }
 
-    .social-links i:hover {
-        color: #eb96f7;
-    }
+    .social-links i:hover { color: #eb96f7; }
 
-    .nav-links a:hover {
-        color: #eb96f7;
-    }
+    .nav-links a:hover { color: #eb96f7; }
 
     .page-body h1 {
         font-size: 8vw;
