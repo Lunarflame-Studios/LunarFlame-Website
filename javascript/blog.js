@@ -1,7 +1,7 @@
 const pages = [
     [
         'Hello World; An Introduction',
-        'hello-world.html',
+        'hello-world.php',
         'What is LunarFlame Studios? A little bit about us and our goals.',
         'Feb 4, 2024',
         'Phantom',
@@ -10,7 +10,7 @@ const pages = [
     ],
     [
         'My Curiosity Moment',
-        'curiosity-moment.html',
+        'curiosity-moment.php',
         'I believe that video games are the future of storytelling. Here\'s why.',
         'Mar 19, 2024',
         'Phantom',
