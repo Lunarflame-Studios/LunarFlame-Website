@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head> 
+    <?php require('partials/header.php')?>
     <title>Projects</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="projects.css">
-    <script src="javascript/projects.js" defer></script>
 </head>
 
 <body>
-
     <?php require('partials/sub-header.php')?>
 
     <section class="page-body">

@@ -2,18 +2,14 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require('partials/header.php')?>
     <title>About Us</title>
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!--Header----->
     <?php require('partials/sub-header.php')?>
 
-    <!--Page Body-->
     <section class="page-body">
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">

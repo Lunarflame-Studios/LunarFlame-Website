@@ -2,15 +2,12 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require('partials/header.php') ?>
     <title>Blog</title>
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
-    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-
     <?php require('partials/sub-header.php')?>
 
     <section class="page-body">

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="blog-page.css">
         <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="/images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
     </head>
     <body>
 
