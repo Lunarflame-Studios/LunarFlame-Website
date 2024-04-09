@@ -9,21 +9,8 @@
     <script src="javascript/nexo.js" defer></script>
 </head>
 <body>
-    <section class="sub-header">
-        <nav>
-            <a href="../index.html"><img src="../images/Lunarflame_Logo.png"></a>
-            <div class="nav-links header" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-    </section>
+
+    <?php require('partials/sub-header.php')?>
 
     <section class="page-body">
         <div id="overlay"></div>
@@ -37,7 +24,7 @@
             <iframe class="widget" frameborder="0" 
                 src="https://itch.io/embed/2535297?linkback=true&amp;border_width=4&amp;bg_color=0a0a30&amp;fg_color=ffffff&amp;link_color=8a2be2&amp;border_color=ed88ff" 
                 width="558" height="173"><a href="https://phantomforce.itch.io/project-leo-v04">Project Leo v0.4.2 (Download) by Phantomforce</a></iframe>
-                <a href="nexosphere-web.html"><h3>Or play the Web Version Here!</h3></a>
+                <a href="nexosphere-web.php"><h3>Or play the Web Version Here!</h3></a>
         </div>
 
         <div class="nexosphere-summary">
@@ -82,58 +69,9 @@
         
     </section>
 
-    <section class="sub-footer">
-        <div class="footer-about-us">
-            <h1>About Us</h1>
-            <h2>Welcome to LunarFlame Studios, where creativity meets innovation in the world of interactive
-                entertainment!</h2>
-        </div>
-        <div class="footer-quick-links">
-            <h1>Quick Links</h1>
-            <div class="nav-links footer" id="navLinks">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-contact-us">
-            <h1>Contact Us</h1>
-        </div>
+    <?php require('partials/sub-footer.php')?>
 
-    </section>
-
-    <section class="copyright">
-        <nav>
-        <div class="social-links" id="socialLinks">
-            <ul>
-                <li>
-                    <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
-                        <i class="fa fa-github fa-2x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-container discord" href="https://discord.gg/khKCJyjKSm">
-                        <i class="fa fa-bars fa-2x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-container insta" href="https://www.instagram.com/phantomforce26/">
-                        <i class="fa fa-instagram fa-2x"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon-container soundcloud" href="https://soundcloud.com/k4p33p4">
-                        <i class="fa fa-soundcloud fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
-    </nav>
-    </section>
+    <?php require('partials/copyright.php')?>
 
     <script src="../javascript/images.js"></script>
     <script>

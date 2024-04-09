@@ -10,21 +10,8 @@
 </head>
 
 <body>
-    <section class="sub-header">
-        <nav>
-            <a href="../index.html"><img src="../images/Lunarflame_Logo.png" alt="LunarFlame Logo"></a>
-            <div class="nav-links header" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-    </section>
+
+    <?php require('partials/sub-header.php')?>
 
     <section class="page-body">
         <div id="overlay"></div>
@@ -54,7 +41,7 @@
                 </a>
             </div>
 
-            <div class="recent-box" id="recent-box-2">
+            <div class="recent-box" id="recent-box-1">
                 <a id="link" href="">
                     <div class="recent-img-container">
                         <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
@@ -72,7 +59,6 @@
                     </div>
                 </a>
             </div>
-
         </div>
         <hr id="spacing">
 
@@ -102,62 +88,10 @@
         <h1></h1>
     </section>
 
-    <section class="sub-footer">
-        <div class="footer-about-us">
-            <h1>About Us</h1>
-            <h2>Welcome to LunarFlame Studios, where creativity meets innovation in the world of interactive
-                entertainment!</h2>
-        </div>
-        <div class="footer-quick-links">
-            <h1>Quick Links</h1>
-            <div class="nav-links footer" id="navLinks">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-contact-us">
-            <h1>Contact Us</h1>
-        </div>
-    </section>
+    <?php require('partials/sub-footer.php')?>
 
-    <section class="copyright">
-        <nav>
-            <div class="social-links" id="socialLinks">
-                <ul>
-                    <li>
-                        <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
-                            <i class="fa fa-github fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container discord" href="https://discord.gg/khKCJyjKSm">
-                            <i class="fa fa-bars fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container insta" href="https://www.instagram.com/phantomforce26/">
-                            <i class="fa fa-instagram fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container soundcloud" href="https://soundcloud.com/k4p33p4">
-                            <i class="fa fa-soundcloud fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <a href="blog/project-leo-v04.php" class="copyright-text">Copyright © 2024 LunarFlame Studios</a>
-            <style>
-                a {
-                    text-decoration: none;
-                }
-            </style>
-        </nav>
-    </section>
+    <?php require('partials/copyright.php')?>
+
     <script src="../javascript/blog.js"></script>
     <script>
         var navLinks = document.getElementById("navLinks");

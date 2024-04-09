@@ -10,21 +10,9 @@
 </head>
 
 <body>
-    <section class="sub-header">
-        <nav>
-            <a href="../index.html"><img src="../images/Lunarflame_Logo.png"></a>
-            <div class="nav-links header" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-    </section>
+    <!--Header----->
+    <?php require('partials/sub-header.php')?>
+
     <!--Page Body-->
     <section class="page-body">
         <div id="overlay"></div>
@@ -69,59 +57,10 @@
             <br><br>
         </div>
     </section>
-    <!--Footer----------------------------------------------------------->
-    <section class="sub-footer">
-        <div class="footer-about-us">
-            <h1>About Us</h1>
-            <h2>Welcome to LunarFlame Studios, where creativity meets innovation in the world of interactive
-                entertainment!</h2>
-        </div>
-        <div class="footer-quick-links">
-            <h1>Quick Links</h1>
-            <div class="nav-links footer" id="navLinks">
-                <ul>
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-contact-us">
-            <h1>Contact Us</h1>
-        </div>
 
-    </section>
+    <?php require('partials/sub-footer.php')?>
 
-    <section class="copyright">
-        <nav>
-            <div class="social-links" id="socialLinks">
-                <ul>
-                    <li>
-                        <a class="icon-container github" href="https://github.com/Lunarflame-Studios">
-                            <i class="fa fa-github fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container discord" href="https://discord.gg/khKCJyjKSm">
-                            <i class="fa fa-bars fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container insta" href="https://www.instagram.com/phantomforce26/">
-                            <i class="fa fa-instagram fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="icon-container soundcloud" href="https://soundcloud.com/k4p33p4">
-                            <i class="fa fa-soundcloud fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
-        </nav>
-    </section>
+    <?php require('partials/copyright.php')?>
 
     <script src="../javascript/images.js"></script>
     <script>
