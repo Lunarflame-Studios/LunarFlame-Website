@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php require('../partials/header.php')?>
         <title>Play Nexopshere v0.4</title>
-        <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="blog-page.css">
-        <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="/images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="../blog.css">
     </head>
     <body>
        <section class="sub-header">
@@ -38,6 +36,9 @@
                 <h3 id="author">Phantom</h3>
                 <h4 id="date">Apr 08, 2024</h4>
             </div>
+
+            <hr>
+            <?php require('../partials/recent-posts.php')?>
 
         </section>
     </body>

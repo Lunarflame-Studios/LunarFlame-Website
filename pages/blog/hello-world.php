@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php require('../partials/header.php')?>
         <title>Hello World - Blog</title>
-        <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="blog-page.css">
-        <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="/images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="../blog.css">
     </head>
     <body>
         <?php require('../partials/sub-header.php') ?>
@@ -25,7 +23,7 @@
                 <h4 id="date">Feb 4, 2024</h4>
                 <br>
             </div>
-            <div class="blog-body">
+            <div class="blog-pageBody">
                 <p id="description">What is LunarFlame Studios? A little bit about us and our goals.</p>
                 <br><br>
                 <img class="page-image" id="image" src="../../images/Minimal.jpg" alt="">
@@ -36,6 +34,10 @@
                 <p class="margin-top">In the far future, we plan to release games onto Steam. However, having only one project right now in development, we release periodically on itch.io. Please stay tuned for our beta releases!</p>
                 <br><br>
             </div>
+
+            <hr>
+            <?php require('../partials/recent-posts.php') ?>
+
         </section>
 
         <?php require('../partials/sub-footer.php')?>

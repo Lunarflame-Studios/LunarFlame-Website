@@ -12,9 +12,6 @@
 /*HOME PAGE-----------------------------------------------------------*/
 /*px --> vw conversion: 0.0703125x*/
 
-/*Prevent sidebar from creating whitespace*/
-body { overflow-x: hidden; }
-
 /*Main Color Overlay and Image*/
 .home-header {
     min-height: 100vh;
@@ -307,7 +304,7 @@ body { overflow-x: hidden; }
     .social-links ul li { display: block; }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         background: linear-gradient(#03002e, #0a0068);
         height: 100vh;
         width: 200px;
@@ -319,7 +316,7 @@ body { overflow-x: hidden; }
     }
 
     .social-links {
-        position: absolute;
+        position: fixed;
         width: 200px;
         right: -200px;
         text-align: left;

@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php require('../partials/header.php')?>
         <title>My Curiosity Moment - Blog</title>
-        <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="blog-page.css">
-        <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="/images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="../blog.css">
     </head>
     <body>
 
@@ -25,7 +23,7 @@
                 <h3 id="author">Phantom</h3>
                 <h4 id="date">Mar 20, 2024</h4>
             </div>
-            <div class="blog-body">
+            <div class="blog-pageBody">
                 <p id="description">I believe that video games are the future of storytelling. Here's why.</p>
                 <br><br>
                 <img class="page-image gallery-img" id="image" src="../../images/Horizon_Skyline_1.png" alt="">
@@ -38,7 +36,7 @@
                 <div>
                     <h2>Xenoblade Chronicles</h2>
                     <br>
-                    <p>This is one of my favorite series of all time. The 3 games span across 2 universes, and detail the struggles of different groups of characters as they fight against a pre-determined fate. </p>
+                    <p>This is one of my favorite series of all time. The 3 games span across 2 universes, and detail the struggles of different groups of characters as they fight against a pre-determined fate and discover the meaning of human existence. </p>
                     <br>
                     <div id="full-width" class="scroll-container">
                         <img class="gallery-img" src="../../images/blog/Xenoblade-Chronicles-Shulk.png" alt="">
@@ -92,6 +90,7 @@
                 <div>
                     <h2 id="subheader">4. Images can evoke strong emotions.</h2>
                     <p class="margin-top">Not all stories have to have incredibly complex storylines or plot twists to be powerful. Sometimes simplicity is key and works all the same. However, simplicity alone doesn't attract an audience, which is why video games can make simple stories work. Beautiful graphics, music, and world-building can make a game memorable.</p>
+                </div>
                 <hr>
 
                 <div>
@@ -134,10 +133,13 @@
                 <p class="margin-top">All of these games have influenced me in profound ways. From provoking my creativity to posing existential and philosophical questions, I truly believe that video games are overlooked as forms of storytelling, both by younger audiences that downplay them as mere entertainment, or by older audiences that consider them mind-numbing wastes of time. I hope that through our own endeavors to create games, we can change the minds of people who pass off these remarkable experiences.</p>
                 <br>
             </div>
+
+            <hr>
+            <?php require('../partials/recent-posts.php')?>
+
         </section>
 
         <?php require('../partials/sub-footer.php')?>
-
         <?php require('../partials/copyright.php')?>
 
         <script src="../../javascript/images.js"></script>
