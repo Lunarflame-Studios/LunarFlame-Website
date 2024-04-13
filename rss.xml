@@ -11,6 +11,9 @@
             <link>https://lunarflamestudios.com/pages/blog/hello-world.php</link>
             <description>What is LunarFlame Studios? A little bit about us and our goals.</description>
             <pubDate>Sun, 04 Feb 2024</pubDate>
+            <author>Phantom</author>
+            <category>Misc.</category>
+            <image>https://lunarflamestudios.com/images/Nordic.jpg</image>
         </item>
 
         <item>
@@ -18,7 +21,19 @@
             <link>https://lunarflamestudios.com/pages/blog/curiosity-moment.php</link>
             <description>I believe that video games are the future of storytelling. Here's why.</description>
             <pubDate>Fri, 19 Mar 2024</pubDate>
+            <author>Phantom</author>
+            <category>Misc.</category>
+            <image>https://lunarflamestudios.com/images/Horizon_Skyline_1.png</image>
         </item>
-           
+
+        <item>
+            <title>Play Nexosphere v0.4</title>
+            <link>https://lunarflamestudios.com/pages/blog/project-leo-v04.php</link>
+            <description>Nexosphere v0.4 is out now. Check out the release notes</description>
+            <pubDate>Sat, 13 Apr 2024</pubDate>
+            <author>Phantom</author>
+            <category>Nexosphere</category>
+            <image>https://lunarflamestudios.com/images/Nexo_SS_5.png</image>
+        </item>
     </channel>
 </rss>

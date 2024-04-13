@@ -39,7 +39,9 @@
 
             <hr>
             <?php require('../partials/recent-posts.php')?>
-
         </section>
+
+        <?php require('../partials/sub-footer.php')?>
+        <?php require('../partials/copyright.php')?>
     </body>
 </html>

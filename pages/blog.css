@@ -87,7 +87,7 @@
 
 .blog-author-text span {
     padding-top: 5%;
-    color: white;
+    color: #9192fc;
     font-size: 1vw;
 }
 
@@ -140,7 +140,9 @@
         max-height: 60vw;
     }
 
-    .recent-text, .blog-text { padding: 15px 10px 20px 10px; }
+    .recent-text, .blog-text { 
+        padding: 15px 10px 20px 10px;
+   }
 
     .recent-text h2 { font-size: 4vw; }
 
@@ -160,7 +162,6 @@
     .recent-text h3 {
         font-size: 3vw;
         line-height: 3.5vw;
-        margin-bottom: 5%;
     }
 
     .recent-text p, .blog-text p { font-size: 2vw; }
@@ -181,7 +182,9 @@
 /*DESKTOP UI-----------------------------*/
 @media(min-width: 701px) {
     .blog-body {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
         justify-content: center;
         align-items: center;
         margin-top: 50px;
@@ -206,7 +209,7 @@
 
     .blog-img-container {
         min-height: 15vw;
-        max-width: 250px;
+        max-width: 200px;
         overflow: hidden;
         display: flex;
     }
@@ -218,7 +221,7 @@
     }
 
     .blog-text h2 {
-        font-size: 1.6vw;
+        font-size: 1.5vw;
         color: #ed88ff;
     }
 
