@@ -6,14 +6,15 @@
         <description>Articles, Opinions, and Updates from LunarFlame Studios</description>
         <language>en-us</language>
 
+        <!--Most Recent Posts Should go at the Top-->
         <item>
-            <title>Hello World; An Introduction.</title>
-            <link>https://lunarflamestudios.com/pages/blog/hello-world.php</link>
-            <description>What is LunarFlame Studios? A little bit about us and our goals.</description>
-            <pubDate>Sun, 04 Feb 2024</pubDate>
+            <title>Play Nexosphere v0.4</title>
+            <link>https://lunarflamestudios.com/pages/blog/project-leo-v04.php</link>
+            <description>Nexosphere v0.4 is out now. Check out the release notes</description>
+            <pubDate>Sat, 08 Apr 2024</pubDate>
             <author>Phantom</author>
-            <category>Misc.</category>
-            <image>https://lunarflamestudios.com/images/Nordic.jpg</image>
+            <category>Nexosphere</category>
+            <image>https://lunarflamestudios.com/images/Nexo_SS_5.png</image>
         </item>
 
         <item>
@@ -27,13 +28,14 @@
         </item>
 
         <item>
-            <title>Play Nexosphere v0.4</title>
-            <link>https://lunarflamestudios.com/pages/blog/project-leo-v04.php</link>
-            <description>Nexosphere v0.4 is out now. Check out the release notes</description>
-            <pubDate>Sat, 13 Apr 2024</pubDate>
+            <title>Hello World; An Introduction.</title>
+            <link>https://lunarflamestudios.com/pages/blog/hello-world.php</link>
+            <description>What is LunarFlame Studios? A little bit about us and our goals.</description>
+            <pubDate>Sun, 04 Feb 2024</pubDate>
             <author>Phantom</author>
-            <category>Nexosphere</category>
-            <image>https://lunarflamestudios.com/images/Nexo_SS_5.png</image>
+            <category>Misc.</category>
+            <image>https://lunarflamestudios.com/images/Nordic.jpg</image>
         </item>
+        
     </channel>
 </rss>
