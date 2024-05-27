@@ -146,6 +146,17 @@
     line-height: 175%;
 }
 
+.footer-contact-us a { text-decoration: none; }
+
+.sub-footer h3  {
+    color: #9192fc;
+    font-size: 1.35vw;
+    line-height: 175%;
+    padding: 0;
+}
+
+.sub-footer h3:hover { color: #5663f0; }
+
 .copyright {
     background-color: black;
     text-align: right;

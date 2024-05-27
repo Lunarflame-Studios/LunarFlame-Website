@@ -17,5 +17,6 @@
     </div>
     <div class="footer-contact-us">
         <h1>Contact Us</h1>
+        <a href="https://forms.gle/yHjrXyp24NZuHPfU8"><h3>Give Us Feedback! (Google Form)</h3></a>
     </div>
 </section>
