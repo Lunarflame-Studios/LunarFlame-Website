@@ -15,8 +15,13 @@
         <img id="zoom-in" src="" alt="">
 
         <img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere">
-        <iframe frameborder="0" src="https://itch.io/embed-upload/9815481?color=051246" allowfullscreen="" width="960" height="620"><a href="https://phantomforce.itch.io/project-leo-v04-webgl">Play Project Leo v0.4.2 (WebGL) on itch.io</a></iframe>
-        <h3 id="not-available" class="margin-top">Sorry, this WebGL game is not supported on mobile devices and small screens. If you're on desktop, try expanding your screen.</h3>
+
+        <iframe frameborder="0" src="https://itch.io/embed-upload/9815481?color=051246" allowfullscreen="" width="960" height="620">
+            <a href="https://phantomforce.itch.io/project-leo-v04-webgl">Play Project Leo v0.4.2 (WebGL) on itch.io</a>
+        </iframe>
+        <h3 id="not-available" class="margin-top">Sorry, this WebGL game is not supported on mobile devices and small screens. 
+            If you're on desktop, try expanding your screen.</h3>
+            
         <style>
             @media(max-width: 700px) {
                 iframe { display: none; }
