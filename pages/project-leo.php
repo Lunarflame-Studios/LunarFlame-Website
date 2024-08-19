@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php require('partials/header.php')?>
-    <title>Nexosphere</title>
+    <title>Project Leo</title>
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
@@ -12,26 +12,28 @@
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
-        <img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere">
-        <p>Nexosphere, codenamed "Project Leo", is a game under development by LunarFlame Studios.</p>
+        
+        <h1>Project Leo</h1>
+        <!---<img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere"> -->
+        <p>Project Leo is a game under development by LunarFlame Studios.</p>
 
         <h1>Latest Version</h1>
         <div class="widget-container">
             <iframe class="widget" frameborder="0" 
                 src="https://itch.io/embed/2535297?linkback=true&amp;border_width=4&amp;bg_color=0a0a30&amp;fg_color=ffffff&amp;link_color=8a2be2&amp;border_color=ed88ff" 
                 width="558" height="173"><a href="https://phantomforce.itch.io/project-leo-v04">Project Leo v0.4.2 (Download) by Phantomforce</a></iframe>
-                <a href="nexosphere-web.php"><h3>Or play the Web Version Here!</h3></a>
+                <a href="project-leo-web.php"><h3>Or play the Web Version Here!</h3></a>
         </div>
 
-        <div class="nexosphere-summary">
+        <div class="project-leo-summary">
             <hr>
             <p class="summary">"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
             <img class="page-image gallery-img" src="../images/NetherSpawn.jpg" alt="">
             <p class="summary">Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
             <div class="scroll-container">
-                <img class="gallery-img" src="../images/Nexo_SS_5.png" alt="">
-                <img class="gallery-img" src="../images/Nexo_SS_4.png" alt="">
-                <img class="gallery-img" src="../images/Nexo_SS_3.png" alt="">
+                <img class="gallery-img" src="../images/PL_SS_2.png" alt="">
+                <img class="gallery-img" src="../images/PL_SS_3.png" alt="">
+                <img class="gallery-img" src="../images/PL_SS_4.png" alt="">
             </div>
         </div>
 

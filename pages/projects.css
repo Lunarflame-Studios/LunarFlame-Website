@@ -4,29 +4,36 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
 }
 
-.project-links nav ul {
+.project-links ul {
     list-style: none;
     padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
-.project-links nav ul li {
+.project {
     width: 100%;
-    background-position: center;
-    background-size: cover;
     position: relative;
-    margin: 2%;
-    transition: all ease 0.3s;
+    min-width: 100vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    background-position: center;
+    margin: 10px 0;
+    transition: background-size 0.3s ease;
 }
 
-.project-links nav ul li:hover {
-    width: 120%;
-}
+.project:hover { background-size: 120%; }
+
+.project h2 { min-width: 50vw; }
 
 /*TODO: Set background images*/
 .page-body p {
@@ -38,7 +45,7 @@
 
 /*PROJECTS SPECIFIC-----------------------------*/
 
-.nexosphere { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/Nexo_SS_2.png); }
+#project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/PL_SS_5.png); }
 
 .page-image {
     border-radius: 2%;
@@ -82,7 +89,7 @@ h3 {
         width: 50%;
     }
     
-    .project-links nav ul li { padding: 5%; }
+    .project { padding: 5% 0; }
     
     .project-links h2 {
         color: white;
@@ -106,7 +113,7 @@ h3 {
         line-height: 120%;
     }
 
-    .project-links nav ul li { padding: 15% 2%; }
+    .project-links li { padding: 15% 2%; }
 
     .release-logs h2 { font-size: 36px; }
 

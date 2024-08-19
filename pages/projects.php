@@ -19,12 +19,10 @@
         <div class="project-links">
             <nav>
                 <ul>
-                    <li class="nexosphere">
-                        <a href="nexosphere.php"><img src="../images/NeXoSphere.png" alt="Nexosphere"></a>
-                    </li>
-                    <li class="moonshadow">
-                        <h2>Project Moonshadow</h2>
-                    </li><br>
+                    <a href="project-leo.php"><li id="project-leo" class="project">
+                        <h2>Project Leo</h2>
+                    </li></a>
+                    <br>
                 </ul>
             </nav>
         </div>

@@ -29,7 +29,7 @@
         <div class="text-box">
             <h1 class="light-effect">Welcome to LunarFlame Studios</h1>
             <p>We strive to create fun and innovative stories.</p>
-            <a href="pages/nexosphere.php" class="light-effect hero-btn">Play Nexosphere</a>
+            <a href="pages/project-leo.php" class="light-effect hero-btn">Play Project Leo</a>
         </div>
     </section>
 
