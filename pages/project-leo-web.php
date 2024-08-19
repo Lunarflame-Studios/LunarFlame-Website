@@ -14,7 +14,8 @@
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
-        <img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">
+        <h1>Project Leo</h1>
+        <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
 
         <iframe frameborder="0" src="https://itch.io/embed-upload/9815481?color=051246" allowfullscreen="" width="960" height="620">
             <a href="https://phantomforce.itch.io/project-leo-v04-webgl">Play Project Leo v0.4.2 (WebGL) on itch.io</a>

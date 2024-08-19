@@ -2,7 +2,7 @@
 <html>
     <head>
         <?php require('../partials/header.php')?>
-        <title>Play Nexopshere v0.4</title>
+        <title>Play Project Leo v0.4</title>
         <link rel="stylesheet" href="blog-page.css">
         <link rel="stylesheet" href="../blog.css">
     </head>
@@ -14,8 +14,8 @@
             <img id="zoom-in" src="" alt="">
 
             <div class="blog-title">
-                <h1 id="title">Play Nexosphere v0.4</h1>
-                <h5 id="category">Nexosphere</h5>
+                <h1 id="title">Play Project Leo v0.4</h1>
+                <h5 id="category">Project Leo</h5>
                 <hr>
             </div>
             <div class="blog-subInfo">
@@ -23,9 +23,9 @@
                 <h4 id="date">Apr 08, 2024</h4>
             </div>
             <div class="blog-pageBody">
-                <p id="description">Nexopshere v0.4 is out, and there's a lot of new features.</p>
+                <p id="description">Project Leo v0.4 is out, and there's a lot of new features.</p>
                 <br><br>
-                <img class="page-image gallery-img" id="image" src="/images/Nexo_SS_5.png" alt="">
+                <img class="page-image gallery-img" id="image" src="/images/PL_SS_3.png" alt="">
                 <br><br>
                 <div>
                     <h2 id="subheader">Cloud Save Data</h2>
