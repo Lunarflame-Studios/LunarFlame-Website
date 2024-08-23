@@ -66,7 +66,7 @@
 
                 <div>
                     <h2 id="subheader">Bug Fixes and Physics Changes</h2>
-                    <p class="margin-top">Various QoL fixes and changes were made to optimize the visual, musical, and gameplay experience, such as jump buffering, platform adjustments, and gravity adjustments. We alwyas try to adapt to player feedback.</p>
+                    <p class="margin-top">Various QoL fixes and changes were made to optimize the visual, musical, and gameplay experience, such as jump buffering, platform adjustments, and gravity adjustments. We always try to adapt to player feedback.</p>
                 </div>
             </div>
 
