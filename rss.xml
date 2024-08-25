@@ -8,6 +8,16 @@
 
         <!--Most Recent Posts Should go at the Top-->
         <item>
+            <title>Play Project Leo v0.45</title>
+            <link>https://lunarflamestudios.com/pages/blog/project-leo-v045.php</link>
+            <description>Project Leo v0.45 is out! We've prepared a ton of new features.</description>
+            <pubDate>Sun, 25 Aug 2024</pubDate>
+            <author>Kapeepa</author>
+            <category>Project Leo</category>
+            <image>https://lunarflamestudios.com/images/PL_SS_5.png</image>
+        </item>
+
+        <item>
             <title>Play Project Leo v0.4</title>
             <link>https://lunarflamestudios.com/pages/blog/project-leo-v04.php</link>
             <description>Project Leo v0.4 is out now. Check out the release notes</description>
@@ -36,6 +46,5 @@
             <category>Misc.</category>
             <image>https://lunarflamestudios.com/images/Nordic.jpg</image>
         </item>
-        
     </channel>
 </rss>
