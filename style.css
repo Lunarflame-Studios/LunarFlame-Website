@@ -9,7 +9,7 @@
     src: url(fonts/MontserratAlt1-SemiBold.ttf);
 }
 
-/*HOME PAGE-----------------------------------------------------------*/
+/* Home Page ----------------------------------------------------------------------------------- */
 /*px --> vw conversion: 0.0703125x*/
 
 /*Main Color Overlay and Image*/
@@ -90,7 +90,8 @@
     transition: 1s;
 }
 
-/*HEADER, FOOTER, AND GENERAL STRUCTURE--------------------*/
+/* Header, Footer, and General Structure ------------------------------------------------------- */
+
 .sub-header { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png); }
 
 .page-body {
@@ -196,7 +197,8 @@
 
 .social-links { display: flex; }
 
-/*SCROLLBAR------------------------*/
+
+/* Scrollbar ----------------------------------------------------------------------------------- */
 .scroll-container {
     background-color: #00010c;
     overflow: auto;
@@ -210,7 +212,7 @@
     max-width: 50%;
 }
 
-/*DROPDOWNS------------------------*/
+/* Dropdowns ----------------------------------------------------------------------------------- */
 
 .drop-btn {
     background-color: transparent;
@@ -244,7 +246,7 @@
 
 .dropdown:hover .drop-btn { background-color: rgba(255, 255, 255, 0.1);}
 
-/*OTHER-------------------------------------------*/
+/* Other --------------------------------------------------------------------------------------- */
 
 .row {
     margin-top: 5%;
@@ -280,7 +282,7 @@
     cursor: pointer;
 }
 
-/*MOBILE UI------------------------*/
+/* Mobile UI ----------------------------------------------------------------------------------- */
 @media(max-width: 700px) {
     .sub-header nav img, .home-header nav img { width: 200px; }
 
@@ -374,7 +376,8 @@
     .sub-footer { display: none; }
 }
 
-/*DESKTOP UI---------------------*/
+/* Desktop UI ---------------------------------------------------------------------------------- */
+
 @media(min-width: 701px) {
     .nav-links ul li::after {
         content: '';

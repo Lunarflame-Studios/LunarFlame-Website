@@ -1,4 +1,4 @@
-/*PROJECTS GENERAL----------------------------------------------*/
+/* General Projects Page ----------------------------------------------------------------------- */
 
 .project-links, .release-logs {
     display: flex;
@@ -43,7 +43,7 @@
 
 .title { max-width: 50%; }
 
-/*PROJECTS SPECIFIC-----------------------------*/
+/* Project Specific Stuff ---------------------------------------------------------------------- */
 
 #project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/PL_SS_5.png); }
 
@@ -52,19 +52,20 @@
     max-width: 50%;
 }
 
+/* Nether Highlight */
 strong { color: rgb(128, 0, 0);}
-
-.moonshadow {background-color: rgba(255, 255, 255, 0.1);}
 
 .release-logs nav ul li { padding: 5% 0; }
 
 .summary { margin: 0% 5%;}
 
+/* Remove underlines from anchors */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* itch.io iframe */
 iframe {
     margin-top: 3%;
 }
@@ -83,7 +84,7 @@ h3 {
 
 .release-logs h2:hover { color: #924af1; }
 
-/*DESKTOP UI------------------------------------*/
+/* Desktop UI ---------------------------------------------------------------------------------- */
 @media(min-width: 701px) {
     .project-links img {
         width: 50%;
@@ -103,7 +104,8 @@ h3 {
     }
 }
 
-/*MOBILE UI-------------------------------------*/
+/* Mobile UI ----------------------------------------------------------------------------------- */
+
 @media(max-width: 700px) {
     .project-links img { width: 90%; }
 
