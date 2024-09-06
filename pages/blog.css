@@ -1,4 +1,31 @@
-/* Recent Posts*/
+/* || Recent Posts 
+ 
+   Given the structure of a Recent Blog Post:
+ 
+   <div class="recent-body">
+   
+        <div class="recent-box">
+            <a id="link">
+                <div class="recent-img-container">
+                    <img>
+                </div>
+  
+                <div class="recent-text">
+                    <h2 id="category">
+                    <h3 id="title">
+                    <p id="description">
+                    <div class="blog-author-text">
+                        <strong id="author">
+                        <span id="pubDate">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>       
+ */
+
+/* The container for all recent blog posts.*/
 .recent-body {
     display: flex;
     justify-content: center;
@@ -6,24 +33,24 @@
     margin-top: 50px;
 }
 
+/* The container for a single recent blog post. */
 .recent-box {
-    max-width: 24.6vw;
-    min-height: 38.67vw;
-    max-height: 42.12vw;
     width: 100%;
     height: 100%;
-    padding: 10px;
-    margin: 0% 3%;
     display: flex;
     flex-direction: column;
     transition: all ease 0.3s;
     background: linear-gradient(#0c002b, #09003f);
 }
 
+/* When hovered over, a recent blog box should adopt a colored box-shadow. */
 .recent-box:hover {
     background-color: #010116;
     box-shadow: 0px 0px 50px #ff40c6;
 }
+
+/*Since the entire blog box is a link, remove any hyperlink decoration. */
+.recent-box a, .blog-box a { text-decoration: none; }
 
 .recent-img-container {
     max-height: 300px;
@@ -32,12 +59,9 @@
     position: relative;
 }
 
-.recent-box a, .blog-box a { text-decoration: none; }
-
 .recent-text {
     display: flex;
     flex-direction: column;
-    padding: 30px 10px 20px 10px;
 }
 
 .recent-text h2 {
@@ -55,11 +79,35 @@
 .recent-text p {
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
     font-size: 1.25vw;
 }
+
+/* || All Blog Posts
+
+    Given the structure of a Blog Post:
+
+    <div class="blog-body">
+   
+        <div class="blog-box">
+            <a id="link">
+                <div class="blog-img-container">
+                    <img>
+                </div>
+  
+                <div class="blog-text">
+                    <h2 id="category">
+                    <h3 id="title">
+                    <p id="description">
+                    <div class="blog-author-text">
+                        <strong id="author">
+                        <span id="pubDate">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>    
+*/
 
 .blog-img {
     max-width: 100%;
@@ -91,6 +139,7 @@
     font-size: 1vw;
 }
 
+/* Subscribe RSS button */
 #subscribe { text-decoration: none; }
 
 #subscribe h4 {
@@ -106,58 +155,18 @@
 
 /*Mobile UI*/
 @media(max-width: 700px) {
-    .blog-body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-    }
-
-    .blog-box {
-        max-width: 38vw;
-        min-height: 48vw;
-        max-height: 60vw;
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        margin: 0% 3%;
-        display: flex;
-        flex-direction: column;
-        transition: all ease 0.3s;
-        background: linear-gradient(#0c002b, #09003f);
-    }
-
-    .blog-author {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1.2vw;
-    }
 
     .recent-box {
         max-width: 38vw;
-        min-height: 48vw;
-        max-height: 60vw;
+        min-height: 70vw;
+        margin: 0% 1%;
     }
 
     .recent-text, .blog-text { 
-        padding: 15px 10px 20px 10px;
-   }
+        padding: 15px 6px 15px 6px;
+    }
 
     .recent-text h2 { font-size: 4vw; }
-
-    .blog-text h2 {
-        font-size: 3.5vw;
-        line-height: 4.2vw;
-        margin: 0px 0px 3%;
-    }
-
-    .blog-text h3 {
-        color: #ad72ff;
-        line-height: 2.1vw;
-        margin: 4% 0px 6%;
-        font-size: 3vw;
-    }
 
     .recent-text h3 {
         font-size: 3vw;
@@ -173,6 +182,47 @@
         font-size: 2vw;
     }
 
+    /* On mobile displays, the "All Posts section should look the same as the "Recent Posts." */
+    .blog-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50px;
+        gap: 15px 0px;
+        justify-items: center;
+    }
+
+    .blog-box {
+        max-width: 30vw;
+        min-height: 70vw;
+        margin: 0% 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all ease 0.3s;
+        background: linear-gradient(#0c002b, #09003f);
+    }
+
+    .blog-author {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+    }
+
+    .blog-text h2 {
+        font-size: 3.5vw;
+        line-height: 4.2vw;
+        margin: 0px 0px 3%;
+    }
+
+    .blog-text h3 {
+        color: #ad72ff;
+        line-height: 2.1vw;
+        margin: 4% 0px 6%;
+        font-size: 3vw;
+    }
+
     #subscribe h4 {
         margin-top: 3vw;
         font-size: 4.5vw;
@@ -181,12 +231,24 @@
 
 /*DESKTOP UI-----------------------------*/
 @media(min-width: 701px) {
+    /*Recent Blog Posts*/
+    .recent-box {
+        max-width: 38vw;
+        min-height: 48vw;
+        max-height: 60vw;
+        padding: 10px;
+        margin: 0% 3%;
+    }
+
+    .recent-text {
+        padding: 30px 10px 20px 10px;
+    }
+    
     .blog-body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         gap: 15px;
-        justify-content: center;
-        align-items: center;
         margin-top: 50px;
     }
 
@@ -235,11 +297,6 @@
     .blog-text p {
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
         font-size: 1vw;
     }
 }
-
-/*Other*/

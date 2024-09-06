@@ -12,7 +12,6 @@
     padding: 20px;
 }
 
-
 /*Name*/
 .about-dev h2 {
     color: #d883ff;
@@ -35,6 +34,7 @@
     padding-bottom: 8%;
 }
 
+/* Roles */
 .about-dev h5 {
     color: #f3bafd;
     font-size: 2vw;
@@ -51,7 +51,7 @@
     position: relative;
 }
 
-/*Adrian----------------------------------*/
+/*Adrian*/
 .phantom {
     background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
     background-repeat: no-repeat;
@@ -136,9 +136,7 @@
 
 /*MOBILE UI----------------------------------------*/
 @media(max-width: 700px) {
-    .about-devs {
-        padding: 0;
-    }
+    .about-devs { padding: 0; }
 
     .about-dev h2 { font-size: 10.125vw; }
 
