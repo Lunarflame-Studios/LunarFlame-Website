@@ -73,6 +73,7 @@ function populateBlogEntries() {
 
             var imgContainer = document.createElement("div");
             imgContainer.classList.add("blog-img-container");
+
             var img = document.createElement("img");
             img.classList.add("blog-img");
             img.src = entry[6];
@@ -81,22 +82,29 @@ function populateBlogEntries() {
 
             var blogText = document.createElement("div");
             blogText.classList.add("blog-text");
+
             var category = document.createElement("h2");
             category.id = "category";
             category.textContent = entry[0];
+
             var title = document.createElement("h3");
             title.id = "title";
             title.textContent = entry[5];
+
             var description = document.createElement("p");
             description.id = "description";
             description.textContent = entry[2];
+
             var blogAuthor = document.createElement("div");
             blogAuthor.classList.add("blog-author");
+
             var blogAuthorText = document.createElement("div");
             blogAuthorText.classList.add("blog-author-text");
+
             var author = document.createElement("strong");
             author.id = "author";
             author.textContent = entry[4];
+            
             var pubDate = document.createElement("span");
             pubDate.id = "pubDate";
             pubDate.textContent = entry[3];

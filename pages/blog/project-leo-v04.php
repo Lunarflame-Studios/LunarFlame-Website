@@ -73,9 +73,12 @@
             <br><br>
             <hr>
             <?php require('../partials/recent-posts.php')?>
+            
         </section>
 
         <?php require('../partials/sub-footer.php')?>
         <?php require('../partials/copyright.php')?>
+
+        <?php require('../partials/javascript.php')?>
     </body>
 </html>

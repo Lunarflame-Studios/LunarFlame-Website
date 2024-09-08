@@ -36,18 +36,7 @@
     <?php require('pages/partials/copyright.php') ?>
 
     <!------JavaScript for Toggle Menu---->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        var socialLinks = document.getElementById("socialLinks");
-        function showMenu() {
-            navLinks.style.right = "0";
-            socialLinks.style.right = "0";
-        }
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-            socialLinks.style.right = "-200px";
-        }
-    </script>
+    <?php require('pages/partials/javascript.php') ?>
 
 </body>
 

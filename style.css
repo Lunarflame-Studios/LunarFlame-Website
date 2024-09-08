@@ -4,6 +4,7 @@
     font-family: montserrat;
 }
 
+/* Make Montserrat the default font for all pages. */
 @font-face {
     font-family: montserrat;
     src: url(fonts/MontserratAlt1-SemiBold.ttf);
@@ -12,7 +13,7 @@
 /* Home Page ----------------------------------------------------------------------------------- */
 /*px --> vw conversion: 0.0703125x*/
 
-/*Main Color Overlay and Image*/
+/* Main Color Overlay and Image */
 .home-header {
     min-height: 100vh;
     width: 100%;
@@ -22,6 +23,7 @@
     overflow: hidden;
 }
 
+/* Top Menu area, containing the logo and nav links. */
 .sub-header nav, .home-header nav {
     display: flex;
     padding: 1% 2%;
@@ -32,11 +34,13 @@
 /*Lunarflame Logo Image*/
 .sub-header nav img, .home-header nav img { width: 28.125vw; }
 
-/*Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)*/
+/* Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)  */
 .nav-links, .social-links { flex: 1; }
 
+/* Top Menu Buttons */
 .header { text-align: right; }
 
+/* Item in Top Menu nav list. */
 .nav-links ul li, .social-links ul li {
     list-style: none;
     display: inline-block;
@@ -44,6 +48,13 @@
     position: relative;
 }
 
+/* Anchor for Top Menu nav list item */
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* When hovered over, a list item should get a purple underline. */
 .nav-links ul li:hover::after { width: 100%; }
 
 /*Home page Center Text Box*/
@@ -57,21 +68,24 @@
     text-align: center;
 }
 
+/* (Welcome to LunarFlame Studios)*/
 .text-box h1 { font-size: 4.36vw; }
 
+/*Description*/
 .text-box p {
     margin: 10px 0 40px;
     font-size: 1.5vw;
     color: white;
 }
 
+/* Link to Project Leo */
 .text-box a {
     margin-top: 2%;
     font-size: 2.53vw;
 }
 
-.sub-header nav .fa, .home-header nav .fa{ display: none; }
 
+/* Project Leo Link Button */
 .hero-btn {
     display: inline-block;
     text-decoration: none;
@@ -84,6 +98,7 @@
     cursor: pointer;
 }
 
+/* Hero Button should become blue-violet when when hovered over. */
 .hero-btn:hover {
     border: 1px solid blueviolet;
     background: blueviolet;
@@ -94,6 +109,7 @@
 
 .sub-header { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png); }
 
+/* Gives a dark blue gradient to every page with content. */
 .page-body {
     background: linear-gradient(#00021f, #020131);
     width: 100%;
@@ -101,32 +117,38 @@
     text-align: center;
 }
 
+/*Primary Titles*/
 .page-body h1{
     font-size: 4.5vw;
     color: #f3bafd;
     padding-top: 5%;
 }
 
+/*Secondary Titles*/
 .page-body h2 {
     font-size: 3.9vw;
     color: #ed88ff;
     padding-top: 5%;
 }
 
-.page-body p{
+/*Paragraph Content*/
+.page-body p {
     font-size: 1.55vw;
     color: white;
     line-height: 150%;
 }
 
+/*Image on any Website Page*/
 .page-image { max-width: 80%; }
 
+/*Horizontal Break*/
 .page-body hr {
     width: 75%;
     border: 1px solid blueviolet;
     margin: 20px auto;
 }
 
+/*Footer for all site pages*/
 .sub-footer {
     background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
     display: grid;
@@ -135,20 +157,24 @@
     padding: 50px 80px;
 }
 
+/*Sub-Footer Titles*/
 .sub-footer h1 {
     color: #ad72ff;
     font-size: 3.5vw;
     padding-bottom: 5%;
 }
 
+/*Sub-Footer Subtext*/
 .sub-footer h2 {
     color: white;
     font-size: 1.26vw;
     line-height: 175%;
 }
 
+/*Links under Contact Us Form*/
 .footer-contact-us a { text-decoration: none; }
 
+/*Sub-Footer Subtext v2*/
 .sub-footer h3  {
     color: #9192fc;
     font-size: 1.35vw;
@@ -156,49 +182,54 @@
     padding: 0;
 }
 
+/* Subtext link turns dark blue when hovered over. */
 .sub-footer h3:hover { color: #5663f0; }
 
+/* div container for copyright section */
 .copyright {
     background-color: black;
     text-align: right;
     padding: 15px;
 }
 
+/*Copyright text*/
 .copyright-text {
     font-size: 1.69vw;
     color: #6d5a85;
     padding: 0% 3%;
 }
 
+/* Nav links for copyright section */
 .copyright nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Icon containers for external links */
 .icon-container {
     border-radius: 8px;
     margin: 0px;
     display: inline-block;
     padding: 15px 20px;
     transition: all ease 0.3s;
+
+    color: white;
 }
 
+/* Icon container images*/
 .social-links i {
     font-size: 140%;
     color: white;
     transition: all ease 0.3s;
 }
 
-.nav-links a {
-    color: white;
-    transition: all ease 0.3s;
-}
-
+/* div class for list of external links */
 .social-links { display: flex; }
 
-
 /* Scrollbar ----------------------------------------------------------------------------------- */
+
+/* Container for the scrollbar */
 .scroll-container {
     background-color: #00010c;
     overflow: auto;
@@ -207,9 +238,12 @@
     scrollbar-color: #fc0fc0 rgb(3, 0, 21);
 }
 
+/* An individual image in a scroll container */
 .scroll-container img {
     padding: 10px;
     max-width: 50%;
+    max-height: 18vw;
+    align-items: center;
 }
 
 /* Dropdowns ----------------------------------------------------------------------------------- */
@@ -248,15 +282,10 @@
 
 /* Other --------------------------------------------------------------------------------------- */
 
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
+/* Gives any element a slight top margin*/
 .margin-top { margin-top: 4%; }
 
-/* Styles for the overlay */
+/* Styles for the zoomed-in image overlay */
 #overlay {
     display: none;
     position: fixed;
@@ -269,7 +298,7 @@
     cursor: pointer;
 }
 
-/* Styles for the zoomed image */
+/* Styles for the zoomed-in image */
 #zoom-in {
     display: none;
     position: fixed;
@@ -284,38 +313,45 @@
 
 /* Mobile UI ----------------------------------------------------------------------------------- */
 @media(max-width: 700px) {
+
+    /*Lunarflame Logo Image*/
     .sub-header nav img, .home-header nav img { width: 200px; }
 
+    /* (Welcome to LunarFlame Studios)*/
     .text-box h1 { font-size: 8vw; }
 
+    /*Description*/
     .text-box p {
         margin: 10px 0 40px;
         font-size: 3vw;
         color: white;
     }
 
+    /* Link to Project Leo */
     .text-box a {
         margin-top: 0;
         font-size: 6vw;
     }
 
+    /* Item in Top Menu nav list */
     .nav-links ul li { 
         display: block;
         margin: 20px 0px;
     }
 
-    .nav-links ul li a {
-        text-decoration: none;
-        font-size: 4.4vw;
-    }
+    /* Anchor for Top Menu nav list item */
+    .nav-links ul li a { font-size: 4.4vw; }
 
+    /* Anchor for Social Links list item */
     .social-links a {
         text-decoration: none;
         font-size: 5vw;
     }
 
+    /* Item in Social Links list*/
     .social-links ul li { display: block; }
 
+    /* Top Menu Buttons go to the side bar on the Mobile View. */
     .nav-links {
         position: fixed;
         background: linear-gradient(#03002e, #0a0068);
@@ -328,6 +364,7 @@
         transition: 1s;
     }
 
+    /* Social Links go under the Nav Links on the Mobile View. */
     .social-links {
         position: fixed;
         width: 200px;
@@ -339,6 +376,7 @@
         transition: 1s;
     }
 
+    /* Show sidebar on mobile view. */
     .sub-header nav .fa, .home-header nav .fa{
         display: block;
         color: white;
@@ -347,38 +385,53 @@
         cursor: pointer;
     }
 
+    /* Nav Links list */
     .nav-links ul { padding: 20px; }
 
+    /* Social Links list */
     .social-links ul { padding: 50px; }
 
+    /* Social Links icons turn pink when hovered over. */
     .social-links i:hover { color: #eb96f7; }
 
+    /* Nav Links icons turn pink when hovered over. */
     .nav-links a:hover { color: #eb96f7; }
 
+    /*Primary Titles*/
     .page-body h1 {
         font-size: 8vw;
         padding-top: 10%;
     }
 
+    /*Paragraph Content*/
     .page-body p {
         font-size: 3vw;
         margin: 5%;
     }
 
+    /*Footer for all site pages*/
+    .sub-footer { display: none; }
+
+    /*Sub-Footer Titles*/
     .sub-footer h1 { font-size: 2.25vw; }
 
-    .copyright h1 {
+    /*Copyright text*/
+    .copyright-text {
         font-size: 2.25vw;
         padding: 2%;
         line-height: 110%;
     }
 
-    .sub-footer { display: none; }
 }
 
 /* Desktop UI ---------------------------------------------------------------------------------- */
 
 @media(min-width: 701px) {
+
+    /* Hide sidebar on desktop view */
+    .sub-header nav .fa, .home-header nav .fa { display: none; }
+
+    /* Item in Top Menu nav list. */
     .nav-links ul li::after {
         content: '';
         width: 0%;
@@ -389,14 +442,13 @@
         transition: 0.5s;
     }
 
-    .nav-links ul li a, .social-links ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.68vw;
-    }
+    /* Anchor for Item in Top Menu nav list. */
+    .nav-links ul li a, .social-links ul li a { font-size: 1.68vw; }
 
+    /* Icon container backgrounds should only show on the desktop view. */
     .icon-container { background-color: #490596; }
-    
+
+    /* Icon container background darkens when hovered over. */
     .icon-container:hover {
         background-color: #2b005c;
         box-shadow: 0px 0px 50px #00000000;

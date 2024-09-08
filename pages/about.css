@@ -44,6 +44,7 @@
 
 /*Text is part of .about-body p, listed in style.css*/
 
+/* Horizontal Line in an about-dev block. */
 .about-dev hr {
     width: 8.43vw;
     border: 3px solid #f3bafd;
@@ -71,10 +72,10 @@
 
 .kapeepa h5 { color: #c447da; }
 
-/*PC/DESKTOP UI---------------------------*/
+/* Desktop UI ---------------------------------------------------------------------------------- */
 @media(min-width: 701px) {
 
-    /*Style for all dev boxes*/
+    /* Individual dev box */
     .about-dev {
         display: flex;
         flex-direction: row;
@@ -85,12 +86,14 @@
         padding: 5% 10%;
     }
 
+    /* Reverse the alignment of every odd dev box. */
     .about-dev:nth-child(odd) {
         flex-direction: row-reverse;
         padding: 5% 10%;
         text-align: right;
     }
 
+    /* Div container for Phantom's pfp.  */
     .pfp-phantom {
         display: inline-block;
         position: relative;
@@ -102,6 +105,7 @@
         border-radius: 50%;
     }
 
+    /* Phantom's pfp image */
     .pfp-phantom img {
         width: auto;
         height: 130%;
@@ -110,6 +114,7 @@
         object-fit: cover;
     }
 
+    /* Kapeepa's pfp image */
     .pfp-kapeepa img {
         display: inline-block;
         position: relative;
@@ -134,12 +139,22 @@
 }
 
 
-/*MOBILE UI----------------------------------------*/
+/* Mobile UI ----------------------------------------------------------------------------------- */
 @media(max-width: 700px) {
+
+    /* Container for list of devs */
     .about-devs { padding: 0; }
 
+    /* Individual dev box */
+    .about-dev {
+        text-align: center;
+        position: relative;
+    }
+
+    /*Name*/
     .about-dev h2 { font-size: 10.125vw; }
 
+    /*Quote*/
     .about-dev h3 {
         margin: 5%;
         font-size: 4.22vw;
@@ -147,22 +162,20 @@
 
     }
 
+    /*Nicknames*/
     .about-dev h4 { 
         font-size: 4vw;
         padding-bottom: 5%; 
     }
 
+    /*Roles*/
     .about-dev h5 { 
         font-size: 4vw; 
         margin-top: 50%;
         padding-top: 8%;
     }
 
-    .about-dev {
-        text-align: center;
-        position: relative;
-    }
-
+    /* Dev profile picture */
     .about-dev img {
         position: absolute;
         top: 35%;
@@ -171,13 +184,16 @@
         max-width: 40%;
     }
 
+    /* UNUSED: Read More Button */
     .hero-btn { 
         font-size: 4vw;
         margin-bottom: 5%; 
     }
 
+    /* All paragraph text in the about-devs section*/
     .about-devs p { padding-bottom: 2%; }
 
+    /*Adrian*/
     .phantom {
         background-size: 320%;
         background-position-x: -200px;

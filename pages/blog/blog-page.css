@@ -1,21 +1,25 @@
+/*Author*/
 .page-body h3 {
     margin-top: 16px;
     font-size: 3vw;
     color: #d883ff;
 }
 
+/*Date*/
 .page-body h4 {
     margin-top: 8px;
     font-size: 1.5vw;
     color: #cbbcff;
 }
 
+/*Category*/
 .page-body h5 {
     margin-top: 12px;
     font-size: 2.2vw;
     color: #ed88ff;
 }
 
+/* Div container for author and date */
 .blog-subInfo {
     text-align: left;
     margin-left: 12%;
@@ -23,6 +27,7 @@
     margin-right: 15%;
 }
 
+/* Div container for rest of article */
 .blog-pageBody {
     text-align: left;
     margin-left: 10%;
@@ -30,20 +35,18 @@
     margin-right: 10%;
 }
 
+/* An h2 subheader. Applies a different color than a normal h2 header. */
 #subheader {
     font-size: 3vw;
     color: #ada8ff;
 }
 
+/* Unused??? */
 #subcategory {
     display: inline-flex;
 }
 
-.scroll-container img {
-    max-height: 18vw;
-    align-items: center;
-}
-
+/* Used by the div container for scrollbars to widen them closer to viewport width. */
 #full-width {
     margin: 0 -12%;
 }

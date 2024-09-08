@@ -57,6 +57,6 @@
                 </a>
             </div>
 
-    <script src="../../javascript/blog.js"></script>
+    <script src="/javascript/blog.js"></script>
 </div>
 <br><br>

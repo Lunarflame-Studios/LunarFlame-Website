@@ -104,23 +104,13 @@
         <h1></h1>
     </section>
 
+    <script src="/javascript/blog.js"></script>
+    
     <?php require('partials/sub-footer.php')?>
-
     <?php require('partials/copyright.php')?>
 
-    <script src="../javascript/blog.js"></script>
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        var socialLinks = document.getElementById("socialLinks");
-        function showMenu() {
-            navLinks.style.right = "0";
-            socialLinks.style.right = "0";
-        }
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-            socialLinks.style.right = "-200px";
-        }
-    </script>
+    <?php require('partials/javascript.php')?>
+
 </body>
 
 </html>

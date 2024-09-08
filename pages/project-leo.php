@@ -12,7 +12,6 @@
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
-        
         <h1>Project Leo</h1>
         <!---<img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere"> -->
         <p>Project Leo is a game under development by LunarFlame Studios.</p>
@@ -39,20 +38,7 @@
     </section>
 
     <?php require('partials/sub-footer.php')?>
-
     <?php require('partials/copyright.php')?>
 
-    <script src="../javascript/images.js"></script>
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        var socialLinks = document.getElementById("socialLinks");
-        function showMenu() {
-            navLinks.style.right = "0";
-            socialLinks.style.right = "0";
-        }
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-            socialLinks.style.right = "-200px";
-        }
-    </script>
+    <?php require('partials/javascript.php')?>
 </body>

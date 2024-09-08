@@ -1,5 +1,6 @@
 /* General Projects Page ----------------------------------------------------------------------- */
 
+/* List of all projects */
 .project-links, .release-logs {
     display: flex;
     align-items: center;
@@ -9,6 +10,7 @@
     overflow: hidden;
 }
 
+/* Sub-element for list of projects */
 .project-links ul {
     list-style: none;
     padding: 0px;
@@ -17,6 +19,7 @@
     align-items: center;
 }
 
+/* An individual project */
 .project {
     width: 100%;
     position: relative;
@@ -31,22 +34,27 @@
     transition: background-size 0.3s ease;
 }
 
+/* When hovered over, a project's background image should enlarge. */
 .project:hover { background-size: 120%; }
 
+/* Default title text of a project. */
 .project h2 { min-width: 50vw; }
 
-/*TODO: Set background images*/
+/* Background Image for Project Leo. */
+#project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/PL_SS_5.png); }
+
+/*TEST !!!*/
 .page-body p {
     padding-top: 3%;
     padding-bottom: 2%;
 }
 
+/* Title Image. Substitutes for an h1 title */
 .title { max-width: 50%; }
 
 /* Project Specific Stuff ---------------------------------------------------------------------- */
 
-#project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/PL_SS_5.png); }
-
+/* Gives a page image a slightly round radius. */
 .page-image {
     border-radius: 2%;
     max-width: 50%;
@@ -55,21 +63,25 @@
 /* Nether Highlight */
 strong { color: rgb(128, 0, 0);}
 
-.release-logs nav ul li { padding: 5% 0; }
-
+/* Summary of the project. */
 .summary { margin: 0% 5%;}
 
-/* Remove underlines from anchors */
+.release-logs nav ul li { padding: 5% 0; }
+
+/* Removes underlines from anchors */
 a {
     text-decoration: none;
     color: inherit;
 }
 
 /* itch.io iframe */
-iframe {
-    margin-top: 3%;
-}
+iframe { margin-top: 3%; }
 
+/*
+    There are only 2 h3s using this tag:
+    "Play the Web Version"
+    "The web version is not supported."
+*/
 h3 {
     padding-top: 3%;
     padding-bottom: 2%;
@@ -78,26 +90,33 @@ h3 {
     transition: all ease 0.3s;
 }
 
+/* Link to the project web version. */
 .widget-container h3:hover { color: #5663f0; }
 
+/* Release Logs are currently unused. */
 .release-logs h2 { transition: all ease 0.3s; }
 
 .release-logs h2:hover { color: #924af1; }
 
 /* Desktop UI ---------------------------------------------------------------------------------- */
 @media(min-width: 701px) {
+    
+    /* Title Image. Substitutes for an h2 title. */
     .project-links img {
         width: 50%;
     }
     
-    .project { padding: 5% 0; }
+    /* An individual project. */
+    .project { padding: 5% 0%; }
     
+    /* Default title text of a project. */
     .project-links h2 {
         color: white;
         font-size: 4.36vw;
         padding: 2%;
     }
 
+    /* The project download iframe. */
     .widget {
         width: 39vw;
         height: 9.5vw;
@@ -107,23 +126,29 @@ h3 {
 /* Mobile UI ----------------------------------------------------------------------------------- */
 
 @media(max-width: 700px) {
+
+    /* Title image. Substitutes for an h2 title. */
     .project-links img { width: 90%; }
 
+    /* Default title text of a project. */
     .project-links h2 {
         color: white;
         font-size: 36px;
         line-height: 120%;
     }
 
+    /* li container for a project. */
     .project-links li { padding: 15% 2%; }
 
     .release-logs h2 { font-size: 36px; }
 
+    /* The project download iframe. */
     .widget {
         width: 70vw;
         height: 30vw;
     }
 
+    /* Text that appears whent the WebGL build is unavailable. */
     #not-available {
         margin: 5%;
         line-height: 125%;
