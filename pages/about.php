@@ -15,14 +15,14 @@
         <img id="zoom-in" src="" alt="">
 
         <div class="about-general">
-            <h1 class="gradient blur v1">About Us</h1>
+            <h1>About Us</h1>
             <p>Lunarflame Studios is an independent game studio founded in 2023.</p>
             <img class="page-image gallery-img" src="../images/PL_SS_1.png" alt="">
             <p>Our studio strives to create games with thought-provoking stories, immersion for countless audiences,
                 foster artistic expression, and have fun while doing it all.</p>
         </div>
         <hr>
-        <h1 class="gradient blur v2">Developers</h1><br><br>
+        <h1>Developers</h1><br><br>
         <div class="about-devs">
             <div class="about-dev phantom">
                 <div class="text-group">

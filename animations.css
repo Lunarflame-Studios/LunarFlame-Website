@@ -53,6 +53,8 @@
     animation: lights 5s 750ms linear infinite;
  }
 
+ /*--------------------------------------------------------------------------------------------- */
+
  @keyframes background {
   0% { background-position: -300% 100%; }
   100% { background-position: 100% -300%; }
@@ -66,39 +68,7 @@
   outline-offset: 5px;
  }
 
- /*-----------------------------------------------------------------------------------------------------------------*/
-
-.center { margin: 0 auto;}
-
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typewriter 3s steps(50) 0.5s 1 normal both;
-}
-
-.typewriter-right {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typewriter-right 3s steps(50) 0.5s 1 normal both;
-  direction: rtl;
-  text-align: right;
-}
-
-.animate { animation-play-state: running; }
-
-.typewriter.paused { animation: none; }
-
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes typewriter-right {
-  from { width: 100%; }
-  to { width: 0; }
-}
-
-/*-----------------------------------------------------------------------------------------------------------------*/
+ /*--------------------------------------------------------------------------------------------- */
 
 .gradient {
   background-size: 200% auto;

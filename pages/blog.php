@@ -14,7 +14,7 @@
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
-        <h1 class="gradient blur v3">Latest Posts</h1>
+        <h1>Latest Posts</h1>
         <a id="subscribe" href="../rss.xml"><h4>Subscribe!</h4></a>
 
         <div class="recent-body">
@@ -78,7 +78,7 @@
         </div>
         <hr id="spacing">
 
-        <h1 class="gradient blur v1">All Posts</h1>
+        <h1>All Posts</h1>
 
         <div class="blog-body">
 

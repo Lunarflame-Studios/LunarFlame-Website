@@ -14,7 +14,7 @@
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
-        <h1 class="gradient blur v5">Projects</h1>
+        <h1>Projects</h1>
         <p>A collection of LunarFlame Studios' current projects.</p>
         <div class="project-links">
             <nav>
