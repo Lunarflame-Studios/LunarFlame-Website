@@ -51,7 +51,7 @@
 
     </section>
 
-    <!--<?php require('pages/partials/copyright.php') ?>-->
+    <?php require('pages/partials/copyright.php') ?>
 
     <script src="javascript/background.js"></script>
     <script src="javascript/home.js" defer></script>

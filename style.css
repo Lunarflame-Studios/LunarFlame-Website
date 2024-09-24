@@ -105,6 +105,7 @@
     transition: 1s;
 }
 
+/* Container for all elements that are center aligned on the screen. */
 .center-container {
     position: fixed;
     top: 50%;
@@ -114,6 +115,7 @@
     align-items: center;
 }
 
+/* Circles on the Home Page. */
 .circle {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -201,6 +203,8 @@
 
 /* div container for copyright section */
 .copyright {
+    position: relative;
+    z-index: 5;
     background-color: black;
     text-align: right;
     padding: 15px;
