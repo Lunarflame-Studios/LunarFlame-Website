@@ -36,6 +36,6 @@ function nextSlide() {
     changeBackground();
 }
 
-setInterval(nextSlide, 5000);
+/*setInterval(nextSlide, 5000);
 
-changeBackground();
+changeBackground();*/
