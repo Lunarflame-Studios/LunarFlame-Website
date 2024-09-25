@@ -7,9 +7,11 @@
 </head>
 
 <body>
-    <section id="home-background" class="home-header">
+    <section class="home-header background">
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
+
+        <div id="fade-out-sub"></div>
 
         <nav id="subheader-nav">
             <a href="index.php"><img src="images/Lunarflame_Logo.png"></a>
@@ -49,11 +51,12 @@
             </div>
         </div>
 
+        <div id="fade-out-all"></div>
+
     </section>
 
     <?php require('pages/partials/copyright.php') ?>
 
-    <script src="javascript/background.js"></script>
     <script src="javascript/home.js" defer></script>
     <?php require('pages/partials/javascript.php') ?>
 

@@ -1,3 +1,26 @@
+const fadeOutMain = document.querySelector('#fade-out-all');
+const mainHeader = document.querySelector('.home-header');
+
+let backgroundOpacity = 0.8;
+
+function fadeOut(element, delay) {
+    element.style.backgroundColor = `rgba(0, 0, 0, ${backgroundOpacity})`;
+
+    if (backgroundOpacity > 0) {
+        setTimeout(() => {
+            backgroundOpacity -= 0.05;
+            fadeOut(element, delay);
+        }, delay);
+    }
+}
+
+if (fadeOutMain !== null) {
+    setTimeout(() => {
+        fadeOut(fadeOutMain, 50);
+        mainHeader.style.backgroundImage = 'url(images/Background.png)';
+    }, 500)
+}
+
 const styleSheet = Array.from(document.styleSheets).find(
     styleSheet => styleSheet.href && styleSheet.href.includes('animations.css'));
 
@@ -71,11 +94,11 @@ function applyBlurAnimation() {
             }
             `;
 
-            if (styleSheet) {
-                styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-            }
+        if (styleSheet) {
+            styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+        }
 
-            element.style.animation = 'dynamic-blur-color-' + gradientNumber + ' infinite 12s';
+        element.style.animation = 'dynamic-blur-color-' + gradientNumber + ' infinite 12s';
 
     })
 }
@@ -91,3 +114,4 @@ function combineAnimations() {
 }
 
 combineAnimations();
+

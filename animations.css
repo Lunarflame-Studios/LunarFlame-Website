@@ -148,6 +148,16 @@
 
 /* Home Page Animations */
 
+#fade-out-all, #fade-out-sub {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
 #subheader-nav {
   z-index: 2;
   position: relative;
@@ -171,7 +181,7 @@
   opacity: 1;
 
   animation-name: ui-frame;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
@@ -188,7 +198,7 @@
 
 #center-circle {
   animation-name: center-circle;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
@@ -245,7 +255,7 @@
     transform: translate(-50%, -50%) scale(0.4);
   }
 
-  60% { transform: translate(-50%, -50%) scale(0.4); }
+  /*60% { transform: translate(-50%, -50%) scale(0.4); } */
 
   75% { transform: translate(-50%, -50%) scale(1); }
 
