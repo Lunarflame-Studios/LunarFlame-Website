@@ -18,6 +18,8 @@ function nextSlide() {
     changeBackground();
 }
 
+let fadeOutTriggered = false;
+
 function fadeBackground(element, delay, targetOpacity) {
     element.style.backgroundColor = `rgba(0, 0, 0, ${elementOpacity})`;
 
@@ -35,11 +37,16 @@ function fadeBackground(element, delay, targetOpacity) {
         }, delay);
     }
 
-    if (elementOpacity >= 1) {
+    if (elementOpacity >= 1 && targetOpacity == 1 && !fadeOutTriggered) {
+        fadeOutTriggered = true;
         setTimeout(nextSlide, 50);
         setTimeout(() => {
-            fadeBackground(element, delay, 0);
-        }, 500);
+            fadeBackground(element, delay, 0); // Trigger fade-out animation
+        }, 50);
+    }
+
+    if (elementOpacity <= 0 && targetOpacity == 0) {
+        fadeOutTriggered = false; // Reset flag
     }
 }
 
