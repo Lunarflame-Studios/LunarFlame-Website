@@ -8,10 +8,10 @@
         <h1>Quick Links</h1>
         <div class="nav-links footer" id="navLinks">
             <ul>
-                <li><a href="/index.php">HOME</a></li>
-                <li><a href="/pages/about.php">ABOUT</a></li>
-                <li><a href="/pages/projects.php">PROJECTS</a></li>
-                <li><a href="/pages/blog.php">BLOG</a></li>
+                <li><a class="hover-effect light-blue" href="/index.php">HOME</a></li>
+                <li><a class="hover-effect purple" href="/pages/about.php">ABOUT</a></li>
+                <li><a class="hover-effect blue" href="/pages/projects.php">PROJECTS</a></li>
+                <li><a class="hover-effect pink" href="/pages/blog.php">BLOG</a></li>
             </ul>
         </div>
     </div>
