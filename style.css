@@ -304,6 +304,8 @@
 
 /* Other --------------------------------------------------------------------------------------- */
 
+.typewriter-v2 span { display: none; }
+
 /* Gives any element a slight top margin*/
 .margin-top { margin-top: 4%; }
 
