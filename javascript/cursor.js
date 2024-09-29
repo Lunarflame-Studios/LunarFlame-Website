@@ -1,7 +1,6 @@
 var pointer = document.getElementById('pointer');
 
 var panner = document.getElementById('panner');
-var hammertime = new Hammer(panner);
 
 window.limit_x = () => window.innerWidth - pointer.offsetWidth;
 

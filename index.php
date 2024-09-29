@@ -13,7 +13,7 @@
 
         <div id="fade-out-sub"></div>
 
-        <nav id="subheader-nav">
+        <nav id="home-header-nav">
             <a href="index.php"><img src="images/Lunarflame_Logo.png"></a>
             <div class="nav-links header" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>

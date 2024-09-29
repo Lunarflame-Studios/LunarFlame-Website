@@ -17,7 +17,7 @@
         <img id="zoom-in" src="" alt="">
 
         <div class="about-general">
-            <h1 class="typewrite" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
+            <h1 class="typewrite gradient v3" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
                 <span class="wrap">&#8203;</span>
             </h1>
 
@@ -35,7 +35,7 @@
 
         <hr>
 
-        <h1 class="typewriter-v2"> &#8203;
+        <h1 class="typewriter-v2 gradient v2"> &#8203;
             <span>Developers</span>
         </h1>
 

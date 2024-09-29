@@ -133,6 +133,10 @@
 
 /* Home Page Animations */
 
+/* fade-out-all is used in the initial fade-out animation.
+ * fade-out-sub is placed underneath all other elements, and is used in all subsequent fade-outs.
+ */
+
 #fade-out-all, #fade-out-sub {
   width: 100vw;
   height: 100vh;
@@ -143,7 +147,8 @@
   top: 0;
 }
 
-#subheader-nav {
+/* Top Menu area, containing the logo and nav links. */
+#home-header-nav {
   z-index: 2;
   position: relative;
 
@@ -154,6 +159,7 @@
   animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
 }
 
+/* The UI Frame image that appears in the background. */
 #ui-frame {
   position: absolute;
   z-index: 0;
@@ -170,6 +176,7 @@
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
+/* The main text content of the home page. */
 #main-content {
   opacity: 1;
   position: relative;
@@ -181,18 +188,21 @@
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
+/* The 3 inner circles in the center of the screen view. */
 #center-circle {
   animation-name: center-circle;
   animation-duration: 2.5s;
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
+/* The 3 outer concentric circles centered on the screen view. */
 #outer-circle {
   animation-name: outer-circle;
   animation-duration: 8s;
   animation-timing-function: cubic-bezier(0.33, 0, 0.68, 1);
 }
 
+/* Circles 4, 5, and 6 are the outer circles. */
 #circle-v4 {
   transform-origin: center;
   transform: translate(-50%, -50%) scale(1.1);
@@ -208,6 +218,7 @@
   transform: translate(-50%, -50%) scale(2);
 }
 
+/* Apply infinite rotation animations to all circles. */
 #circle-v1 img { animation: clockwise 5s linear infinite; }
 #circle-v2 img { animation: counterclockwise 6s linear infinite; }
 #circle-v3 img { animation: clockwise 5.5s linear infinite; }
@@ -216,9 +227,7 @@
 #circle-v6 img { animation: clockwise 150s linear infinite; }
 
 @media(max-width: 700px) {
-  #circle-v6 {
-    display: none;
-  }
+  #circle-v6 { display: none; }
 }
 
 @keyframes subheader-nav {
@@ -285,6 +294,12 @@
 @keyframes counterclockwise {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
+}
+
+@media (max-width: 700px) {
+  #ui-frame {
+    display: none;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -474,9 +489,6 @@
   line-height: 150px;
   text-align: center;
   margin: 3em auto;
-  &.panning {
-    box-shadow: 0 5px 20px 0 transparentize(darken(#333, 10%), 0.6);
-  }
 }
 
 #pointer {
@@ -504,6 +516,11 @@
     outline-offset: 10px;
     outline-color: transparent;
   }
+}
+
+@media(max-width: 700px) {
+  #panner { display: none; }
+  #pointer { display: none; }
 }
 
 /* --------------------------------------------------------------------------------------------- */
