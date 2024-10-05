@@ -2,13 +2,13 @@
 <html>
 
 <head> 
-    <?php require('partials/header.php')?>
+    <?php require('../partials/header.php')?>
     <title>Projects</title>
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="projects/projects.css">
 </head>
 
 <body>
-    <?php require('partials/sub-header.php')?>
+    <?php require('../partials/sub-header.php')?>
 
     <section class="page-body">
         <div id="overlay"></div>
@@ -19,7 +19,7 @@
         <div class="project-links">
             <nav>
                 <ul>
-                    <a href="project-leo.php"><li id="project-leo" class="project">
+                    <a href="/pages/projects/project-leo"><li id="project-leo" class="project">
                         <h2>Project Leo</h2>
                     </li></a>
                     <br>
@@ -28,10 +28,10 @@
         </div>
     </section>
 
-    <?php require('partials/sub-footer.php')?>
-    <?php require('partials/copyright.php')?>
+    <?php require('../partials/sub-footer.php')?>
+    <?php require('../partials/copyright.php')?>
 
-    <?php require('partials/javascript.php')?>
+    <?php require('../partials/javascript.php')?>
 </body>
 
 </html>

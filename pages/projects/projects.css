@@ -41,7 +41,7 @@
 .project h2 { min-width: 50vw; }
 
 /* Background Image for Project Leo. */
-#project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(../images/PL_SS_5.png); }
+#project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(/images/PL_SS_5.png); }
 
 /*TEST !!!*/
 .page-body p {
@@ -120,6 +120,10 @@ h3 {
     .widget {
         width: 39vw;
         height: 9.5vw;
+    }
+
+    .project-leo-summary {
+        padding-bottom: 5%;
     }
 }
 

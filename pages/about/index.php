@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <?php require('partials/header.php')?>
+    <?php require('../partials/header.php')?>
     <title>About Us</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about/about.css">
 </head>
 
 <body>
-    <?php require('partials/sub-header.php')?>
+    <?php require('../partials/sub-header.php')?>
 
     <!-- &#8203; is an empty ACSII character. -->
 
@@ -93,10 +93,10 @@
         </div>
     </section>
 
-    <?php require('partials/sub-footer.php')?>
-    <?php require('partials/copyright.php')?>
+    <?php require('../partials/sub-footer.php')?>
+    <?php require('../partials/copyright.php')?>
 
-    <?php require('partials/javascript.php')?>
+    <?php require('../partials/javascript.php')?>
 </body>
 
 </html>
