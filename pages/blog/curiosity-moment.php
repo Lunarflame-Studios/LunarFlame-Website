@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require('../../../partials/header.php')?>
+        <?php require('../partials/header.php')?>
         <title>My Curiosity Moment - Blog</title>
-        <link rel="stylesheet" href="../blog-page.css">
-        <link rel="stylesheet" href="../blog-main.css">
+        <link rel="stylesheet" href="blog-page.css">
+        <link rel="stylesheet" href="../blog.css">
     </head>
     <body>
 
-        <?php require('../../../partials/sub-header.php')?>
+        <?php require('../partials/sub-header.php')?>
         
         <section class="page-body">
             <div id="overlay"></div>
@@ -26,7 +26,7 @@
             <div class="blog-pageBody">
                 <p id="description">I believe that video games are the future of storytelling. Here's why.</p>
                 <br><br>
-                <img class="page-image gallery-img" id="image" src="/images/Horizon_Skyline_1.png" alt="">
+                <img class="page-image gallery-img" id="image" src="../../images/Horizon_Skyline_1.png" alt="">
                 <div>
                     <h2 id="subheader">1. You are part of the story.</h2>
                     <p class="margin-top">Books and movies can do good jobs establishing worlds and giving them life. But I think that video games excel here by making you a part of the world. You control a character, and you interact with other characters and the world around you. The stakes are more intense because now you want to preserve the world that you are so immersed in. You want to become stronger, explore, and discover more about the world through your own observations.</p>
@@ -39,13 +39,13 @@
                     <p>This is one of my favorite series of all time. The 3 games span across 2 universes, and detail the struggles of different groups of characters as they fight against a pre-determined fate and discover the meaning of human existence. </p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/Xenoblade-Chronicles-Shulk.png" alt="">
-                        <img class="gallery-img" src="/images/blog/pyra-rex-xenoblade-2.png" alt="">
-                        <img class="gallery-img" src="/images/blog/Xenoblade_Chronicles_3_combat_1.0.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/xenoblade_1.png" alt="">
-                        <img class="gallery-img" src="/images/blog/xeno_3_mio.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/xeno_3_noah_mio.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/orobouros.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/Xenoblade-Chronicles-Shulk.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/pyra-rex-xenoblade-2.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/Xenoblade_Chronicles_3_combat_1.0.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/xenoblade_1.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/xeno_3_mio.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/xeno_3_noah_mio.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/orobouros.jpg" alt="">
                     </div>
                 </div>
 
@@ -61,10 +61,10 @@
                     <p>NieR: Automata is an open-world game set in a post-apocalyptic Earth that has been taken over by aliens and their force of machines. A special squadron of androids, known as YorHa, is tasked with defeating them. NieR: Automata is famous for having 26 different endings. However, only 5 of those endings are canonical. The rest are a result of the player choosing or failing to complete important story objectives.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/NieR_1.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_automata_1.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_automata_2.png" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_gameplay.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/NieR_1.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/nier_automata_1.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/nier_automata_2.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/nier_gameplay.jpg" alt="">
                     </div>
                 </div>
 
@@ -80,10 +80,10 @@
                     <p>Persona 5 takes place in Tokyo, Japan, and centers around a high-school student who goes by the codename "Joker." His reputation was ruined after being falsely accused of a crime. After discovering a world called the Metaverse, where the corrupted cognitions of people manifest, he uncovers a special power known as a Persona. He forms a group called the Phantom Thieves of Hearts, Persona-users who traverse the metaverse and defeat the shadows of the malevolent adults to make them repent for their sins in the real world.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/P5R_gang.png" alt="">
-                        <img class="gallery-img" src="/images/blog/persona5battle.png" alt="">
-                        <img class="gallery-img" src="/images/blog/P5R_joker.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/persona5ui.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/P5R_gang.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/persona5battle.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/P5R_joker.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/persona5ui.jpg" alt="">
                     </div>
                 </div>
 
@@ -101,12 +101,12 @@
                     </p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/Ori_scene.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene.png" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene_2.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene_3.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/ori_naru.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/ori_naru_2.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/Ori_scene.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/OWW_scene.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/OWW_scene_2.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/OWW_scene_3.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/ori_naru.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/ori_naru_2.jpg" alt="">
                     </div>
                 </div>
 
@@ -123,10 +123,10 @@
                     <p>Minecraft is an open-world sandbox game in which the entire world is made of blocks. Players can choose to play in Creative Mode, where they have unlimited building materials and completely free movement, or Survival Mode, where players must gather materials, food, and tools, survive against monsters, and traverse different dimensions.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/The_End_-_Outer_Islands.png" alt="">
-                        <img class="gallery-img" src="/images/blog/MonumentOcean1.png" alt="">
-                        <img class="gallery-img" src="/images/blog/minecraft_stronghold.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nether_fortress.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/The_End_-_Outer_Islands.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/MonumentOcean1.png" alt="">
+                        <img class="gallery-img" src="../../images/blog/minecraft_stronghold.jpg" alt="">
+                        <img class="gallery-img" src="../../images/blog/nether_fortress.png" alt="">
                     </div>
                 </div>
 
@@ -135,13 +135,13 @@
             </div>
 
             <hr>
-            <?php require('../../../partials/recent-posts.php')?>
+            <?php require('../partials/recent-posts.php')?>
 
         </section>
 
-        <?php require('../../../partials/sub-footer.php')?>
-        <?php require('../../../partials/copyright.php')?>
+        <?php require('../partials/sub-footer.php')?>
+        <?php require('../partials/copyright.php')?>
 
-        <?php require('../../../partials/javascript.php')?>
+        <?php require('../partials/javascript.php')?>
     </body> 
 </html>

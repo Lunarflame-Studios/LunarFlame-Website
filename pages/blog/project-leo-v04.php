@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require('../../../partials/header.php')?>
+        <?php require('../partials/header.php')?>
         <title>Play Project Leo v0.4</title>
-        <link rel="stylesheet" href="../blog-page.css">
-        <link rel="stylesheet" href="../blog-main.css">
+        <link rel="stylesheet" href="blog-page.css">
+        <link rel="stylesheet" href="../blog.css">
     </head>
     <body>
-        <?php require('../../../partials/sub-header.php')?>
+        <?php require('../partials/sub-header.php')?>
 
         <section class="page-body">
             <div id="overlay"></div>
@@ -72,13 +72,13 @@
 
             <br><br>
             <hr>
-            <?php require('../../../partials/recent-posts.php')?>
+            <?php require('../partials/recent-posts.php')?>
             
         </section>
 
-        <?php require('../../../partials/sub-footer.php')?>
-        <?php require('../../../partials/copyright.php')?>
+        <?php require('../partials/sub-footer.php')?>
+        <?php require('../partials/copyright.php')?>
 
-        <?php require('../../../partials/javascript.php')?>
+        <?php require('../partials/javascript.php')?>
     </body>
 </html>

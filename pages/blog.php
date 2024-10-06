@@ -2,27 +2,27 @@
 <html>
 
 <head>
-    <?php require('../partials/header.php') ?>
+    <?php require('partials/header.php') ?>
     <title>Blog</title>
-    <link rel="stylesheet" href="blog/blog-main.css">
+    <link rel="stylesheet" href="blog.css">
 </head>
 
 <body>
-    <?php require('../partials/sub-header.php')?>
+    <?php require('partials/sub-header.php')?>
 
     <section class="page-body">
         <div id="overlay"></div>
         <img id="zoom-in" src="" alt="">
 
         <h1>Latest Posts</h1>
-        <a id="subscribe" href="/rss.xml"><h4>Subscribe!</h4></a>
+        <a id="subscribe" href="../rss.xml"><h4>Subscribe!</h4></a>
 
         <div class="recent-body">
 
             <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -41,7 +41,7 @@
             <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -60,7 +60,7 @@
             <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -85,7 +85,7 @@
             <div class="blog-box" id="blog-box-1">
                 <a id="link" href="">
                     <div class="blog-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="../images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="blog-text">
                         <h2 id="category">Category</h2>
@@ -106,10 +106,10 @@
 
     <script src="/javascript/blog.js"></script>
     
-    <?php require('../partials/sub-footer.php')?>
-    <?php require('../partials/copyright.php')?>
+    <?php require('partials/sub-footer.php')?>
+    <?php require('partials/copyright.php')?>
 
-    <?php require('../partials/javascript.php')?>
+    <?php require('partials/javascript.php')?>
 
 </body>
 
