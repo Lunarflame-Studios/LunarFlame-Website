@@ -3,7 +3,7 @@
 <head>
     <?php require('../../partials/header.php')?>
     <title>Project Leo</title>
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="/pages/projects/projects.css">
 </head>
 <body>
     <?php require('../../partials/sub-header.php')?>

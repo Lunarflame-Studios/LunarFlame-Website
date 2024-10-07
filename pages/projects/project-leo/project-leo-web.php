@@ -4,7 +4,7 @@
 <head>
     <?php require('../../partials/header.php') ?>
     <title>Project Leo (Browser)</title>
-    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="/pages/projects/projects.css">
 </head>
 
 <body>

@@ -4,7 +4,7 @@
 <head>
     <?php require('../partials/header.php')?>
     <title>About Us</title>
-    <link rel="stylesheet" href="about/about.css">
+    <link rel="stylesheet" href="/pages/about/about.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 <span>Lunarflame Studios is an independent game studio founded in 2023.</span>
             </p>
 
-            <img class="page-image gallery-img offset-border" src="../images/PL_SS_1.png" alt="">
+            <img class="page-image gallery-img offset-border" src="/images/PL_SS_1.png" alt="">
 
             <p class="typewriter-v2"> &#8203;
                 <span>Our studio strives to create games with thought-provoking stories, immersion for countless audiences,
@@ -63,7 +63,7 @@
                         I began this project because I wanted to create my own story to tell to the world."</p>
                     <a href="" class="hero-btn">Read More</a>
                 </div>
-                <div class="pfp-phantom"><img src="../images/adri_pfp.jpg" alt=""></div>
+                <div class="pfp-phantom"><img src="/images/adri_pfp.jpg" alt=""></div>
             </div>
             <div class="about-dev kapeepa">
                 <div class="text-group">
@@ -87,7 +87,7 @@
                     </p>
                     <a href="" class="hero-btn">Read More</a>
                 </div>
-                <div class="pfp-kapeepa"><img src="../images/dan_pfp.png" alt=""></div>
+                <div class="pfp-kapeepa"><img src="/images/dan_pfp.png" alt=""></div>
             </div>
             <br><br>
         </div>

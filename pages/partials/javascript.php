@@ -1,7 +1,7 @@
 <div id="panner" data-cursor="stretch" class="panner"></div>
 <div id="pointer"></div>
 
-<script src="/assets/js/hammer.min.js"></script>
+<!--<script src="/assets/js/hammer.min.js"></script>-->
 <script src="/assets/js/tweenmax.min.js"></script>
 
 <script src="/javascript/typewrite.js"></script>
