@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require('../partials/header.php')?>
+        <?php require('../../../partials/header.php')?>
         <title>Play Project Leo v0.45</title>
-        <link rel="stylesheet" href="blog-page.css">
-        <link rel="stylesheet" href="../blog.css">
+        <link rel="stylesheet" href="../blog-page.css">
+        <link rel="stylesheet" href="../blog-main.css">
     </head>
     <body>
-        <?php require('../partials/sub-header.php') ?>
+        <?php require('../../../partials/sub-header.php') ?>
         
         <section class="page-body">
             <div id="overlay"></div>
@@ -26,7 +26,7 @@
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.45 is out! In preparation for v0.5 (which will hopefully be out later this year), we've prepared tons of new features, fixes, and other changes.</p>
                 <br><br>
-                <img class="page-image" id="image" src="../../images/PL_SS_5.png" alt="">
+                <img class="page-image gallery-img" id="image" src="/images/PL_SS_5.png" alt="">
                 <br><br>
 
                 <div>
@@ -84,13 +84,13 @@
             <br><br>
 
             <hr>
-            <?php require('../partials/recent-posts.php') ?>
+            <?php require('../../../partials/recent-posts.php') ?>
             
         </section>
 
-        <?php require('../partials/sub-footer.php')?>
-        <?php require('../partials/copyright.php')?>
+        <?php require('../../../partials/sub-footer.php')?>
+        <?php require('../../../partials/copyright.php')?>
 
-        <?php require('../partials/javascript.php')?>
+        <?php require('../../../partials/javascript.php')?>
     </body>
 </html>

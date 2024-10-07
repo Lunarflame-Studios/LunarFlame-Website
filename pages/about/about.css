@@ -54,7 +54,7 @@
 
 /*Adrian*/
 .phantom {
-    background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url("../images/Minimal.jpg");
+    background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url(/images/Minimal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,7 +62,7 @@
 
 /*Daniel*/
 .kapeepa {
-    background: linear-gradient(rgb(202, 210, 221, 0.5), rgb(75, 115, 151, 0.5)), url("../images/Nordic.jpg");
+    background: linear-gradient(rgb(202, 210, 221, 0.5), rgb(75, 115, 151, 0.5)), url(/images/Nordic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
