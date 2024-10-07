@@ -3,8 +3,8 @@
     <head>
         <?php require('../../../partials/header.php')?>
         <title>Hello World - Blog</title>
-        <link rel="stylesheet" href="../blog-page.css">
-        <link rel="stylesheet" href="../blog-main.css">
+        <link rel="stylesheet" href="/pages/blog/blog-page.css">
+        <link rel="stylesheet" href="/pages/blog/blog-main.css">
     </head>
     <body>
         <?php require('../../../partials/sub-header.php') ?>
