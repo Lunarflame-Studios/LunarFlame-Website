@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <?php require('../../../partials/header.php')?>
-        <title>Play Project Leo v0.45</title>
-        <link rel="stylesheet" href="/pages/blog/blog-page.css">
-        <link rel="stylesheet" href="/pages/blog/blog-main.css">
-    </head>
-    <body>
+
+<head>
+    <?php require('../../../partials/header.php') ?>
+    <title>Play Project Leo v0.45</title>
+    <link rel="stylesheet" href="/pages/blog/blog-page.css">
+    <link rel="stylesheet" href="/pages/blog/blog-main.css">
+</head>
+
+<body>
+    <div class="background">
         <?php require('../../../partials/sub-header.php') ?>
-        
+
         <section class="page-body">
             <div id="overlay"></div>
             <img id="zoom-in" src="" alt="">
@@ -32,13 +35,13 @@
                 <div>
                     <h2 id="subheader">Shop</h2>
                     <p class="margin-top">The elusive "Shop" submenu has now been given functionality. Here, players can use their accumulated currency to purchase various items that will assist them throughout the game.
-                        <br>Some can be used from the new "Inventory" submenu, while most others are used during runs. These items may be assigned to the E, R, and F keys in the settings menu. Information about 
+                        <br>Some can be used from the new "Inventory" submenu, while most others are used during runs. These items may be assigned to the E, R, and F keys in the settings menu. Information about
                         <br>costs, uses, durations, etc. are visible in the Shop Menu.
                     </p>
                     <br>
                     <p class="margin-top">So far, the Score Magnifier, Coin Multiplier, Coin Magnet, and HP Ampule are all fully implemented. The Anti-Nether Drone, Enhanced Coin Magnet,
-                            Midas Field, and Condensed Nether Core are fully functional, but unfortunately lack sprites. Check out the shop to see what they all do! Or mix and match them
-                            to create unique combos!
+                        Midas Field, and Condensed Nether Core are fully functional, but unfortunately lack sprites. Check out the shop to see what they all do! Or mix and match them
+                        to create unique combos!
                     </p>
                 </div>
 
@@ -49,7 +52,7 @@
                     </p>
                     <br>
                     <p class="margin-top">If you read "HP Ampule" in hte previous section and thought, "Wait, this game has no HP," then surprise, surprise, it does now! When missing a Nether Spawn,
-                        instead of decreasing the score multiplier like in v0.4, it now decreases the player's HP bar, which will briefly flash on the screen. Players start the game with 6 HP 
+                        instead of decreasing the score multiplier like in v0.4, it now decreases the player's HP bar, which will briefly flash on the screen. Players start the game with 6 HP
                         (3 hearts total), missing a Nether Spawn subtracts 2 HP (1 heart loss), and HP Ampules increase your base HP by 1 (1 half heart gained).
                     </p>
                 </div>
@@ -85,12 +88,14 @@
 
             <hr>
             <?php require('../../../partials/recent-posts.php') ?>
-            
+
         </section>
+    </div>
 
-        <?php require('../../../partials/sub-footer.php')?>
-        <?php require('../../../partials/copyright.php')?>
+    <?php require('../../../partials/sub-footer.php') ?>
+    <?php require('../../../partials/copyright.php') ?>
 
-        <?php require('../../../partials/javascript.php')?>
-    </body>
+    <?php require('../../../partials/javascript.php') ?>
+</body>
+
 </html>

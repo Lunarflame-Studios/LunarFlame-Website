@@ -71,6 +71,14 @@ const typewriterV2s = document.querySelectorAll('.typewriter-v2');
 
 let typeWriterValues = [];
 
+let timeoutId;
+
+function cancelTypewriterEffect(element) {
+    if (element.timeoutId) {
+        clearTimeout(element.timeoutId);
+    }
+}
+
 function applyTypewriterEffect(element, text, delay) {
     element.textContent = "";
     let i = 0;
@@ -79,7 +87,7 @@ function applyTypewriterEffect(element, text, delay) {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(typeCharacter, delay);
+            element.timeoutId = setTimeout(typeCharacter, delay);
         }
     }
 
@@ -92,7 +100,7 @@ function observeTypewriterElements(delay) {
             if (entry.isIntersecting) {
                 const element = entry.target;
                 const originalText = element.children[0].textContent.trim();
-                applyTypewriterEffect(element, originalText, delay);
+                applyTypewriterEffect(element, originalText, element.nodeName === 'P' ? delay : (delay * 5));
                 observer.unobserve(element);
             }
         });
@@ -104,5 +112,5 @@ function observeTypewriterElements(delay) {
 }
 
 setTimeout(() => {
-    observeTypewriterElements(40);
+    observeTypewriterElements(35);
 }, 1000);

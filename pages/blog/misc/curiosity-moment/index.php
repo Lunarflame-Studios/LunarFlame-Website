@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <?php require('../../../partials/header.php')?>
-        <title>My Curiosity Moment - Blog</title>
-        <link rel="stylesheet" href="/pages/blog/blog-page.css">
-        <link rel="stylesheet" href="/pages/blog/blog-main.css">
-    </head>
-    <body>
 
-        <?php require('../../../partials/sub-header.php')?>
-        
+<head>
+    <?php require('../../../partials/header.php') ?>
+    <title>My Curiosity Moment - Blog</title>
+    <link rel="stylesheet" href="/pages/blog/blog-page.css">
+    <link rel="stylesheet" href="/pages/blog/blog-main.css">
+</head>
+
+<body>
+    <div class="background">
+        <?php require('../../../partials/sub-header.php') ?>
+
         <section class="page-body">
             <div id="overlay"></div>
             <img id="zoom-in" src="" alt="">
@@ -135,13 +137,15 @@
             </div>
 
             <hr>
-            <?php require('../../../partials/recent-posts.php')?>
+            <?php require('../../../partials/recent-posts.php') ?>
 
         </section>
+    </div>
 
-        <?php require('../../../partials/sub-footer.php')?>
-        <?php require('../../../partials/copyright.php')?>
+    <?php require('../../../partials/sub-footer.php') ?>
+    <?php require('../../../partials/copyright.php') ?>
 
-        <?php require('../../../partials/javascript.php')?>
-    </body> 
+    <?php require('../../../partials/javascript.php') ?>
+</body>
+
 </html>

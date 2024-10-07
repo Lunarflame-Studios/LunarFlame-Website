@@ -1,6 +1,6 @@
-var pointer = document.getElementById('pointer');
+var pointer = document.querySelector('.pointer');
 
-var panner = document.getElementById('panner');
+var panner = document.querySelector('.panner');
 
 window.limit_x = () => window.innerWidth - pointer.offsetWidth;
 

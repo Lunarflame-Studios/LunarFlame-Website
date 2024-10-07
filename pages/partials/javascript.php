@@ -1,5 +1,5 @@
-<div id="panner" data-cursor="stretch" class="panner"></div>
-<div id="pointer"></div>
+<div class="panner" data-cursor="stretch"></div>
+<div class="pointer"></div>
 
 <!--<script src="/assets/js/hammer.min.js"></script>-->
 <script src="/assets/js/tweenmax.min.js"></script>

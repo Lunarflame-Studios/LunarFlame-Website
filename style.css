@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: montserrat;
-
-    cursor: none;
 }
 
 /* Make Montserrat the default font for all pages. */
@@ -35,6 +33,14 @@
 
 /*Lunarflame Logo Image*/
 .sub-header nav img, .home-header nav img { width: 28.125vw; }
+
+.sub-header-background {
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+}
+
+.page-body-background {
+    background-image: linear-gradient(#00021F, #020131);
+}
 
 /* Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)  */
 .nav-links, .social-links { flex: 1; }
@@ -89,16 +95,17 @@
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    padding: 12px 34px;
+    padding: 1.15vw 3.75vw;
     font-size: 1.4vw;
     background: transparent;
     position: relative;
 }
 
 /* Hero Button gets a background fill-in when hovered over. */
-.hero-btn:hover {
+.hero-btn:hover { transition: 1s; }
+
+.hero-btn.main:hover {
     background: linear-gradient(0.25turn, #7403C07E, #4B0DBE79);
-    transition: 1s;
 }
 
 /* Container for all elements that are center aligned on the screen. */
@@ -126,14 +133,9 @@
 
 /* Header, Footer, and General Structure ------------------------------------------------------- */
 
-.sub-header { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png); }
-
-/* Gives a dark blue gradient to every page with content. */
-.page-body {
-    background: linear-gradient(#00021f, #020131);
-    width: 100%;
-    min-height: 70vh;
-    text-align: center;
+.background {
+    position: relative;
+    background-image: linear-gradient(#130A44, #040511 20%);
 }
 
 /*Primary Titles*/
@@ -418,9 +420,16 @@
     /* Nav Links icons turn pink when hovered over. */
     .nav-links a:hover { color: #eb96f7; }
 
+    /* Gives a dark blue gradient to every page with content. */
+    .page-body {
+        width: 100%;
+        min-height: 70vh;
+        text-align: center;
+    }
+
     /*Primary Titles*/
     .page-body h1 {
-        font-size: 8vw;
+        font-size: 7.5vw;
         padding-top: 10%;
     }
 
@@ -449,6 +458,18 @@
 
 @media(min-width: 701px) {
 
+    * {
+        cursor: none;
+        scrollbar-color: #0A52F2 #03002e;
+    }
+
+    /* Gives a dark blue gradient to every page with content. */
+    .page-body {
+        width: 100%;
+        min-height: 78vh;
+        text-align: center;
+    }
+
     /* Hide sidebar on desktop view */
     .sub-header nav .fa, .home-header nav .fa { display: none; }
 
@@ -474,4 +495,50 @@
         background-color: #2b005c;
         box-shadow: 0px 0px 50px #00000000;
     }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.panner {
+  position: fixed;
+  left: calc(50% - 75px);
+  background: lighten(#333, 10%);
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  margin: 3em auto;
+}
+
+.pointer {
+  content: '';
+  background: white;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: fixed;
+  z-index: 1010;
+  display: block;
+  outline-color: white;
+  outline-style: solid;
+  outline-width: 2px;
+  animation: cursor 1s infinite;
+  box-shadow: 0px 0px 20px white;
+  pointer-events: none;
+}
+
+@keyframes cursor {
+  from {
+    outline-offset: 0px;
+  }
+
+  to {
+    outline-offset: 10px;
+    outline-color: transparent;
+  }
+}
+
+@media(max-width: 700px) {
+  .panner { display: none; }
+  .pointer { display: none; }
 }

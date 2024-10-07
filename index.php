@@ -30,7 +30,7 @@
         <div id="main-content" class="text-box">
             <h1 class="light-effect">Welcome to LunarFlame Studios</h1>
             <p>We strive to create fun and innovative stories.</p>
-            <a href="pages/projects/project-leo" class="button pulse hero-btn">Play Project Leo</a>
+            <a href="/pages/projects/project-leo" class="button pulse hero-btn main">Play Project Leo</a>
         </div>
 
         <div class="center-container">

@@ -1,201 +1,419 @@
-/*General About Us Info*/
-.about-general p {
-    padding-top: 2%;
-    padding-bottom: 2%;
+/* General About Us Info*/
+
+.about-general #flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-/*Container for list of devs*/
-.about-devs {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+.about-general-text hr {
+    position: absolute;
+    top: 50%;
+    left: 11%;
 }
 
-/*Name*/
-.about-dev h2 {
-    color: #d883ff;
-    font-size: 3.9vw;
-    padding-bottom: 2%;
+.about-general img { width: 45%; }
+
+/* --------------------------------------------------------------------------------------------- */
+
+.button.raise:hover {
+    background: linear-gradient(0.25turn, #C10A0A7A, #5401017A);
 }
-
-/*Quote*/
-.about-dev h3 {
-    color: #cbbcff;
-    font-size: 2.1vw;
-    line-height: 150%;
-    padding-top: 5%;
-}
-
-/*Nicknames*/
-.about-dev h4 {
-    color: white;
-    font-size: 1.69vw;
-    padding-bottom: 8%;
-}
-
-/* Roles */
-.about-dev h5 {
-    color: #f3bafd;
-    font-size: 2vw;
-    padding-top: 3%;
-
-}
-
-/*Text is part of .about-body p, listed in style.css*/
-
-/* Horizontal Line in an about-dev block. */
-.about-dev hr {
-    width: 8.43vw;
-    border: 3px solid #f3bafd;
-    margin: 20px auto;
-    position: relative;
-}
-
-/*Adrian*/
-.phantom {
-    background: linear-gradient(rgb(39, 27, 41, 0.5), rgb(206, 54, 101, 0.5)), url(/images/Minimal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-/*Daniel*/
-.kapeepa {
-    background: linear-gradient(rgb(202, 210, 221, 0.5), rgb(75, 115, 151, 0.5)), url(/images/Nordic.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.kapeepa h2 { color: #7a18a7; }
-
-.kapeepa h5 { color: #c447da; }
 
 /* Desktop UI ---------------------------------------------------------------------------------- */
+
 @media(min-width: 701px) {
 
-    /* Individual dev box */
-    .about-dev {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        column-gap: 25%;
-        text-align: left;
-        padding: 5% 10%;
+    .dev-boxes { display: none; }
+
+    .about-general-text {
+        width: 45%;
+        transform: translateY(15%);
     }
 
-    /* Reverse the alignment of every odd dev box. */
-    .about-dev:nth-child(odd) {
-        flex-direction: row-reverse;
-        padding: 5% 10%;
+    .about-general p { padding: 5% 3%; }
+
+    /* Container for list of devs */
+    .about-devs {
+        padding: 20% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: -20%;
+    }
+
+    /* Name */
+    .about-devs h2 {
+        color: #3A5A7D;
+        font-size: 3.9vw;
+        position: absolute;
+        bottom: 86%;
+        left: 22%;
+    }
+
+    /* Roles */
+    .about-devs h3 {
+        color: #773F64;
+        font-size: 2vw;
+        position: absolute;
+        top: 82%;
+        left: 22.3%;
+    }
+
+    /* Nicknames */
+    .about-devs h4 {
+        color: #A6294F;
+        font-size: 1.7vw;
+        position: absolute;
+        top: 17%;
+        left: 22.3%;
+    }
+
+    /* Descriptions */
+    .about-devs p {
+        color: white;
+        font-size: 1.25vw;
+        position: absolute;
+        top: 28%;
+        left: 43.3%;
+        width: 33%;
         text-align: right;
     }
 
-    /* Div container for Phantom's pfp.  */
-    .pfp-phantom {
+    /* Horizontal Line */
+    .about-devs hr {
+        width: 8.5vw;
+        border: 3px solid #f3BAFD;
+        position: absolute;
+        top: 10%;
+        left: 67%;
+    }
+
+    /* Read More Button */
+    .about-devs a {
+        position: absolute;
+        top: 80%;
+        left: 60%;
+    }
+
+    .button { font-size: 1.5vw; }
+
+    .dev-slideshow { padding: 10% 0; }
+
+    /* Div container for the profile picture. */
+    .profile-pic {
         display: inline-block;
-        position: relative;
+        position: absolute;
         width: 15vw;
         height: 15vw;
-        min-width: 15vw;
-        min-height: 15vw;
         overflow: hidden;
         border-radius: 50%;
+        top: 28%;
+        left: 22%;
     }
 
-    /* Phantom's pfp image */
-    .pfp-phantom img {
+    /* Profile Picture Image Element */
+    .profile-pic img {
         width: auto;
-        height: 130%;
-        margin-left: -50px;
-        margin-top: -40px;
-        object-fit: cover;
+        height: 120%;
+        left: 50%;
+        top: 47%;
     }
 
-    /* Kapeepa's pfp image */
-    .pfp-kapeepa img {
-        display: inline-block;
-        position: relative;
-        width: 18vw;
-        height: 18vw;
-        min-width: 18vw;
-        min-height: 18vw;
-        overflow: hidden;
-        border-radius: 50%;
-        object-fit: cover;
+    #about-general-bottom { padding: 5% 8%; }
+
+    #left-arrow { left: 3.75%; }
+
+    #right-arrow { right: 3.75%; }
+
+    #left-arrow, #right-arrow {
+        scale: 1;
+        position: absolute;
+        z-index: 6;
+
+        width: 8vw;
+
+        transition: 0.5s ease-in-out;
     }
 
-    .hr-odd { left: 16.5vw; }
+    #left-arrow:hover, #right-arrow:hover { scale: 1.2; }
 
-    .hr-even { right: 15vw; }
+    #left-arrow-circle {
+        left: 5%;
+        animation: clockwise 8s linear infinite;   
+    }
 
-    .about-dev h3 { padding-bottom: 15%; }
+    #right-arrow-circle {
+        right: 5%;
+        animation: counterclockwise 8s linear infinite;
+    }
 
-    .about-dev h5 { padding-bottom: 8%; }
+    #left-arrow-circle, #right-arrow-circle {
+        scale: 1;
+        position: absolute;
+        z-index: 5;
+        width: 8vw;
+    }
 
-    .about-devs p { padding-bottom: 5%; }
+    /* ----------------------------------------------------------------------------------------- */
+
+    #abt-inner-circle {
+        position: absolute;
+        scale: 0.3;
+
+        width: 45vw;
+        height: auto;
+
+        animation: 
+            abt-circles 6s linear,
+            clockwise 15s linear infinite;
+    }
+
+    #abt-outer-circle {
+        position: absolute;
+        scale: 0.5;
+
+        width: 60vw;
+        height: auto;
+
+        animation: 
+            abt-circles 6s linear,
+            counterclockwise 30s linear infinite;
+    }
+
+    #frame-outside {
+        width: 70%;
+        left: 50%;
+    }
+
+    #frame-inside {
+        mask-image: url(/images/ui-frame-2-fill-in.svg);
+        mask-size: 90%;
+        mask-repeat: no-repeat;
+
+        width: 77%;
+        left: 54%;
+        opacity: 0.4;
+    }
+
+    #ui-frame-2 {
+        width: 70%;
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+        transform-origin: center;
+    }
+
+    #ui-frame-2 img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-
 /* Mobile UI ----------------------------------------------------------------------------------- */
+
 @media(max-width: 700px) {
 
-    /* Container for list of devs */
-    .about-devs { padding: 0; }
+    .about-general { margin-top: 8%; }
 
-    /* Individual dev box */
-    .about-dev {
-        text-align: center;
+    #flex-container { padding-bottom: 65%; }
+
+    .dev-slideshow { display: none; }
+
+    .about-general p { padding: 0 1%; }
+
+    .about-general-text {
+        background: linear-gradient(-45deg, #0A53F22A, #C600A53E);
+        width: 45%;
+        min-width: 70%;
+        min-height: 32vw;
+        padding: 0 3%;
+        right: 20%;
+        text-align: left;
+    }
+
+    .about-general-text p {
+        text-align: left;
+        font-size: 2.4vw;
+        margin: 3% 4%;
+    }
+
+    .about-general-text hr { display: none; }
+
+    .about-general-text h1 {
+        font-size:  6.25vw;
+        padding-left: 4%;
+        margin-left: 1%;
+    }
+
+    .about-general img {
+        top: 48vw;
+        left: 36%;
+        width: 60%;
+        height: auto;
+    }
+
+    .about-general-text, .about-general img { position: absolute; }
+
+    #about-general-bottom { padding: 8% 8%; }
+
+    .margin { margin: 5% 8%; }
+
+    .dev-boxes {
+        padding: 10% 0 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dev-box {
+        width: 75vw;
+        height: 95vw;
+        text-align: left;
+        position: relative;
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    .dev-flex-container { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .profile-pic {
+        display: inline-block;
+        position: relative;
+        width: 25vw;
+        height: 25vw;
+        overflow: hidden;
+    }
+
+    .profile-pic img {
+        width: auto;
+        height: 120%;
         position: relative;
     }
 
-    /*Name*/
-    .about-dev h2 { font-size: 10.125vw; }
-
-    /*Quote*/
-    .about-dev h3 {
-        margin: 5%;
-        font-size: 4.22vw;
-        padding-bottom: 5%;
-
+    .dev-box h2 {
+        font-size: 9vw;
+        padding: 4% 0;
     }
 
-    /*Nicknames*/
-    .about-dev h4 { 
+    .dev-box h3 {
         font-size: 4vw;
-        padding-bottom: 5%; 
-    }
-
-    /*Roles*/
-    .about-dev h5 { 
-        font-size: 4vw; 
-        margin-top: 50%;
         padding-top: 8%;
     }
 
-    /* Dev profile picture */
-    .about-dev img {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 40%;
+    .dev-box h4 { font-size: 5vw; }
+
+    .dev-box p {
+        font-size: 3vw;
+        margin: 5% 0 7%;
     }
 
-    /* UNUSED: Read More Button */
-    .hero-btn { 
-        font-size: 4vw;
-        margin-bottom: 5%; 
+    .dev-box a { 
+        font-size: 3vw;
+        padding: 2vw 5.25vw; 
     }
 
-    /* All paragraph text in the about-devs section*/
-    .about-devs p { padding-bottom: 2%; }
+    /* ----------------------------------------------------------------------------------------- */
 
-    /*Adrian*/
-    .phantom {
-        background-size: 320%;
-        background-position-x: -200px;
+    .dev-box.adri {
+        background-image: url(/images/Minimal.jpg);
+        right: 7%;
+        z-index: 4;
     }
+
+    .dev-box.adri h2 { color: #3A5A7D; }
+
+    .dev-box.adri h3 { color: #C21471; }
+
+    .dev-box.adri h4 { color: #A6294F; }
+
+    .adri .profile-pic img { bottom: 12%; }
+
+    /* ----------------------------------------------------------------------------------------- */
+
+    .dev-box.dan {
+        background-image: url(/images/Nordic.jpg);
+        z-index: 5;
+        left: 5%;
+        margin: -6% 0;
+    }
+
+    .dan .dev-title-text { text-align: right; }
+
+    .dev-box.dan h2 { color: #1D71F2; }
+
+    .dev-box.dan h3 { color: #19C3FB; }
+
+    .dev-box.dan h4 { color: #1C9CF6; }
+
+    .dan .profile-pic img { 
+        bottom: 12%;
+        right: 3%; 
+    }
+
+    .dev-box.dan a { left: 50%; }
+
+    /* ----------------------------------------------------------------------------------------- */
+
+    .dev-box.pape {
+        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/PL_SS_3.png);
+        z-index: 6;
+        margin: -3% 0;
+    }
+
+    .dev-box.pape h2 { color: white; }
+
+    .dev-box.pape h3 { color: white; }
+
+    .dev-box.pape h4 { color: white; }
+
+    .pape .profile-pic img { 
+        bottom: 10%;
+        right: 10%; 
+    }
+
+    /* ----------------------------------------------------------------------------------------- */
+
+    .dev-box.ryan {
+        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/PL_SS_1.png);
+        z-index: 7;
+        left: 8%;
+        margin: -6% 0;
+    }
+
+    .ryan .dev-title-text { text-align: right; }
+
+    .dev-box.ryan h2 { color: white; }
+
+    .dev-box.ryan h3 { color: white; }
+
+    .dev-box.ryan h4 { color: white; }
+
+    .ryan .profile-pic img { 
+        bottom: 10%;
+        right: 10%; 
+    }
+
+    .dev-box.ryan a { left: 50%; }
+}
+
+@media(max-width: 500px) {
+    .about-general img { top: 55vw; }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+@keyframes abt-circles {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; }
 }
