@@ -35,7 +35,7 @@
 .sub-header nav img, .home-header nav img { width: 28.125vw; }
 
 .sub-header-background {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
 }
 
 .page-body-background {
@@ -126,7 +126,7 @@
 
 /* Background Image */
 .home-background { 
-    background-image: linear-gradient(black, black), url(/images/Background.png); 
+    background-image: linear-gradient(black, black), url(/images/vfx/Background.png); 
     position: relative;
     z-index: 0;
 }
@@ -171,7 +171,7 @@
 
 /*Footer for all site pages*/
 .sub-footer {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/Blue-Nebula-8-1024x1024-1.png);
+    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;

@@ -14,11 +14,11 @@
         <div id="fade-out-sub"></div>
 
         <nav id="home-header-nav">
-            <a href="index.php"><img src="images/Lunarflame_Logo.png"></a>
+            <a href="/"><img src="images/Lunarflame_Logo.png"></a>
             <div class="nav-links header" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a class="hover-effect light-blue" href="index.php">HOME</a></li>
+                    <li><a class="hover-effect light-blue" href="/">HOME</a></li>
                     <li><a class="hover-effect purple" href="pages/about">ABOUT</a></li>
                     <li><a class="hover-effect blue" href="pages/projects">PROJECTS</a></li>
                     <li><a class="hover-effect pink" href="pages/blog">BLOG</a></li>
@@ -35,19 +35,19 @@
 
         <div class="center-container">
             <div id="ui-frame">
-                <img src="images/UI_Frame.png" alt="">
+                <img src="images/vfx/UI_Frame.png" alt="">
             </div>
 
             <div id="center-circle">
-                <div id="circle-v1" class="circle"><img src="images/Inner Circle.png" alt=""></div>
-                <div id="circle-v2" class="circle"><img src="images/Outer Circle.png" alt=""></div>
-                <div id="circle-v3" class="circle"><img src="images/Outer Circuits.png" alt=""></div>
+                <div id="circle-v1" class="circle"><img src="images/vfx/Inner Circle.png" alt=""></div>
+                <div id="circle-v2" class="circle"><img src="images/vfx/Outer Circle.png" alt=""></div>
+                <div id="circle-v3" class="circle"><img src="images/vfx/Outer Circuits.png" alt=""></div>
             </div>
 
             <div id="outer-circle">
-                <div id="circle-v4" class="circle"><img src="images/Outer Ring.png" alt=""></div>
-                <div id="circle-v5" class="circle"><img src="images/Outer Ring 2.png" alt=""></div>
-                <div id="circle-v6" class="circle"><img src="images/Outer Ring 2.png" alt=""></div>
+                <div id="circle-v4" class="circle"><img src="images/vfx/Outer Ring.png" alt=""></div>
+                <div id="circle-v5" class="circle"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
+                <div id="circle-v6" class="circle"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
             </div>
         </div>
 

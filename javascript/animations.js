@@ -17,7 +17,7 @@ function fadeOut(element, delay) {
 if (fadeOutMain !== null) {
     setTimeout(() => {
         fadeOut(fadeOutMain, 50);
-        mainHeader.style.backgroundImage = 'url(images/Background.png)';
+        mainHeader.style.backgroundImage = 'url(images/vfx/Background.png)';
     }, 500)
 }
 

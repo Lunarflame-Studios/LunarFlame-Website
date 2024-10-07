@@ -39,12 +39,12 @@
             <div class="project-leo-summary">
                 <hr>
                 <p class="summary">"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
-                <img class="page-image gallery-img" src="/images/NetherSpawn.jpg" alt="">
+                <img class="page-image gallery-img" src="/images/screenshots/NetherSpawn.jpg" alt="">
                 <p class="summary">Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
                 <div class="scroll-container">
-                    <img class="gallery-img" src="/images/PL_SS_2.png" alt="">
-                    <img class="gallery-img" src="/images/PL_SS_3.png" alt="">
-                    <img class="gallery-img" src="/images/PL_SS_4.png" alt="">
+                    <img class="gallery-img" src="/images/screenshots/PL_SS_2.png" alt="">
+                    <img class="gallery-img" src="/images/screenshots/PL_SS_3.png" alt="">
+                    <img class="gallery-img" src="/images/screenshots/PL_SS_4.png" alt="">
                 </div>
             </div>
         </section>

@@ -28,7 +28,7 @@
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.4 is out, and there's a lot of new features.</p>
                 <br><br>
-                <img class="page-image gallery-img" id="image" src="/images/PL_SS_3.png" alt="">
+                <img class="page-image gallery-img" id="image" src="/images/screenshots/PL_SS_3.png" alt="">
                 <br><br>
                 <div>
                     <h2 id="subheader">Cloud Save Data</h2>

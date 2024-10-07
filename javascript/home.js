@@ -1,5 +1,12 @@
 const header = document.querySelector('.home-header');
-const imagePaths = ['images/PL_SS_1.png', 'images/PL_SS_4.png', 'images/Background.png', 'images/Horizon_Skyline_1.png', 'images/PL_SS_5.png', 'images/Background.png'];
+const imagePaths = [
+    'images/screenshots/PL_SS_1.png', 
+    'images/screenshots/PL_SS_4.png', 
+    'images/vfx/Background.png', 
+    'images/screenshots/Horizon_Skyline_1.png', 
+    'images/screenshots/PL_SS_5.png', 
+    'images/vfx/Background.png'];
+
 let currentIndex = 0;
 
 const fadeOutSub = document.querySelector('#fade-out-sub');

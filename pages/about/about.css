@@ -188,7 +188,7 @@
     }
 
     #frame-inside {
-        mask-image: url(/images/ui-frame-2-fill-in.svg);
+        mask-image: url(/images/vfx/ui-frame-2-fill-in.svg);
         mask-size: 90%;
         mask-repeat: no-repeat;
 
@@ -325,7 +325,7 @@
     /* ----------------------------------------------------------------------------------------- */
 
     .dev-box.adri {
-        background-image: url(/images/Minimal.jpg);
+        background-image: url(/images/devs/Minimal.jpg);
         right: 7%;
         z-index: 4;
     }
@@ -341,7 +341,7 @@
     /* ----------------------------------------------------------------------------------------- */
 
     .dev-box.dan {
-        background-image: url(/images/Nordic.jpg);
+        background-image: url(/images/devs/Nordic.jpg);
         z-index: 5;
         left: 5%;
         margin: -6% 0;
@@ -365,7 +365,7 @@
     /* ----------------------------------------------------------------------------------------- */
 
     .dev-box.pape {
-        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/PL_SS_3.png);
+        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/screenshots/PL_SS_3.png);
         z-index: 6;
         margin: -3% 0;
     }
@@ -384,7 +384,7 @@
     /* ----------------------------------------------------------------------------------------- */
 
     .dev-box.ryan {
-        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/PL_SS_1.png);
+        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/screenshots/PL_SS_1.png);
         z-index: 7;
         left: 8%;
         margin: -6% 0;

@@ -30,7 +30,7 @@
                         <hr>
                     </div>
 
-                    <img class="page-image gallery-img offset-border" src="/images/PL_SS_1.png" alt="">
+                    <img class="page-image gallery-img offset-border" src="/images/screenshots/PL_SS_1.png" alt="">
                 </div>
 
                 <p id="about-general-bottom" class="typewriter-v2"> &#8203;
@@ -48,15 +48,15 @@
 
             <div class="dev-slideshow">
                 <div class="about-devs">
-                    <img id="left-arrow" src="/images/Back_Arrow.png" onclick="backDev()" alt="">
-                    <img id="left-arrow-circle" src="/images/arrow_circle.png" alt="">
+                    <img id="left-arrow" src="/images/vfx/Back_Arrow.png" onclick="backDev()" alt="">
+                    <img id="left-arrow-circle" src="/images/vfx/arrow_circle.png" alt="">
 
-                    <img id="abt-inner-circle" src="/images/Outer Ring.png" alt="">
-                    <img id="abt-outer-circle" src="/images/Outer Ring 2.png" alt="">
+                    <img id="abt-inner-circle" src="/images/vfx/Outer Ring.png" alt="">
+                    <img id="abt-outer-circle" src="/images/vfx/Outer Ring 2.png" alt="">
 
                     <div id="ui-frame-2">
-                        <img id="frame-inside" src="/images/Minimal.jpg" alt="">
-                        <img id="frame-outside" src="/images/UI_Frame_2.png" alt="">
+                        <img id="frame-inside" src="/images/devs/Minimal.jpg" alt="">
+                        <img id="frame-outside" src="/images/vfx/UI_Frame_2.png" alt="">
 
                         <div class="text-content">
                             <h2>Adrian</h2>
@@ -72,15 +72,15 @@
                             </p>
 
                             <div class="profile-pic">
-                                <img src="/images/adri_pfp.jpg" alt="">
+                                <img src="/images/devs/adri_pfp.jpg" alt="">
                             </div>
 
                             <a class="hero-btn button raise" href="#">Read More</a>
                         </div>
                     </div>
 
-                    <img id="right-arrow" src="/images/Forward_Arrow.png" onclick="forwardDev()" alt="">
-                    <img id="right-arrow-circle" src="/images/arrow_circle.png" alt="">
+                    <img id="right-arrow" src="/images/vfx/Forward_Arrow.png" onclick="forwardDev()" alt="">
+                    <img id="right-arrow-circle" src="/images/vfx/arrow_circle.png" alt="">
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                             </div>
 
                             <div class="profile-pic">
-                                <img src="/images/adri_pfp.jpg" alt="">
+                                <img src="/images/devs/adri_pfp.jpg" alt="">
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@
                     <div class="margin">
                         <div class="dev-flex-container">
                             <div class="profile-pic">
-                                <img src="/images/dan_pfp.png" alt="">
+                                <img src="/images/devs/dan_pfp.png" alt="">
                             </div>
 
                             <div class="dev-title-text">

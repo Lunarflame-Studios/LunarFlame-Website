@@ -29,7 +29,7 @@
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.45 is out! In preparation for v0.5 (which will hopefully be out later this year), we've prepared tons of new features, fixes, and other changes.</p>
                 <br><br>
-                <img class="page-image gallery-img" id="image" src="/images/PL_SS_5.png" alt="">
+                <img class="page-image gallery-img" id="image" src="/images/screenshots/PL_SS_5.png" alt="">
                 <br><br>
 
                 <div>
