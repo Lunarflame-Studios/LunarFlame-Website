@@ -40,15 +40,15 @@ const devInfo = [
     ],
 
     [
-        'Pape',
-        'Speedster',
+        'Speedster101',
+        '',
         'Assistant Artist, Programmer',
         '\"Growing up on Nintendo consoles and Saturday Morning Cartoons, I\'ve always maintained a love for art and gaming and found joining the Lunarflame team the perfect expression of this interest. Whether it was learning C# or getting to gripes with Unity (I love collision detection), I appreciate how much opportunity being on the team gives me to learn new things and push my ambition and work ethic.\"',
-        baseImagePath + 'LunarFlame-Logo-Simplified.png',
-        baseImagePath + 'screenshots/PL_SS_3.png',
+        baseImagePath + 'devs/speedster_pfp.jpg',
+        baseImagePath + 'devs/cosmic_cove.png',
         "slide",
-        ['#fff', '#fff', '#fff'],
-        baseURLPath + 'about-pape.php'
+        ['#72AB94', '#fff', '#A3D6F0'],
+        baseURLPath + 'about-speedster.php'
     ],
     [
         'Ryan',

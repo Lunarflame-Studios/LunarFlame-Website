@@ -364,19 +364,30 @@
 
     /* ----------------------------------------------------------------------------------------- */
 
-    .dev-box.pape {
-        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/screenshots/PL_SS_3.png);
+    .dev-box.speedster {
+        background-image: 
+            linear-gradient(#72ab948f, #b6ddac83),
+            url(/images/devs/cosmic_cove.png);
+
         z-index: 6;
         margin: -3% 0;
+        height: 115vw;
     }
 
-    .dev-box.pape h2 { color: white; }
+    .dev-box.speedster h2 { 
+        color: #131FAA;
+        font-size: 5vw; 
+    }
 
-    .dev-box.pape h3 { color: white; }
+    .dev-box.speedster h3 { color: #25540d; }
 
-    .dev-box.pape h4 { color: white; }
+    .dev-box.speedster h4 { color: white; }
 
-    .pape .profile-pic img { 
+    .dev-box.speedster p {
+        color: #040b5e;
+    }
+
+    .speedster .profile-pic img { 
         bottom: 10%;
         right: 10%; 
     }
@@ -407,7 +418,7 @@
 }
 
 @media(max-width: 500px) {
-    .about-general img { top: 55vw; }
+    .about-general img { top: 52vw; }
 }
 
 /* --------------------------------------------------------------------------------------------- */

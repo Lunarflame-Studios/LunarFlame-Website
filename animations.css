@@ -375,10 +375,18 @@
   --hover: #58e4cb;
 }
 
-/* Change colors later. */
-.button.slide {
-  --color: #8fc866;
-  --hover: #66c887;
+@media(min-width: 701px) {
+  .button.slide {
+    --color: #8fc866;
+    --hover: #66c887;
+  }
+}
+
+@media(max-width: 700px) {
+  .button.slide {
+    --color: #131FAA;
+    --hover: #6633C6;
+  }
 }
 
 /* Change colors later. */

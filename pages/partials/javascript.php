@@ -1,15 +1,16 @@
 <div class="panner" data-cursor="stretch"></div>
 <div class="pointer"></div>
 
-<!--<script src="/assets/js/hammer.min.js"></script>-->
-<script src="/assets/js/tweenmax.min.js"></script>
+<div class="js-links">
+    <script src="/assets/js/tweenmax.min.js"></script>
 
-<script src="/javascript/typewrite.js"></script>
+    <script src="/javascript/typewrite.js"></script>
 
-<script src="/javascript/images.js"></script>
-<script src="/javascript/animations.js"></script>
+    <script src="/javascript/images.js"></script>
+    <script src="/javascript/animations.js"></script>
 
-<script src="/javascript/cursor.js"></script>
+    <script src="/javascript/cursor.js"></script>
+</div>
 <script>
     var navLinks = document.getElementById("navLinks");
     var socialLinks = document.getElementById("socialLinks");

@@ -136,23 +136,21 @@
                     </div>
                 </div>
 
-                <div class="dev-box pape">
+                <div class="dev-box speedster">
                     <div class="margin">
                         <div class="dev-flex-container">
                             <div class="dev-title-text">
-                                <h2>Pape</h2>
-                                <h4>Speedster</h4>
+                                <h2>Speedster101</h2>
+                                <h4>&#8203;</h4>
                             </div>
 
-                            <!-- TODO: Replace with actual profile picture -->
                             <div class="profile-pic">
-                                <img src="/images/LunarFlame-Logo-Simplified.png" alt="">
+                                <img src="/images/devs/speedster_pfp.jpg" alt="">
                             </div>
                         </div>
 
                         <h3>Assistant Artist, Programmer</h3>
 
-                        <!-- TODO: Replace with real data -->
                         <p>
                             "Growing up on Nintendo consoles and Saturday Morning Cartoons, I've always maintained a love for art and gaming and found 
                             joining the Lunarflame team the perfect expression of this interest. 
