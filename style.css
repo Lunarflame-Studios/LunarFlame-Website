@@ -73,29 +73,12 @@
     text-align: center;
 }
 
-/* (Welcome to LunarFlame Studios)*/
-.text-box h1 { font-size: 3.75vw; }
-
-/*Description*/
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 1.5vw;
-    color: white;
-}
-
-/* Link to Project Leo */
-.text-box a {
-    margin-top: 2%;
-    font-size: 2.53vw;
-}
-
 /* Project Leo Link Button */
 .hero-btn {
     display: inline-block;
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    padding: 1.15vw 3.75vw;
     font-size: 1.4vw;
     background: transparent;
     position: relative;
@@ -127,7 +110,6 @@
 /* Background Image */
 .home-background { 
     background-image: linear-gradient(black, black), url(/images/vfx/Background.png); 
-    position: relative;
     z-index: 0;
 }
 
@@ -139,7 +121,7 @@
 }
 
 /*Primary Titles*/
-.page-body h1{
+.page-body h1 {
     font-size: 4.5vw;
     color: #f3bafd;
     padding-top: 5%;
@@ -169,47 +151,10 @@
     margin: 20px auto;
 }
 
-/*Footer for all site pages*/
-.sub-footer {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 50px 80px;
-}
-
-/*Sub-Footer Titles*/
-.sub-footer h1 {
-    color: #ad72ff;
-    font-size: 3.5vw;
-    padding-bottom: 5%;
-}
-
-/*Sub-Footer Subtext*/
-.sub-footer h2 {
-    color: white;
-    font-size: 1.26vw;
-    line-height: 175%;
-}
-
-/*Links under Contact Us Form*/
-.footer-contact-us a { text-decoration: none; }
-
-/*Sub-Footer Subtext v2*/
-.sub-footer h3  {
-    color: #9192fc;
-    font-size: 1.35vw;
-    line-height: 175%;
-    padding: 0;
-}
-
-/* Subtext link turns dark blue when hovered over. */
-.sub-footer h3:hover { color: #5663f0; }
-
 /* div container for copyright section */
 .copyright {
     position: relative;
-    z-index: 5;
+    z-index: 12;
     background-color: black;
     text-align: right;
     padding: 15px;
@@ -363,16 +308,13 @@
     }
 
     /* Anchor for Top Menu nav list item */
-    .nav-links ul li a { font-size: 4.4vw; }
+    .nav-links a { font-size: 4.4vw; }
 
     /* Anchor for Social Links list item */
     .social-links a {
         text-decoration: none;
         font-size: 5vw;
     }
-
-    /* Item in Social Links list*/
-    .social-links ul li { display: block; }
 
     /* Top Menu Buttons go to the side bar on the Mobile View. */
     .nav-links {
@@ -383,7 +325,7 @@
         top: 0;
         right: -200px;
         text-align: left;
-        z-index: 2;
+        z-index: 10;
         transition: 1s;
     }
 
@@ -400,19 +342,22 @@
     }
 
     /* Show sidebar on mobile view. */
-    .sub-header nav .fa, .home-header nav .fa{
+    .sub-header nav i, .home-header nav i {
         display: block;
         color: white;
         margin: 10px;
-        font-size: 8vw;
+        font-size: 10vw;
         cursor: pointer;
     }
 
     /* Nav Links list */
-    .nav-links ul { padding: 20px; }
+    .nav-links ul { 
+        padding: 0 20px;
+        text-align: center;
+    }
 
     /* Social Links list */
-    .social-links ul { padding: 50px; }
+    .social-links ul { padding: 72px 50px; }
 
     /* Social Links icons turn pink when hovered over. */
     .social-links i:hover { color: #eb96f7; }
@@ -420,10 +365,12 @@
     /* Nav Links icons turn pink when hovered over. */
     .nav-links a:hover { color: #eb96f7; }
 
+    .hero-btn { padding: 3vw 8vw; }
+
     /* Gives a dark blue gradient to every page with content. */
     .page-body {
         width: 100%;
-        min-height: 70vh;
+        min-height: 84vh;
         text-align: center;
     }
 
@@ -451,7 +398,6 @@
         padding: 2%;
         line-height: 110%;
     }
-
 }
 
 /* Desktop UI ---------------------------------------------------------------------------------- */
@@ -470,11 +416,27 @@
         text-align: center;
     }
 
+    /* (Welcome to LunarFlame Studios)*/
+    .text-box h1 { font-size: 3.75vw; }
+
+    /*Description*/
+    .text-box p {
+        margin: 10px 0 40px;
+        font-size: 1.5vw;
+        color: white;
+    }
+
+    /* Link to Project Leo */
+    .text-box a {
+        margin-top: 2%;
+        font-size: 2.53vw;
+    }
+
     /* Hide sidebar on desktop view */
-    .sub-header nav .fa, .home-header nav .fa { display: none; }
+    .sub-header nav i, .home-header nav i { display: none; }
 
     /* Item in Top Menu nav list. */
-    .nav-links ul li::after {
+    .nav-links li::after {
         content: '';
         width: 0%;
         height: 4px;
@@ -485,7 +447,9 @@
     }
 
     /* Anchor for Item in Top Menu nav list. */
-    .nav-links ul li a, .social-links ul li a { font-size: 1.68vw; }
+    .nav-links a, .social-links a { font-size: 1.68vw; }
+
+    .hero-btn { padding: 1.15vw 3.75vw; }
 
     /* Icon container backgrounds should only show on the desktop view. */
     .icon-container { background-color: #490596; }
@@ -495,36 +459,80 @@
         background-color: #2b005c;
         box-shadow: 0px 0px 50px #00000000;
     }
+
+    /*Footer for all site pages*/
+    .sub-footer {
+        background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 50px 80px;
+    }
+
+    /*Sub-Footer Titles*/
+    .sub-footer h1 {
+        color: #ad72ff;
+        font-size: 3.5vw;
+        padding-bottom: 5%;
+    }
+
+    /*Sub-Footer Subtext*/
+    .sub-footer h2 {
+        color: white;
+        font-size: 1.26vw;
+        line-height: 175%;
+    }
+
+    /*Links under Contact Us Form*/
+    .footer-contact-us a { text-decoration: none; }
+
+    /*Sub-Footer Subtext v2*/
+    .sub-footer h3  {
+        color: #9192fc;
+        font-size: 1.35vw;
+        line-height: 175%;
+        padding: 0;
+    }
+
+    /* Subtext link turns dark blue when hovered over. */
+    .sub-footer h3:hover { color: #5663f0; }
 }
 
 /* --------------------------------------------------------------------------------------------- */
 
-.panner {
-  position: fixed;
-  left: calc(50% - 75px);
-  background: lighten(#333, 10%);
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  text-align: center;
-  margin: 3em auto;
+@media(max-width: 700px) {
+    .panner { display: none; }
+    .pointer { display: none; }
 }
 
-.pointer {
-  content: '';
-  background: white;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  position: fixed;
-  z-index: 1010;
-  display: block;
-  outline-color: white;
-  outline-style: solid;
-  outline-width: 2px;
-  animation: cursor 1s infinite;
-  box-shadow: 0px 0px 20px white;
-  pointer-events: none;
+@media(min-width: 701px) {
+    .panner {
+        position: fixed;
+        left: calc(50% - 75px);
+        background: lighten(#333, 10%);
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        margin: 3em auto;
+    }
+
+    .pointer {
+        content: '';
+        background: white;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        position: fixed;
+        z-index: 1010;
+        display: block;
+        outline-color: white;
+        outline-style: solid;
+        outline-width: 2px;
+        animation: cursor 1s infinite;
+        box-shadow: 0px 0px 20px white;
+        pointer-events: none;
+    }
 }
 
 @keyframes cursor {
@@ -536,9 +544,4 @@
     outline-offset: 10px;
     outline-color: transparent;
   }
-}
-
-@media(max-width: 700px) {
-  .panner { display: none; }
-  .pointer { display: none; }
 }
