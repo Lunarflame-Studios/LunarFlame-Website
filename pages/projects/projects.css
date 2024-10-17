@@ -44,10 +44,7 @@
 #project-leo { background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(/images/screenshots/PL_SS_5.png); }
 
 /*TEST !!!*/
-.page-body p {
-    padding-top: 3%;
-    padding-bottom: 2%;
-}
+.page-body p { padding: 3% 0 2% 0; }
 
 /* Title Image. Substitutes for an h1 title */
 .title { max-width: 50%; }
@@ -102,9 +99,7 @@ h3 {
 @media(min-width: 701px) {
     
     /* Title Image. Substitutes for an h2 title. */
-    .project-links img {
-        width: 50%;
-    }
+    .project-links img { width: 50%; }
     
     /* An individual project. */
     .project { padding: 5% 0%; }
@@ -124,6 +119,33 @@ h3 {
 
     .project-leo-summary {
         padding-bottom: 5%;
+    }
+
+     #orb-blue {
+        width: 60%;
+        opacity: 0.6;
+        bottom: 53vh;
+        left: 50vw;
+
+        animation: orb-pulse 10s linear infinite;
+    }
+
+    #orb-purple {
+        width: 60%;
+        opacity: 0.75;
+        top: 1vh;
+        left: 1vw;
+
+        animation: orb-pulse 18s linear infinite;
+    }
+
+    #orb-pink {
+        width: 40%;
+        opacity: 0.6;
+        top: 55vh;
+        left: 62vw;
+
+        animation: orb-pulse 14s linear infinite;
     }
 }
 

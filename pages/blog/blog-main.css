@@ -297,4 +297,31 @@
         text-overflow: ellipsis;
         font-size: 1vw;
     }
+
+    #orb-purple {
+        top: 90vh;
+        right: -10vw;
+        width: 60%;
+        opacity: 0.6;
+
+        animation: orb-pulse 10s linear infinite;
+    }
+
+    #orb-light-blue {
+        top: 1vh;
+        left: 1vw;
+        width: 60%;
+        opacity: 0.6;
+
+        animation: orb-pulse 18s linear infinite;
+    }
+
+    #orb-pink {
+        bottom: -8vh;
+        left: -8vw;
+        width: 60%;
+        opacity: 0.6;
+
+        animation: orb-pulse 14s linear infinite;
+    }
 }

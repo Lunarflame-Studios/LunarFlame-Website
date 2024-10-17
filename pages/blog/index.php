@@ -9,6 +9,12 @@
 
 <body>
     <div class="background">
+        <div id="glow-orbs">
+            <img id="orb-purple" src="/images/vfx/Purple-Glow.png" alt="">
+            <img id="orb-light-blue" src="/images/vfx/Light-Blue-Glow.png" alt="">
+            <img id="orb-pink" src="/images/vfx/Pink-Glow.png" alt="">
+        </div>
+
         <?php require('../partials/sub-header.php') ?>
 
         <section class="page-body">
@@ -112,11 +118,10 @@
         </section>
     </div>
 
-    <script src="/javascript/blog.js"></script>
-
     <?php require('../partials/sub-footer.php') ?>
     <?php require('../partials/copyright.php') ?>
 
+    <script src="/javascript/blog.js"></script>
     <?php require('../partials/javascript.php') ?>
 
 </body>

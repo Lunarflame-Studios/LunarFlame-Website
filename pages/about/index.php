@@ -9,6 +9,17 @@
 
 <body>
     <div class="background">
+
+        <div>
+            <div id="ui-circuit-2"></div>
+        </div>
+
+        <div id="glow-orbs">
+            <img id="orb-light-blue" src="/images/vfx/Light-Blue-Glow.png" alt="">
+            <img id="orb-pink" src="/images/vfx/Pink-Glow.png" alt="">
+            <img id="orb-purple" src="/images/vfx/Purple-Glow.png" alt="">
+        </div>
+
         <?php require('../partials/sub-header.php') ?>
 
         <!-- &#8203; is an empty ACSII character. -->
@@ -16,6 +27,8 @@
         <section class="page-body">
             <div id="overlay"></div>
             <img id="zoom-in" src="" alt="">
+
+            <h1 style="display: none;">About Us</h1>
 
             <div class="about-general">
                 <div id="flex-container">
@@ -44,7 +57,6 @@
             <h1 class="typewriter-v2 gradient v2"> &#8203;
                 <span>Developers</span>
             </h1>
-
 
             <div class="dev-slideshow">
                 <div class="about-devs">

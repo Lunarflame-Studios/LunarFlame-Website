@@ -24,27 +24,6 @@ if (fadeOutMain !== null) {
 const styleSheet = Array.from(document.styleSheets).find(
     styleSheet => styleSheet.href && styleSheet.href.includes('animations.css'));
 
-document.addEventListener("DOMContentLoaded", () => {
-    const typewriters = document.querySelectorAll(".typewriter");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.remove('paused');
-                entry.target.classList.add('animate');
-
-                entry.target.addEventListener('animatonend', () => {
-                    entry.target.classList.remove('animate');
-                    entry.target.classList.add('paused');
-                });
-            }
-        });
-    });
-
-    typewriters.forEach((typewriter) => observer.observe(typewriter));
-
-});
-
 function applyBlurAnimation() {
     const blurRadius = 20;
 
@@ -114,4 +93,3 @@ function combineAnimations() {
 }
 
 combineAnimations();
-
