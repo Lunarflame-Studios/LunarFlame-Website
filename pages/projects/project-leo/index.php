@@ -4,11 +4,21 @@
 <head>
     <?php require('../../partials/header.php') ?>
     <title>Project Leo</title>
-    <link rel="stylesheet" href="/pages/projects/projects.css">
+    <link rel="stylesheet" href="/pages/projects/project-leo/project-leo.css">
 </head>
 
 <body>
     <div class="background">
+        <div>
+            <div id="ui-circuit-1"></div>
+        </div>
+
+        <div id="glow-orbs">
+            <img id="orb-pink" src="/images/vfx/Pink-Glow.png" alt="">
+            <img id="orb-blue" src="/images/vfx/Blue-Glow.png" alt="">
+            <img id="orb-purple" src="/images/vfx/Purple-Glow.png" alt="">
+        </div>
+
         <?php require('../../partials/sub-header.php') ?>
 
         <section class="page-body">
@@ -48,8 +58,9 @@
                 </div>
             </div>
         </section>
+
+        <?php require('../../partials/sub-footer.php') ?>
     </div>
-    <?php require('../../partials/sub-footer.php') ?>
     <?php require('../../partials/copyright.php') ?>
 
     <?php require('../../partials/javascript.php') ?>

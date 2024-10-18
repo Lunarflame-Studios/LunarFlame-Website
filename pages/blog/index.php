@@ -9,6 +9,10 @@
 
 <body>
     <div class="background">
+        <div>
+            <div id="ui-circuit-2"></div>
+        </div>
+
         <div id="glow-orbs">
             <img id="orb-purple" src="/images/vfx/Purple-Glow.png" alt="">
             <img id="orb-light-blue" src="/images/vfx/Light-Blue-Glow.png" alt="">
@@ -116,9 +120,10 @@
             </div>
             <h1></h1>
         </section>
+        
+        <?php require('../partials/sub-footer.php') ?>
     </div>
 
-    <?php require('../partials/sub-footer.php') ?>
     <?php require('../partials/copyright.php') ?>
 
     <script src="/javascript/blog.js"></script>

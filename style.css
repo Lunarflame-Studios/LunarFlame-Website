@@ -143,7 +143,7 @@
 }
 
 /*Image on any Website Page*/
-.page-image { max-width: 80%; }
+.page-image { max-width: 70%; }
 
 /*Horizontal Break*/
 .page-body hr {
@@ -200,7 +200,7 @@
 
 /* Container for the scrollbar */
 .scroll-container {
-    background-color: #00010c;
+    background-color: #00010c9f;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
@@ -468,12 +468,12 @@
 
     /*Footer for all site pages*/
     .sub-footer {
-        background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
-        padding: 50px 80px;
         position: relative;
+        padding: 50px 6vw;
+        background-image: linear-gradient(#0c002b50, #09003f9c);
     }
 
     /*Sub-Footer Titles*/
@@ -503,6 +503,8 @@
 
     /* Subtext link turns dark blue when hovered over. */
     .sub-footer h3:hover { color: #5663f0; }
+
+    .copyright-text:hover { color: #46325e;}
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -525,19 +527,21 @@
     }
 
     .pointer {
+        --mouse-color: white;
+
         content: '';
-        background: white;
+        background: var(--mouse-color);
         width: 20px;
         height: 20px;
         transform: rotate(45deg);
         position: fixed;
         z-index: 110;
         display: block;
-        outline-color: white;
+        outline-color: var(--mouse-color);
         outline-style: solid;
         outline-width: 2px;
         animation: cursor 1s infinite;
-        box-shadow: 0px 0px 20px white;
+        box-shadow: 0px 0px 20px var(--mouse-color);
         pointer-events: none;
     }
 }

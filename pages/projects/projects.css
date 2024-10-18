@@ -49,51 +49,7 @@
 /* Title Image. Substitutes for an h1 title */
 .title { max-width: 50%; }
 
-/* Project Specific Stuff ---------------------------------------------------------------------- */
-
-/* Gives a page image a slightly round radius. */
-.page-image {
-    border-radius: 2%;
-    max-width: 50%;
-}
-
-/* Nether Highlight */
-strong { color: rgb(128, 0, 0);}
-
-/* Summary of the project. */
-.summary { margin: 0% 5%;}
-
-.release-logs nav ul li { padding: 5% 0; }
-
-/* Removes underlines from anchors */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* itch.io iframe */
-iframe { margin-top: 3%; }
-
-/*
-    There are only 2 h3s using this tag:
-    "Play the Web Version"
-    "The web version is not supported."
-*/
-h3 {
-    padding-top: 3%;
-    padding-bottom: 2%;
-    color: #9192fc;
-    font-size: 2vw;
-    transition: all ease 0.3s;
-}
-
-/* Link to the project web version. */
-.widget-container h3:hover { color: #5663f0; }
-
-/* Release Logs are currently unused. */
-.release-logs h2 { transition: all ease 0.3s; }
-
-.release-logs h2:hover { color: #924af1; }
+a { text-decoration: none; }
 
 /* Desktop UI ---------------------------------------------------------------------------------- */
 @media(min-width: 701px) {
@@ -109,17 +65,7 @@ h3 {
         color: white;
         font-size: 4.36vw;
         padding: 2%;
-    }
-
-    /* The project download iframe. */
-    .widget {
-        width: 39vw;
-        height: 9.5vw;
-    }
-
-    .project-leo-summary {
-        padding-bottom: 5%;
-    }
+    }  
 
      #orb-blue {
         width: 60%;
@@ -166,19 +112,6 @@ h3 {
     /* li container for a project. */
     .project-links li { padding: 15% 2%; }
 
-    .release-logs h2 { font-size: 36px; }
-
-    /* The project download iframe. */
-    .widget {
-        width: 70vw;
-        height: 30vw;
-    }
-
-    /* Text that appears whent the WebGL build is unavailable. */
-    #not-available {
-        margin: 5%;
-        line-height: 125%;
-        font-size: 4vw;
-    }
+    .release-logs h2 { font-size: 36px; }  
 }
 

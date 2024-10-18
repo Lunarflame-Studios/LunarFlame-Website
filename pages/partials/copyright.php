@@ -24,6 +24,6 @@
                 </li>
             </ul>
         </div>
-        <h1 class="copyright-text">Copyright © 2024 LunarFlame Studios</h1>
+        <h1 class="copyright-text" onclick="changeCursorColor()">Copyright © 2024 LunarFlame Studios</h1>
     </nav>
 </section>

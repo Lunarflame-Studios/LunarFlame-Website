@@ -424,7 +424,7 @@
     /* ----------------------------------------------------------------------------------------- */
 
     .dev-box.ryan {
-        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/screenshots/PL_SS_1.png);
+        background-image: linear-gradient(#1C48F669, #1D2BF266), url(/images/devs/deep-blue-sky.png);
         z-index: 7;
         left: 8%;
         margin: -6% 0;
@@ -432,15 +432,16 @@
 
     .ryan .dev-title-text { text-align: right; }
 
-    .dev-box.ryan h2 { color: white; }
+    .dev-box.ryan h2 { color: #BDFCFE; }
 
-    .dev-box.ryan h3 { color: white; }
+    .dev-box.ryan h3 { color: #66D9D1; }
 
-    .dev-box.ryan h4 { color: white; }
+    .dev-box.ryan h4 { color: #98F4F4; }
 
     .ryan .profile-pic img { 
-        bottom: 10%;
-        right: 10%; 
+        bottom: 16%;
+        right: 22%;
+        height: 145%; 
     }
 
     .dev-box.ryan a { left: 50%; }

@@ -14,7 +14,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(#0c002b, #09003f);
+    background: linear-gradient(#0c002b9c, #09003f9c);
 
     /* Used to ease in the colored box shadow. */
     transition: all ease 0.3s;
@@ -68,7 +68,7 @@
 
 /* The container for a regular blog post. */
 .blog-box {
-    background: linear-gradient(#0c002b, #09003f);
+    background: linear-gradient(#0c002b9c, #09003f9c);
     transition: all ease 0.3s;
 }
 

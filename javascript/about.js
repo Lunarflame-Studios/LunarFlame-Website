@@ -1,8 +1,7 @@
 const frameBackground = document.querySelector('#frame-inside');
 
 const uiFrame = '#ui-frame-2 ';
-// Note: When all dev pfps have been implemented, change baseImagePath to '/images/devs/'
-const baseImagePath = '/images/';
+const baseImagePath = '/images/devs/';
 const baseURLPath = '/pages/';
 const heroBtn = "hero-btn button ";
 
@@ -21,8 +20,8 @@ const devInfo = [
         'Phantom',
         'Lead Artist, Lead Programmer',
         '\"I\'ve always been a huge believer in the idea that video games are the future of storytelling. I\'m a jRPG fiend, some of my favorite titles include Persona, Xenoblade, and Nier. I began this project because I wanted to create my own story to tell to the world.\"',
-        baseImagePath + 'devs/adri_pfp.jpg',
-        baseImagePath + 'devs/Minimal.jpg',
+        baseImagePath + 'adri_pfp.jpg',
+        baseImagePath + 'Minimal.jpg',
         "raise",
         ['#3A5A81', '#773F64', '#A6294F'], /* Title Color, Nickname Color, Role Color */
         baseURLPath + 'about-adrian.php'
@@ -32,8 +31,8 @@ const devInfo = [
         'Kapeepa',
         'Lead Musician, Programmer',
         '\"Certified learner. I joined the project to get good at programming and music stuff. Like Adrian, I do love me some video games---so much we can learn from them. PM sleeper agent (!)\"',
-        baseImagePath + 'devs/dan_pfp.png',
-        baseImagePath + 'devs/Nordic.jpg',
+        baseImagePath + 'dan_pfp.png',
+        baseImagePath + 'Nordic.jpg',
         "offset",
         ['#1D71F2', '#19C3FB', '#1C9CF6'],
         baseURLPath + 'about-dan.php'
@@ -44,8 +43,8 @@ const devInfo = [
         '',
         'Assistant Artist, Programmer',
         '\"Growing up on Nintendo consoles and Saturday Morning Cartoons, I\'ve always maintained a love for art and gaming and found joining the Lunarflame team the perfect expression of this interest. Whether it was learning C# or getting to gripes with Unity (I love collision detection), I appreciate how much opportunity being on the team gives me to learn new things and push my ambition and work ethic.\"',
-        baseImagePath + 'devs/speedster_pfp.jpg',
-        baseImagePath + 'devs/cosmic_cove.png',
+        baseImagePath + 'speedster_pfp.jpg',
+        baseImagePath + 'cosmic_cove.png',
         "slide",
         ['#72AB94', '#fff', '#A3D6F0'],
         baseURLPath + 'about-speedster.php'
@@ -54,11 +53,11 @@ const devInfo = [
         'Ryan',
         'Ry',
         'Programmer',
-        'Quote #4',
-        baseImagePath + 'LunarFlame-Logo-Black.png',
-        baseImagePath + 'screenshots/PL_SS_1.png',
+        '\"I\'ve always been an avid gamer and fascinated by the design and technical aspects behind it; there was no better project than this one for me to refine my technical skills and express myself in a world of our design\".',
+        baseImagePath + 'ryan_pfp.jpg',
+        baseImagePath + 'deep-blue-sky.png',
         "up",
-        ['#fff', '#fff', '#fff'],
+        ['#BDFCFE', '#98F4F4', '#66D9D1'],
         baseURLPath + 'about-ryan.php'
     ]
 ];

@@ -33,7 +33,7 @@
             <div class="about-general">
                 <div id="flex-container">
                     <div class="about-general-text">
-                        <h1 class="typewrite gradient v3" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
+                        <h1 class="typewrite gradient v2" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
                             <span class="wrap">&#8203;</span>
                         </h1>
 
@@ -43,7 +43,7 @@
                         <hr>
                     </div>
 
-                    <img class="page-image gallery-img offset-border" src="/images/screenshots/PL_SS_1.png" alt="">
+                    <img class="page-image gallery-img offset-border light-blue" src="/images/screenshots/PL_SS_1.png" alt="">
                 </div>
 
                 <p id="about-general-bottom" class="typewriter-v2"> &#8203;
@@ -179,7 +179,7 @@
                         <div class="dev-flex-container">
                             <!-- TODO: Replace with actual profile picture -->
                             <div class="profile-pic">
-                                <img src="/images/LunarFlame-Logo-Black.png" alt="">
+                                <img src="/images/devs/ryan_pfp.jpg" alt="">
                             </div>
 
                             <div class="dev-title-text">
@@ -191,8 +191,9 @@
                         <h3>Programmer</h3>
 
                         <!-- TODO: Replace with real data -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <p>
+                            "I've always been an avid gamer and fascinated by the design and technical aspects behind it; 
+                            there was no better project than this one for me to refine my technical skills and express myself in a world of our design."
                         </p>
 
                         <a class="hero-btn button up" href="#">Read More</a>
@@ -201,9 +202,10 @@
             </div>
 
         </section>
+
+        <?php require('../partials/sub-footer.php') ?>
     </div>
 
-    <?php require('../partials/sub-footer.php') ?>
     <?php require('../partials/copyright.php') ?>
 
     <script>

@@ -45,6 +45,19 @@ window.addEventListener('mousemove', function(e) {
     }
 });
 
+let cursorColors = ['#FA7FFF', '#8DA0FE', '#14F2E0', '#A818D4', '#9A75F0', '#FFFFFF' ];
+let colorIndex = 0;
+
+function changeCursorColor() {
+    let pointerStyle = pointer.style.cssText;
+
+    pointer.style.cssText = pointerStyle.includes("--mouse-color:") 
+        ? pointerStyle.substring(0, 15) + cursorColors[colorIndex] + pointerStyle.substring(15 + cursorColors[colorIndex].length)
+        : `--mouse-color: ${cursorColors[colorIndex]}; ${pointerStyle}`;
+
+    colorIndex = (colorIndex + 1) % cursorColors.length;
+}
+
 /* --------------------------------------------------------------------------------------------- */
 
 window.addEventListener('resize', function() {

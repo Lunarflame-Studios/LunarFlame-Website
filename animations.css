@@ -1,6 +1,4 @@
-:root {
-  --circuit-color: #fc1bfccc;
-}
+:root { --circuit-color: #fc1bfccc; }
 
 @keyframes lights {
     0% {
@@ -95,12 +93,12 @@
 .gradient.v3 {
   background-image: linear-gradient(
     -225deg,
-    #7303C0 0%,
-    #4B0DBE 20%,
-    #3204E7 40%,
-    #B105F4 65%,
-    #FF0066 80%,
-    #7303C0 100%
+    #F10080 0%,
+    #8B0D88 20%,
+    #5E2390 40%,
+    #034EA2 60%,
+    #8D0D88 80%,
+    #F10080 100%
   );
   text-shadow: 0 0 60px #3204E7DE;
 }
@@ -108,12 +106,12 @@
 .gradient.v4 {
   background-image: linear-gradient(
     -225deg,
-    #0A52F2 0%,
-    #5A06F5 20%,
-    #A40BF3 40%,
-    #FF0A94 60%,
-    #E40DAF 80%,
-    #0A52F2 100%
+    #F54952 0%,
+    #660F56 20%,
+    #280659 40%,
+    #422680 60%,
+    #660F56 80%,
+    #F54952 100%
   );
   text-shadow: 0 0 60px #0a53f287;
 }
@@ -121,12 +119,12 @@
 .gradient.v5 {
   background-image: linear-gradient(
     -225deg,
-    #0710E8 0%,
-    #4D05E1 20%,
-    #8A00D4 40%,
-    #C600A6 60%,
-    #FF0056 80%,
-    #0710E8 100%
+    #14F2E0 0%,
+    #6E9EEB 20%,
+    #9A75F0 40%,
+    #F320FA 60%,
+    #9A75F0 80%,
+    #14F2E0 100%
   );
   text-shadow: 0 0 60px #070EE8BF;
 }
@@ -379,8 +377,8 @@
 
 /* Change colors later. */
 .button.up {
-  --color: #e4cb58;
-  --hover: #58e4cb;
+  --color: #F3C757;
+  --hover: #F08500;
 }
 
 @media(min-width: 701px) {
@@ -519,6 +517,14 @@
     transition: 0.5s;
   }
 
+  .offset-border.light-blue { --color:#30C0EB; }
+
+  .offset-border.blue { --color: #010FCC; }
+
+  .offset-border.pink { --color: #F019E1; }
+
+  .offset-border.purple { --color: #953DF5; }
+
   .offset-border:hover {
     background-position: 0px 0px;
     background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
@@ -533,16 +539,13 @@
     height: auto;
   }
 
-  #ui-circuit-2 {
+  #ui-circuit-1, #ui-circuit-2 {
     position: fixed;
     z-index: 0;
-    top: 7%;
     width: 100%;
     height: 100%;
-    mask-image: url(/images/vfx/Circuit_2.svg);
     mask-repeat: no-repeat;
     mask-size: 100%;
-    box-shadow: 0 0 60px #00D4F9;
 
     background-image: linear-gradient(
       to right,
@@ -556,6 +559,17 @@
       circuit-pulse 28s linear infinite,
       color-swap 55s linear infinite;
   }
+
+  #ui-circuit-1 {
+    mask-image: url(/images/vfx/Circuit_1.svg);
+    top: 6%;
+  }
+
+  #ui-circuit-2 {
+    mask-image: url(/images/vfx/Circuit_2.svg);
+    top: 7%;
+  }
+
 }
 
 @keyframes circuit-pulse {
@@ -564,6 +578,8 @@
 
 @media(max-width: 700px) {
   #orb-light-blue, #orb-blue, #orb-purple, #orb-pink { display: none; }
+
+  #ui-circuit-2 { display: none; }
 }
 
 @keyframes orb-pulse {

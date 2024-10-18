@@ -42,9 +42,10 @@
                 </nav>
             </div>
         </section>
+        
+        <?php require('../partials/sub-footer.php') ?>
     </div>
 
-    <?php require('../partials/sub-footer.php') ?>
     <?php require('../partials/copyright.php') ?>
 
     <?php require('../partials/javascript.php') ?>

@@ -1,4 +1,7 @@
-<h1>Recent Posts</h1>
+<h1 class="typewriter-v2 gradient v1">&#8203;
+    <span>Recent Posts</span>
+</h1>
+
 <div class="recent-body">
     <div class="recent-box">
                 <a id="link" href="">

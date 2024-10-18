@@ -28,7 +28,7 @@
             <div class="blog-pageBody">
                 <p id="description">I believe that video games are the future of storytelling. Here's why.</p>
                 <br><br>
-                <img class="page-image gallery-img" id="image" src="/images/screenshots/Horizon_Skyline_1.png" alt="">
+                <img class="page-image gallery-img offset-border purple" id="image" src="/images/screenshots/Horizon_Skyline_1.png" alt="">
                 <div>
                     <h2 id="subheader">1. You are part of the story.</h2>
                     <p class="margin-top">Books and movies can do good jobs establishing worlds and giving them life. But I think that video games excel here by making you a part of the world. You control a character, and you interact with other characters and the world around you. The stakes are more intense because now you want to preserve the world that you are so immersed in. You want to become stronger, explore, and discover more about the world through your own observations.</p>
@@ -140,9 +140,9 @@
             <?php require('../../../partials/recent-posts.php') ?>
 
         </section>
+        <?php require('../../../partials/sub-footer.php') ?>
     </div>
 
-    <?php require('../../../partials/sub-footer.php') ?>
     <?php require('../../../partials/copyright.php') ?>
 
     <?php require('../../../partials/javascript.php') ?>
