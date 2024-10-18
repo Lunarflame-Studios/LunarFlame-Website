@@ -1,7 +1,3 @@
-<!--TODO: Integrate sub-footer into page body background
-    Create hr separation, use blog post BG colors
-    Apply different colors to footer links. -->
-
 <section class="sub-footer">
     <div class="footer-about-us">
         <h1 class="gradient v1">About Us</h1>

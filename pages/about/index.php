@@ -99,6 +99,7 @@
             <!------------------------------------------------------------------------------------>
 
             <div class="dev-boxes">
+                
                 <div class="dev-box adri">
                     <div class="margin">
                         <div class="dev-flex-container">
@@ -177,7 +178,6 @@
                 <div class="dev-box ryan">
                     <div class="margin">
                         <div class="dev-flex-container">
-                            <!-- TODO: Replace with actual profile picture -->
                             <div class="profile-pic">
                                 <img src="/images/devs/ryan_pfp.jpg" alt="">
                             </div>
@@ -190,7 +190,6 @@
 
                         <h3>Programmer</h3>
 
-                        <!-- TODO: Replace with real data -->
                         <p>
                             "I've always been an avid gamer and fascinated by the design and technical aspects behind it; 
                             there was no better project than this one for me to refine my technical skills and express myself in a world of our design."
@@ -209,13 +208,9 @@
     <?php require('../partials/copyright.php') ?>
 
     <script>
-        function forwardDev() {
-            nextDev(1);
-        }
+        function forwardDev() { nextDev(1); }
 
-        function backDev() {
-            nextDev(-1);
-        }
+        function backDev() { nextDev(-1); }
     </script>
     <script src="/javascript/about.js"></script>
 
