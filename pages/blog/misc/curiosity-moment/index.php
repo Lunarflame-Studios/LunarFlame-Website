@@ -41,13 +41,13 @@
                     <p>This is one of my favorite series of all time. The 3 games span across 2 universes, and detail the struggles of different groups of characters as they fight against a pre-determined fate and discover the meaning of human existence. </p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/Xenoblade-Chronicles-Shulk.png" alt="">
-                        <img class="gallery-img" src="/images/blog/pyra-rex-xenoblade-2.png" alt="">
-                        <img class="gallery-img" src="/images/blog/Xenoblade_Chronicles_3_combat_1.0.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/xenoblade_1.png" alt="">
-                        <img class="gallery-img" src="/images/blog/xeno_3_mio.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/xeno_3_noah_mio.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/orobouros.jpg" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1K-Y7hHQ7OczR-_nLGg6WqLlTn1pEmMs2&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1cP5WXow4ZLB6oyStvwvW50VW26TzWhez&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1OpAtiqu_SzFcNLqAmmlDfFpjINqRXTuW&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1E6uOh7Krcs--Sr4o9F7nwwU-q8U-0uDV&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=13CdX4NhQlgI43ujCvDEKeq7lwtfX7Ur6&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1X8I_gPa3xWgDCcMMWDfA2c8jhOS2A_5e&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=13KKOeipjWuRwFDAKzvr5Q7I-dFjYlTvI&sz=w1000" alt="">
                     </div>
                 </div>
 
@@ -63,10 +63,10 @@
                     <p>NieR: Automata is an open-world game set in a post-apocalyptic Earth that has been taken over by aliens and their force of machines. A special squadron of androids, known as YorHa, is tasked with defeating them. NieR: Automata is famous for having 26 different endings. However, only 5 of those endings are canonical. The rest are a result of the player choosing or failing to complete important story objectives.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/NieR_1.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_automata_1.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_automata_2.png" alt="">
-                        <img class="gallery-img" src="/images/blog/nier_gameplay.jpg" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1Qm8lziXK4L4uBMwY249qnFBqRwSbvdwy&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1-cop4RzffPPcn_UoCxe878Z7Yl_b99Av&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1G9kU1Sy55Ruminz2hdiUdUe3fjX3_JFi&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1A39-D_SuJ0P1VMNCka6jVhjEVkaQvVfW&sz=w1000" alt="">
                     </div>
                 </div>
 
@@ -82,10 +82,10 @@
                     <p>Persona 5 takes place in Tokyo, Japan, and centers around a high-school student who goes by the codename "Joker." His reputation was ruined after being falsely accused of a crime. After discovering a world called the Metaverse, where the corrupted cognitions of people manifest, he uncovers a special power known as a Persona. He forms a group called the Phantom Thieves of Hearts, Persona-users who traverse the metaverse and defeat the shadows of the malevolent adults to make them repent for their sins in the real world.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/P5R_gang.png" alt="">
-                        <img class="gallery-img" src="/images/blog/persona5battle.png" alt="">
-                        <img class="gallery-img" src="/images/blog/P5R_joker.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/persona5ui.jpg" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=16qPwBv3VjSKhtkxntmKAwcEJmp8F03bJ&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1agGjOY4eFNRrG6IgWESpYvyzi5sNNdbf&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1CIazfobGQu3bKhdhGjAX_7Y9BnSqBV0P&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1EYORweCsFFgYHtuD51Vce2PD0lAuUGw7&sz=w1000" alt="">
                     </div>
                 </div>
 
@@ -103,12 +103,12 @@
                     </p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/Ori_scene.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene.png" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene_2.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/OWW_scene_3.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/ori_naru.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/ori_naru_2.jpg" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1nfK0kka8CZfQWPL5lOOGaflFrt3kswQj&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1NB4EgXaeCmrOl5JnwZIT8JD8BQdBetEj&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1MEFAzobR0-pnlEqbwjPOr0THhDydwdWU&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1QXGWALTSB_wo_MD4JzGCDAVNOltj9sIj&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1J3l36pUYvM48uBuzgdS-C2rV38V5dtoS&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1lzF2JFVdAAbRqqJNkSz5UlGNL0A0jhvU&sz=w1000" alt="">
                     </div>
                 </div>
 
@@ -125,10 +125,10 @@
                     <p>Minecraft is an open-world sandbox game in which the entire world is made of blocks. Players can choose to play in Creative Mode, where they have unlimited building materials and completely free movement, or Survival Mode, where players must gather materials, food, and tools, survive against monsters, and traverse different dimensions.</p>
                     <br>
                     <div id="full-width" class="scroll-container">
-                        <img class="gallery-img" src="/images/blog/The_End_-_Outer_Islands.png" alt="">
-                        <img class="gallery-img" src="/images/blog/MonumentOcean1.png" alt="">
-                        <img class="gallery-img" src="/images/blog/minecraft_stronghold.jpg" alt="">
-                        <img class="gallery-img" src="/images/blog/nether_fortress.png" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1m2za6Ob_bQJTxHFv6xVy4z9ld_Z-vL3N&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1P8qXZR7k7rJrSDlLneQbqbDI_9UgUgVz&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1YBCZSznlxjZE5sSoBQCiHzfzZBh2mW4b&sz=w1000" alt="">
+                        <img class="gallery-img" src="https://drive.google.com/thumbnail?id=1js7O111d_xkZbf9OfTI-3iOLiDoabAGE&sz=w1000" alt="">
                     </div>
                 </div>
 
