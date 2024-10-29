@@ -15,6 +15,10 @@
 
         .panner { display: none; }
 
+        .sub-footer {
+            background: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(/images/vfx/Blue-Nebula-8-1024x1024-1.png);
+        }
+        
         @media(max-width: 700px) {
             iframe { display: none; }
         }
@@ -22,6 +26,7 @@
         @media(min-width: 701px) {
             #not-available { display: none; }
             iframe { padding-bottom: 10%; }
+
         }
     </style>
 

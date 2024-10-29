@@ -1,12 +1,13 @@
 let pages = [];
-var colors = ['#0b54fe', '#fc0fc0', '#a129d7', '#633be7'];
-var recentBoxes = document.querySelectorAll(".page-body .recent-body .recent-box");
+let boxShadowColors = ['#0b54fe', '#fc0fc0', '#a129d7', '#633be7'];
+const recentBoxes = document.querySelectorAll(".page-body .recent-body .recent-box");
+
 recentBoxes.forEach(function(box) { colorShadow(box) });
 
 fetch('/rss.xml')
     .then(response => {
         if (!response.ok) {
-            console.log("There was an error parsing the XML");
+            console.log("There was an error parsing the XML.");
         }
         else {
             return response.text();
@@ -32,8 +33,6 @@ fetch('/rss.xml')
         populateRecentPosts();
         populateBlogEntries();
 
-        // console.log(pages);
-
     }).catch(error => {
         console.error('There was a problem fetching the RSS feed: ' + error);
     })
@@ -58,7 +57,7 @@ function colorShadow(box) {
      * @description Returns a random color from the colors array.
      * @returns {string} A random color in the format "#xxxxxx".
      */
-    const getRandomColor = () => colors[getRandomIndex(0, colors.length - 1)];
+    const getRandomColor = () => boxShadowColors[getRandomIndex(0, boxShadowColors.length - 1)];
 
     /**
      * @listens box#mouseenter
@@ -194,7 +193,6 @@ function populateBlogEntries() {
     }
 }
 
-
 /**
  * @function populateRecentPosts
  * @description Populates the "Recent Posts" section of the blog page with the latest three blog posts.
@@ -204,6 +202,7 @@ function populateRecentPosts() {
      * @var {NodeList} recentPostBlocks - The array of elements for the "Recent Posts" section.
      */
     var recentPostBlocks = document.querySelectorAll(".recent-box");
+    const getRandomIndex = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
     if (recentPostBlocks != null) {
         /**

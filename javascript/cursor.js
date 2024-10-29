@@ -37,7 +37,7 @@ window.addEventListener('mousemove', function(e) {
 
     if (target.localName != 'html') {
         if (target.localName == 'a' || target.dataset.cursor == 'false' || target.parentNode.dataset.cursor == 'false') {
-            TweenLite.to(pointer, 1, { ease: Power4.easeOut, scale: 0.4 });
+            TweenLite.to(pointer, 1, { ease: Power4.easeOut, scale: 0.5 });
         }
         else {
             TweenLite.to(pointer, 1, { ease: Power4.easeOut, scale: 1 });

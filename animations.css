@@ -299,9 +299,7 @@
 }
 
 @media (max-width: 700px) {
-  #ui-frame {
-    display: none;
-  }
+  #ui-frame { display: none; }
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -569,7 +567,10 @@
     mask-image: url(/images/vfx/Circuit_2.svg);
     top: 7%;
   }
+}
 
+@media(min-width: 1521px) {
+  #ui-circuit-1, #ui-circuit-2 { top: 4%; }
 }
 
 @keyframes circuit-pulse {

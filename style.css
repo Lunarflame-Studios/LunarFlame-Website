@@ -10,6 +10,8 @@
     src: url(fonts/MontserratAlt1-SemiBold.ttf);
 }
 
+body { background-color: #040511; }
+
 /* Home Page ----------------------------------------------------------------------------------- */
 /*px --> vw conversion: 0.0703125x*/
 
