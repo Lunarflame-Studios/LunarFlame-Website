@@ -26,6 +26,9 @@
         @media(min-width: 701px) {
             #not-available { display: none; }
             iframe { padding-bottom: 10%; }
+            .page-body h1 {
+                padding-bottom: 4%;
+            }
 
         }
     </style>
@@ -52,9 +55,9 @@
                 If you're on desktop, try expanding your screen.</h3>
 
         </section>
+        <?php require('../../partials/sub-footer.php') ?>
     </div>
 
-    <?php require('../../partials/sub-footer.php') ?>
     <?php require('../../partials/copyright.php') ?>
 
     <?php require('../../partials/javascript.php') ?>
