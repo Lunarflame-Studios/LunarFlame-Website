@@ -2,9 +2,11 @@ let pages = [];
 let boxShadowColors = ['#0b54fe', '#fc0fc0', '#a129d7', '#633be7'];
 const recentBoxes = document.querySelectorAll(".page-body .recent-body .recent-box");
 
+const domainChars = 30;
+
 recentBoxes.forEach(function(box) { colorShadow(box) });
 
-fetch('/rss.xml')
+fetch('rss.xml')
     .then(response => {
         if (!response.ok) {
             console.log("There was an error parsing the XML.");
@@ -104,7 +106,7 @@ function populateBlogEntries() {
              * @var {HTMLElement} link - The link element that wraps the blog post.
              */
             var link = document.createElement("a");
-            link.href = entry[1].substring(29, entry[1].length);
+            link.href = entry[1].substring(domainChars, entry[1].length);
             link.id = "link";
 
             /**
@@ -118,7 +120,7 @@ function populateBlogEntries() {
              */
             var img = document.createElement("img");
             img.classList.add("blog-img");
-            img.src = entry[6].substring(29, entry[6].length);
+            img.src = entry[6].substring(domainChars, entry[6].length);
             img.alt = "blog img";
             imgContainer.appendChild(img);
 
@@ -222,7 +224,7 @@ function populateRecentPosts() {
              * @var {HTMLElement} link - The link element that wraps the blog post.
              */
             var link = document.createElement("a");
-            link.href = post[1].substring(29, post[1].length);
+            link.href = post[1].substring(domainChars, post[1].length);
 
             /**
              * @var {HTMLElement} imgContainer - The container element for the blog post image.
@@ -235,7 +237,7 @@ function populateRecentPosts() {
              */
             var img = document.createElement("img");
             img.classList.add("blog-img");
-            img.src = post[6].substring(29, post[6].length);
+            img.src = post[6].substring(domainChars, post[6].length);
             img.alt = "blog img";
             imgContainer.appendChild(img);
 

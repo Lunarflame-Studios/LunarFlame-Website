@@ -2,14 +2,15 @@
 <div class="pointer"></div>
 
 <div class="js-links">
-    <script src="/assets/js/tweenmax.min.js"></script>
+    <script src="javascript/global.js"></script>
+    <script src="assets/js/tweenmax.min.js"></script>
 
-    <script src="/javascript/typewrite.js"></script>
+    <script src="javascript/typewrite.js"></script>
 
-    <script src="/javascript/images.js"></script>
-    <script src="/javascript/animations.js"></script>
+    <script src="javascript/images.js"></script>
+    <script src="javascript/animations.js"></script>
 
-    <script src="/javascript/cursor.js"></script>
+    <script src="javascript/cursor.js"></script>
 </div>
 <script>
     var navLinks = document.getElementById("navLinks");

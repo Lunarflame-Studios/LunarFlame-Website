@@ -6,7 +6,7 @@
     <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -25,7 +25,7 @@
             <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -44,7 +44,7 @@
             <div class="recent-box">
                 <a id="link" href="">
                     <div class="recent-img-container">
-                        <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                        <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                     </div>
                     <div class="recent-text">
                         <h2 id="category">Category</h2>
@@ -60,6 +60,6 @@
                 </a>
             </div>
 
-    <script src="/javascript/blog.js"></script>
+    <script src="javascript/blog.js"></script>
 </div>
 <br><br>

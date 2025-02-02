@@ -3,6 +3,14 @@ const mainHeader = document.querySelector('.home-header');
 
 let backgroundOpacity = 0.8;
 
+document.querySelectorAll("#ui-circuit-1").forEach(element => {
+    element.style.maskImage = `url(${rootPath}images/vfx/Circuit_1.svg)`;
+});
+
+document.querySelectorAll("#ui-circuit-2").forEach(element => {
+    element.style.maskImage = `url(${rootPath}images/vfx/Circuit_2.svg)`;
+});
+
 function fadeOut(element, delay) {
     element.style.backgroundColor = `rgba(0, 0, 0, ${backgroundOpacity})`;
 
@@ -17,7 +25,7 @@ function fadeOut(element, delay) {
 if (fadeOutMain !== null) {
     setTimeout(() => {
         fadeOut(fadeOutMain, 50);
-        mainHeader.style.backgroundImage = 'url(images/vfx/Background.png)';
+        mainHeader.style.backgroundImage = `url(${rootPath}images/vfx/Background.png)`;
     }, 500)
 }
 

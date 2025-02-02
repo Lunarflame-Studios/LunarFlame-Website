@@ -559,18 +559,20 @@
   }
 
   #ui-circuit-1 {
-    mask-image: url(/images/vfx/Circuit_1.svg);
+    /* maskImage property is set in animations.js*/
+    /* mask-image: url(/images/vfx/Circuit_1.svg); */
     top: 6%;
   }
 
   #ui-circuit-2 {
-    mask-image: url(/images/vfx/Circuit_2.svg);
+    /* maskImage property is set in animations.js*/
+    /* mask-image: url(/images/vfx/Circuit_2.svg); */
     top: 7%;
   }
 }
 
 @media(min-width: 1521px) {
-  #ui-circuit-1, #ui-circuit-2 { top: 4%; }
+  #ui-circuit-1, #ui-circuit-2 { top: 7%; }
 }
 
 @keyframes circuit-pulse {

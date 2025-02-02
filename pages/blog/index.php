@@ -4,7 +4,7 @@
 <head>
     <?php require('../partials/header.php') ?>
     <title>Blog</title>
-    <link rel="stylesheet" href="/pages/blog/blog-main.css">
+    <link rel="stylesheet" href="pages/blog/blog-main.css">
 </head>
 
 <body>
@@ -14,9 +14,9 @@
         </div>
 
         <div id="glow-orbs">
-            <img id="orb-purple" src="/images/vfx/Purple-Glow.png" alt="">
-            <img id="orb-light-blue" src="/images/vfx/Light-Blue-Glow.png" alt="">
-            <img id="orb-pink" src="/images/vfx/Pink-Glow.png" alt="">
+            <img id="orb-purple" src="images/vfx/Purple-Glow.png" alt="">
+            <img id="orb-light-blue" src="images/vfx/Light-Blue-Glow.png" alt="">
+            <img id="orb-pink" src="images/vfx/Pink-Glow.png" alt="">
         </div>
 
         <?php require('../partials/sub-header.php') ?>
@@ -29,7 +29,7 @@
                 <span>Latest Posts</span>
             </h1>
 
-            <a id="subscribe" href="/rss.xml">
+            <a id="subscribe" href="rss.xml">
                 <h4>Subscribe!</h4>
             </a>
 
@@ -38,7 +38,7 @@
                 <div class="recent-box">
                     <a id="link" href="">
                         <div class="recent-img-container">
-                            <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                            <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                         </div>
                         <div class="recent-text">
                             <h2 id="category">Category</h2>
@@ -57,7 +57,7 @@
                 <div class="recent-box">
                     <a id="link" href="">
                         <div class="recent-img-container">
-                            <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                            <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                         </div>
                         <div class="recent-text">
                             <h2 id="category">Category</h2>
@@ -76,7 +76,7 @@
                 <div class="recent-box">
                     <a id="link" href="">
                         <div class="recent-img-container">
-                            <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                            <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                         </div>
                         <div class="recent-text">
                             <h2 id="category">Category</h2>
@@ -102,7 +102,7 @@
                 <div class="blog-box" id="blog-box-1">
                     <a id="link" href="">
                         <div class="blog-img-container">
-                            <img id="image" class="blog-img" src="/images/LunarFlame-Logo-Simplified.png" alt="blog img">
+                            <img id="image" class="blog-img" src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
                         </div>
                         <div class="blog-text">
                             <h2 id="category">Category</h2>
@@ -126,7 +126,7 @@
 
     <?php require('../partials/copyright.php') ?>
 
-    <script src="/javascript/blog.js"></script>
+    <script src="javascript/blog.js"></script>
     <?php require('../partials/javascript.php') ?>
 
 </body>

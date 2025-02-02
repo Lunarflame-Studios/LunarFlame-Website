@@ -4,7 +4,7 @@
 <head>
     <?php require('../../partials/header.php') ?>
     <title>Project Leo (Browser)</title>
-    <link rel="stylesheet" href="/pages/projects/projects.css">
+    <link rel="stylesheet" href="pages/projects/projects.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         .panner { display: none; }
 
         .sub-footer {
-            background: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(/images/vfx/Blue-Nebula-8-1024x1024-1.png);
+            background: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
         }
         
         @media(max-width: 700px) {

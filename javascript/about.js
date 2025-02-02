@@ -1,8 +1,8 @@
 const frameBackground = document.querySelector('#frame-inside');
 
 const uiFrame = '#ui-frame-2 ';
-const baseImagePath = '/images/devs/';
-const baseURLPath = '/pages/about/';
+const baseImagePath = 'images/devs/';
+const baseURLPath = 'pages/about/';
 const heroBtn = "hero-btn button ";
 
 const devBoxElements = [

@@ -17,7 +17,7 @@ function changeBackground() {
     let blue = (currentIndex == 2 || currentIndex == 5) ?  `0, 0, 0, 0` : `5, 18, 70, 0.7`;
     let purple = (currentIndex == 2 || currentIndex == 5) ?  `0, 0, 0, 0` : `59, 4, 70, 0.7`;
 
-    header.style.backgroundImage = `linear-gradient(rgba(${blue}), rgba(${purple})), url(${imagePaths[currentIndex]})`;
+    header.style.backgroundImage = `linear-gradient(rgba(${blue}), rgba(${purple})), url(${rootPath}${imagePaths[currentIndex]})`;
 }
 
 function nextSlide() {

@@ -111,7 +111,7 @@ body { background-color: #040511; }
 
 /* Background Image */
 .home-background { 
-    background-image: linear-gradient(black, black), url(/images/vfx/Background.png); 
+    background-image: linear-gradient(black, black), url(images/vfx/Background.png); 
     z-index: 0;
 }
 

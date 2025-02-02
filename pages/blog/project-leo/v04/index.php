@@ -4,8 +4,8 @@
 <head>
     <?php require('../../../partials/header.php') ?>
     <title>Play Project Leo v0.4</title>
-    <link rel="stylesheet" href="/pages/blog/blog-page.css">
-    <link rel="stylesheet" href="/pages/blog/blog-main.css">
+    <link rel="stylesheet" href="pages/blog/blog-page.css">
+    <link rel="stylesheet" href="pages/blog/blog-main.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.4 is out, and there's a lot of new features.</p>
                 <br><br>
-                <img class="page-image gallery-img offset-border light-blue" id="image" src="/images/screenshots/PL_SS_3.png" alt="">
+                <img class="page-image gallery-img offset-border light-blue" id="image" src="images/screenshots/PL_SS_3.png" alt="">
                 <br><br>
                 <div>
                     <h2 id="subheader">Cloud Save Data</h2>
