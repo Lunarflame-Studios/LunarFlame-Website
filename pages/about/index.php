@@ -208,9 +208,9 @@
     <?php require('../partials/copyright.php') ?>
 
     <script>
-        function forwardDev() { nextDev(1); }
+        function forwardDev() { aboutPage.nextDev(1); }
 
-        function backDev() { nextDev(-1); }
+        function backDev() { aboutPage.nextDev(-1); }
     </script>
     <script src="javascript/about.js"></script>
 
