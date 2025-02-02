@@ -45,7 +45,7 @@ window.addEventListener('mousemove', function(e) {
     }
 });
 
-let cursorColors = ['#FA7FFF', '#8DA0FE', '#14F2E0', '#A818D4', '#9A75F0', '#FFFFFF' ];
+const cursorColors = ['#FA7FFF', '#8DA0FE', '#14F2E0', '#A818D4', '#9A75F0', '#FFFFFF' ];
 let colorIndex = 0;
 
 function changeCursorColor() {
