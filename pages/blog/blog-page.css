@@ -7,7 +7,7 @@
 
 /*Date*/
 .page-body h4 {
-    margin-top: 8px;
+    margin-top: 2%;
     font-size: 1.5vw;
     color: #cbbcff;
 }
@@ -30,23 +30,30 @@
 /* Div container for rest of article */
 .blog-pageBody {
     text-align: left;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-right: 10%;
+    margin: 5% 10% 5%;
+}
+
+.blog-pageBody p {
+    margin-top: 4%;
+}
+
+.blog-end { margin: 12vh auto; }
+
+.blog-begin { margin: 4vh auto; }
+
+.blog-break { margin: 8vh auto; }
+
+#description {
+    margin: 3% 0 3%;
 }
 
 /* An h2 subheader. Applies a different color than a normal h2 header. */
-#subheader {
-    font-size: 3vw;
+.page-body .subheader {
     color: #ada8ff;
-}
-
-/* Unused??? */
-#subcategory {
-    display: inline-flex;
+    line-height: 4vw;
 }
 
 /* Used by the div container for scrollbars to widen them closer to viewport width. */
-#full-width {
-    margin: 0 -12%;
+.scroll-container {
+    margin: 4% -12%;
 }

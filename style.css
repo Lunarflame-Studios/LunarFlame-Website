@@ -28,21 +28,13 @@ body { background-color: #040511; }
 /* Top Menu area, containing the logo and nav links. */
 .sub-header nav, .home-header nav {
     display: flex;
-    padding: 1% 2%;
+    margin: 1% 2%;
     justify-content: space-between;
     align-items: center;
 }
 
 /*Lunarflame Logo Image*/
 .sub-header nav img, .home-header nav img { width: 28.125vw; }
-
-.sub-header-background {
-    background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
-}
-
-.page-body-background {
-    background-image: linear-gradient(#00021F, #020131);
-}
 
 /* Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)  */
 .nav-links, .social-links { flex: 1; }
@@ -54,7 +46,7 @@ body { background-color: #040511; }
 .nav-links ul li, .social-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    margin: 8px 12px;
     position: relative;
 }
 
@@ -127,14 +119,14 @@ body { background-color: #040511; }
 .page-body h1 {
     font-size: 4.5vw;
     color: #f3bafd;
-    padding-top: 5%;
+    margin-top: 5%;
 }
 
 /*Secondary Titles*/
 .page-body h2 {
     font-size: 3.9vw;
     color: #ed88ff;
-    padding-top: 5%;
+    margin-top: 5%;
 }
 
 /*Paragraph Content*/
@@ -148,7 +140,7 @@ body { background-color: #040511; }
 .page-image { max-width: 70%; }
 
 /*Horizontal Break*/
-.page-body hr {
+hr {
     width: 75%;
     border: 1px solid blueviolet;
     margin: 20px auto;
@@ -256,7 +248,7 @@ body { background-color: #040511; }
 .typewriter-v2 span { display: none; }
 
 /* Gives any element a slight top margin*/
-.margin-top { margin-top: 4%; }
+/* .margin-top { margin-top: 4%; }
 
 /* Styles for the zoomed-in image overlay */
 #overlay {
@@ -307,16 +299,16 @@ body { background-color: #040511; }
     /* Item in Top Menu nav list */
     .nav-links ul li { 
         display: block;
-        margin: 20px 0px;
+        margin: 5vh 0px;
     }
 
     /* Anchor for Top Menu nav list item */
-    .nav-links a { font-size: 4.4vw; }
+    .nav-links a { font-size: 5vw; }
 
     /* Anchor for Social Links list item */
     .social-links a {
         text-decoration: none;
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     /* Top Menu Buttons go to the side bar on the Mobile View. */
@@ -355,12 +347,15 @@ body { background-color: #040511; }
 
     /* Nav Links list */
     .nav-links ul { 
-        padding: 0 20px;
+        margin: 8vh 4vh;
         text-align: center;
     }
 
     /* Social Links list */
-    .social-links ul { padding: 72px 50px; }
+    .social-links ul { 
+        margin: 10vh 4vh;
+        text-align: center;
+    }
 
     /* Social Links icons turn pink when hovered over. */
     .social-links i:hover { color: #eb96f7; }
@@ -482,7 +477,7 @@ body { background-color: #040511; }
     .sub-footer h1 {
         color: #ad72ff;
         font-size: 3.5vw;
-        padding-bottom: 5%;
+        margin-bottom: 5%;
     }
 
     /*Sub-Footer Subtext*/

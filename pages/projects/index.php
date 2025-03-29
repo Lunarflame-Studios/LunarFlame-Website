@@ -37,7 +37,6 @@
                                 <h2>Project Leo</h2>
                             </li>
                         </a>
-                        <br>
                     </ul>
                 </nav>
             </div>

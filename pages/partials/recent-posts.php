@@ -62,4 +62,3 @@
 
     <script src="javascript/blog.js"></script>
 </div>
-<br><br>

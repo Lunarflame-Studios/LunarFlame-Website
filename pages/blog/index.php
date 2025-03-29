@@ -92,6 +92,7 @@
                     </a>
                 </div>
             </div>
+
             <hr id="spacing">
 
             <h1 class="typewriter-v2 gradient v2"> &#8203;

@@ -29,7 +29,6 @@
                 <span>Project Leo</span>
             </h1>
 
-            <!---<img class="title margin-top" src="../images/NeXoSphere.png" alt="Nexosphere"> -->
             <p class="typewriter-v2"> &#8203;
                 <span>Project Leo is a game under development by LunarFlame Studios.</span>
             </p>

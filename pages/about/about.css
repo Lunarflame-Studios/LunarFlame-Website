@@ -31,7 +31,7 @@
         transform: translateY(15%);
     }
 
-    .about-general p { padding: 5% 3%; }
+    .about-general-text p { margin: 5% 3%; }
 
     /* Container for list of devs */
     .about-devs {
@@ -99,7 +99,7 @@
 
     .button { font-size: 1.5vw; }
 
-    .dev-slideshow { padding: 10% 0; }
+    .dev-slideshow { margin: 10% 0; }
 
     /* Div container for the profile picture. */
     .profile-pic {
@@ -122,7 +122,7 @@
     }
 
     #about-general-bottom { 
-        padding: 5% 8%;
+        margin: 5% 8%;
         position: relative;
         z-index: 1; 
     }

@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(#C60C31, #67023D);
+}
+
+.adri-general {
+    background: #67023D67;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5% 10%;
+    padding: 5%;
+    gap: 8%;
+}
+
+.adri-general p {
+    text-align: right;
+}
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 5%;
+}
+
+.reverse a {
+    font-size: 2.5vw;
+    background: #67023D;
+}
+
+/* Div container for the profile picture. */
+#profile-pic {
+    display: inline-block;
+    width: 22vw;
+    height: 15vw;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Profile Picture Image Element */
+#profile-pic img {
+    position: relative;
+    width: auto;
+    height: 120%;
+    bottom: 10%;
+}

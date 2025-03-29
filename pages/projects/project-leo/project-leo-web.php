@@ -9,6 +9,21 @@
 
 <body>
     <style>
+        
+        .sub-header-background {
+            background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
+            padding: 1% 2%;
+        }
+
+        .sub-header-background nav {
+            margin: 0;
+        }
+
+
+        .page-body-background {
+            background-image: linear-gradient(#00021F, #020131);
+        }
+
         * { cursor: pointer; }
 
         .pointer { display: none; }
@@ -27,7 +42,8 @@
             #not-available { display: none; }
             iframe { padding-bottom: 10%; }
             .page-body h1 {
-                padding-bottom: 4%;
+                margin: 0;
+                padding: 5% 0;
             }
 
         }
