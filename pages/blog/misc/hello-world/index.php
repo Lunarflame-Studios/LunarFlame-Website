@@ -11,7 +11,6 @@
 <body>
     <div class="background">
         <?php require('../../../partials/sub-header.php') ?>
-
         <section class="page-body">
             <div id="overlay"></div>
             <img id="zoom-in" src="" alt="">
@@ -36,14 +35,10 @@
             <hr class="blog-end">
             <?php require('../../../partials/recent-posts.php') ?>
         </section>
-        
         <?php require('../../../partials/sub-footer.php') ?>
     </div>
-
     <?php require('../../../partials/copyright.php') ?>
-
     <?php require('../../../partials/javascript.php') ?>
-
 </body>
 
 </html>

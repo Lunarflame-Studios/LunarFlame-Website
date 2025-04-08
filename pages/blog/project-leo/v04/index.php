@@ -30,8 +30,7 @@
                 <img class="page-image gallery-img offset-border light-blue" id="image" src="images/screenshots/PL_SS_3.png" alt="">
                 <div>
                     <h2 class="subheader">Cloud Save Data</h2>
-                    <p>Players can now choose to create accounts and store their data online. This allows players to load their data across multiple devices and preserve their data in future updates.
-                       Players who choose not to create accounts can use guest accounts. These are anonymous, locally stored accounts that can allow you to play the game quickly or without internet access. However, certain features will not be available to guest accounts during future updates. </p>
+                    <p>Players can now choose to create accounts and store their data online. This allows players to load their data across multiple devices and preserve their data in future updates. Players who choose not to create accounts can use guest accounts. These are anonymous, locally stored accounts that can allow you to play the game quickly or without internet access. However, certain features will not be available to guest accounts during future updates. </p>
                 </div>
 
                 <div>
@@ -50,7 +49,7 @@
                 <div>
                     <h2 class="subheader" id="nether">Nether</h2>
                     <p>Nether is a creature from between worlds that devours space-time and turns its surroundings into a corrosive, uninhabitable hellscape. Nether will stop at nothing until it has nothing left to consume. It must be completely destroyed in order to save the galaxy.</p>
-                    <p> Nether Spawns are a primitive form of Nether that appear occasionally in worlds under its influence. They are normally invisible to the human eye, but can be seen when in close contact, or with the help of special contact lenses made by EDEN. Nether spawns can be destroyed through player interaction, and reward Nether Cores upon being slain. Nether Cores are a valuable currency in the galaxy that can be used for premium goods.</p>
+                    <p>Nether Spawns are a primitive form of Nether that appear occasionally in worlds under its influence. They are normally invisible to the human eye, but can be seen when in close contact, or with the help of special contact lenses made by EDEN. Nether spawns can be destroyed through player interaction, and reward Nether Cores upon being slain. Nether Cores are a valuable currency in the galaxy that can be used for premium goods.</p>
 
                     <style> #nether { color: #800000; } </style>
                 </div>
