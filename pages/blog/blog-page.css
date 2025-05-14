@@ -37,6 +37,11 @@
     margin-top: 4%;
 }
 
+.image-container { 
+    text-align: center;
+    margin: 6vw 0;
+}
+
 .blog-end { margin: 12vh auto; }
 
 .blog-begin { margin: 4vh auto; }
