@@ -7,16 +7,6 @@
         <language>en-us</language>
         <!--Most Recent Posts Should go at the Top-->
         <item>
-            <title>ACBLOT: Programming with C</title>
-            <link>https://lunarflamestudios.com/pages/blog/misc/ACBLOT</link>
-            <description>I spent some time making a C script to automate making blog posts. Here's what I learned.</description>
-            <pubDate>Apr 09, 2025</pubDate>
-            <author>Phantom</author>
-            <category>Misc.</category>
-            <image>https://lunarflamestudios.com/images/blog/C_programming.png</image>
-        </item>
-
-        <item>
             <title>Play Project Leo v0.45</title>
             <link>https://lunarflamestudios.com/pages/blog/project-leo/v045</link>
             <description>Project Leo v0.45 is out! We've prepared a ton of new features.</description>
