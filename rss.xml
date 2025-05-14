@@ -5,8 +5,17 @@
         <link>https://lunarflamestudios.com</link>
         <description>Articles, Opinions, and Updates from LunarFlame Studios</description>
         <language>en-us</language>
-
         <!--Most Recent Posts Should go at the Top-->
+        <item>
+            <title>ACBLOT: Programming with C</title>
+            <link>https://lunarflamestudios.com/pages/blog/misc/ACBLOT</link>
+            <description>I spent some time making a C script to automate making blog posts. Here's what I learned.</description>
+            <pubDate>Apr 09, 2025</pubDate>
+            <author>Phantom</author>
+            <category>Misc.</category>
+            <image>https://lunarflamestudios.com/images/blog/C_programming.png</image>
+        </item>
+
         <item>
             <title>Play Project Leo v0.45</title>
             <link>https://lunarflamestudios.com/pages/blog/project-leo/v045</link>
@@ -16,7 +25,6 @@
             <category>Project Leo</category>
             <image>https://lunarflamestudios.com/images/screenshots/PL_SS_5.png</image>
         </item>
-
         <item>
             <title>Play Project Leo v0.4</title>
             <link>https://lunarflamestudios.com/pages/blog/project-leo/v04</link>
@@ -26,7 +34,6 @@
             <category>Project Leo</category>
             <image>https://lunarflamestudios.com/images/screenshots/PL_SS_3.png</image>
         </item>
-
         <item>
             <title>My Curiosity Moment</title>
             <link>https://lunarflamestudios.com/pages/blog/misc/curiosity-moment</link>
@@ -36,7 +43,6 @@
             <category>Misc.</category>
             <image>https://lunarflamestudios.com/images/screenshots/Horizon_Skyline_1.png</image>
         </item>
-
         <item>
             <title>Hello World; An Introduction.</title>
             <link>https://lunarflamestudios.com/pages/blog/misc/hello-world</link>
