@@ -91,10 +91,10 @@ let blogPageInstance = function() {
                 thumbnail.appendChild(img);
 
                 /**
-                 * @var {HTMLElement} blogText - The container element for the blog post text.
+                 * @var {HTMLElement} metadata - The container element for the blog post text.
                  */
-                var blogText = document.createElement("div");
-                blogText.classList.add("metadata");
+                var metadata = document.createElement("div");
+                metadata.classList.add("metadata");
 
                 /**
                  * @var {HTMLElement} category - The element for the category of the blog post.
@@ -138,13 +138,13 @@ let blogPageInstance = function() {
 
                 authorContainer.appendChild(author);
                 authorContainer.appendChild(pubDate);
-                blogText.appendChild(category);
-                blogText.appendChild(title);
-                blogText.appendChild(description);
-                blogText.appendChild(authorContainer);
+                metadata.appendChild(category);
+                metadata.appendChild(title);
+                metadata.appendChild(description);
+                metadata.appendChild(authorContainer);
 
                 link.appendChild(thumbnail);
-                link.appendChild(blogText);
+                link.appendChild(metadata);
                 blogBox.appendChild(link);
 
                 blogBody.appendChild(blogBox);
@@ -161,7 +161,7 @@ let blogPageInstance = function() {
         /**
          * @var {NodeList} recentPostBlocks - The array of elements for the "Recent Posts" section.
          */
-        var recentPostBlocks = document.querySelectorAll(".post");
+        var recentPostBlocks = document.querySelectorAll(".recent .post");
         const getRandomIndex = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
         if (recentPostBlocks != null) {
