@@ -15,7 +15,7 @@ body { background-color: #040511; }
 /*px --> vw conversion: 0.0703125x*/
 
 /* Top Menu area, containing the logo and nav links. */
-.sub-header nav, .home-header nav {
+header {
     display: flex;
     margin: 1% 2%;
     justify-content: space-between;
@@ -23,16 +23,16 @@ body { background-color: #040511; }
 }
 
 /*Lunarflame Logo Image*/
-.sub-header nav img, .home-header nav img { width: 28.125vw; }
+header img, .home-header nav img { width: 28.125vw; }
 
 /* Top Menu Buttons (HOME, ABOUT, PROJECTS, BLOG)  */
 .nav-links, .social-links { flex: 1; }
 
 /* Top Menu Buttons */
-.header { text-align: right; }
+header > nav { text-align: right; }
 
 /* Item in Top Menu nav list. */
-.nav-links ul li, .social-links ul li {
+.nav-links li, .social-links li {
     list-style: none;
     display: inline-block;
     margin: 8px 12px;
@@ -40,7 +40,7 @@ body { background-color: #040511; }
 }
 
 /* Anchor for Top Menu nav list item */
-.nav-links ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
 }
@@ -57,28 +57,6 @@ body { background-color: #040511; }
 
 .hero-btn.main:hover {
     background: linear-gradient(0.25turn, #7403C07E, #4B0DBE79);
-}
-
-/* Container for all elements that are center aligned on the screen. */
-.center-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Circles on the Home Page. */
-.circle {
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-/* Background Image */
-.home-background { 
-    background-image: linear-gradient(black, black), url(../images/vfx/Background.png); 
-    z-index: 0;
 }
 
 /* Header, Footer, and General Structure ------------------------------------------------------- */
@@ -123,7 +101,6 @@ hr {
 /* div container for copyright section */
 .copyright {
     position: relative;
-    z-index: 12;
     background-color: black;
     text-align: right;
     padding: 15px;
@@ -252,12 +229,12 @@ hr {
 @media(max-width: 700px) {
 
     /*Lunarflame Logo Image*/
-    .sub-header nav img, .home-header nav img { width: 200px; }
+    header img { width: 200px; }
 
     /* Item in Top Menu nav list */
-    .nav-links ul li { 
+    .nav-links li { 
         display: block;
-        margin: 5vh 0px;
+        margin: 5vw 0px;
     }
 
     /* Anchor for Top Menu nav list item */
@@ -274,9 +251,9 @@ hr {
         position: fixed;
         background: linear-gradient(#03002e, #0a0068);
         height: 100vh;
-        width: 200px;
+        width: 50vw;
         top: 0;
-        right: -200px;
+        right: -50vw;
         text-align: left;
         z-index: 10;
         transition: 1s;
@@ -285,17 +262,17 @@ hr {
     /* Social Links go under the Nav Links on the Mobile View. */
     .social-links {
         position: fixed;
-        width: 200px;
-        right: -200px;
+        width: 50vw;
+        right: -50vw;
         text-align: left;
         top: 40vh;
-        z-index: 2;
+        z-index: 11;
         background-color: transparent;
         transition: 1s;
     }
 
     /* Show sidebar on mobile view. */
-    .sub-header nav i, .home-header nav i {
+    header i.bx {
         display: block;
         color: white;
         margin: 10px;
@@ -305,13 +282,13 @@ hr {
 
     /* Nav Links list */
     .nav-links ul { 
-        margin: 8vh 4vh;
+        margin: 4vh 4vh;
         text-align: center;
     }
 
     /* Social Links list */
     .social-links ul { 
-        margin: 10vh 4vh;
+        margin: 6vh 4vh;
         text-align: center;
     }
 
@@ -342,13 +319,13 @@ hr {
         margin: 5%;
     }
 
-    /*Footer for all site pages*/
-    .sub-footer { display: none; }
+    /* Footer for all site pages */
+    footer { display: none; }
 
-    /*Sub-Footer Titles*/
-    .sub-footer h1 { font-size: 2.25vw; }
+    /* Footer Titles */
+    footer h1 { font-size: 2.25vw; }
 
-    /*Copyright text*/
+    /* Copyright Text */
     .copyright h1 {
         font-size: 2.25vw;
         padding: 2%;
@@ -372,13 +349,13 @@ hr {
         text-align: center;
     }
 
-    .sub-header, .page-body {
+    header, .page-body {
         position: relative;
         z-index: 3;
     }
 
     /* Hide sidebar on desktop view */
-    .sub-header nav i, .home-header nav i { display: none; }
+    header i.bx { display: none; }
 
     /* Item in Top Menu nav list. */
     .nav-links li::after {
@@ -405,8 +382,8 @@ hr {
         box-shadow: 0px 0px 50px #00000000;
     }
 
-    /*Footer for all site pages*/
-    .sub-footer {
+    /* Footer for all site pages */
+    footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
@@ -415,25 +392,25 @@ hr {
         background-image: linear-gradient(#0c002b50, #09003f9c);
     }
 
-    /*Sub-Footer Titles*/
-    .sub-footer h1 {
+    /* Footer Titles */
+    footer h1 {
         color: #ad72ff;
         font-size: 3.5vw;
         margin-bottom: 5%;
     }
 
-    /*Sub-Footer Subtext*/
-    .sub-footer h2 {
+    /* Footer Subtext*/
+    footer h2 {
         color: white;
         font-size: 1.26vw;
         line-height: 175%;
     }
 
-    /*Links under Contact Us Form*/
-    .footer-contact-us a { text-decoration: none; }
+    /* Links under Contact Us Form */
+    footer > .contact-us a { text-decoration: none; }
 
-    /*Sub-Footer Subtext v2*/
-    .sub-footer h3  {
+    /* Footer Subtext v2 */
+    footer h3  {
         color: #9192fc;
         font-size: 1.35vw;
         line-height: 175%;
@@ -441,7 +418,7 @@ hr {
     }
 
     /* Subtext link turns dark blue when hovered over. */
-    .sub-footer h3:hover { color: #5663f0; }
+    footer h3:hover { color: #5663f0; }
 
     .copyright-text:hover { color: #46325e;}
 }

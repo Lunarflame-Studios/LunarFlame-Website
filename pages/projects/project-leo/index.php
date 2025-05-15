@@ -2,28 +2,29 @@
 <html>
 
 <head>
-    <?php require('../../partials/header.php') ?>
-    <title>Project Leo</title>
-    <link rel="stylesheet" href="pages/projects/project-leo/project-leo.css">
+    <?php
+        require('../../partials/metadata.php');
+        echo metadata("Project Leo");
+        echo stylesheet("pages/projects/project-leo/project-leo.css");
+    ?>
 </head>
+
+<span>
+    <?php require('../../partials/constants.php'); ?>
+</span>
 
 <body>
     <div class="background">
-        <div>
-            <span class="circuit" id="v1"></span>
-        </div>
 
-        <div id="glow-orbs">
-            <img class="orb" id="pink" src="images/vfx/Pink-Glow.png" alt="">
-            <img class="orb" id="blue" src="images/vfx/Blue-Glow.png" alt="">
-            <img class="orb" id="purple" src="images/vfx/Purple-Glow.png" alt="">
-        </div>
+        <?php
+            echo circuit("v1");
+            echo orbs("pink", "blue", "purple");
 
-        <?php require('../../partials/sub-header.php') ?>
+            require('../../partials/header.php');
+        ?>
 
         <section class="page-body">
-            <span id="overlay"></span>
-            <img id="zoom-in" src="" alt="">
+            <?php echo OVERLAY; ?>
 
             <main>
                 <h1 class="typewriter-v2 gradient" id="v3">&#8203;
@@ -60,9 +61,13 @@
             </div>
         </section>
 
-        <?php require('../../partials/sub-footer.php') ?>
+        <?php require('../../partials/footer.php'); ?>
     </div>
-    <?php require('../../partials/copyright.php') ?>
 
-    <?php require('../../partials/javascript.php') ?>
+    <?php 
+        require('../../partials/copyright.php');
+        require('../../partials/javascript.php');
+    ?>
 </body>
+
+</html>

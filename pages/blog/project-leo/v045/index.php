@@ -2,19 +2,23 @@
 <html>
 
 <head>
-    <?php require('../../../partials/header.php') ?>
-    <title>Play Project Leo v0.45</title>
-    <link rel="stylesheet" href="pages/blog/blog-page.css">
-    <link rel="stylesheet" href="pages/blog/blog-main.css">
+    <?php
+        require('../../../partials/metadata.php');
+        echo metadata("Play Project Leo v0.45 - Blog");
+        echo stylesheet("blog");
+    ?>
 </head>
+
+<span>
+    <?php require('../../../partials/constants.php') ?>
+</span>
 
 <body>
     <div class="background">
-        <?php require('../../../partials/sub-header.php') ?>
+        <?php require('../../../partials/header.php') ?>
 
         <section class="page-body">
-            <span id="overlay"></span>
-            <img id="zoom-in" src="" alt="">
+            <?php echo OVERLAY ?>
 
             <div class="blog-title">
                 <h1 id="title">Play Project Leo v0.45</h1>
@@ -62,16 +66,15 @@
                     <p>These were just the major changes; for a full list of changes and more specifics, be sure to check out the Review Form.</p>
                 </div>
             </div>
-
             <hr class="blog-end">
             <?php require('../../../partials/recent-posts.php') ?>
         </section>
-        <?php require('../../../partials/sub-footer.php') ?>
+        <?php require('../../../partials/footer.php') ?>
     </div>
-
-    <?php require('../../../partials/copyright.php') ?>
-
-    <?php require('../../../partials/javascript.php') ?>
+    <?php 
+        require('../../../partials/copyright.php');
+        require('../../../partials/javascript.php'); 
+    ?>
 </body>
 
 </html>

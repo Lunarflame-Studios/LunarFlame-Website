@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require('../../partials/header.php') ?>
+        <?php require('../../partials/metadata.php') ?>
         <title>About Adrian</title>
         <link rel="stylesheet" href="pages/about/adrian/about-adri.css">
     </head>
@@ -9,7 +9,7 @@
     <body>
         <div class="adri-background">
 
-            <?php require('../../partials/sub-header.php') ?>
+            <?php require('../../partials/header.php') ?>
 
             <section class="page-body">
                 <div id="overlay"></div>
@@ -58,7 +58,7 @@
                 </div>
             </section>
 
-            <?php require('../../partials/sub-footer.php') ?>
+            <?php require('../../partials/footer.php') ?>
         </div>
 
         <?php require('../../partials/copyright.php') ?>

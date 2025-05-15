@@ -2,31 +2,30 @@
 <html>
 
 <head>
-    <?php require('../partials/header.php') ?>
-    <title>About Us</title>
-    <link rel="stylesheet" href="pages/about/about.css">
+    <?php 
+        require('../partials/metadata.php');
+        echo metadata("About Us");
+        echo stylesheet("pages/about/about.css");
+    ?>
 </head>
+
+<span>
+    <?php require('../partials/constants.php') ?>
+</span>
 
 <body>
     <div class="background">
+        <?php 
+            echo circuit("v2");
+            echo orbs("light-blue", "pink", "purple"); 
 
-        <div>
-            <span class="circuit" id="v2"></span>
-        </div>
+            require('../partials/header.php');
+        ?>
 
-        <div id="glow-orbs">
-            <img class="orb" id="light-blue" src="images/vfx/Light-Blue-Glow.png" alt="">
-            <img class="orb" id="pink" src="images/vfx/Pink-Glow.png" alt="">
-            <img class="orb" id="purple" src="images/vfx/Purple-Glow.png" alt="">
-        </div>
-
-        <?php require('../partials/sub-header.php') ?>
-
-        <!-- &#8203; is an empty ACSII character. -->
+        <!-- <?php echo EMPTY_CHAR ?> is an empty ACSII character. -->
 
         <section class="page-body">
-            <span id="overlay"></span>
-            <img id="zoom-in" src="" alt="">
+            <?php echo OVERLAY; ?>
 
             <h1 style="display: none;">About Us</h1>
 
@@ -34,10 +33,10 @@
                 <div>
                     <div>
                         <h1 class="typewrite gradient" id="v2" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
-                            <span class="wrap">&#8203;</span>
+                            <span class="wrap"><?php echo EMPTY_CHAR ?></span>
                         </h1>
 
-                        <p class="typewriter-v2">&#8203;
+                        <p class="typewriter-v2"><?php echo EMPTY_CHAR ?>
                             <span>Lunarflame Studios is an independent game studio founded in 2023.</span>
                         </p>
                         <hr>
@@ -46,7 +45,7 @@
                     <img class="page-image interactable offset-border" id="light-blue" src="images/screenshots/PL_SS_1.png" alt="">
                 </div>
 
-                <p class="typewriter-v2">&#8203;
+                <p class="typewriter-v2"><?php echo EMPTY_CHAR ?>
                     <span>Our studio strives to create games with thought-provoking stories, immersion for countless audiences,
                         foster artistic expression, and have fun while doing it all.</span>
                 </p>
@@ -54,7 +53,7 @@
 
             <hr>
 
-            <h1 class="typewriter-v2 gradient" id="v2">&#8203;
+            <h1 class="typewriter-v2 gradient" id="v2"><?php echo EMPTY_CHAR ?>
                 <span>Developers</span>
             </h1>
 
@@ -154,7 +153,7 @@
                         <div>
                             <div class="dev-name">
                                 <h2>Speedster101</h2>
-                                <h4>&#8203;</h4>
+                                <h4><?php echo EMPTY_CHAR ?></h4>
                             </div>
 
                             <div class="profile-pic">
@@ -199,22 +198,20 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
-        <?php require('../partials/sub-footer.php') ?>
+        <?php require('../partials/footer.php'); ?>
     </div>
-
-    <?php require('../partials/copyright.php') ?>
 
     <script>
         function forwardDev() { aboutPage.nextDev(1); }
-
         function backDev() { aboutPage.nextDev(-1); }
     </script>
     <script src="javascript/about.js"></script>
 
-    <?php require('../partials/javascript.php') ?>
+    <?php
+        require('../partials/copyright.php');
+        require('../partials/javascript.php');
+    ?>
 </body>
 
 </html>

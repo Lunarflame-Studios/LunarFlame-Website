@@ -2,14 +2,19 @@
 <html>
 
 <head>
-    <?php require('../../partials/header.php') ?>
-    <title>Project Leo (Browser)</title>
-    <link rel="stylesheet" href="pages/projects/projects.css">
+    <?php
+        require('../../partials/metadata.php');
+        echo metadata("Project Leo (WebGL)");
+        echo stylesheet("pages/projects/projects.css");
+    ?>
 </head>
+
+<span>
+    <?php require('../../partials/constants.php'); ?>
+</span>
 
 <body>
     <style>
-        
         .sub-header-background {
             background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
             padding: 1% 2%;
@@ -49,15 +54,14 @@
     </style>
 
     <div class="sub-header-background">
-        <?php require('../../partials/sub-header.php') ?>
+        <?php require('../../partials/header.php'); ?>
     </div>
 
     <div class="page-body-background">
         <section class="page-body">
-            <div id="overlay"></div>
-            <img id="zoom-in" src="" alt="">
+            <?php echo OVERLAY ?>
 
-            <h1 class="typewriter-v2 gradient v1"> &#8203;
+            <h1 class="typewriter-v2 gradient v1"><?php echo EMPTY_CHAR ?>
                 <span>Project Leo</span>
             </h1>
             <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
@@ -70,13 +74,12 @@
                 If you're on desktop, try expanding your screen.</h3>
 
         </section>
-        <?php require('../../partials/sub-footer.php') ?>
+        <?php require('../../partials/footer.php') ?>
     </div>
-
-    <?php require('../../partials/copyright.php') ?>
-
-    <?php require('../../partials/javascript.php') ?>
-
+    <?php
+        require('../../partials/copyright.php');
+        require('../../partials/javascript.php');
+    ?>
 </body>
 
 </html>

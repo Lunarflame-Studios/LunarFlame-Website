@@ -1,27 +1,52 @@
+<?php
+    function social($social) {
+        $link = '';
+        $bx = '';
+
+        switch ($social) {
+            case "github":
+                $link = "https://github.com/Lunarflame-Studios";
+                $bx = $social;
+                break;
+            case "discord":
+                $link = "https://discord.gg/khKCJyjKSm";
+                $bx = "discord-alt";
+                break;
+            case "instagram":
+                $link = "https://www.instagram.com/phantomforce26/";
+                $bx = $social;
+                break;
+            case "soundcloud":
+                $link = "https://soundcloud.com/k4p33p4";
+                $bx = $social;
+                break;
+            default:
+                $link = "#";
+                $bx = "error";
+                break;
+        }
+
+        return <<<HTML
+            <li>
+                <a class="icon $social" href="$link" target="_blank">
+                    <i class="bx bxl-$bx"></i>
+                </a>
+            </li>
+        HTML;
+
+    }
+?>
+
 <section class="copyright">
     <nav>
         <div class="social-links">
             <ul>
-                <li>
-                    <a class="icon github" href="https://github.com/Lunarflame-Studios" target="_blank">
-                        <i class="bx bxl-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon discord" href="https://discord.gg/khKCJyjKSm" target="_blank">
-                        <i class="bx bxl-discord-alt"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon insta" href="https://www.instagram.com/phantomforce26/" target="_blank">
-                        <i class="bx bxl-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="icon soundcloud" href="https://soundcloud.com/k4p33p4" target="_blank">
-                        <i class="bx bxl-soundcloud"></i>
-                    </a>
-                </li>
+                <?php
+                    echo social("github");
+                    echo social("discord");
+                    echo social("instagram");
+                    echo social("soundcloud");
+                ?>
             </ul>
         </div>
         <h1 onclick="changeCursorColor()">Copyright © 2024 LunarFlame Studios</h1>

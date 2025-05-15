@@ -2,31 +2,24 @@
 <html>
 
 <head>
-    <?php require('pages/partials/header.php') ?>
-    <link rel="stylesheet" href="home.css">
-    <title>Lunarflame Studios</title>
+    <?php 
+        require('pages/partials/metadata.php'); 
+        echo metadata("Lunarflame Studios");
+        echo stylesheet("home.css");
+    ?>
 </head>
+
+<span>
+    <?php require('pages/partials/constants.php'); ?>
+</span>
 
 <body>
     <section class="home-header home-background">
-        <span id="overlay"></span>
-        <img id="zoom-in" src="" alt="">
+        <?php echo OVERLAY; ?>
 
         <span id="fade-out-sub"></span>
 
-        <nav>
-            <a href=""><img src="images/Lunarflame_Logo.png"></a>
-            <div class="nav-links header">
-                <i class="bx bx-x" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a class="hover" id="light-blue" href="">HOME</a></li>
-                    <li><a class="hover" id="purple" href="pages/about">ABOUT</a></li>
-                    <li><a class="hover" id="blue" href="pages/projects">PROJECTS</a></li>
-                    <li><a class="hover" id="pink" href="pages/blog">BLOG</a></li>
-                </ul>
-            </div>
-            <i class="bx bx-menu" onclick="showMenu()"></i>
-        </nav>
+        <?php require('pages/partials/header.php'); ?>
 
         <main>
             <h1 class="light">Welcome to LunarFlame Studios</h1>
@@ -53,14 +46,12 @@
         </div>
 
         <span id="fade-out-all"></span>
-
     </section>
-
-    <?php require('pages/partials/copyright.php') ?>
-
     <script src="javascript/home.js" defer></script>
-    <?php require('pages/partials/javascript.php') ?>
-
+    <?php 
+        require('pages/partials/copyright.php');
+        require('pages/partials/javascript.php'); 
+    ?>
 </body>
 
 </html>

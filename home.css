@@ -64,6 +64,28 @@ main {
     }
 }
 
+/* Container for all elements that are center aligned on the screen. */
+.center-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circles on the Home Page. */
+.circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* Background Image */
+.home-background { 
+    background-image: linear-gradient(black, black), url(../images/vfx/Background.png); 
+    z-index: 0;
+}
+
 /* --------------------------------------------------------------------------------------------- */
 
 /* Home Page Animations */
@@ -83,13 +105,13 @@ main {
 }
 
 /* Top Menu area, containing the logo and nav links. */
-.home-header nav {
+header {
     z-index: 2;
     position: relative;
 
     opacity: 1;
 
-    animation-name: subheader-nav;
+    animation-name: header-nav;
     animation-duration: 3s;
     animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
 }
@@ -153,7 +175,7 @@ main {
     .circle#v6 { display: none; }
 }
 
-@keyframes subheader-nav {
+@keyframes header-nav {
     0% { opacity: 0; }
     70% { opacity: 0; }
     100% { opacity: 1; }

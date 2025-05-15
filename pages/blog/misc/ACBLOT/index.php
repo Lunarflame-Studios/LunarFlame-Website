@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <?php require('../../../partials/header.php') ?>
-    <title>ACBLOT: Programming with C</title>
-    <link rel="stylesheet" href="pages/blog/blog-page.css">
-    <link rel="stylesheet" href="pages/blog/blog-main.css">
+    <?php 
+        require('../../../partials/metadata.php');
+        echo metadata("ACBLOT: Programming with C - Blog");
+        echo stylesheet("blog");
+    ?>
 </head>
+
+<span>
+    <?php require('../../../partials/constants.php'); ?>
+</span>
 
 <body>
     <div class="background">
-        <?php require('../../../partials/sub-header.php') ?>
+        <?php require('../../../partials/header.php'); ?>
         <section class="page-body">
-            <span id="overlay"></span>
-            <img id="zoom-in" src="" alt="">
+            <?php echo OVERLAY; ?>
+
             <div class="blog-title">
                 <h1 id="title">ACBLOT: Programming with C</h1>
                 <h5 id="category">Misc.</h5>
@@ -49,11 +55,13 @@
                 <p>Developing this project was a lot of fun, and in the process I learned a lot about how intrinsic pointers and memory management are to low-level programming. It has helped me become more aware of memory-consuming processes that I commonly deploy in higher level programming projects, such as Project Leo. This is only the beginning of my adventure with the C programming language; through both future classes I will take and an ongoing project with a friend to develop a video call app in C, I am sure that I will learn a lot more about becoming a better systems programmer.</p>
             </div>
             <hr class="blog-end">
-            <?php require('../../../partials/recent-posts.php') ?>
+            <?php require('../../../partials/recent-posts.php'); ?>
         </section>
-        <?php require('../../../partials/sub-footer.php') ?>
+        <?php require('../../../partials/footer.php'); ?>
     </div>
-    <?php require('../../../partials/copyright.php') ?>
-    <?php require('../../../partials/javascript.php') ?>
+    <?php
+        require('../../../partials/copyright.php'); 
+        require('../../../partials/javascript.php');
+    ?>
 </body>
 </html>

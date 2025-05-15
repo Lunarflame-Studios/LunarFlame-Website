@@ -13,7 +13,7 @@
     <script src="javascript/cursor.js"></script>
 </div>
 <script>
-    var navLinks = document.querySelector(".nav-links header");
+    var navLinks = document.querySelector("header .nav-links");
     var socialLinks = document.querySelector(".social-links");
 
     function showMenu() {
@@ -22,7 +22,7 @@
     }
 
     function hideMenu() {
-        navLinks.style.right = "-200px";
-        socialLinks.style.right = "-200px";
+        navLinks.style.right = "-50vw";
+        socialLinks.style.right = "-50vw";
     }
 </script>
