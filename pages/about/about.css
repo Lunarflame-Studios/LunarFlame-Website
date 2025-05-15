@@ -1,18 +1,18 @@
 /* General About Us Info*/
 
-.about-general #flex-container {
+main > div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.about-general-text hr {
+main > div hr {
     position: absolute;
     top: 50%;
     left: 11%;
 }
 
-.about-general img { width: 45%; }
+main img { width: 45%; }
 
 /* --------------------------------------------------------------------------------------------- */
 
@@ -23,18 +23,17 @@
 /* Desktop UI ---------------------------------------------------------------------------------- */
 
 @media(min-width: 701px) {
-
     .dev-boxes { display: none; }
 
-    .about-general-text {
+    main > div > div {
         width: 45%;
         transform: translateY(15%);
     }
 
-    .about-general-text p { margin: 5% 3%; }
+    main > div p { margin: 5% 3%; }
 
     /* Container for list of devs */
-    .about-devs {
+    .dev-slideshow > div {
         padding: 20% 0;
         display: flex;
         justify-content: center;
@@ -44,7 +43,7 @@
     }
 
     /* Name */
-    .about-devs h2 {
+    .dev-slideshow > div h2 {
         color: #3A5A7D;
         font-size: 3.9vw;
         position: absolute;
@@ -53,7 +52,7 @@
     }
 
     /* Roles */
-    .about-devs h3 {
+    .dev-slideshow > div h3 {
         color: #773F64;
         font-size: 2vw;
         position: absolute;
@@ -62,7 +61,7 @@
     }
 
     /* Nicknames */
-    .about-devs h4 {
+    .dev-slideshow > div h4 {
         color: #A6294F;
         font-size: 1.7vw;
         position: absolute;
@@ -71,7 +70,7 @@
     }
 
     /* Descriptions */
-    .about-devs p {
+    .dev-slideshow > div p {
         color: white;
         font-size: 1.25vw;
         position: absolute;
@@ -82,7 +81,7 @@
     }
 
     /* Horizontal Line */
-    .about-devs hr {
+    .dev-slideshow > div hr {
         width: 8.5vw;
         border: 3px solid #f3BAFD;
         position: absolute;
@@ -91,7 +90,7 @@
     }
 
     /* Read More Button */
-    .about-devs a {
+    .dev-slideshow > div a {
         position: absolute;
         top: 80%;
         left: 60%;
@@ -121,7 +120,7 @@
         top: 47%;
     }
 
-    #about-general-bottom { 
+    main > p { 
         margin: 5% 8%;
         position: relative;
         z-index: 1; 
@@ -135,7 +134,6 @@
         scale: 1;
         position: absolute;
         z-index: 6;
-
         width: 8vw;
 
         transition: 0.5s ease-in-out;
@@ -216,7 +214,7 @@
         align-items: center;
     }
 
-    #orb-light-blue {
+    .orb#light-blue {
         top: 26vh;
         left: -32vw;
         width: 60%;
@@ -225,7 +223,7 @@
         animation: orb-pulse 10s linear infinite;
     }
 
-    #orb-pink {
+    .orb#pink {
         top: 56vh;
         right: -30vw;
         width: 60%;
@@ -234,7 +232,7 @@
         animation: orb-pulse 18s linear infinite;
     }
 
-    #orb-purple {
+    .orb#purple {
         top: 88vw;
         left: -28vw;
         width: 45%;
@@ -248,50 +246,50 @@
 
 @media(max-width: 700px) {
 
-    .about-general { margin-top: 8%; }
+    main { margin-top: 8%; }
 
-    #flex-container { padding-bottom: 65%; }
+    main > div { padding-bottom: 65%; }
 
     .dev-slideshow { display: none; }
 
-    .about-general p { padding: 0 1%; }
+    main p { padding: 0 1%; }
 
-    .about-general-text {
+    main > div > div {
+        position: absolute;
         background: linear-gradient(-45deg, #0A53F22A, #C600A53E);
         width: 45%;
         min-width: 70%;
-        min-height: 32vw;
+        min-height: 34vw;
         padding: 0 3%;
         right: 20%;
         text-align: left;
     }
 
-    .about-general-text p {
+    main > div p {
         text-align: left;
         font-size: 2.4vw;
         margin: 3% 4%;
     }
 
-    .about-general-text hr { display: none; }
+    main > div hr { display: none; }
 
-    .about-general-text h1 {
+    main > div h1 {
         font-size:  6.25vw;
         padding-left: 4%;
         margin-left: 1%;
     }
 
-    .about-general img {
-        top: 48vw;
+    main img {
+        position: absolute;
+        top: 54vw;
         left: 36%;
         width: 60%;
         height: auto;
     }
 
-    .about-general-text, .about-general img { position: absolute; }
+    main > p { padding: 8% 8%; }
 
-    #about-general-bottom { padding: 8% 8%; }
-
-    .margin { margin: 5% 8%; }
+    .dev-box > div { margin: 5% 8%; }
 
     .dev-boxes {
         padding: 10% 0 20%;
@@ -310,7 +308,7 @@
         background-position-x: center;
     }
 
-    .dev-flex-container { 
+    .dev-box > div > div { 
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -378,7 +376,7 @@
         margin: -6% 0;
     }
 
-    .dan .dev-title-text { text-align: right; }
+    .dan .dev-name { text-align: right; }
 
     .dev-box.dan h2 { color: #1D71F2; }
 
@@ -430,7 +428,7 @@
         margin: -6% 0;
     }
 
-    .ryan .dev-title-text { text-align: right; }
+    .ryan .dev-name { text-align: right; }
 
     .dev-box.ryan h2 { color: #BDFCFE; }
 
@@ -447,8 +445,8 @@
     .dev-box.ryan a { left: 50%; }
 }
 
-@media(max-width: 500px) {
-    .about-general img { top: 52vw; }
+@media(max-width: 400px) {
+    main img { top: 60vw; }
 }
 
 /* --------------------------------------------------------------------------------------------- */

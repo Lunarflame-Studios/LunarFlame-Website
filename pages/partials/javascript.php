@@ -13,8 +13,8 @@
     <script src="javascript/cursor.js"></script>
 </div>
 <script>
-    var navLinks = document.getElementById("navLinks");
-    var socialLinks = document.getElementById("socialLinks");
+    var navLinks = document.querySelector(".nav-links header");
+    var socialLinks = document.querySelector(".social-links");
 
     function showMenu() {
         navLinks.style.right = "0";

@@ -3,35 +3,36 @@
 
 <head>
     <?php require('pages/partials/header.php') ?>
+    <link rel="stylesheet" href="home.css">
     <title>Lunarflame Studios</title>
 </head>
 
 <body>
     <section class="home-header home-background">
-        <div id="overlay"></div>
+        <span id="overlay"></span>
         <img id="zoom-in" src="" alt="">
 
-        <div id="fade-out-sub"></div>
+        <span id="fade-out-sub"></span>
 
-        <nav id="home-header-nav">
+        <nav>
             <a href=""><img src="images/Lunarflame_Logo.png"></a>
-            <div class="nav-links header" id="navLinks">
+            <div class="nav-links header">
                 <i class="bx bx-x" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a class="hover-effect light-blue" href="">HOME</a></li>
-                    <li><a class="hover-effect purple" href="pages/about">ABOUT</a></li>
-                    <li><a class="hover-effect blue" href="pages/projects">PROJECTS</a></li>
-                    <li><a class="hover-effect pink" href="pages/blog">BLOG</a></li>
+                    <li><a class="hover" id="light-blue" href="">HOME</a></li>
+                    <li><a class="hover" id="purple" href="pages/about">ABOUT</a></li>
+                    <li><a class="hover" id="blue" href="pages/projects">PROJECTS</a></li>
+                    <li><a class="hover" id="pink" href="pages/blog">BLOG</a></li>
                 </ul>
             </div>
             <i class="bx bx-menu" onclick="showMenu()"></i>
         </nav>
 
-        <div id="main-content" class="text-box">
-            <h1 class="light-effect">Welcome to LunarFlame Studios</h1>
+        <main>
+            <h1 class="light">Welcome to LunarFlame Studios</h1>
             <p>We strive to create fun and innovative stories.</p>
             <a href="pages/projects/project-leo" class="button pulse hero-btn main">Play Project Leo</a>
-        </div>
+        </main>
 
         <div class="center-container">
             <div id="ui-frame">
@@ -39,19 +40,19 @@
             </div>
 
             <div id="center-circle">
-                <div id="circle-v1" class="circle"><img src="images/vfx/Inner Circle.png" alt=""></div>
-                <div id="circle-v2" class="circle"><img src="images/vfx/Outer Circle.png" alt=""></div>
-                <div id="circle-v3" class="circle"><img src="images/vfx/Outer Circuits.png" alt=""></div>
+                <div class="circle" id="v1" ><img src="images/vfx/Inner Circle.png" alt=""></div>
+                <div class="circle" id="v2" ><img src="images/vfx/Outer Circle.png" alt=""></div>
+                <div class="circle" id="v3" ><img src="images/vfx/Outer Circuits.png" alt=""></div>
             </div>
 
             <div id="outer-circle">
-                <div id="circle-v4" class="circle"><img src="images/vfx/Outer Ring.png" alt=""></div>
-                <div id="circle-v5" class="circle"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
-                <div id="circle-v6" class="circle"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
+                <div class="circle" id="v4"><img src="images/vfx/Outer Ring.png" alt=""></div>
+                <div class="circle" id="v5"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
+                <div class="circle" id="v6"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
             </div>
         </div>
 
-        <div id="fade-out-all"></div>
+        <span id="fade-out-all"></span>
 
     </section>
 

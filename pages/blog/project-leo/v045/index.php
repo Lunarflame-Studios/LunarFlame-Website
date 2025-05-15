@@ -13,7 +13,7 @@
         <?php require('../../../partials/sub-header.php') ?>
 
         <section class="page-body">
-            <div id="overlay"></div>
+            <span id="overlay"></span>
             <img id="zoom-in" src="" alt="">
 
             <div class="blog-title">
@@ -28,7 +28,7 @@
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.45 is out! In preparation for v0.5 (which will hopefully be out later this year), we've prepared tons of new features, fixes, and other changes.</p>
 
-                <img class="page-image gallery-img offset-border pink" id="image" src="images/screenshots/PL_SS_5.png" alt="">
+                <img class="page-image interactable offset-border" id="pink" src="images/screenshots/PL_SS_5.png" alt="">
 
                 <div>
                     <h2 class="subheader">Shop</h2>

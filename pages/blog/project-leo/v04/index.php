@@ -13,7 +13,7 @@
         <?php require('../../../partials/sub-header.php') ?>
 
         <section class="page-body">
-            <div id="overlay"></div>
+            <span id="overlay"></span>
             <img id="zoom-in" src="" alt="">
 
             <div class="blog-title">
@@ -27,7 +27,7 @@
             </div>
             <div class="blog-pageBody">
                 <p id="description">Project Leo v0.4 is out, and there's a lot of new features.</p>
-                <img class="page-image gallery-img offset-border light-blue" id="image" src="images/screenshots/PL_SS_3.png" alt="">
+                <img class="page-image interactable offset-border" id="light-blue" src="images/screenshots/PL_SS_3.png" alt="">
                 <div>
                     <h2 class="subheader">Cloud Save Data</h2>
                     <p>Players can now choose to create accounts and store their data online. This allows players to load their data across multiple devices and preserve their data in future updates. Players who choose not to create accounts can use guest accounts. These are anonymous, locally stored accounts that can allow you to play the game quickly or without internet access. However, certain features will not be available to guest accounts during future updates. </p>

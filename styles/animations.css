@@ -1,0 +1,436 @@
+:root { --circuit-color: #fc1bfccc; }
+
+@keyframes lights {
+    0% {
+        /*color: hsl(230, 40%, 80%); */
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+        /*color: hsl(230, 80%, 90%); */
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+        /*color: hsl(230, 100%, 95%); */
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 90%, 0.5),
+            -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+            0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+        /*color: hsl(230, 80%, 90%); */
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+        /*color: hsl(230, 40%, 80%); */
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+}
+
+.light {
+    margin: auto;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite;
+ }
+
+ /*--------------------------------------------------------------------------------------------- */
+
+.gradient {
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 12s linear infinite;
+}
+
+.gradient#v1 {
+    background-image: linear-gradient(
+        -225deg,
+        #FA7FFF 0%,
+        #B98EFC 20%,
+        #B55DE8 40%,
+        #8DA0FE 60%,
+        #C490FF 80%,
+        #FA7FFF 100%
+    );
+    text-shadow: 0 0 60px #8da0feD1;
+}
+
+.gradient#v2 {
+    background-image: linear-gradient(
+        -225deg,
+        #01AEF3 0%,
+        #464CE7 20%,
+        #A818D4 40%,
+        #D80D9A 60%,
+        #6A5FC7 80%,
+        #01AEF3 100%
+    );
+    text-shadow: 0 0 60px #464BE7E3;
+}
+
+.gradient#v3 {
+    background-image: linear-gradient(
+        -225deg,
+        #F10080 0%,
+        #8B0D88 20%,
+        #5E2390 40%,
+        #034EA2 60%,
+        #8D0D88 80%,
+        #F10080 100%
+    );
+    text-shadow: 0 0 60px #3204E7DE;
+}
+
+.gradient#v4 {
+    background-image: linear-gradient(
+        -225deg,
+        #F54952 0%,
+        #660F56 20%,
+        #280659 40%,
+        #422680 60%,
+        #660F56 80%,
+        #F54952 100%
+    );
+    text-shadow: 0 0 60px #0a53f287;
+}
+
+.gradient#v5 {
+    background-image: linear-gradient(
+        -225deg,
+        #14F2E0 0%,
+        #6E9EEB 20%,
+        #9A75F0 40%,
+        #F320FA 60%,
+        #9A75F0 80%,
+        #14F2E0 100%
+    );
+    text-shadow: 0 0 60px #070EE8BF;
+}
+
+@keyframes gradient {
+    to { background-position: 200% center; }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* Button Animations */
+
+.button.fill:hover, .button.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.button.pulse:hover, .button.pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+.button.close:hover, .button.close:focus {
+    box-shadow: 
+        inset -3.5em 0 0 0 var(--hover), 
+        inset 3.5em 0 0 0 var(--hover);
+}
+
+.button.raise:hover, .button.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+.button.up:hover, .button.up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.button.slide:hover, .button.slide:focus {
+    box-shadow: inset 13em 0 0 0 var(--hover);
+}
+
+.button.offset {
+    box-shadow: 
+        0.3em 0.3em 0 0 var(--color), 
+        inset 0.3em 0.3em 0 0 var(--color);
+}
+
+.button.offset:hover, .button.offset:focus {
+    box-shadow: 
+        0 0 0 0 var(--hover), 
+        inset 6em 3.5em 0 0 var(--hover);
+}
+
+/* Change colors later. */
+.button.fill {
+    --color: #A972CB;
+    --hover: #CB72A9;
+}
+
+.button.pulse {
+    --color: white;
+    --hover: #b16eef;
+}
+
+/* Change colors later. */
+.button.close {
+    --color: #ff7f82;
+    --hover: #ff7fff;
+}
+
+/* Change colors later. */
+.button.raise {
+    --color: #9A0A0A;
+    --hover: #580303;
+}
+
+/* Change colors later. */
+.button.up {
+    --color: #F3C757;
+    --hover: #F08500;
+}
+
+@media(min-width: 701px) {
+    .button.slide {
+        --color: #8fc866;
+        --hover: #66c887;
+    }
+}
+
+@media(max-width: 700px) {
+    .button.slide {
+        --color: #131FAA;
+        --hover: #6633C6;
+    }
+}
+
+/* Change colors later. */
+.button.offset {
+    --color: #00D4F9;
+    --hover: #0091D6;
+}
+
+.button:hover, .button:focus {
+    border-color: var(--hover);
+    color: white;
+}
+
+.button {
+    background: none;
+    border: 2px solid;
+    color: var(--color);
+    transition: 0.25s;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* Nav Bar Animations */
+
+.hover#light-blue {
+    background-image: linear-gradient(
+        to right,
+        #30c0eb,
+        #01AEF3 50%,
+        white 50%
+    );
+}
+
+.hover#light-blue::before { background: linear-gradient(to left, #30c0eb, #01AEF3); }
+
+.hover#blue {
+    background-image: linear-gradient(
+        to right,
+        #010FCC,
+        #000A83 50%,
+        white 50%
+    );
+}
+
+.hover#blue::before { background: linear-gradient(to left, #010FCC, #000A83); }
+
+.hover#purple {
+    background-image: linear-gradient(
+        to right,
+        #953DF5,
+        #4E26E2 50%,
+        white 50%
+    );
+}
+
+.hover#purple::before { background: linear-gradient(to left, #953DF5, #4E26E2); }
+
+.hover#pink {
+    background-image: linear-gradient(
+        to right,
+        #F019E1,
+        #FA7FFF 50%,
+        white 50%
+    );
+}
+
+.hover#pink::before { background: linear-gradient(to left, #F019E1, #FA7FFF); }
+
+.hover {
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    margin: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover:hover { background-position: 0; }
+
+.hover:hover::before { width: 100%; }
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* Image Border */
+@media(min-width: 701px) {
+    .offset-border {
+        --color: #30C0EB; /* the border color */
+        --border: 10px;     /* the border thickness */
+        --offset: 20px;     /* control the offset */
+        --gap: 5px;         /* the gap on hover */
+        
+        --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+        --_o: calc(3 * var(--offset));
+
+        padding: 
+            calc(var(--gap) + var(--border))
+            calc(var(--gap) + var(--border) + var(--offset))
+            calc(var(--gap) + var(--border) + var(--offset))
+            calc(var(--gap) + var(--border));
+
+        background: 
+            linear-gradient(var(--_c)) var(--_o) var(--_o), 
+            linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+
+        background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+        background-repeat: no-repeat;
+        filter: grayscale(0.5);
+        transition: 0.5s;
+    }
+
+  .offset-border#light-blue { --color:#30C0EB; }
+
+  .offset-border#blue { --color: #010FCC; }
+
+  .offset-border#pink { --color: #F019E1; }
+
+  .offset-border#purple { --color: #953DF5; }
+
+  .offset-border:hover {
+      background-position: 0px 0px;
+      background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+      filter: grayscale(0);
+  }
+}
+
+@media(min-width: 701px) {
+    .orb {
+        position: absolute;
+        z-index: 0;
+        height: auto;
+    }
+
+    .circuit {
+        position: fixed;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+
+        background-image: linear-gradient(
+            to right,
+            #4c5fde0c 48%,
+            var(--circuit-color) 50%,
+            #4c5fde0c 52%
+        );
+
+        background-size: 300% auto;
+        animation: 
+            circuit-pulse 28s linear infinite,
+            color-swap 55s linear infinite;
+    }
+
+    .circuit#v1 {
+        /* maskImage property is set in animations.js*/
+        top: 6%;
+    }
+
+    .circuit#v2 {
+        /* maskImage property is set in animations.js*/
+        top: 7%;
+    }
+}
+
+@media(min-width: 1521px) {
+    .circuit { top: 7%; }
+}
+
+@keyframes circuit-pulse {
+    to { background-position: 300% center; }
+}
+
+@media(max-width: 700px) {
+    .orb { display: none; }
+    .circuit#v2 { display: none; }
+}
+
+@keyframes orb-pulse {
+    0% { opacity: 0.05; }
+    15% { opacity: 0.05; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.05; }
+}
+
+@keyframes color-swap {
+    0% { --circuit-color: #fc1bfcb3; }
+    100% { --circuit-color: #4c60deb3; }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+@keyframes clockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes counterclockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}

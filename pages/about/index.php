@@ -11,13 +11,13 @@
     <div class="background">
 
         <div>
-            <div id="ui-circuit-2"></div>
+            <span class="circuit" id="v2"></span>
         </div>
 
         <div id="glow-orbs">
-            <img id="orb-light-blue" src="images/vfx/Light-Blue-Glow.png" alt="">
-            <img id="orb-pink" src="images/vfx/Pink-Glow.png" alt="">
-            <img id="orb-purple" src="images/vfx/Purple-Glow.png" alt="">
+            <img class="orb" id="light-blue" src="images/vfx/Light-Blue-Glow.png" alt="">
+            <img class="orb" id="pink" src="images/vfx/Pink-Glow.png" alt="">
+            <img class="orb" id="purple" src="images/vfx/Purple-Glow.png" alt="">
         </div>
 
         <?php require('../partials/sub-header.php') ?>
@@ -25,41 +25,41 @@
         <!-- &#8203; is an empty ACSII character. -->
 
         <section class="page-body">
-            <div id="overlay"></div>
+            <span id="overlay"></span>
             <img id="zoom-in" src="" alt="">
 
             <h1 style="display: none;">About Us</h1>
 
-            <div class="about-general">
-                <div id="flex-container">
-                    <div class="about-general-text">
-                        <h1 class="typewrite gradient v2" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
+            <main>
+                <div>
+                    <div>
+                        <h1 class="typewrite gradient" id="v2" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
                             <span class="wrap">&#8203;</span>
                         </h1>
 
-                        <p class="typewriter-v2"> &#8203;
+                        <p class="typewriter-v2">&#8203;
                             <span>Lunarflame Studios is an independent game studio founded in 2023.</span>
                         </p>
                         <hr>
                     </div>
 
-                    <img class="page-image gallery-img offset-border light-blue" src="images/screenshots/PL_SS_1.png" alt="">
+                    <img class="page-image interactable offset-border" id="light-blue" src="images/screenshots/PL_SS_1.png" alt="">
                 </div>
 
-                <p id="about-general-bottom" class="typewriter-v2"> &#8203;
+                <p class="typewriter-v2">&#8203;
                     <span>Our studio strives to create games with thought-provoking stories, immersion for countless audiences,
                         foster artistic expression, and have fun while doing it all.</span>
                 </p>
-            </div>
+            </main>
 
             <hr>
 
-            <h1 class="typewriter-v2 gradient v2"> &#8203;
+            <h1 class="typewriter-v2 gradient" id="v2">&#8203;
                 <span>Developers</span>
             </h1>
 
             <div class="dev-slideshow">
-                <div class="about-devs">
+                <div>
                     <img id="left-arrow" src="images/vfx/Back_Arrow.png" onclick="backDev()" alt="">
                     <img id="left-arrow-circle" src="images/vfx/arrow_circle.png" alt="">
 
@@ -70,7 +70,7 @@
                         <img id="frame-inside" src="images/devs/Minimal.jpg" alt="">
                         <img id="frame-outside" src="images/vfx/UI_Frame_2.png" alt="">
 
-                        <div class="text-content">
+                        <div>
                             <h2>Adrian</h2>
                             <h4>Phantom</h4>
                             <h3>Lead Artist, Lead Programmer</h3>
@@ -101,9 +101,9 @@
             <div class="dev-boxes">
                 
                 <div class="dev-box adri">
-                    <div class="margin">
-                        <div class="dev-flex-container">
-                            <div class="dev-title-text">
+                    <div>
+                        <div>
+                            <div class="dev-name">
                                 <h2>Adrian</h2>
                                 <h4>Phantom</h4>
                             </div>
@@ -126,13 +126,13 @@
                 </div>
 
                 <div class="dev-box dan">
-                    <div class="margin">
-                        <div class="dev-flex-container">
+                    <div>
+                        <div>
                             <div class="profile-pic">
                                 <img src="images/devs/dan_pfp.png" alt="">
                             </div>
 
-                            <div class="dev-title-text">
+                            <div class="dev-name">
                                 <h2>Daniel</h2>
                                 <h4>Kapeepa</h4>
                             </div>
@@ -150,9 +150,9 @@
                 </div>
 
                 <div class="dev-box speedster">
-                    <div class="margin">
-                        <div class="dev-flex-container">
-                            <div class="dev-title-text">
+                    <div>
+                        <div>
+                            <div class="dev-name">
                                 <h2>Speedster101</h2>
                                 <h4>&#8203;</h4>
                             </div>
@@ -176,13 +176,13 @@
                 </div>
 
                 <div class="dev-box ryan">
-                    <div class="margin">
-                        <div class="dev-flex-container">
+                    <div>
+                        <div>
                             <div class="profile-pic">
                                 <img src="images/devs/ryan_pfp.jpg" alt="">
                             </div>
 
-                            <div class="dev-title-text">
+                            <div class="dev-name">
                                 <h2>Ryan</h2>
                                 <h4>Ry</h4>
                             </div>

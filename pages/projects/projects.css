@@ -64,7 +64,7 @@ a { text-decoration: none; }
         margin: 2%;
     }  
 
-     #orb-blue {
+    .orb#blue {
         width: 60%;
         opacity: 0.6;
         bottom: 53vh;
@@ -73,7 +73,7 @@ a { text-decoration: none; }
         animation: orb-pulse 10s linear infinite;
     }
 
-    #orb-purple {
+    .orb#purple {
         width: 60%;
         opacity: 0.75;
         top: 1vh;
@@ -82,7 +82,7 @@ a { text-decoration: none; }
         animation: orb-pulse 18s linear infinite;
     }
 
-    #orb-pink {
+    .orb#pink {
         width: 40%;
         opacity: 0.6;
         top: 55vh;

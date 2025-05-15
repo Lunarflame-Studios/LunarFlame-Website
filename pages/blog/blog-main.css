@@ -1,7 +1,7 @@
 /* Recent Blog Posts --------------------------------------------------------------------------- */
 
 /* The container for all recent blog posts.*/
-.recent-body {
+.recent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 /* The container for a single recent blog post. */
-.recent-box {
+.recent .post {
     width: 100%;
     background: linear-gradient(#0c002b9c, #09003f9c);
 
@@ -17,26 +17,26 @@
     transition: all ease 0.3s;
 }
 
-.recent-box a {
+.recent .post #link {
     text-decoration: none; 
 
     padding-bottom: 10vw;
 }
 
 /* When hovered over, a recent blog box should adopt a colored box-shadow. */
-.recent-box:hover {
+.recent .post:hover {
     background-color: #010116;
     box-shadow: 0px 0px 50px #ff40c6;
 }
 
 /*Since the entire blog box is a link, remove any hyperlink decoration. */
- .blog-box a { 
+ .catalog .post #link { 
     text-decoration: none; 
     height: 48vw;
 }
 
 /* A div container for a recent box image. */
-.recent-img-container {
+.recent .thumbnail {
     max-height: 300px;
     overflow: hidden;
     display: flex;
@@ -44,19 +44,19 @@
 }
 
 /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-.recent-text {
+.recent .metadata {
     display: flex;
     flex-direction: column;
 }
 
 /*Category*/
-.recent-text h2 {
+.recent .metadata #category {
     font-size: 2.9vw;
     color: #ed88ff;
 }
 
 /*Title*/
-.recent-text h3 {
+.recent .metadata #title {
     font-size: 1.75vw;
     color: #ad72ff;
     line-height: 2.1vw;
@@ -64,7 +64,7 @@
 }
 
 /*Description*/
-.recent-text p {
+.recent .metadata #description {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.25vw;
@@ -73,13 +73,13 @@
 /* All Blog Posts ------------------------------------------------------------------------------ */
 
 /* The container for a regular blog post. */
-.blog-box {
+.catalog .post {
     background: linear-gradient(#0c002b9c, #09003f9c);
     transition: all ease 0.3s;
 }
 
 /* The image for the blog post. */
-.blog-img {
+.thumbnail img {
     max-width: 100%;
     max-height: 18vw;
     object-fit: cover;
@@ -87,27 +87,22 @@
 }
 
 /* A div container for the author and date of a blog post. */
-.blog-author {
+.metadata div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 1.2vw;
 }
 
-/* A div subcontainer for the author and date of a blog post. */
-.blog-author-text {
-    display: flex;
-    flex-direction: column;
-}
-
 /*Author*/
-.blog-author-text strong {
+.metadata #author {
     color: #f3bafd;
     font-size: 1.6vw;
 }
 
 /*Date*/
-.blog-author-text span {
+.metadata #pubDate {
     margin-top: 5%;
     color: #9192fc;
     font-size: 1vw;
@@ -140,34 +135,32 @@
     /* Recent Blog Posts ----------------------------------------------------*/
 
     /* The container for a single recent blog post. */
-    .recent-box {
+    .recent .post {
         max-width: 38vw;
         min-height: 70vw;
         margin: 0% 1%;
     }
 
     /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .recent-text, .blog-text { 
-        padding: 15px 6px 15px 6px;
-    }
+    .metadata { padding: 15px 6px 15px 6px; }
 
-    /*Category*/
-    .recent-text h2 { font-size: 4vw; }
+    /* Category */
+    .recent .metadata #category { font-size: 4vw; }
 
-    /*Title*/
-    .recent-text h3 {
+    /* Title */
+    .recent .metadata #title {
         font-size: 3vw;
         line-height: 3.5vw;
     }
 
-    /*Description*/
-    .recent-text p, .blog-text p { font-size: 2vw; }
+    /* Description */
+    .metadata #description { font-size: 2vw; }
 
-    /*Author*/
-    .recent-text strong, .blog-text strong { font-size: 3vw; }
+    /* Author */
+    .metadata #author { font-size: 3vw; }
 
-    /*Date*/
-    .recent-text span, .blog-text span {
+    /* Date */
+    .metadata #pubDate {
         margin-top: 1vw;
         font-size: 2vw;
     }
@@ -184,7 +177,7 @@
     }
 
     /* The container for a regular blog post. */
-    .blog-box {
+    .catalog .post {
         max-width: 30vw;
         min-height: 70vw;
         margin: 0% 0%;
@@ -198,14 +191,14 @@
     .blog-author { margin-top: 5vw; }
 
     /*Category*/
-    .blog-text h2 {
+    .catalog .metadata h2 {
         font-size: 3.5vw;
         line-height: 4.2vw;
         margin: 0px 0px 3%;
     }
 
     /*Title*/
-    .blog-text h3 {
+    .catalog .metadata h3 {
         color: #ad72ff;
         line-height: 2.1vw;
         margin: 4% 0px 6%;
@@ -228,12 +221,12 @@
     /* Recent Blog Posts --------------------------------------------------- */
 
     /* The container for a single recent blog post. */
-    .recent-box {
+    .recent .post {
         padding: 15px;
         margin: 0% 3%;
     }
 
-    .recent-box a {
+    .recent .post a {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -241,12 +234,12 @@
     }
 
     /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .recent-text { margin: 10px; }
+    .metadata { margin: 10px; }
 
     /* All Blog Posts ------------------------------------------------------ */
 
     /* On desktop displays, the "All Posts" section should be a grid, with each row having 3 boxes. */
-    .blog-body {
+    .catalog {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
@@ -255,45 +248,45 @@
     }
 
     /* The container for a regular blog post. */
-    .blog-box {
+    .catalog .post {
         max-width: 40vw;
         min-height: 15vw;
         margin: 2%;
     }
 
     /* When hovered over, a blog box should adopt a colored box-shadow. */
-    .blog-box:hover { box-shadow: 0px 0px 40px #ff40c6; }
+    .catalog .post:hover { box-shadow: 0px 0px 40px #ff40c6; }
 
     /* The anchor around a blog box*/
-    .blog-box a {
+    .catalog .post #link {
         display: inline-flex;
         max-width: 40vw;
         max-height: 18vw;
     } 
 
     /* A div container for a blog box image. */
-    .blog-img-container {
+    .catalog .thumbnail {
         max-width: 14vw;
         display: flex;
     }
 
     /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .blog-text {
+    .catalog .metadata {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 8px 40px;
+        padding: 8px 20px;
     }
 
     /*Category*/
-    .blog-text h2 {
+    .catalog .metadata #category {
         font-size: 1.5vw;
         color: #ed88ff;
         min-width: 8vw;
     }
 
     /*Title*/
-    .blog-text h3 {
+    .catalog .metadata #title {
         font-size: 1.25vw;
         color: #ad72ff;
         line-height: 2.1vw;
@@ -301,13 +294,13 @@
     }
 
     /*Description*/
-    .blog-text p {
+    .catalog .metadata #description {
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 1vw;
     }
 
-    #orb-purple {
+    .orb#purple {
         top: 90vh;
         right: -10vw;
         width: 60%;
@@ -316,7 +309,7 @@
         animation: orb-pulse 10s linear infinite;
     }
 
-    #orb-light-blue {
+    .orb#light-blue {
         top: 1vh;
         left: 1vw;
         width: 60%;
@@ -325,7 +318,7 @@
         animation: orb-pulse 18s linear infinite;
     }
 
-    #orb-pink {
+    .orb#pink {
         bottom: -8vh;
         left: -8vw;
         width: 60%;

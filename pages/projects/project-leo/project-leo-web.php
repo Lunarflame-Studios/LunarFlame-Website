@@ -19,7 +19,6 @@
             margin: 0;
         }
 
-
         .page-body-background {
             background-image: linear-gradient(#00021F, #020131);
         }

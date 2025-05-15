@@ -1,4 +1,4 @@
-var images = document.querySelectorAll(".gallery-img");
+var images = document.querySelectorAll(".interactable");
 var overlay = document.getElementById("overlay");
 var zoomIn = document.getElementById("zoom-in");
 

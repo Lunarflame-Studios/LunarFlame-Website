@@ -10,30 +10,32 @@
 <body>
     <div class="background">
         <div>
-            <div id="ui-circuit-1"></div>
+            <span class="circuit" id="v1"></span>
         </div>
 
         <div id="glow-orbs">
-            <img id="orb-pink" src="images/vfx/Pink-Glow.png" alt="">
-            <img id="orb-blue" src="images/vfx/Blue-Glow.png" alt="">
-            <img id="orb-purple" src="images/vfx/Purple-Glow.png" alt="">
+            <img class="orb" id="pink" src="images/vfx/Pink-Glow.png" alt="">
+            <img class="orb" id="blue" src="images/vfx/Blue-Glow.png" alt="">
+            <img class="orb" id="purple" src="images/vfx/Purple-Glow.png" alt="">
         </div>
 
         <?php require('../../partials/sub-header.php') ?>
 
         <section class="page-body">
-            <div id="overlay"></div>
+            <span id="overlay"></span>
             <img id="zoom-in" src="" alt="">
 
-            <h1 class="typewriter-v2 gradient v3"> &#8203;
-                <span>Project Leo</span>
-            </h1>
+            <main>
+                <h1 class="typewriter-v2 gradient" id="v3">&#8203;
+                    <span>Project Leo</span>
+                </h1>
 
-            <p class="typewriter-v2"> &#8203;
-                <span>Project Leo is a game under development by LunarFlame Studios.</span>
-            </p>
+                <p class="typewriter-v2">&#8203;
+                    <span>Project Leo is a game under development by LunarFlame Studios.</span>
+                </p>
+            </main>
 
-            <h1 class="typewriter-v2 gradient v2"> &#8203;
+            <h1 class="typewriter-v2 gradient" id="v2">&#8203;
                 <span>Latest Version</span>
             </h1>
             <div class="widget-container">
@@ -45,15 +47,15 @@
                 </a>
             </div>
 
-            <div class="project-leo-summary">
+            <div class="summary">
                 <hr>
-                <p class="summary">"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
-                <img class="page-image gallery-img" src="images/screenshots/NetherSpawn.jpg" alt="">
-                <p class="summary">Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
+                <p>"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
+                <img class="page-image interactable" src="images/screenshots/NetherSpawn.jpg" alt="">
+                <p>Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
                 <div class="scroll-container">
-                    <img class="gallery-img" src="images/screenshots/PL_SS_2.png" alt="">
-                    <img class="gallery-img" src="images/screenshots/PL_SS_3.png" alt="">
-                    <img class="gallery-img" src="images/screenshots/PL_SS_4.png" alt="">
+                    <img class="interactable" src="images/screenshots/PL_SS_2.png" alt="">
+                    <img class="interactable" src="images/screenshots/PL_SS_3.png" alt="">
+                    <img class="interactable" src="images/screenshots/PL_SS_4.png" alt="">
                 </div>
             </div>
         </section>

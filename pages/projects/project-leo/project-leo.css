@@ -10,9 +10,7 @@
 strong { color: rgb(128, 0, 0);}
 
 /* Summary of the project. */
-.summary { margin: 0% 5%;}
-
-.release-logs nav ul li { padding: 5% 0; }
+.summary > p { margin: 0% 5%;}
 
 /* Removes underlines from anchors */
 a { text-decoration: none; }
@@ -36,20 +34,6 @@ h3 {
 /* Link to the project web version. */
 .widget-container h3:hover { color: #5663f0; }
 
-.release-logs {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-}
-
-/* Release Logs are currently unused. */
-.release-logs h2 { transition: all ease 0.3s; }
-
-.release-logs h2:hover { color: #924af1; }
-
 @media(min-width: 701px) {
 
     /* The project download iframe. */
@@ -58,9 +42,9 @@ h3 {
         height: 9.5vw;
     }
 
-    .project-leo-summary { padding-bottom: 5%; }
+    .summary { padding-bottom: 5%; }
 
-    #orb-pink {
+    .orb#pink {
         width: 60%;
         opacity: 0.6;
         top: -45vh;
@@ -69,7 +53,7 @@ h3 {
         animation: orb-pulse 12s linear infinite;
     }
 
-    #orb-blue {
+    .orb#blue {
         width: 60%;
         opacity: 0.6;
         top: 45vh;
@@ -78,7 +62,7 @@ h3 {
         animation: orb-pulse 18s linear infinite;
     }
 
-    #orb-purple {
+    .orb#purple {
         width: 60%;
         opacity: 0.6;
         left: 50vw;

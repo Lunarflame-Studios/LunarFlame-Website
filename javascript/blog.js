@@ -54,7 +54,7 @@ let blogPageInstance = function() {
         /**
          * @var {HTMLElement} blogBody - The container element for all blog posts.
          */
-        var blogBody = document.querySelector(".blog-body");
+        var blogBody = document.querySelector(".catalog");
 
         if (blogBody != null) {
             /**
@@ -67,8 +67,7 @@ let blogPageInstance = function() {
                  * @var {HTMLElement} blogBox - The container element for a single blog post.
                  */
                 var blogBox = document.createElement("div");
-                blogBox.classList.add("blog-box");
-                blogBox.id = "blog-box-" + (index + 1);
+                blogBox.classList.add("post");
 
                 /**
                  * @var {HTMLElement} link - The link element that wraps the blog post.
@@ -78,25 +77,24 @@ let blogPageInstance = function() {
                 link.id = "link";
 
                 /**
-                 * @var {HTMLElement} imgContainer - The container element for the blog post image.
+                 * @var {HTMLElement} thumbnail - The container element for the blog post image.
                  */
-                var imgContainer = document.createElement("div");
-                imgContainer.classList.add("blog-img-container");
+                var thumbnail = document.createElement("div");
+                thumbnail.classList.add("thumbnail");
 
                 /**
                  * @var {HTMLElement} img - The image element for the blog post.
                  */
                 var img = document.createElement("img");
-                img.classList.add("blog-img");
                 img.src = entry[6].substring(domainChars, entry[6].length);
                 img.alt = "blog img";
-                imgContainer.appendChild(img);
+                thumbnail.appendChild(img);
 
                 /**
                  * @var {HTMLElement} blogText - The container element for the blog post text.
                  */
                 var blogText = document.createElement("div");
-                blogText.classList.add("blog-text");
+                blogText.classList.add("metadata");
 
                 /**
                  * @var {HTMLElement} category - The element for the category of the blog post.
@@ -120,16 +118,9 @@ let blogPageInstance = function() {
                 description.textContent = entry[2];
 
                 /**
-                 * @var {HTMLElement} blogAuthor - The container element for the author and date of the blog post.
+                 * @var {HTMLElement} authorContainer - The container element for the author and date of the blog post.
                  */
-                var blogAuthor = document.createElement("div");
-                blogAuthor.classList.add("blog-author");
-
-                /**
-                 * @var {HTMLElement} blogAuthorText - The container element for the text of the author and date of the blog post.
-                 */
-                var blogAuthorText = document.createElement("div");
-                blogAuthorText.classList.add("blog-author-text");
+                var authorContainer = document.createElement("div");
 
                 /**
                  * @var {HTMLElement} author - The element for the author of the blog post.
@@ -145,15 +136,14 @@ let blogPageInstance = function() {
                 pubDate.id = "pubDate";
                 pubDate.textContent = entry[3];
 
-                blogAuthorText.appendChild(author);
-                blogAuthorText.appendChild(pubDate);
-                blogAuthor.appendChild(blogAuthorText);
+                authorContainer.appendChild(author);
+                authorContainer.appendChild(pubDate);
                 blogText.appendChild(category);
                 blogText.appendChild(title);
                 blogText.appendChild(description);
-                blogText.appendChild(blogAuthor);
+                blogText.appendChild(authorContainer);
 
-                link.appendChild(imgContainer);
+                link.appendChild(thumbnail);
                 link.appendChild(blogText);
                 blogBox.appendChild(link);
 
@@ -171,7 +161,7 @@ let blogPageInstance = function() {
         /**
          * @var {NodeList} recentPostBlocks - The array of elements for the "Recent Posts" section.
          */
-        var recentPostBlocks = document.querySelectorAll(".recent-box");
+        var recentPostBlocks = document.querySelectorAll(".post");
         const getRandomIndex = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
         if (recentPostBlocks != null) {
@@ -192,81 +182,78 @@ let blogPageInstance = function() {
                  * @var {HTMLElement} link - The link element that wraps the blog post.
                  */
                 var link = document.createElement("a");
+                link.id = "link";
                 link.href = post[1].substring(domainChars, post[1].length);
 
                 /**
-                 * @var {HTMLElement} imgContainer - The container element for the blog post image.
+                 * @var {HTMLElement} thumbnail - The container element for the blog post image.
                  */
-                var imgContainer = document.createElement("div");
-                imgContainer.classList.add("recent-img-container");
+                var thumbnail = document.createElement("div");
+                thumbnail.classList.add("thumbnail");
 
                 /**
                  * @var {HTMLElement} img - The image element for the blog post.
                  */
                 var img = document.createElement("img");
-                img.classList.add("blog-img");
                 img.src = post[6].substring(domainChars, post[6].length);
                 img.alt = "blog img";
-                imgContainer.appendChild(img);
+                thumbnail.appendChild(img);
 
                 /**
-                 * @var {HTMLElement} recentText - The container element for the blog post text.
+                 * @var {HTMLElement} metadata - The container element for the blog post text.
                  */
-                var recentText = document.createElement("div");
-                recentText.classList.add("recent-text");
+                var metadata = document.createElement("div");
+                metadata.classList.add("metadata");
 
                 /**
                  * @var {HTMLElement} category - The element for the category of the blog post.
                  */
                 var category = document.createElement("h2");
+                category.id = "category";
                 category.textContent = post[5];
 
                 /**
                  * @var {HTMLElement} title - The element for the title of the blog post.
                  */
                 var title = document.createElement("h3");
+                title.id = "title";
                 title.textContent = post[0];
 
                 /**
                  * @var {HTMLElement} description - The element for the description of the blog post.
                  */
                 var description = document.createElement("p");
+                description.id = "description";
                 description.textContent = post[2];
 
                 /**
-                 * @var {HTMLElement} blogAuthor - The container element for the author and date of the blog post.
+                 * @var {HTMLElement} authorContainer - The container element for the author and date of the blog post.
                  */
-                var blogAuthor = document.createElement("div");
-                blogAuthor.classList.add("blog-author");
-
-                /**
-                 * @var {HTMLElement} blogAuthorText - The container element for the text of the author and date of the blog post.
-                 */
-                var blogAuthorText = document.createElement("div");
-                blogAuthorText.classList.add("blog-author-text");
+                var authorContainer = document.createElement("div");
 
                 /**
                  * @var {HTMLElement} author - The element for the author of the blog post.
                  */
                 var author = document.createElement("strong");
+                author.id = "author";
                 author.textContent = post[4];
 
                 /**
                  * @var {HTMLElement} pubDate - The element for the date of the blog post.
                  */
                 var pubDate = document.createElement("span");
+                pubDate.id = "pubDate";
                 pubDate.textContent = post[3];
 
-                blogAuthorText.appendChild(author);
-                blogAuthorText.appendChild(pubDate);
-                blogAuthor.appendChild(blogAuthorText);
-                recentText.appendChild(category);
-                recentText.appendChild(title);
-                recentText.appendChild(description);
-                recentText.appendChild(blogAuthor);
+                authorContainer.appendChild(author);
+                authorContainer.appendChild(pubDate);
+                metadata.appendChild(category);
+                metadata.appendChild(title);
+                metadata.appendChild(description);
+                metadata.appendChild(authorContainer);
 
-                link.appendChild(imgContainer);
-                link.appendChild(recentText);
+                link.appendChild(thumbnail);
+                link.appendChild(metadata);
                 recentPostBlock.appendChild(link);
             });
         }
