@@ -31,6 +31,7 @@
     function orbs(...$colors) {
         // Start the wrapper div
         $html = '<div id="glow-orbs">' . PHP_EOL;
+        $fileName = "";
 
         // Loop through each color argument
         foreach ($colors as $color) {
@@ -38,8 +39,25 @@
             if (trim($color) === '')
                 continue;
 
+            switch($color) {
+                case "pink":
+                    $fileName = "Pink";
+                    break;
+                case "blue":
+                    $fileName = "Blue";
+                    break;
+                case "light-blue":
+                    $fileName = "Light-Blue";
+                    break;
+                case "purple":
+                    $fileName = "Purple";
+                    break;
+                default:
+                    $fileName = "error";
+            }
+        
             // Append the orb image tag
-            $html .= '    <img class="orb" id="' . htmlspecialchars($color) . '" src="images/vfx/' . htmlspecialchars(ucwords($color)) . '-Glow.png" alt="">' . PHP_EOL;
+            $html .= '    <img class="orb" id="' . htmlspecialchars($color) . '" src="images/vfx/' . htmlspecialchars($fileName) . '-Glow.png" alt="">' . PHP_EOL;
         }
 
         // Close the wrapper div
