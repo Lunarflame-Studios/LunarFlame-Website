@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../../../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
     <?php 
-        require('../../../partials/metadata.php');
+        require($partials . 'metadata.php');
         echo metadata("My Curiosity Moment - Blog");
         echo stylesheet("blog");
     ?>
 </head>
 
-<span>
-    <?php require('../../../partials/constants.php') ?>
-</span>
-
 <body>
     <div class="background">
-        <?php require('../../../partials/header.php') ?>
+        <?php require($partials . 'header.php') ?>
 
         <section class="page-body">
             <?php echo OVERLAY; ?>
@@ -126,13 +129,13 @@
                 <p>All of these games have influenced me in profound ways. From provoking my creativity to posing existential and philosophical questions, I truly believe that video games are overlooked as forms of storytelling, both by younger audiences that downplay them as mere entertainment, or by older audiences that consider them mind-numbing wastes of time. I hope that through our own endeavors to create games, we can change the minds of people who pass off these remarkable experiences.</p>
             </div>
             <hr class="blog-end">
-            <?php require('../../../partials/recent-posts.php') ?>
+            <?php require($partials . 'recent-posts.php') ?>
         </section>
-        <?php require('../../../partials/footer.php') ?>
+        <?php require($partials . 'footer.php') ?>
     </div>
     <?php
-        require('../../../partials/copyright.php');
-        require('../../../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

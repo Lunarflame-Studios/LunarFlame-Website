@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = 'pages/partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
     <?php 
-        require('pages/partials/metadata.php'); 
+        require($partials . 'metadata.php'); 
         echo metadata("Lunarflame Studios");
         echo stylesheet("home.css");
     ?>
 </head>
-
-<span>
-    <?php require('pages/partials/constants.php'); ?>
-</span>
 
 <body>
     <section class="home-header home-background">
@@ -19,7 +22,7 @@
 
         <span id="fade-out-sub"></span>
 
-        <?php require('pages/partials/header.php'); ?>
+        <?php require($partials . 'header.php'); ?>
 
         <main>
             <h1 class="light">Welcome to LunarFlame Studios</h1>
@@ -49,8 +52,8 @@
     </section>
     <script src="javascript/home.js" defer></script>
     <?php 
-        require('pages/partials/copyright.php');
-        require('pages/partials/javascript.php'); 
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php'); 
     ?>
 </body>
 

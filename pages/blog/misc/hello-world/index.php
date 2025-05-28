@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../../../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
     <?php
-        require('../../../partials/metadata.php');
+        require($partials . 'metadata.php');
         echo metadata("Hello World - Blog");
         echo stylesheet("blog");
     ?>
 </head>
 
-<span>
-    <?php require('../../../partials/constants.php'); ?>
-</span>
-
 <body>
     <div class="background">
-        <?php require('../../../partials/header.php'); ?>
+        <?php require($partials . 'header.php'); ?>
 
         <section class="page-body">
             <?php echo OVERLAY; ?>
@@ -37,13 +40,13 @@
                 <p>In the far future, we plan to release games onto Steam. However, having only one project right now in development, we release periodically on itch.io. Please stay tuned for our beta releases!</p>
             </div>
             <hr class="blog-end">
-            <?php require('../../../partials/recent-posts.php'); ?>
+            <?php require($partials . 'recent-posts.php'); ?>
         </section>
-        <?php require('../../../partials/footer.php'); ?>
+        <?php require($partials . 'footer.php'); ?>
     </div>
     <?php 
-        require('../../../partials/copyright.php');
-        require('../../../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

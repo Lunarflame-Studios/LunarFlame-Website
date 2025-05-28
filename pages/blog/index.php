@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../partials/';
+        require($partials . 'server.php');
+        $allPosts = parseRSS("../../");
+    ?>
+</span>
+
 <head>
     <?php
-        require('../partials/metadata.php');
+        require($partials . 'metadata.php');
         echo metadata("Blog");
         echo stylesheet("pages/blog/blog-main.css");
     ?>
 </head>
-
-<span>
-    <?php require('../partials/constants.php'); ?>
-</span>
 
 <body>
     <div class="background">
         <?php 
             echo circuit("v2");
             echo orbs("purple", "light-blue", "pink");
-            require('../partials/header.php');
+            require($partials . 'header.php');
         ?>
 
         <section class="page-body">
@@ -36,9 +40,9 @@
 
             <div class="recent">
                 <?php
-                    echo RECENT_POST;
-                    echo RECENT_POST;
-                    echo RECENT_POST;
+                    for ($i = 0; $i < 3; $i++) {
+                        echo createBlogPost($allPosts[$i]);
+                    }
                 ?>
             </div>
 
@@ -49,32 +53,21 @@
             </h1>
 
             <div class="catalog">
-                <div class="post">
-                    <a id="link" href="">
-                        <div class="thumbnail">
-                            <img src="images/LunarFlame-Logo-Simplified.png" alt="blog img">
-                        </div>
-                        <div class="metadata">
-                            <h2 id="category">Category</h2>
-                            <h3 id="title">Title</h3>
-                            <p id="description">Description</p>
-                            <div>
-                                <strong id="author">Author</strong>
-                                <span id="pubDate">Jan 1, 2024</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php
+                    foreach ($allPosts as $post) {
+                        echo createBlogPost($post);
+                    }
+                ?>
             </div>
             <h1></h1>
         </section>
         
-        <?php require('../partials/footer.php') ?>
+        <?php require($partials . 'footer.php') ?>
     </div>
     <script src="javascript/blog.js"></script>
     <?php 
-        require('../partials/copyright.php');
-        require('../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

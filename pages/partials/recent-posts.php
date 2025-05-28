@@ -4,9 +4,9 @@
 
 <div class="recent">
     <?php
-        echo RECENT_POST;
-        echo RECENT_POST;
-        echo RECENT_POST;
+        for ($i = 0; $i < 3; $i++) {
+            echo createBlogPost($allPosts[$i]);
+        }
     ?>
 
     <script src="javascript/blog.js"></script>

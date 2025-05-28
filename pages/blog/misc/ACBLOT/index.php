@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../../../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
     <?php 
-        require('../../../partials/metadata.php');
+        require($partials . 'metadata.php');
         echo metadata("ACBLOT: Programming with C - Blog");
         echo stylesheet("blog");
     ?>
 </head>
 
-<span>
-    <?php require('../../../partials/constants.php'); ?>
-</span>
-
 <body>
     <div class="background">
-        <?php require('../../../partials/header.php'); ?>
+        <?php require($partials . 'header.php'); ?>
         <section class="page-body">
             <?php echo OVERLAY; ?>
 
@@ -55,13 +58,13 @@
                 <p>Developing this project was a lot of fun, and in the process I learned a lot about how intrinsic pointers and memory management are to low-level programming. It has helped me become more aware of memory-consuming processes that I commonly deploy in higher level programming projects, such as Project Leo. This is only the beginning of my adventure with the C programming language; through both future classes I will take and an ongoing project with a friend to develop a video call app in C, I am sure that I will learn a lot more about becoming a better systems programmer.</p>
             </div>
             <hr class="blog-end">
-            <?php require('../../../partials/recent-posts.php'); ?>
+            <?php require($partials . 'recent-posts.php'); ?>
         </section>
-        <?php require('../../../partials/footer.php'); ?>
+        <?php require($partials . 'footer.php'); ?>
     </div>
     <?php
-        require('../../../partials/copyright.php'); 
-        require('../../../partials/javascript.php');
+        require($partials . 'copyright.php'); 
+        require($partials . 'javascript.php');
     ?>
 </body>
 </html>

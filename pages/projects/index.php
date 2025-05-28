@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
-    <?php 
-        require('../partials/metadata.php');
+    <?php
+        require($partials . 'metadata.php');
         echo metadata("Projects");
         echo stylesheet("pages/projects/projects.css");
     ?>
 </head>
 
-<span>
-    <?php require('../partials/constants.php'); ?>
-</span>
-
 <body>
     <div class="background">
         <?php
             echo orbs("blue", "purple", "pink");
-
-            require('../partials/header.php');
+            require($partials . 'header.php');
         ?>
 
         <section class="page-body">
@@ -47,11 +49,11 @@
             </div>
         </section>
         
-        <?php require('../partials/footer.php'); ?>
+        <?php require($partials . 'footer.php'); ?>
     </div>
     <?php 
-        require('../partials/copyright.php');
-        require('../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

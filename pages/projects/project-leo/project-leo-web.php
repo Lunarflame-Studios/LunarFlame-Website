@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
     <?php
-        require('../../partials/metadata.php');
+        require($partials . 'metadata.php');
         echo metadata("Project Leo (WebGL)");
         echo stylesheet("pages/projects/projects.css");
     ?>
 </head>
-
-<span>
-    <?php require('../../partials/constants.php'); ?>
-</span>
 
 <body>
     <style>
@@ -54,7 +57,7 @@
     </style>
 
     <div class="sub-header-background">
-        <?php require('../../partials/header.php'); ?>
+        <?php require($partials . 'header.php'); ?>
     </div>
 
     <div class="page-body-background">
@@ -74,11 +77,11 @@
                 If you're on desktop, try expanding your screen.</h3>
 
         </section>
-        <?php require('../../partials/footer.php') ?>
+        <?php require($partials . 'footer.php') ?>
     </div>
     <?php
-        require('../../partials/copyright.php');
-        require('../../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

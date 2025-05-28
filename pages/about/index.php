@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 
+<span>
+    <?php
+        $partials = '../partials/';
+        require($partials . 'server.php');
+    ?>
+</span>
+
 <head>
-    <?php 
-        require('../partials/metadata.php');
+    <?php
+        require($partials . 'metadata.php');
         echo metadata("About Us");
         echo stylesheet("pages/about/about.css");
     ?>
 </head>
 
-<span>
-    <?php require('../partials/constants.php') ?>
-</span>
-
 <body>
     <div class="background">
-        <?php 
+        <?php
             echo circuit("v2");
             echo orbs("light-blue", "pink", "purple"); 
-
-            require('../partials/header.php');
+            require($partials . 'header.php');
         ?>
 
         <!-- <?php echo EMPTY_CHAR ?> is an empty ACSII character. -->
@@ -199,7 +201,7 @@
                 </div>
             </div>
         </section>
-        <?php require('../partials/footer.php'); ?>
+        <?php require($partials . 'footer.php'); ?>
     </div>
 
     <script>
@@ -209,8 +211,8 @@
     <script src="javascript/about.js"></script>
 
     <?php
-        require('../partials/copyright.php');
-        require('../partials/javascript.php');
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
     ?>
 </body>
 

@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <?php
-        require('../../../partials/metadata.php');
-        echo metadata("Play Project Leo v0.45 - Blog");
-        echo stylesheet("blog");
-    ?>
-</head>
-
 <span>
-    <?php require('../../../partials/constants.php') ?>
+    <?php
+        $partials = '../../../partials/';
+        require($partials . 'server.php');
+        $allPosts = parseRSS("../../../../");
+        $currentPost = $allPosts[indexOfPost("Play Project Leo v0.45", $allPosts)];
+    ?>
 </span>
+
+<?php echo $currentPost->createHead(); ?>
 
 <body>
     <div class="background">
-        <?php require('../../../partials/header.php') ?>
+        <?php require($partials . 'header.php') ?>
 
         <section class="page-body">
-            <?php echo OVERLAY ?>
+            <?php 
+                echo OVERLAY;
+                echo $currentPost->createBlogTitle();
+                echo $currentPost->createSubInfo();
+            ?>
 
-            <div class="blog-title">
-                <h1 id="title">Play Project Leo v0.45</h1>
-                <h5 id="category">Project Leo</h5>
-                <hr class="blog-begin">
-            </div>
-            <div class="blog-subInfo">
-                <h3 id="author">Kapeepa</h3>
-                <h4 id="date">Aug 25, 2024</h4>
-            </div>
             <div class="blog-pageBody">
-                <p id="description">Project Leo v0.45 is out! In preparation for v0.5 (which will hopefully be out later this year), we've prepared tons of new features, fixes, and other changes.</p>
-
-                <img class="page-image interactable offset-border" id="pink" src="images/screenshots/PL_SS_5.png" alt="">
+                <?php echo $currentPost->createDescription(); ?>
 
                 <div>
                     <h2 class="subheader">Shop</h2>
@@ -67,13 +59,13 @@
                 </div>
             </div>
             <hr class="blog-end">
-            <?php require('../../../partials/recent-posts.php') ?>
+            <?php require($partials . 'recent-posts.php') ?>
         </section>
-        <?php require('../../../partials/footer.php') ?>
+        <?php require($partials . 'footer.php') ?>
     </div>
     <?php 
-        require('../../../partials/copyright.php');
-        require('../../../partials/javascript.php'); 
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php'); 
     ?>
 </body>
 
