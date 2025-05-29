@@ -52,7 +52,6 @@
                 margin: 0;
                 padding: 5% 0;
             }
-
         }
     </style>
 
@@ -64,7 +63,7 @@
         <section class="page-body">
             <?php echo OVERLAY ?>
 
-            <h1 class="typewriter-v2 gradient v1"><?php echo EMPTY_CHAR ?>
+            <h1 class="typewriter-v2 gradient" id="v1"><?php echo EMPTY_CHAR ?>
                 <span>Project Leo</span>
             </h1>
             <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
