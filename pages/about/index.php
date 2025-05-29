@@ -5,6 +5,44 @@
     <?php
         $partials = '../partials/';
         require($partials . 'server.php');
+
+        function devName($name, $nickname) {
+            return <<<HTML
+                <div class="dev-name">
+                    <h2>$name</h2>
+                    <h4>$nickname</h4>
+                </div>
+            HTML;
+        }
+
+        function profilePic($path) {
+            return <<<HTML
+                <div class="profile-pic">
+                    <img src="$path" alt="">
+                </div>
+            HTML;
+        }
+
+        function devBox($name, $order = "normal") {
+            $about = explode("\n", file_get_contents($name . "/" . $name . ".about"));
+            $elements = $order == "reverse" 
+                ? array(profilePic($about[4]), devName($about[0], $about[1]))
+                : array(devName($about[0], $about[1]), profilePic($about[4]));
+
+            return <<<HTML
+                <div class="dev-box $name">
+                    <div>
+                        <div>
+                            $elements[0]
+                            $elements[1]
+                        </div>
+                        <h3>$about[2]</h3>
+                        <p>$about[3]</p>
+                        <a class="hero-btn button {$about[6]}" href="$about[7]">Read More</a>
+                    </div>
+                </div>
+            HTML;
+        } 
     ?>
 </span>
 
@@ -100,105 +138,12 @@
             <!------------------------------------------------------------------------------------>
 
             <div class="dev-boxes">
-                
-                <div class="dev-box adri">
-                    <div>
-                        <div>
-                            <div class="dev-name">
-                                <h2>Adrian</h2>
-                                <h4>Phantom</h4>
-                            </div>
-
-                            <div class="profile-pic">
-                                <img src="images/devs/adri_pfp.jpg" alt="">
-                            </div>
-                        </div>
-
-                        <h3>Lead Artist, Lead Programmer</h3>
-
-                        <p>
-                            "I've always been a huge believer in the idea that video games are the future of storytelling.
-                            I'm a jRPG fiend, some of my favorite titles include Persona, Xenoblade, and Nier.
-                            I began this project because I wanted to create my own story to tell to the world."
-                        </p>
-
-                        <a class="hero-btn button raise" href="#">Read More</a>
-                    </div>
-                </div>
-
-                <div class="dev-box dan">
-                    <div>
-                        <div>
-                            <div class="profile-pic">
-                                <img src="images/devs/dan_pfp.png" alt="">
-                            </div>
-
-                            <div class="dev-name">
-                                <h2>Daniel</h2>
-                                <h4>Kapeepa</h4>
-                            </div>
-                        </div>
-
-                        <h3>Lead Musician, Programmer</h3>
-
-                        <p>
-                            "Certified learner. I joined the project to get good at programming and music stuff.
-                            Like Adrian, I do love me some video games---so much we can learn from them. PM sleeper agent (!)",
-                        </p>
-
-                        <a class="hero-btn button offset" href="#">Read More</a>
-                    </div>
-                </div>
-
-                <div class="dev-box speedster">
-                    <div>
-                        <div>
-                            <div class="dev-name">
-                                <h2>Speedster101</h2>
-                                <h4><?php echo EMPTY_CHAR ?></h4>
-                            </div>
-
-                            <div class="profile-pic">
-                                <img src="images/devs/speedster_pfp.jpg" alt="">
-                            </div>
-                        </div>
-
-                        <h3>Assistant Artist, Programmer</h3>
-
-                        <p>
-                            "Growing up on Nintendo consoles and Saturday Morning Cartoons, I've always maintained a love for art and gaming and found 
-                            joining the Lunarflame team the perfect expression of this interest. 
-                            Whether it was learning C# or getting to gripes with Unity (I love collision detection), 
-                            I appreciate how much opportunity being on the team gives me to learn new things and push my ambition and work ethic."
-                        </p>
-
-                        <a class="hero-btn button slide" href="#">Read More</a>
-                    </div>
-                </div>
-
-                <div class="dev-box ryan">
-                    <div>
-                        <div>
-                            <div class="profile-pic">
-                                <img src="images/devs/ryan_pfp.jpg" alt="">
-                            </div>
-
-                            <div class="dev-name">
-                                <h2>Ryan</h2>
-                                <h4>Ry</h4>
-                            </div>
-                        </div>
-
-                        <h3>Programmer</h3>
-
-                        <p>
-                            "I've always been an avid gamer and fascinated by the design and technical aspects behind it; 
-                            there was no better project than this one for me to refine my technical skills and express myself in a world of our design."
-                        </p>
-
-                        <a class="hero-btn button up" href="#">Read More</a>
-                    </div>
-                </div>
+                <?php 
+                    echo devBox("adrian");
+                    echo devBox("dan", "reverse");
+                    echo devBox("speedster");
+                    echo devBox("ryan", "reverse");
+                ?>                
             </div>
         </section>
         <?php require($partials . 'footer.php'); ?>
@@ -209,7 +154,6 @@
         function backDev() { aboutPage.nextDev(-1); }
     </script>
     <script src="javascript/about.js"></script>
-
     <?php
         require($partials . 'copyright.php');
         require($partials . 'javascript.php');

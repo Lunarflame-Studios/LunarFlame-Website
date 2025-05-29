@@ -259,7 +259,7 @@ main img { width: 45%; }
         background: linear-gradient(-45deg, #0A53F22A, #C600A53E);
         width: 45%;
         min-width: 70%;
-        min-height: 34vw;
+        min-height: 36vw;
         padding: 0 3%;
         right: 20%;
         text-align: left;
@@ -281,7 +281,7 @@ main img { width: 45%; }
 
     main img {
         position: absolute;
-        top: 54vw;
+        top: 58vw;
         left: 36%;
         width: 60%;
         height: auto;
@@ -353,19 +353,19 @@ main img { width: 45%; }
 
     /* ----------------------------------------------------------------------------------------- */
 
-    .dev-box.adri {
+    .dev-box.adrian {
         background-image: url(../../images/devs/Minimal.jpg);
         right: 7%;
         z-index: 4;
     }
 
-    .dev-box.adri h2 { color: #3A5A7D; }
+    .dev-box.adrian h2 { color: #3A5A7D; }
 
-    .dev-box.adri h3 { color: #C21471; }
+    .dev-box.adrian h3 { color: #C21471; }
 
-    .dev-box.adri h4 { color: #A6294F; }
+    .dev-box.adrian h4 { color: #A6294F; }
 
-    .adri .profile-pic img { bottom: 12%; }
+    .adrian .profile-pic img { bottom: 12%; }
 
     /* ----------------------------------------------------------------------------------------- */
 
