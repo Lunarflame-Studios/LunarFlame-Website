@@ -63,12 +63,6 @@
     margin: 5px 0px 10px 0px;
 }
 
-/*Description*/
-.recent .metadata #description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 1.25vw;
-}
 
 /* All Blog Posts ------------------------------------------------------------------------------ */
 
@@ -168,7 +162,7 @@
     /* All Blog Posts ------------------------------------------------------ */
 
     /* On mobile displays, the "All Posts" section should look the same as the "Recent Posts." */
-    .blog-body {
+    .catalog {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-top: 50px;
@@ -188,7 +182,7 @@
     }
 
     /* A div container for the author and date of a blog post. */
-    .blog-author { margin-top: 5vw; }
+    .catalog .metadata > div { margin-top: 5vw; }
 
     /*Category*/
     .catalog .metadata h2 {
@@ -200,7 +194,7 @@
     /*Title*/
     .catalog .metadata h3 {
         color: #ad72ff;
-        line-height: 2.1vw;
+        line-height: 3.6vw;
         margin: 4% 0px 6%;
         font-size: 3vw;
     }
@@ -218,6 +212,13 @@
 
 @media(min-width: 701px) {
     
+    /*Description*/
+    .recent .metadata #description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.25vw;
+    }
+
     /* Recent Blog Posts --------------------------------------------------- */
 
     /* The container for a single recent blog post. */

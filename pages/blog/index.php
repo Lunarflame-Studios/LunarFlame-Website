@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../partials/';
         require($partials . 'server.php');
-        $allPosts = parseRSS("../../");
-    ?>
-</span>
-
-<head>
-    <?php
-        require($partials . 'metadata.php');
         echo metadata("Blog");
         echo stylesheet("pages/blog/blog-main.css");
+        $allPosts = parseRSS("../../");
     ?>
 </head>
 

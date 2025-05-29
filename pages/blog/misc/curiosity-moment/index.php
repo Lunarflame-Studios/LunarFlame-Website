@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../../../partials/';
         require($partials . 'server.php');
-    ?>
-</span>
-
-<head>
-    <?php 
-        require($partials . 'metadata.php');
-        echo metadata("My Curiosity Moment - Blog");
-        echo stylesheet("blog");
+        $currentPost = getPost("My Curiosity Moment");
+        echo $currentPost->createHead();
     ?>
 </head>
 
@@ -21,20 +15,14 @@
         <?php require($partials . 'header.php') ?>
 
         <section class="page-body">
-            <?php echo OVERLAY; ?>
+            <?php
+                echo OVERLAY;
+                echo $currentPost->createBlogTitle();
+                echo $currentPost->createSubInfo();
+            ?>
 
-            <div class="blog-title">
-                <h1 id="title">My Curiosity Moment</h1>
-                <h5 id="category">Misc.</h5>
-                <hr class="blog-begin">
-            </div>
-            <div class="blog-subInfo">
-                <h3 id="author">Phantom</h3>
-                <h4 id="date">Mar 20, 2024</h4>
-            </div>
             <div class="blog-pageBody">
-                <p id="description">I believe that video games are the future of storytelling. Here's why.</p>
-                <img class="page-image interactable offset-border" id="purple" src="images/screenshots/Horizon_Skyline_1.png" alt="">
+                <?php echo $currentPost->createDescription(); ?>
                 <div>
                     <h2 class="subheader">1. You are part of the story.</h2>
                     <p>Books and movies can do good jobs establishing worlds and giving them life. But I think that video games excel here by making you a part of the world. You control a character, and you interact with other characters and the world around you. The stakes are more intense because now you want to preserve the world that you are so immersed in. You want to become stronger, explore, and discover more about the world through your own observations.</p>

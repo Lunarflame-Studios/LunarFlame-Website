@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../../../partials/';
         require($partials . 'server.php');
-    ?>
-</span>
-
-<head>
-    <?php 
-        require($partials . 'metadata.php');
-        echo metadata("ACBLOT: Programming with C - Blog");
-        echo stylesheet("blog");
+        $currentPost = getPost("ACBLOT: Programming with C");
+        echo $currentPost->createHead();
     ?>
 </head>
 
@@ -20,20 +14,14 @@
     <div class="background">
         <?php require($partials . 'header.php'); ?>
         <section class="page-body">
-            <?php echo OVERLAY; ?>
+            <?php
+                echo OVERLAY;
+                echo $currentPost->createBlogTitle();
+                echo $currentPost->createSubInfo();
+            ?>
 
-            <div class="blog-title">
-                <h1 id="title">ACBLOT: Programming with C</h1>
-                <h5 id="category">Misc.</h5>
-                <hr class="blog-begin">
-            </div>
-            <div class="blog-subInfo">
-                <h3 id="author">Phantom</h3>
-                <h4 id="date">Apr 09, 2025</h4>
-            </div>
             <div class="blog-pageBody">
-                <p id="description">I spent some time making a C script to automate making blog posts. Here's what I learned.</p>
-                <img class="page-image interactable offset-border" id="purple" src="images/blog/C_programming.png" alt="">
+                <?php echo $currentPost->createDescription(); ?>
                 <div>
                     <h2>Why Learn C?</h2>
                     <p>During my first year of uni, I took a course on low-level systems programming using C and C++. It was my first time being exposed to the languages, as prior I had only used higher level languages such as Java, C#, and Javascript. However, I found myself taking a liking to C very quickly. Its syntax was familiar enough to other languages that I didn't feel like I was adopting a totally new style (a bit ironic since it's really the other way around: C was the basis for all the other languages described above), and yet it introdcued a bevy of new operations and challenges.</p>

@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<span>
-    <?php
-        $partials = 'pages/partials/';
-        require($partials . 'server.php');
-    ?>
-</span>
-
 <head>
     <?php 
-        require($partials . 'metadata.php'); 
+        $partials = 'pages/partials/';
+        require($partials . 'server.php');
         echo metadata("Lunarflame Studios");
         echo stylesheet("home.css");
     ?>

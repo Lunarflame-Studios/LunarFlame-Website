@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../../partials/';
         require($partials . 'server.php');
-    ?>
-</span>
-
-<head>
-    <?php
-        require($partials . 'metadata.php');
         echo metadata("Project Leo");
         echo stylesheet("pages/projects/project-leo/project-leo.css");
     ?>

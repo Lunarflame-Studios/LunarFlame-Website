@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../partials/';
         require($partials . 'server.php');
+        echo metadata("About Us");
+        echo stylesheet("pages/about/about.css");
+    ?>
+</head>
 
+<span>
+    <?php
         function devName($name, $nickname) {
             return <<<HTML
                 <div class="dev-name">
@@ -45,14 +51,6 @@
         } 
     ?>
 </span>
-
-<head>
-    <?php
-        require($partials . 'metadata.php');
-        echo metadata("About Us");
-        echo stylesheet("pages/about/about.css");
-    ?>
-</head>
 
 <body>
     <div class="background">

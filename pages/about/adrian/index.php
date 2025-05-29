@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require('../../partials/metadata.php') ?>
-        <title>About Adrian</title>
-        <link rel="stylesheet" href="pages/about/adrian/about-adri.css">
+        <?php
+            $partials = '../../partials/';
+            require($partials . 'server.php');
+            echo metadata("About Adrian - Lunarflame Studios");
+            echo stylesheet("pages/about/adrian/about-adri.css");
+        ?>
     </head>
 
     <body>
         <div class="adri-background">
-
-            <?php require('../../partials/header.php') ?>
+            <?php require($partials . 'header.php') ?>
 
             <section class="page-body">
-                <div id="overlay"></div>
-                <img id="zoom-in" src="" alt="">
+                <?php echo OVERLAY; ?>
 
                 <h1>Adrian Cervera</h1>
                 <div class="adri-general">
@@ -58,11 +59,11 @@
                 </div>
             </section>
 
-            <?php require('../../partials/footer.php') ?>
+            <?php require($partials . 'footer.php'); ?>
         </div>
-
-        <?php require('../../partials/copyright.php') ?>
-
-        <?php require('../../partials/javascript.php') ?>
+        <?php 
+            require($partials . 'copyright.php');
+            require($partials . 'javascript.php'); 
+        ?>
     </body>
 </html>

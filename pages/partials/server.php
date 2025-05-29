@@ -1,4 +1,5 @@
 <?php 
+    $allPosts = null;
 
     define('OVERLAY', <<<HTML
         <span id="overlay"></span>
@@ -37,8 +38,6 @@
         public $link;
         public $thumbnail;
 
-        private $partials = '../../../partials/';
-
         function __construct($title, $description, $author, $pubDate, $category, $link, $thumbnail) {
             $this->title = htmlspecialchars($title);
             $this->description = htmlspecialchars($description);
@@ -50,14 +49,11 @@
         }
 
         function createHead() {
-            require_once($this->partials . 'metadata.php');
             $metadata = metadata($this->title . " - Blog");
-            $blogStylesheet = stylesheet("blog");
+            $style = stylesheet("blog");
             return <<<HTML
-                <head>
-                    $metadata
-                    $blogStylesheet
-                </head>
+                $metadata
+                $style
             HTML;
         }
 
@@ -97,7 +93,7 @@
      * @return BlogPost[] An array of BlogPost objects parsed from the RSS feed.
      * @throws Exception If the RSS feed cannot be loaded or parsed.
      */
-    function parseRSS($directory) {
+    function parseRSS($directory = '../../../../') {
 
         $rss = simplexml_load_file($directory . 'rss.xml');
         $domainLength = strlen('https://lunarflamestudios.com/');
@@ -123,21 +119,16 @@
         return $posts;
     }
 
-    /**
-     * Finds the index of a blog post with the given title in the provided array of posts.
-     *
-     * @param string $title The title of the blog post to find.
-     * @param BlogPost[] $posts An array of BlogPost objects to search through.
-     * @return int The index of the post with the given title, or -1 if not found.
-     */
-    function indexOfPost($title, $posts) {
-        // Loop through the posts to find the index of the post with the given title
-        foreach ($posts as $index => $post) {
+    function getPost($title) {
+        global $allPosts;
+        $allPosts = parseRSS();
+        // Loop through the posts to find the post with the given title
+        foreach ($allPosts as $post) {
             if ($post->title === $title) {
-                return $index; // Return the index if found
+                return $post; // Return the post if found
             }
         }
-        return -1; // Return -1 if not found
+        return null; // Return null if not found
     }
 
     /**
@@ -220,4 +211,30 @@
         HTML;
     }
 
+    function metadata($title) {
+        return <<<HTML
+            <base href="/">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>$title</title>
+
+            <link rel="stylesheet" href="styles/style.css">
+            <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+            <link rel="stylesheet" href="assets/devicon/devicon.min.css">
+            <link rel="stylesheet" href="styles/animations.css">
+            <link rel="shortcut icon" href="images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
+        HTML;
+    }
+
+    function stylesheet($path) {
+        if ($path == "blog") {
+            return <<<HTML
+                <link rel="stylesheet" href="pages/blog/blog-page.css">
+                <link rel="stylesheet" href="pages/blog/blog-main.css">
+            HTML;
+        }
+
+        return <<<HTML
+            <link rel="stylesheet" href="$path">
+        HTML;
+    }
 ?>

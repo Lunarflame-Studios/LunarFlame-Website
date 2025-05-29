@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<span>
+<head>
     <?php
         $partials = '../../../partials/';
         require($partials . 'server.php');
-        $allPosts = parseRSS("../../../../");
-        $currentPost = $allPosts[indexOfPost("Play Project Leo v0.45", $allPosts)];
+        $currentPost = getPost("Play Project Leo v0.45");
+        echo $currentPost->createHead();
     ?>
-</span>
-
-<?php echo $currentPost->createHead(); ?>
+</head>
 
 <body>
     <div class="background">
