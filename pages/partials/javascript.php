@@ -1,5 +1,5 @@
-<div class="panner" data-cursor="stretch"></div>
-<div class="pointer"></div>
+<span class="panner" data-cursor="stretch"></span>
+<span class="pointer"></span>
 
 <div class="js-links">
     <script src="javascript/global.js"></script>

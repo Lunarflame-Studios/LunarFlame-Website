@@ -1,6 +1,4 @@
 <?php 
-    $allPosts = null;
-
     define('OVERLAY', <<<HTML
         <span id="overlay"></span>
         <img id="zoom-in" src="" alt="">
@@ -26,9 +24,7 @@
             </a>
         </div>
     HTML);
-?>
 
-<?php
     class BlogPost {
         public $title;
         public $description;
@@ -117,6 +113,21 @@
         }
 
         return $posts;
+    }
+
+    function beginBlogPage($post) {
+        if (!$post instanceof BlogPost) {
+            throw new InvalidArgumentException('Expected an instance of BlogPost');
+        }
+
+        $overlay = OVERLAY;
+        $title = $post->createBlogTitle();
+        $subInfo = $post->createSubInfo();
+        return <<<HTML
+            $overlay
+            $title 
+            $subInfo
+        HTML;
     }
 
     function getPost($title) {
@@ -237,4 +248,46 @@
             <link rel="stylesheet" href="$path">
         HTML;
     }
+
+    function endPage() {
+        require('footer.php');
+        require('copyright.php');
+        require('javascript.php');
+    }
+
+    function typewriteGradient($version, $content) {
+        $empty = EMPTY_CHAR;
+        $version = $version == 0 ? rand(1, 5) : $version;
+        return <<<HTML
+            <h1 class="typewriter-v2 gradient" id="v{$version}">$empty
+                <span>$content</span>
+            </h1>
+        HTML;
+    }
+    
+    function gradient($version, $content) {
+        $version = $version == 0 ? rand(1, 5) : $version;
+        return <<<HTML
+            <h1 class="gradient" id="v{$version}">$content</h1>
+        HTML;
+    }
+
+    function typewrite($content) {
+        $empty = EMPTY_CHAR;
+        return <<<HTML
+            <p class="typewriter-v2">$empty
+                <span>$content</span> 
+            </p>
+        HTML;
+    }
+
+    function borderImage($src) {
+        $colors = ['pink', 'blue', 'light-blue', 'purple'];
+        return <<<HTML
+           <img class="page-image interactable offset-border" id="{$colors[array_rand($colors)]}" src="$src" alt="">
+        HTML;
+    }
+
+    $allPosts = null;
+    
 ?>

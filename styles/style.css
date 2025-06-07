@@ -10,8 +10,6 @@
     src: url(../fonts/MontserratAlt1-SemiBold.ttf);
 }
 
-body { background-color: #040511; }
-
 /*px --> vw conversion: 0.0703125x*/
 
 /* Top Menu area, containing the logo and nav links. */
@@ -61,10 +59,10 @@ header > nav { text-align: right; }
 
 /* Header, Footer, and General Structure ------------------------------------------------------- */
 
-.background {
-    position: relative;
+body {
+    /*position: relative;*/
     background-image: linear-gradient(#130A44, #040511 20%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*Primary Titles*/

@@ -67,7 +67,7 @@ a { text-decoration: none; }
     .orb#blue {
         width: 60%;
         opacity: 0.6;
-        bottom: 53vh;
+        top: -25vh;
         left: 50vw;
 
         animation: orb-pulse 10s linear infinite;
@@ -111,4 +111,3 @@ a { text-decoration: none; }
 
     .release-logs h2 { font-size: 36px; }  
 }
-

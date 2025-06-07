@@ -10,8 +10,18 @@
     ?>
 </head>
 
+<span>
+    <?php
+        function circle($ver, $img) {
+            return <<<HTML
+                <span class="circle" id="v$ver"><img src="images/vfx/{$img}.png" alt=""></span>
+            HTML;
+        }
+    ?>
+</span>
+
 <body>
-    <section class="home-header home-background">
+    <span class="main-content">
         <?php echo OVERLAY; ?>
 
         <span id="fade-out-sub"></span>
@@ -25,25 +35,29 @@
         </main>
 
         <div class="center-container">
-            <div id="ui-frame">
+            <span id="ui-frame">
                 <img src="images/vfx/UI_Frame.png" alt="">
-            </div>
+            </span>
 
             <div id="center-circle">
-                <div class="circle" id="v1" ><img src="images/vfx/Inner Circle.png" alt=""></div>
-                <div class="circle" id="v2" ><img src="images/vfx/Outer Circle.png" alt=""></div>
-                <div class="circle" id="v3" ><img src="images/vfx/Outer Circuits.png" alt=""></div>
+                <?php 
+                    echo circle(1, "Inner Circle");
+                    echo circle(2, "Outer Circle");
+                    echo circle(3, "Outer Circuits");
+                ?>
             </div>
 
             <div id="outer-circle">
-                <div class="circle" id="v4"><img src="images/vfx/Outer Ring.png" alt=""></div>
-                <div class="circle" id="v5"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
-                <div class="circle" id="v6"><img src="images/vfx/Outer Ring 2.png" alt=""></div>
+                <?php
+                    echo circle(4, "Outer Ring");
+                    echo circle(5, "Outer Ring 2");
+                    echo circle(6, "Outer Ring 2");
+                ?>
             </div>
         </div>
 
         <span id="fade-out-all"></span>
-    </section>
+    </span>
     <script src="javascript/home.js" defer></script>
     <?php 
         require($partials . 'copyright.php');

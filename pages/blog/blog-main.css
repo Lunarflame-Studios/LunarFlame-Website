@@ -245,7 +245,7 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         gap: 15px;
-        margin-top: 50px;
+        margin: 50px 0 95px 0;
     }
 
     /* The container for a regular blog post. */
@@ -320,7 +320,7 @@
     }
 
     .orb#pink {
-        bottom: -8vh;
+        top: 150vh;
         left: -8vw;
         width: 60%;
         opacity: 0.6;

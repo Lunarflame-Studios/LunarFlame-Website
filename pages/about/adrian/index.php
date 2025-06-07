@@ -9,6 +9,12 @@
         ?>
     </head>
 
+    <span>
+        <?php
+            
+        ?>
+    </span>
+
     <body>
         <div class="adri-background">
             <?php require($partials . 'header.php') ?>
@@ -17,44 +23,44 @@
                 <?php echo OVERLAY; ?>
 
                 <h1>Adrian Cervera</h1>
-                <div class="adri-general">
+                <main>
                     <div id="profile-pic">
                         <img id="adri-pfp" src="images/devs/adri_pfp.jpg">
                     </div>
                     <div id="adri-general-box">
-                        <p>Hi! I'm a computer Science Major at WPI. I like playing video games and making video games!</p>
+                        <p>Hi! I'm a Computer Science Major at WPI. I like playing video games and making video games!</p>
                         <div class="reverse social-links" id="socialLinks">
                             <ul>
                                 <li>
-                                    <a class="icon-container github" href="https://github.com/Lunarflame-Studios" target="_blank">
+                                    <a class="icon github" href="https://github.com/Lunarflame-Studios" target="_blank">
                                         <i class="bx bxl-github"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="icon-container discord" href="https://discord.gg/khKCJyjKSm" target="_blank">
+                                    <a class="icon discord" href="https://discord.gg/khKCJyjKSm" target="_blank">
                                         <i class="bx bxl-discord-alt"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="icon-container insta" href="https://www.instagram.com/phantomforce26/" target="_blank">
+                                    <a class="icon instagram" href="https://www.instagram.com/phantomforce26/" target="_blank">
                                         <i class="bx bxl-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="icon-container soundcloud" href="https://soundcloud.com/k4p33p4" target="_blank">
+                                    <a class="icon soundcloud" href="https://soundcloud.com/k4p33p4" target="_blank">
                                         <i class="bx bxl-soundcloud"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </main>
 
 
                 <h1>Tools and Languages</h1>
                 <div class="adri-skills">
                     <div class="icon-row">
-                        <span class="icon-container"><i class=""></i></span>
+                        <span class="icon"><i class=""></i></span>
                     </div>
                 </div>
             </section>
