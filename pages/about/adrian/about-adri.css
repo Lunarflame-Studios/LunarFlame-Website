@@ -1,8 +1,8 @@
 body {
-    background: linear-gradient(#050000, #4F0007);
+    background: linear-gradient(#C60C31, #67023D);
 }
 
-main {
+.adri-general {
     background: #67023D67;
     display: flex;
     flex-direction: row;
@@ -12,7 +12,7 @@ main {
     gap: 8%;
 }
 
-main p {
+.adri-general p {
     text-align: right;
 }
 

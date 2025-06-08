@@ -1,5 +1,5 @@
 let homePageInstance = function() {
-    const mainBody = document.querySelector('.main-content');
+    const header = document.querySelector('.home-header');
     const defaultBackground = 'images/vfx/Background.png'
 
     const imagePaths = [
@@ -24,7 +24,7 @@ let homePageInstance = function() {
         const blue = imagePaths[currentIndex] === defaultBackground ?  `0, 0, 0, 0` : `5, 18, 70, 0.7`;
         const purple = imagePaths[currentIndex] === defaultBackground ?  `0, 0, 0, 0` : `59, 4, 70, 0.7`;
 
-        mainBody.style.backgroundImage = `linear-gradient(rgba(${blue}), rgba(${purple})), url(${rootPath}${imagePaths[currentIndex]})`;
+        header.style.backgroundImage = `linear-gradient(rgba(${blue}), rgba(${purple})), url(${rootPath}${imagePaths[currentIndex]})`;
     }
 
     function nextSlide() {
@@ -62,28 +62,6 @@ let homePageInstance = function() {
         if (elementOpacity <= 0 && targetOpacity == 0) {
             fadeOutTriggered = false; // Reset flag
         }
-    }
-
-    let backgroundOpacity = 0.8;
-
-    const fadeOutMain = document.querySelector('#fade-out-all');
-
-    function fadeOut(element, delay) {
-        element.style.backgroundColor = `rgba(0, 0, 0, ${backgroundOpacity})`;
-
-        if (backgroundOpacity > 0) {
-            setTimeout(() => {
-                backgroundOpacity -= 0.05;
-                fadeOut(element, delay);
-            }, delay);
-        }
-    }
-
-    if (fadeOutMain !== null) {
-        setTimeout(() => {
-            fadeOut(fadeOutMain, 50);
-            mainBody.style.backgroundImage = `url(${rootPath}images/vfx/Background.png)`;
-        }, 500)
     }
 
     /* direction = 1: Fade Out. direction = -1: Fade In.  */

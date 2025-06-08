@@ -12,45 +12,57 @@
 </head>
 
 <body>
-    <?php 
-        echo circuit("v2");
-        echo orbs("purple", "light-blue", "pink");
-        require($partials . 'header.php');
-    ?>
+    <div class="background">
+        <?php 
+            echo circuit("v2");
+            echo orbs("purple", "light-blue", "pink");
+            require($partials . 'header.php');
+        ?>
 
-    <section class="page-body">
-        <?php echo OVERLAY; ?>
+        <section class="page-body">
+            <?php echo OVERLAY; ?>
 
-        <main>
-            <?php echo typewriteGradient(0, "Latest Posts"); ?>
+            <main>
+                <h1 class="typewriter-v2 gradient" id="v1"><?php echo EMPTY_CHAR ?>
+                    <span>Latest Posts</span>
+                </h1>
 
-            <a id="subscribe" href="rss.xml">
-                <h4>Subscribe!</h4>
-            </a>
-        </main>
+                <a id="subscribe" href="rss.xml">
+                    <h4>Subscribe!</h4>
+                </a>
+            </main>
 
-        <div class="recent">
-            <?php
-                for ($i = 0; $i < 3; $i++) {
-                    echo createBlogPost($allPosts[$i]);
-                }
-            ?>
-        </div>
+            <div class="recent">
+                <?php
+                    for ($i = 0; $i < 3; $i++) {
+                        echo createBlogPost($allPosts[$i]);
+                    }
+                ?>
+            </div>
 
-        <hr id="spacing">
+            <hr id="spacing">
 
-        <?php echo typewriteGradient(0, "All Posts"); ?>
+            <h1 class="typewriter-v2 gradient" id="v2"><?php echo EMPTY_CHAR ?>
+                <span>All Posts</span>
+            </h1>
 
-        <div class="catalog">
-            <?php
-                foreach ($allPosts as $post) {
-                    echo createBlogPost($post);
-                }
-            ?>
-        </div>
-    </section>
+            <div class="catalog">
+                <?php
+                    foreach ($allPosts as $post) {
+                        echo createBlogPost($post);
+                    }
+                ?>
+            </div>
+            <h1></h1>
+        </section>
+        
+        <?php require($partials . 'footer.php') ?>
+    </div>
     <script src="javascript/blog.js"></script>
-    <?php endPage(); ?>
+    <?php 
+        require($partials . 'copyright.php');
+        require($partials . 'javascript.php');
+    ?>
 </body>
 
 </html>

@@ -66,9 +66,7 @@ h3 {
         width: 60%;
         opacity: 0.6;
         left: 50vw;
-        top: 154vh;
-
-        animation: orb-pulse 16s linear infinite;
+        bottom: 8vh;
     }
 }
 
