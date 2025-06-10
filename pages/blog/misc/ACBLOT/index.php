@@ -3,25 +3,24 @@
 
 <head>
     <?php
-        $partials = '../../../partials/';
-        require($partials . 'server.php');
+        require($partials . '../../../partials/server.php');
         $currentPost = getPost("ACBLOT: Programming with C");
-        echo $currentPost->createHead();
+        $currentPost->createHead();
     ?>
 </head>
 
 <body>
     <div class="background">
-        <?php require($partials . 'header.php'); ?>
+        <?php getHeader(); ?>
         <section class="page-body">
             <?php
                 echo OVERLAY;
-                echo $currentPost->createBlogTitle();
-                echo $currentPost->createSubInfo();
+                $currentPost->createBlogTitle();
+                $currentPost->createSubInfo();
             ?>
 
             <div class="blog-pageBody">
-                <?php echo $currentPost->createDescription(); ?>
+                <?php $currentPost->createDescription(); ?>
                 <div>
                     <h2>Why Learn C?</h2>
                     <p>During my first year of uni, I took a course on low-level systems programming using C and C++. It was my first time being exposed to the languages, as prior I had only used higher level languages such as Java, C#, and Javascript. However, I found myself taking a liking to C very quickly. Its syntax was familiar enough to other languages that I didn't feel like I was adopting a totally new style (a bit ironic since it's really the other way around: C was the basis for all the other languages described above), and yet it introdcued a bevy of new operations and challenges.</p>
@@ -46,13 +45,10 @@
                 <p>Developing this project was a lot of fun, and in the process I learned a lot about how intrinsic pointers and memory management are to low-level programming. It has helped me become more aware of memory-consuming processes that I commonly deploy in higher level programming projects, such as Project Leo. This is only the beginning of my adventure with the C programming language; through both future classes I will take and an ongoing project with a friend to develop a video call app in C, I am sure that I will learn a lot more about becoming a better systems programmer.</p>
             </div>
             <hr class="blog-end">
-            <?php require($partials . 'recent-posts.php'); ?>
+            <?php getRecentPosts(); ?>
         </section>
-        <?php require($partials . 'footer.php'); ?>
+        <?php getFooter(); ?>
     </div>
-    <?php
-        require($partials . 'copyright.php'); 
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 </html>

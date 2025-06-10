@@ -3,26 +3,25 @@
 
 <head>
     <?php
-        $partials = '../../../partials/';
-        require($partials . 'server.php');
+        require($partials . '../../../partials/server.php');
         $currentPost = getPost("Play Project Leo v0.45");
-        echo $currentPost->createHead();
+        $currentPost->createHead();
     ?>
 </head>
 
 <body>
     <div class="background">
-        <?php require($partials . 'header.php') ?>
+        <?php getHeader(); ?>
 
         <section class="page-body">
             <?php 
                 echo OVERLAY;
-                echo $currentPost->createBlogTitle();
-                echo $currentPost->createSubInfo();
+                $currentPost->createBlogTitle();
+                $currentPost->createSubInfo();
             ?>
 
             <div class="blog-pageBody">
-                <?php echo $currentPost->createDescription(); ?>
+                <?php $currentPost->createDescription(); ?>
 
                 <div>
                     <h2 class="subheader">Shop</h2>
@@ -57,14 +56,11 @@
                 </div>
             </div>
             <hr class="blog-end">
-            <?php require($partials . 'recent-posts.php') ?>
+            <?php getRecentPosts(); ?>
         </section>
-        <?php require($partials . 'footer.php') ?>
+        <?php getFooter(); ?>
     </div>
-    <?php 
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php'); 
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>

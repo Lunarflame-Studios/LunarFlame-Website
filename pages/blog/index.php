@@ -3,10 +3,9 @@
 
 <head>
     <?php
-        $partials = '../partials/';
-        require($partials . 'server.php');
-        echo metadata("Blog");
-        echo stylesheet("pages/blog/blog-main.css");
+        require('../partials/server.php');
+        metadata("Blog");
+        stylesheet("pages/blog/blog-main.css");
         $allPosts = parseRSS("../../");
     ?>
 </head>
@@ -14,18 +13,16 @@
 <body>
     <div class="background">
         <?php 
-            echo circuit("v2");
-            echo orbs("purple", "light-blue", "pink");
-            require($partials . 'header.php');
+            circuit("v2");
+            orbs("purple", "light-blue", "pink");
+            getHeader();
         ?>
 
         <section class="page-body">
             <?php echo OVERLAY; ?>
 
             <main>
-                <h1 class="typewriter-v2 gradient" id="v1"><?php echo EMPTY_CHAR ?>
-                    <span>Latest Posts</span>
-                </h1>
+                <?php typewriteGradient(1, "Latest Posts"); ?>
 
                 <a id="subscribe" href="rss.xml">
                     <h4>Subscribe!</h4>
@@ -35,34 +32,28 @@
             <div class="recent">
                 <?php
                     for ($i = 0; $i < 3; $i++) {
-                        echo createBlogPost($allPosts[$i]);
+                        createBlogPost($allPosts[$i]);
                     }
                 ?>
             </div>
 
             <hr id="spacing">
 
-            <h1 class="typewriter-v2 gradient" id="v2"><?php echo EMPTY_CHAR ?>
-                <span>All Posts</span>
-            </h1>
+            <?php typewriteGradient(2, "All Posts"); ?>
 
             <div class="catalog">
                 <?php
                     foreach ($allPosts as $post) {
-                        echo createBlogPost($post);
+                        createBlogPost($post);
                     }
                 ?>
             </div>
-            <h1></h1>
         </section>
         
-        <?php require($partials . 'footer.php') ?>
+        <?php getFooter(); ?>
     </div>
     <script src="javascript/blog.js"></script>
-    <?php 
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>

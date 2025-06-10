@@ -3,26 +3,25 @@
 
 <head>
     <?php
-        $partials = '../../../partials/';
-        require($partials . 'server.php');
+        require('../../../partials/server.php');
         $currentPost = getPost("My Curiosity Moment");
-        echo $currentPost->createHead();
+        $currentPost->createHead();
     ?>
 </head>
 
 <body>
     <div class="background">
-        <?php require($partials . 'header.php') ?>
+        <?php getHeader(); ?>
 
         <section class="page-body">
             <?php
                 echo OVERLAY;
-                echo $currentPost->createBlogTitle();
-                echo $currentPost->createSubInfo();
+                $currentPost->createBlogTitle();
+                $currentPost->createSubInfo();
             ?>
 
             <div class="blog-pageBody">
-                <?php echo $currentPost->createDescription(); ?>
+                <?php $currentPost->createDescription(); ?>
                 <div>
                     <h2 class="subheader">1. You are part of the story.</h2>
                     <p>Books and movies can do good jobs establishing worlds and giving them life. But I think that video games excel here by making you a part of the world. You control a character, and you interact with other characters and the world around you. The stakes are more intense because now you want to preserve the world that you are so immersed in. You want to become stronger, explore, and discover more about the world through your own observations.</p>
@@ -32,15 +31,7 @@
                 <div>
                     <h2>Xenoblade Chronicles</h2>
                     <p>This is one of my favorite series of all time. The 3 games span across 2 universes, and detail the struggles of different groups of characters as they fight against a pre-determined fate and discover the meaning of human existence. </p>
-                    <div class="scroll-container">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1K-Y7hHQ7OczR-_nLGg6WqLlTn1pEmMs2&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1cP5WXow4ZLB6oyStvwvW50VW26TzWhez&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1OpAtiqu_SzFcNLqAmmlDfFpjINqRXTuW&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1E6uOh7Krcs--Sr4o9F7nwwU-q8U-0uDV&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=13CdX4NhQlgI43ujCvDEKeq7lwtfX7Ur6&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1X8I_gPa3xWgDCcMMWDfA2c8jhOS2A_5e&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=13KKOeipjWuRwFDAKzvr5Q7I-dFjYlTvI&sz=w1000" alt="">
-                    </div>
+                    <?php carousel(googleDrive("1K-Y7hHQ7OczR-_nLGg6WqLlTn1pEmMs2"), googleDrive("1cP5WXow4ZLB6oyStvwvW50VW26TzWhez"), googleDrive("1OpAtiqu_SzFcNLqAmmlDfFpjINqRXTuW"), googleDrive("1E6uOh7Krcs--Sr4o9F7nwwU-q8U-0uDV"), googleDrive("13CdX4NhQlgI43ujCvDEKeq7lwtfX7Ur6"), googleDrive("1X8I_gPa3xWgDCcMMWDfA2c8jhOS2A_5e"), googleDrive("13KKOeipjWuRwFDAKzvr5Q7I-dFjYlTvI")); ?> 
                 </div>
 
                 <div>
@@ -52,12 +43,7 @@
                 <div>
                     <h2>NieR: Automata</h2>
                     <p>NieR: Automata is an open-world game set in a post-apocalyptic Earth that has been taken over by aliens and their force of machines. A special squadron of androids, known as YorHa, is tasked with defeating them. NieR: Automata is famous for having 26 different endings. However, only 5 of those endings are canonical. The rest are a result of the player choosing or failing to complete important story objectives.</p>
-                    <div class="scroll-container">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1Qm8lziXK4L4uBMwY249qnFBqRwSbvdwy&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1-cop4RzffPPcn_UoCxe878Z7Yl_b99Av&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1G9kU1Sy55Ruminz2hdiUdUe3fjX3_JFi&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1A39-D_SuJ0P1VMNCka6jVhjEVkaQvVfW&sz=w1000" alt="">
-                    </div>
+                    <?php carousel(googleDrive("1Qm8lziXK4L4uBMwY249qnFBqRwSbvdwy"), googleDrive("1-cop4RzffPPcn_UoCxe878Z7Yl_b99Av"), googleDrive("1G9kU1Sy55Ruminz2hdiUdUe3fjX3_JFi"), googleDrive("1A39-D_SuJ0P1VMNCka6jVhjEVkaQvVfW")); ?>
                 </div>
 
                 <div>
@@ -69,12 +55,7 @@
                 <div>
                     <h2>Persona 5 Royal</h2>
                     <p>Persona 5 takes place in Tokyo, Japan, and centers around a high-school student who goes by the codename "Joker." His reputation was ruined after being falsely accused of a crime. After discovering a world called the Metaverse, where the corrupted cognitions of people manifest, he uncovers a special power known as a Persona. He forms a group called the Phantom Thieves of Hearts, Persona-users who traverse the metaverse and defeat the shadows of the malevolent adults to make them repent for their sins in the real world.</p>
-                    <div class="scroll-container">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=16qPwBv3VjSKhtkxntmKAwcEJmp8F03bJ&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1agGjOY4eFNRrG6IgWESpYvyzi5sNNdbf&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1CIazfobGQu3bKhdhGjAX_7Y9BnSqBV0P&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1EYORweCsFFgYHtuD51Vce2PD0lAuUGw7&sz=w1000" alt="">
-                    </div>
+                    <?php carousel(googleDrive("16qPwBv3VjSKhtkxntmKAwcEJmp8F03bJ"), googleDrive("1agGjOY4eFNRrG6IgWESpYvyzi5sNNdbf"), googleDrive("1CIazfobGQu3bKhdhGjAX_7Y9BnSqBV0P"), googleDrive("1EYORweCsFFgYHtuD51Vce2PD0lAuUGw7")); ?>
                 </div>
 
                 <div>
@@ -87,14 +68,7 @@
                     <h2>Ori and the Blind Forest</h2>
                     <p>Ori and the Blind Forest takes place in the forest of Nibel, which is withering away without the influence of its great Spirit Tree. Ori, a guardian spirit, fell from the tree as a newborn and was taken in by a creature named Naru, who raised Ori as her own. The decaying of the Great Tree causes a famine in the forest, and Naru dies of starvation to feed her child. Afterwards, Ori meets a small spirit named Sein, who guides Ori on a journey to restore the forest.</p>
                     <p>The sequel, Will of the Wisps, takes place in the forest of Niwen, where Ori and his owl friend Ku have been stranded and separated after an accident in a storm. Like Nibel, Niwen is in decay after the deterioration of its great tree. Ori must traverse and restore the land of Niwen in order to rescue Ku.</p>
-                    <div class="scroll-container">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1nfK0kka8CZfQWPL5lOOGaflFrt3kswQj&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1NB4EgXaeCmrOl5JnwZIT8JD8BQdBetEj&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1MEFAzobR0-pnlEqbwjPOr0THhDydwdWU&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1QXGWALTSB_wo_MD4JzGCDAVNOltj9sIj&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1J3l36pUYvM48uBuzgdS-C2rV38V5dtoS&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1lzF2JFVdAAbRqqJNkSz5UlGNL0A0jhvU&sz=w1000" alt="">
-                    </div>
+                    <?php carousel(googleDrive("1nfK0kka8CZfQWPL5lOOGaflFrt3kswQj"), googleDrive("1NB4EgXaeCmrOl5JnwZIT8JD8BQdBetEj"), googleDrive("1MEFAzobR0-pnlEqbwjPOr0THhDydwdWU"), googleDrive("1QXGWALTSB_wo_MD4JzGCDAVNOltj9sIj"), googleDrive("1J3l36pUYvM48uBuzgdS-C2rV38V5dtoS"), googleDrive("1lzF2JFVdAAbRqqJNkSz5UlGNL0A0jhvU")); ?>
                 </div>
 
                 <div>
@@ -106,25 +80,17 @@
                 <div>
                     <h2>Minecraft</h2>
                     <p>Minecraft is an open-world sandbox game in which the entire world is made of blocks. Players can choose to play in Creative Mode, where they have unlimited building materials and completely free movement, or Survival Mode, where players must gather materials, food, and tools, survive against monsters, and traverse different dimensions.</p>
-                    <div class="scroll-container">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1m2za6Ob_bQJTxHFv6xVy4z9ld_Z-vL3N&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1P8qXZR7k7rJrSDlLneQbqbDI_9UgUgVz&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1YBCZSznlxjZE5sSoBQCiHzfzZBh2mW4b&sz=w1000" alt="">
-                        <img class="interactable" src="https://drive.google.com/thumbnail?id=1js7O111d_xkZbf9OfTI-3iOLiDoabAGE&sz=w1000" alt="">
-                    </div>
+                    <?php carousel(googleDrive("1m2za6Ob_bQJTxHFv6xVy4z9ld_Z-vL3N"), googleDrive("1P8qXZR7k7rJrSDlLneQbqbDI_9UgUgVz"), googleDrive("1YBCZSznlxjZE5sSoBQCiHzfzZBh2mW4b"), googleDrive("1js7O111d_xkZbf9OfTI-3iOLiDoabAGE")); ?>
                 </div>
 
                 <p>All of these games have influenced me in profound ways. From provoking my creativity to posing existential and philosophical questions, I truly believe that video games are overlooked as forms of storytelling, both by younger audiences that downplay them as mere entertainment, or by older audiences that consider them mind-numbing wastes of time. I hope that through our own endeavors to create games, we can change the minds of people who pass off these remarkable experiences.</p>
             </div>
             <hr class="blog-end">
-            <?php require($partials . 'recent-posts.php') ?>
+            <?php getRecentPosts(); ?>
         </section>
-        <?php require($partials . 'footer.php') ?>
+        <?php getFooter(); ?>
     </div>
-    <?php
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>

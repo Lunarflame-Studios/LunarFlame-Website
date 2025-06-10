@@ -19,7 +19,6 @@
 
 .recent .post #link {
     text-decoration: none; 
-
     padding-bottom: 10vw;
 }
 
@@ -49,20 +48,19 @@
     flex-direction: column;
 }
 
-/*Category*/
+/* Category */
 .recent .metadata #category {
     font-size: 2.9vw;
     color: #ed88ff;
 }
 
-/*Title*/
+/* Title */
 .recent .metadata #title {
     font-size: 1.75vw;
     color: #ad72ff;
     line-height: 2.1vw;
     margin: 5px 0px 10px 0px;
 }
-
 
 /* All Blog Posts ------------------------------------------------------------------------------ */
 
@@ -89,13 +87,13 @@
     margin-top: 1.2vw;
 }
 
-/*Author*/
+/* Author */
 .metadata #author {
     color: #f3bafd;
     font-size: 1.6vw;
 }
 
-/*Date*/
+/* Date */
 .metadata #pubDate {
     margin-top: 5%;
     color: #9192fc;
@@ -106,10 +104,10 @@
 
 /* Subscribe RSS button */
 
-/*Anchor*/
+/* Anchor */
 #subscribe { text-decoration: none; }
 
-/*Text*/
+/* Text */
 #subscribe h4 {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -136,7 +134,7 @@
     }
 
     /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .metadata { padding: 15px 6px 15px 6px; }
+    .metadata { padding: 15px 6px; }
 
     /* Category */
     .recent .metadata #category { font-size: 4vw; }
@@ -245,7 +243,7 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         gap: 15px;
-        margin-top: 50px;
+        margin: 50px 0;
     }
 
     /* The container for a regular blog post. */

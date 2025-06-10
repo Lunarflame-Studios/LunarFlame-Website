@@ -3,22 +3,17 @@
 
 <head>
     <?php
-        $partials = '../../partials/';
-        require($partials . 'server.php');
-        echo metadata("Project Leo (WebGL)");
-        echo stylesheet("pages/projects/projects.css");
+        require('../../partials/server.php');
+        metadata("Project Leo (WebGL)");
+        stylesheet("pages/projects/projects.css");
     ?>
 </head>
 
 <body>
     <style>
-        .sub-header-background {
+        .header-background {
             background-image: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
-            padding: 1% 2%;
-        }
-
-        .sub-header-background nav {
-            margin: 0;
+            padding: 1% 0;
         }
 
         .page-body-background {
@@ -31,7 +26,7 @@
 
         .panner { display: none; }
 
-        .sub-footer {
+        footer {
             background: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
         }
         
@@ -49,17 +44,14 @@
         }
     </style>
 
-    <div class="sub-header-background">
-        <?php require($partials . 'header.php'); ?>
-    </div>
+    <div class="header-background"><?php getHeader(); ?></div>
 
     <div class="page-body-background">
         <section class="page-body">
-            <?php echo OVERLAY ?>
-
-            <h1 class="typewriter-v2 gradient" id="v1"><?php echo EMPTY_CHAR ?>
-                <span>Project Leo</span>
-            </h1>
+            <?php
+                echo OVERLAY;
+                typewriteGradient(1, "Project Leo");
+            ?>
             <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
 
             <iframe frameborder="0" src="https://itch.io/embed-upload/12014743?color=051246" allowfullscreen="" width="1280" height="760">
@@ -70,12 +62,9 @@
                 If you're on desktop, try expanding your screen.</h3>
 
         </section>
-        <?php require($partials . 'footer.php') ?>
+        <?php getFooter(); ?>
     </div>
-    <?php
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>

@@ -1,11 +1,10 @@
-<h1 class="typewriter-v2 gradient" id="v1"><?php echo EMPTY_CHAR; ?>
-    <span>Recent Posts</span>
-</h1>
+<?php typewriteGradient(1, "Recent Posts") ?>
 
 <div class="recent">
     <?php
+        global $allPosts;
         for ($i = 0; $i < 3; $i++) {
-            echo createBlogPost($allPosts[$i]);
+            createBlogPost($allPosts[$i]);
         }
     ?>
 

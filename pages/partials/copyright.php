@@ -26,7 +26,7 @@
                 break;
         }
 
-        return <<<HTML
+        echo <<<HTML
             <li>
                 <a class="icon $social" href="$link" target="_blank">
                     <i class="bx bxl-$bx"></i>
@@ -42,10 +42,10 @@
         <div class="social-links">
             <ul>
                 <?php
-                    echo social("github");
-                    echo social("discord");
-                    echo social("instagram");
-                    echo social("soundcloud");
+                    social("github");
+                    social("discord");
+                    social("instagram");
+                    social("soundcloud");
                 ?>
             </ul>
         </div>

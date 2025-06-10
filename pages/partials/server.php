@@ -51,14 +51,14 @@
         function createHead() {
             $metadata = metadata($this->title . " - Blog");
             $style = stylesheet("blog");
-            return <<<HTML
+            echo <<<HTML
                 $metadata
                 $style
             HTML;
         }
 
         function createBlogTitle() {
-            return <<<HTML
+            echo <<<HTML
                 <div class="blog-title">
                     <h1 id="title">$this->title</h1>
                     <h5 id="category">$this->category</h5>
@@ -68,7 +68,7 @@
         }
 
         function createSubInfo() {
-            return <<<HTML
+            echo <<<HTML
                 <div class="blog-subInfo">
                     <h3 id="author">$this->author</h3>
                     <h4 id="date">$this->pubDate</h4>
@@ -79,7 +79,7 @@
         function createDescription() {
             $colors = ['pink', 'blue', 'light-blue', 'purple'];
 
-            return <<<HTML
+            echo <<<HTML
                 <p id="description">$this->description</p>
                 <img class="page-image interactable offset-border" id="{$colors[array_rand($colors)]}" src="$this->thumbnail" alt="">
             HTML;
@@ -145,7 +145,7 @@
         }
 
         // Return the HTML for the recent post
-        return str_replace(
+        echo str_replace(
             ['{link}', '{category}', '{title}', '{description}', '{author}', '{pubDate}', '{thumbnail}'],
             [$post->link, $post->category, $post->title, $post->description, $post->author, $post->pubDate, $post->thumbnail],
             BLOG_POST
@@ -194,7 +194,7 @@
         // Close the wrapper div
         $html .= '</div>' . PHP_EOL;
 
-        return $html;
+        echo $html;
     }
 
     /**
@@ -204,7 +204,7 @@
      * @return string The generated HTML string containing the circuit element.
      */
     function circuit($version) {
-        return <<<HTML
+        echo <<<HTML
             <div>
                 <span class="circuit" id="$version"></span>
             </div>
@@ -212,29 +212,115 @@
     }
 
     function metadata($title) {
-        return <<<HTML
+        echo <<<HTML
             <base href="/">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>$title</title>
 
-            <link rel="stylesheet" href="styles/style.css">
+            <link rel="stylesheet" href="style.css">
             <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
             <link rel="stylesheet" href="assets/devicon/devicon.min.css">
-            <link rel="stylesheet" href="styles/animations.css">
             <link rel="shortcut icon" href="images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
         HTML;
     }
 
     function stylesheet($path) {
         if ($path == "blog") {
-            return <<<HTML
+            echo <<<HTML
                 <link rel="stylesheet" href="pages/blog/blog-page.css">
                 <link rel="stylesheet" href="pages/blog/blog-main.css">
             HTML;
         }
+        else {
+            echo <<<HTML
+                <link rel="stylesheet" href="$path">
+            HTML;
+        }
+    }
 
-        return <<<HTML
-            <link rel="stylesheet" href="$path">
+    function getHeader() {
+        require('header.php');
+    }
+
+    function getFooter() {
+        require('footer.php');
+    }
+
+    function endPage() {
+        require('copyright.php');
+        require('javascript.php');
+    }
+
+    function getRecentPosts() {
+        require('recent-posts.php');
+    }
+
+    function typewrite($content) {
+        $empty = EMPTY_CHAR; 
+        echo <<<HTML
+            <p class="typewriter-v2">$empty
+                <span>$content</span>
+            </p>
         HTML;
+    }
+
+    function gradient($ver, $content) {
+        $ver = $ver == -1 ? rand(1, 5) : $ver;
+        echo <<<HTML
+            <h1 class="gradient" id="v{$ver}">$content</h1>
+        HTML;
+    }
+
+    function typewriteGradient($ver, $content) {
+        $empty = EMPTY_CHAR; 
+        $ver = $ver == -1 ? rand(1, 5) : $ver;
+        echo <<<HTML
+            <h1 class="typewriter-v2 gradient" id="v{$ver}">$empty
+                <span>$content</span>
+            </h1>
+        HTML;
+    }
+
+    function multiTypewriteGradient($ver, ...$contents) {
+        $empty = EMPTY_CHAR;
+        $ver = $ver == -1 ? rand(1, 5) : $ver;
+        
+        $dataType = '[';
+        $numContents = func_num_args() - 1;
+
+        $i = 1;
+        foreach ($contents as $content) {
+            $end = $i == $numContents ? '"]' : '", ';
+            $dataType .= '"' . $content . $end ;
+            $i++;
+        }
+
+        echo <<<HTML
+            <h1 class="typewrite gradient" id="v{$ver}" data-type='$dataType' data-period="2000">
+                <span class="wrap">$empty</span>
+            </h1>
+        HTML;
+    }
+    
+    function borderImage($src, $color = "") {
+        $colors = ['pink', 'blue', 'light-blue', 'purple'];
+        $color = $color == "" ? array_rand($colors) : $color;
+        echo <<<HTML
+            <img class="page-image interactable offset-border" id="$color" src="$src" alt="">
+        HTML;
+    }
+
+    function carousel(...$images) {
+        $html = '<div class="carousel">' . PHP_EOL;
+        foreach ($images as $src) {
+            $html .= '    <img class="interactable" src="' . $src . '" alt="">';
+        }
+        $html .= '</div>';
+        echo $html;
+    }
+    
+
+    function googleDrive($id) {
+        return "https://drive.google.com/thumbnail?id=" . $id . "&sz=w1000";
     }
 ?>

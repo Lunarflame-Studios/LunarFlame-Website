@@ -3,16 +3,15 @@
 
 <head>
     <?php 
-        $partials = '../../../partials/';
-        require($partials . 'server.php');
+        require('../../../partials/server.php');
         $currentPost = getPost("Play Project Leo v0.4");
-        echo $currentPost->createHead();
+        $currentPost->createHead();
     ?>
 </head>
 
 <body>
     <div class="background">
-        <?php require($partials . 'header.php'); ?>
+        <?php getHeader(); ?>
 
         <section class="page-body">
             <?php
@@ -22,7 +21,7 @@
             ?>
 
             <div class="blog-pageBody">
-                <?php echo $currentPost->createDescription(); ?>
+                <?php $currentPost->createDescription(); ?>
                 <div>
                     <h2 class="subheader">Cloud Save Data</h2>
                     <p>Players can now choose to create accounts and store their data online. This allows players to load their data across multiple devices and preserve their data in future updates. Players who choose not to create accounts can use guest accounts. These are anonymous, locally stored accounts that can allow you to play the game quickly or without internet access. However, certain features will not be available to guest accounts during future updates. </p>
@@ -60,14 +59,11 @@
                 </div>
             </div>
             <hr class="blog-end">
-            <?php require($partials . 'recent-posts.php'); ?>
+            <?php getRecentPosts(); ?>
         </section>
-        <?php require($partials . 'footer.php'); ?>
+        <?php getFooter(); ?>
     </div>
-    <?php 
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>

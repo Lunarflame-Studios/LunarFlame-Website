@@ -3,10 +3,9 @@
 
 <head>
     <?php
-        $partials = '../partials/';
-        require($partials . 'server.php');
-        echo metadata("About Us");
-        echo stylesheet("pages/about/about.css");
+        require('../partials/server.php');
+        metadata("About Us");
+        stylesheet("pages/about/about.css");
     ?>
 </head>
 
@@ -35,7 +34,7 @@
                 ? array(profilePic($about[4]), devName($about[0], $about[1]))
                 : array(devName($about[0], $about[1]), profilePic($about[4]));
 
-            return <<<HTML
+            echo <<<HTML
                 <div class="dev-box $name">
                     <div>
                         <div>
@@ -55,9 +54,9 @@
 <body>
     <div class="background">
         <?php
-            echo circuit("v2");
-            echo orbs("light-blue", "pink", "purple"); 
-            require($partials . 'header.php');
+            circuit("v2");
+            orbs("light-blue", "pink", "purple"); 
+            getHeader();
         ?>
 
         <!-- <?php echo EMPTY_CHAR ?> is an empty ACSII character. -->
@@ -70,31 +69,21 @@
             <main>
                 <div>
                     <div>
-                        <h1 class="typewrite gradient" id="v2" data-type='["About Us", "About Our Team", "About Our Vision"]' data-period="2000">
-                            <span class="wrap"><?php echo EMPTY_CHAR ?></span>
-                        </h1>
+                        <?php multiTypewriteGradient(2, "About Us", "About Our Team", "About Our Vision") ?>
 
-                        <p class="typewriter-v2"><?php echo EMPTY_CHAR ?>
-                            <span>Lunarflame Studios is an independent game studio founded in 2023.</span>
-                        </p>
+                        <?php typewrite("Lunarflame Studios is an independent game studio founded in 2023."); ?>
                         <hr>
                     </div>
 
-                    <img class="page-image interactable offset-border" id="light-blue" src="images/screenshots/PL_SS_1.png" alt="">
+                    <?php borderImage("images/screenshots/PL_SS_1.png") ?>
                 </div>
 
-                <p class="typewriter-v2"><?php echo EMPTY_CHAR ?>
-                    <span>Our studio strives to create games with thought-provoking stories, immersion for countless audiences,
-                        foster artistic expression, and have fun while doing it all.</span>
-                </p>
+                <?php typewrite("Our studio strives to create games with thought-provoking stories, immersion for countless audiences, foster artistic expression, and have fun while doing it all."); ?>
             </main>
 
             <hr>
-
-            <h1 class="typewriter-v2 gradient" id="v2"><?php echo EMPTY_CHAR ?>
-                <span>Developers</span>
-            </h1>
-
+            
+            <?php typewriteGradient(2, "Developers"); ?>
             <div class="dev-slideshow">
                 <div>
                     <img id="left-arrow" src="images/vfx/Back_Arrow.png" onclick="backDev()" alt="">
@@ -137,14 +126,14 @@
 
             <div class="dev-boxes">
                 <?php 
-                    echo devBox("adrian");
-                    echo devBox("dan", "reverse");
-                    echo devBox("speedster");
-                    echo devBox("ryan", "reverse");
+                    devBox("adrian");
+                    devBox("dan", "reverse");
+                    devBox("speedster");
+                    devBox("ryan", "reverse");
                 ?>                
             </div>
         </section>
-        <?php require($partials . 'footer.php'); ?>
+        <?php getFooter(); ?>
     </div>
 
     <script>
@@ -152,10 +141,7 @@
         function backDev() { aboutPage.nextDev(-1); }
     </script>
     <script src="javascript/about.js"></script>
-    <?php
-        require($partials . 'copyright.php');
-        require($partials . 'javascript.php');
-    ?>
+    <?php endPage(); ?>
 </body>
 
 </html>
