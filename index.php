@@ -20,7 +20,7 @@
 </span>
 
 <body>
-    <section class="home-header home-background">
+    <section class="main-content">
         <?php echo OVERLAY; ?>
 
         <span id="fade-out-sub"></span>

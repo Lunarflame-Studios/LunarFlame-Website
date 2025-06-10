@@ -129,7 +129,6 @@ hr {
     display: inline-block;
     padding: 15px 20px;
     transition: all ease 0.3s;
-
     color: white;
 }
 
@@ -143,9 +142,9 @@ hr {
 /* div class for list of external links */
 .social-links { display: flex; }
 
-/* Scrollbar ----------------------------------------------------------------------------------- */
+/* Carousel ----------------------------------------------------------------------------------- */
 
-/* Container for the scrollbar */
+/* Container for the carousel images. */
 .carousel {
     background-color: #00010c9f;
     overflow: auto;
@@ -193,7 +192,6 @@ hr {
 }
 
 .dropdown:hover .dropdown-content { display: block; }
-
 .dropdown:hover .drop-btn { background-color: rgba(255, 255, 255, 0.1);}
 
 /* Other --------------------------------------------------------------------------------------- */
