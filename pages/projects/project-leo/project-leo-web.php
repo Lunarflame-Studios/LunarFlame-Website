@@ -54,8 +54,11 @@
             ?>
             <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
 
+            <h3 class="margin-top">Epilepsy Warning: This game contains flashing visuals. If you are photosensitive, please take
+                precautions before playing this game.</h3>
+
             <iframe frameborder="0" src="https://itch.io/embed-upload/12014743?color=051246" allowfullscreen="" width="1280" height="760">
-                <a href="https://phantomforce.itch.io/project-leo-v045-webgl">Play Project Leo v0.45.3 (WebGL) on itch.io</a>
+                <a href="https://phantomforce.itch.io/project-leo-v05-webgl">Play Project Leo v0.5 (WebGL) on itch.io</a>
             </iframe>
 
             <h3 id="not-available" class="margin-top">Sorry, this WebGL game is not supported on mobile devices and small screens.
