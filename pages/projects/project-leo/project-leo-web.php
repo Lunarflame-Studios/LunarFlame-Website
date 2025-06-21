@@ -29,13 +29,27 @@
         footer {
             background: linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), url(images/vfx/Blue-Nebula-8-1024x1024-1.png);
         }
+
+        h3 {
+            color: #9192fc;
+            line-height: 4vw;
+        }
         
         @media(max-width: 700px) {
             iframe { display: none; }
+            #warning { display: none; }
+            #not-available { padding: 8% 8%; }
         }
 
         @media(min-width: 701px) {
             #not-available { display: none; }
+            
+            #warning {
+                margin: 0;
+                padding: 0% 5% 4%;
+                font-size: 1.8vw;
+            }
+
             iframe { padding-bottom: 10%; }
             .page-body h1 {
                 margin: 0;
@@ -54,7 +68,7 @@
             ?>
             <!--<img class="title margin-top" src="../images/NeXoSphere.png" alt="Project Leo">-->
 
-            <h3 class="margin-top">Epilepsy Warning: This game contains flashing visuals. If you are photosensitive, please take
+            <h3 id="warning" class="margin-top">Epilepsy Warning: This game contains flashing visuals. If you are photosensitive, please take
                 precautions before playing this game.</h3>
 
             <iframe frameborder="0" src="https://itch.io/embed-upload/12014743?color=051246" allowfullscreen="" width="1280" height="760">

@@ -10,7 +10,7 @@
 strong { color: rgb(128, 0, 0);}
 
 /* Summary of the project. */
-.summary > p { margin: 0% 5%;}
+.widget-container p, .summary > p { margin: 0% 5%;}
 
 /* Removes underlines from anchors */
 a { text-decoration: none; }
