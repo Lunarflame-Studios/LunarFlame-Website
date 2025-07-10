@@ -11,7 +11,6 @@
 
 <body>
     <div class="background">
-
         <?php
             circuit("v1");
             orbs("pink", "blue", "purple");
@@ -43,9 +42,9 @@
             <div class="summary">
                 <hr>
                 <p>"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
-                <img class="page-image interactable" src="images/screenshots/NetherSpawn.jpg" alt="">
+                <?php pageImage("images/screenshots/NetherSpawn.jpg") ?>
                 <p>Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
-                <?php carousel( "images/screenshots/PL_SS_2.png", "images/screenshots/PL_SS_3.png", "images/screenshots/PL_SS_4.png"); ?>
+                <?php carousel("images/screenshots/PL_SS_2.png", "images/screenshots/PL_SS_3.png", "images/screenshots/PL_SS_4.png"); ?>
             </div>
         </section>
         <?php getFooter(); ?>

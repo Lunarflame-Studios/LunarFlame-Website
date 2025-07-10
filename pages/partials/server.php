@@ -310,6 +310,14 @@
         HTML;
     }
 
+    function pageImage($src) {
+        echo <<<HTML
+            <div class="image-container">
+                <img class="page-image interactable" src="$src" alt="">
+            </div>
+        HTML;
+    }
+
     function carousel(...$images) {
         $html = '<div class="carousel">' . PHP_EOL;
         foreach ($images as $src) {
