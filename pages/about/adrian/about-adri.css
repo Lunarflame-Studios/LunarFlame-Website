@@ -1,19 +1,49 @@
-body {
-    background: linear-gradient(#C60C31, #67023D);
+.adri-background {
+    background: linear-gradient(
+        #1E6173, 
+        #243363,
+        #300064,
+        #540089
+    );
+    overflow: hidden;
+    position: relative;
 }
 
-.adri-general {
-    background: #67023D67;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+main {
+    background: #3484ADD7;
     margin: 5% 10%;
     padding: 5%;
     gap: 8%;
 }
 
-.adri-general p {
+main > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main p {
     text-align: right;
+    width: 48.5vw;
+    height: 4vw;
+}
+
+main h3 {
+    margin-top: 2vw;
+    font-size: 2.5vw;
+    color: #C8E9EF;
+    transition: 0.3s ease-in-out;
+}
+
+main a { text-decoration: none; }
+
+main h3:hover { color: #CFC5DD; }
+
+main > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1vw 0;
 }
 
 .reverse {
@@ -24,13 +54,58 @@ body {
 
 .reverse a {
     font-size: 2.5vw;
-    background: #67023D;
+    background: #2F0067;
+}
+
+.adri-skills { margin-bottom: 4%; }
+
+.icon-row { margin-top: 4%; }
+
+.icon-row .icon {
+    padding: 2vw;
+    margin: 0 2vw;
+
+    background: #32267D;
+    transition: 0.3s ease-in-out;
+}
+
+.icon-row .icon i {
+    font-size: 3.5vw;
+    transition: 0.3s ease-in-out;
+}
+
+.icon#v1:hover { background: #290053; }
+
+.icon#v2:hover { background: #243363; }
+
+.icon#v3:hover { background: #240054; }
+
+.icon#v4:hover { background: #1E6173; }
+
+.icon#v5:hover { background: #300054; }
+
+.adri-projects {
+    padding: 6vw 0;
+    background: linear-gradient(
+        transparent 0%, 
+        #130A44 10%,
+        #040511 90%,
+        transparent 100%);
+}
+
+.adri-projects h2 {
+    margin-bottom: 4vw;
+}
+
+.adri-projects h3 {
+    font-size: 2.5vw;
+    margin: 4vw 0;
 }
 
 /* Div container for the profile picture. */
 #profile-pic {
     display: inline-block;
-    width: 22vw;
+    width: 15vw;
     height: 15vw;
     overflow: hidden;
     border-radius: 50%;

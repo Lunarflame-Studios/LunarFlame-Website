@@ -511,7 +511,7 @@ hr {
 
  /*--------------------------------------------------------------------------------------------- */
 
-.gradient {
+.gradient, .icon-row .icon i:hover {
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -519,7 +519,7 @@ hr {
     animation: gradient 12s linear infinite;
 }
 
-.gradient#v1 {
+.gradient#v1, .icon#v1 i:hover {
     background-image: linear-gradient(
         -225deg,
         #FA7FFF 0%,
@@ -532,7 +532,7 @@ hr {
     text-shadow: 0 0 60px #8da0feD1;
 }
 
-.gradient#v2 {
+.gradient#v2, .icon#v2 i:hover {
     background-image: linear-gradient(
         -225deg,
         #01AEF3 0%,
@@ -545,7 +545,7 @@ hr {
     text-shadow: 0 0 60px #464BE7E3;
 }
 
-.gradient#v3 {
+.gradient#v3, .icon#v3 i:hover {
     background-image: linear-gradient(
         -225deg,
         #F10080 0%,
@@ -558,7 +558,7 @@ hr {
     text-shadow: 0 0 60px #3204E7DE;
 }
 
-.gradient#v4 {
+.gradient#v4, .icon#v4 i:hover {
     background-image: linear-gradient(
         -225deg,
         #F54952 0%,
@@ -571,7 +571,7 @@ hr {
     text-shadow: 0 0 60px #0a53f287;
 }
 
-.gradient#v5 {
+.gradient#v5, .icon#v5 i:hover {
     background-image: linear-gradient(
         -225deg,
         #14F2E0 0%,

@@ -1,12 +1,11 @@
 <?php
     function social($social) {
         $link = '';
-        $bx = '';
+        $bx = $social;
 
         switch ($social) {
             case "github":
                 $link = "https://github.com/Lunarflame-Studios";
-                $bx = $social;
                 break;
             case "discord":
                 $link = "https://discord.gg/khKCJyjKSm";
@@ -14,11 +13,9 @@
                 break;
             case "instagram":
                 $link = "https://www.instagram.com/phantomforce26/";
-                $bx = $social;
                 break;
             case "soundcloud":
                 $link = "https://soundcloud.com/k4p33p4";
-                $bx = $social;
                 break;
             default:
                 $link = "#";

@@ -327,8 +327,11 @@
         echo $html;
     }
     
-
     function googleDrive($id) {
         return "https://drive.google.com/thumbnail?id=" . $id . "&sz=w1000";
+    }
+
+    function screenshots($img) {
+        return "images/screenshots/" . $img;
     }
 ?>
