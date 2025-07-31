@@ -4,8 +4,7 @@
 <head>
     <?php 
         require('pages/partials/server.php');
-        metadata("Lunarflame Studios");
-        stylesheet("home.css");
+        Head::new("LunarFlame Studios", "home.css");
     ?>
 </head>
 

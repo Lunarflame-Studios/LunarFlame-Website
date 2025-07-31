@@ -2,10 +2,12 @@
 <html>
     <head>
         <?php
+            // Get URL parameters
+            $show = isset($_GET['show']) && $_GET['show'] === 'true';
+        
             require('../../partials/server.php');
             require('about-adri.php');
-            echo metadata("About Adrian - Lunarflame Studios");
-            echo stylesheet("pages/about/adrian/about-adri.css");
+            Head::new("About Adrian", "pages/about/adrian/about-adri.css");
         ?>
     </head>
 
@@ -16,8 +18,8 @@
             <section class="page-body">
                 <?php 
                     echo OVERLAY;
-                    typewriteGradient(1, "Adrian Cervera");
-                    Adrian::mainContent();
+                    multiTypewriteGradient(1, "Adrian Cervera", "Phantom");
+                    Adrian::mainContent($show);
                     Adrian::skills();
                     typewriteGradient(5, "My Role and Projects");
                 ?>
@@ -25,7 +27,7 @@
                 <div class="adri-projects">
                     <h2>Project Leo</h2>
                     <?php
-                        ProjectLeo::artwork();
+                        ProjectLeo::artwork($show);
                         ProjectLeo::codeContent();
                     ?>
 

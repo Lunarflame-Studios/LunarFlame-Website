@@ -4,15 +4,14 @@
 <head>
     <?php
         require('../partials/server.php');
-        metadata("Projects");
-        stylesheet("pages/projects/projects.css");
+        Head::new("Projects", "pages/projects/projects.css");
     ?>
 </head>
 
 <body>
     <div class="background">
         <?php
-            orbs("blue", "purple", "pink");
+            orbs(BLUE, PURPLE, PINK);
             getHeader();
         ?>
 

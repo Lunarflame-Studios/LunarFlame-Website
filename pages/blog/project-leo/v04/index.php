@@ -4,7 +4,7 @@
 <head>
     <?php 
         require('../../../partials/server.php');
-        $currentPost = getPost("Play Project Leo v0.4");
+        $currentPost = Blog::getPost("Play Project Leo v0.4");
         $currentPost->createHead();
     ?>
 </head>
@@ -16,8 +16,8 @@
         <section class="page-body">
             <?php
                 echo OVERLAY;
-                echo $currentPost->createBlogTitle();
-                echo $currentPost->createSubInfo();
+                $currentPost->createBlogTitle();
+                $currentPost->createSubInfo();
             ?>
 
             <div class="blog-pageBody">

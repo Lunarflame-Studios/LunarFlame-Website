@@ -1,6 +1,6 @@
 <?php
     function social($social) {
-        $link = '';
+        $link = EMPTY_STRING;
         $bx = $social;
 
         switch ($social) {

@@ -4,8 +4,7 @@
 <head>
     <?php
         require('../../partials/server.php');
-        metadata("Project Leo");
-        stylesheet("pages/projects/project-leo/project-leo.css");
+        Head::new("Project Leo", "pages/projects/project-leo/project-leo.css");
     ?>
 </head>
 
@@ -13,7 +12,7 @@
     <div class="background">
         <?php
             circuit("v1");
-            orbs("pink", "blue", "purple");
+            orbs(PINK, BLUE, PURPLE);
             getHeader();
         ?>
 

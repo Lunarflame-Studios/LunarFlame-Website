@@ -4,7 +4,7 @@
 <head>
     <?php
         require('../../../partials/server.php');
-        $currentPost = getPost("Hello World; An Introduction");
+        $currentPost = Blog::getPost("Hello World; An Introduction");
         $currentPost->createHead();
     ?>
 </head>

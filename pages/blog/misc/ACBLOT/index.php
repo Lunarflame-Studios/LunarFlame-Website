@@ -3,8 +3,8 @@
 
 <head>
     <?php
-        require($partials . '../../../partials/server.php');
-        $currentPost = getPost("ACBLOT: Programming with C");
+        require('../../../partials/server.php');
+        $currentPost = Blog::getPost("ACBLOT: Programming with C");
         $currentPost->createHead();
     ?>
 </head>

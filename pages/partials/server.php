@@ -7,6 +7,7 @@
     HTML);
 
     define('EMPTY_CHAR', '&#8203;');
+    define('EMPTY_STRING', '');
 
     define('BLOG_POST', <<<HTML
         <div class="post">
@@ -26,139 +27,67 @@
             </a>
         </div>
     HTML);
-?>
 
-<?php
-    class BlogPost {
-        public $title;
-        public $description;
-        public $author;
-        public $pubDate;
-        public $category;
-        public $link;
-        public $thumbnail;
+    define('H1', 'h1');
+    define('H2', 'h2');
+    define('H3', 'h3');
+    define('H4', 'h4');
+    define('P', 'p');
 
-        function __construct($title, $description, $author, $pubDate, $category, $link, $thumbnail) {
-            $this->title = htmlspecialchars($title);
-            $this->description = htmlspecialchars($description);
-            $this->author = htmlspecialchars($author);
-            $this->pubDate = htmlspecialchars($pubDate);
-            $this->category = htmlspecialchars($category);
-            $this->link = htmlspecialchars($link);
-            $this->thumbnail = htmlspecialchars($thumbnail);
-        }
+    define('PINK', 'pink');
+    define('BLUE', 'blue');
+    define('LIGHT_BLUE', 'light-blue');
+    define('PURPLE', 'purple');
 
-        function createHead() {
-            $metadata = metadata($this->title . " - Blog");
-            $style = stylesheet("blog");
-            echo <<<HTML
-                $metadata
-                $style
-            HTML;
-        }
+    define('DEFAULT_PARAGRAPH', P);
+    define('DEFAULT_HEADER', H1);
 
-        function createBlogTitle() {
-            echo <<<HTML
-                <div class="blog-title">
-                    <h1 id="title">$this->title</h1>
-                    <h5 id="category">$this->category</h5>
-                    <hr class="blog-begin">
-                </div>
-            HTML;
-        }
-
-        function createSubInfo() {
-            echo <<<HTML
-                <div class="blog-subInfo">
-                    <h3 id="author">$this->author</h3>
-                    <h4 id="date">$this->pubDate</h4>
-                </div>
-            HTML;
-        }
-
-        function createDescription() {
-            $colors = ['pink', 'blue', 'light-blue', 'purple'];
-
-            echo <<<HTML
-                <p id="description">$this->description</p>
-                <img class="page-image interactable offset-border" id="{$colors[array_rand($colors)]}" src="$this->thumbnail" alt="">
-            HTML;
-        }
+    function getHeader() : void {
+        require('header.php');
     }
 
-    /**
-     * Parses the RSS feed from the specified directory and returns an array of BlogPost objects.
-     *
-     * @param string $directory The directory where the RSS feed is located.
-     * @return BlogPost[] An array of BlogPost objects parsed from the RSS feed.
-     * @throws Exception If the RSS feed cannot be loaded or parsed.
-     */
-    function parseRSS($directory = '../../../../') {
-
-        $rss = simplexml_load_file($directory . 'rss.xml');
-        $domainLength = strlen('https://lunarflamestudios.com/');
-
-        if (!$rss) {
-            throw new Exception('Failed to load RSS feed.');
-        }
-
-        $posts = [];
-        foreach ($rss->channel->item as $item) {
-            $post = new BlogPost(
-                (string) $item->title,
-                (string) $item->description,
-                (string) $item->author,
-                (string) $item->pubDate,
-                (string) $item->category,
-                substr((string) $item->link, $domainLength), // Remove the domain part from the link
-                substr((string) $item->thumbnail, $domainLength) // Remove the domain part from the thumbnail URL
-            );
-            $posts[] = $post;
-        }
-
-        return $posts;
+    function getFooter() : void{
+        require('footer.php');
     }
 
-    function getPost($title) {
-        global $allPosts;
-        $allPosts = parseRSS();
-        // Loop through the posts to find the post with the given title
-        foreach ($allPosts as $post) {
-            if ($post->title === $title) {
-                return $post; // Return the post if found
-            }
-        }
-        return null; // Return null if not found
+    function endPage() : void {
+        require('copyright.php');
+        require('javascript.php');
     }
 
-    /**
-     * Generates HTML for a blog post.
-     *
-     * @param BlogPost $post The blog post object containing the details of the post.
-     * @return string The generated HTML string for the blog post.
-     * @throws InvalidArgumentException If the provided post is not an instance of BlogPost.
-     */
-    function createBlogPost($post) {
-        // Ensure the post is an instance of BlogPost
-        if (!$post instanceof BlogPost) {
-            throw new InvalidArgumentException('Expected an instance of BlogPost');
-        }
-
-        // Return the HTML for the recent post
-        echo str_replace(
-            ['{link}', '{category}', '{title}', '{description}', '{author}', '{pubDate}', '{thumbnail}'],
-            [$post->link, $post->category, $post->title, $post->description, $post->author, $post->pubDate, $post->thumbnail],
-            BLOG_POST
-        );
+    function getRecentPosts() : void {
+        require('recent-posts.php');
     }
 
-    /**
-     * Generates HTML for a set of glowing orbs based on the provided colors.
-     *
-     * @param string ...$colors The colors for the orbs. Valid values are "pink", "blue", "light-blue", and "purple".
-     * @return string The generated HTML string containing the orbs.
-     */
-    function orbs(...$colors) {
+    function gradient($color, $content) : void {
+        echo Text::gradient($color, DEFAULT_HEADER, $content);
+    }
+
+    function typewrite($content) : void {
+        echo Text::typewrite(DEFAULT_PARAGRAPH, $content);
+    }
+
+    function typewriteGradient($color, $content) : void {
+        echo Text::typewriteGradient($color, DEFAULT_HEADER, $content);
+    }
+
+    function multiTypewriteGradient(string $color, string ...$contents) : void {
+        echo Text::multiTypewriteGradient($color, DEFAULT_HEADER, ...$contents);
+    }
+
+    function borderImage($src, $color = EMPTY_STRING) : void {
+        echo Image::border($src, $color);
+    }
+
+    function pageImage($src) : void {
+        echo Image::standard($src);
+    }
+
+    function carousel(...$images) : void {
+        echo Image::carousel(...$images);
+    }
+
+    function orbs(string ...$colors) : void {
         // Start the wrapper div
         $html = '<div id="glow-orbs">' . PHP_EOL;
         $fileName = "";
@@ -170,16 +99,16 @@
                 continue;
 
             switch($color) {
-                case "pink":
+                case PINK:
                     $fileName = "Pink";
                     break;
-                case "blue":
+                case BLUE:
                     $fileName = "Blue";
                     break;
-                case "light-blue":
+                case LIGHT_BLUE:
                     $fileName = "Light-Blue";
                     break;
-                case "purple":
+                case PURPLE:
                     $fileName = "Purple";
                     break;
                 default:
@@ -196,12 +125,6 @@
         echo $html;
     }
 
-    /**
-     * Generates HTML for a circuit element with a given version.
-     *
-     * @param string $version The version of the circuit to display.
-     * @return string The generated HTML string containing the circuit element.
-     */
     function circuit($version) {
         echo <<<HTML
             <div>
@@ -210,127 +133,255 @@
         HTML;
     }
 
-    function metadata($title) {
-        echo <<<HTML
-            <base href="/">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>$title</title>
+    //-----------------------------------------------------------------------------------------------------------------
 
-            <link rel="stylesheet" href="style.css">
-            <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
-            <link rel="stylesheet" href="assets/devicon/devicon.min.css">
-            <link rel="shortcut icon" href="images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
-        HTML;
-    }
+    class BlogPost {
+        public string $title;
+        public string $description;
+        public string $author;
+        public string $pubDate;
+        public string $category;
+        public string $link;
+        public string $thumbnail;
 
-    function stylesheet($path) {
-        if ($path == "blog") {
+        function __construct($title, $description, $author, $pubDate, $category, $link, $thumbnail) {
+            $this->title = htmlspecialchars($title);
+            $this->description = htmlspecialchars($description);
+            $this->author = htmlspecialchars($author);
+            $this->pubDate = htmlspecialchars($pubDate);
+            $this->category = htmlspecialchars($category);
+            $this->link = htmlspecialchars($link);
+            $this->thumbnail = htmlspecialchars($thumbnail);
+        }
+
+        function createHead() : void {
+            $metadata = Head::metadata($this->title . " - Blog");
+            $style = Head::stylesheet("blog");
             echo <<<HTML
-                <link rel="stylesheet" href="pages/blog/blog-page.css">
-                <link rel="stylesheet" href="pages/blog/blog-main.css">
+                $metadata
+                $style
             HTML;
         }
-        else {
+
+        function createBlogTitle() : void {
             echo <<<HTML
-                <link rel="stylesheet" href="$path">
+                <div class="blog-title">
+                    <h1 id="title">$this->title</h1>
+                    <h5 id="category">$this->category</h5>
+                    <hr class="blog-begin">
+                </div>
+            HTML;
+        }
+
+        function createSubInfo() : void {
+            echo <<<HTML
+                <div class="blog-subInfo">
+                    <h3 id="author">$this->author</h3>
+                    <h4 id="date">$this->pubDate</h4>
+                </div>
+            HTML;
+        }
+
+        function createDescription() : void {
+            $colors = [PINK, BLUE, LIGHT_BLUE, PURPLE];
+
+            echo <<<HTML
+                <p id="description">$this->description</p>
+                <img class="page-image interactable offset-border" id="{$colors[array_rand($colors)]}" src="$this->thumbnail" alt="">
             HTML;
         }
     }
 
-    function getHeader() {
-        require('header.php');
-    }
+    //-----------------------------------------------------------------------------------------------------------------
 
-    function getFooter() {
-        require('footer.php');
-    }
+    class Blog {
 
-    function endPage() {
-        require('copyright.php');
-        require('javascript.php');
-    }
+        public static function parseRSS(string $directory = '../../../../') : array {
 
-    function getRecentPosts() {
-        require('recent-posts.php');
-    }
+            $rss = simplexml_load_file($directory . 'rss.xml');
+            $domainLength = strlen('https://lunarflamestudios.com/');
 
-    function typewrite($content) {
-        $empty = EMPTY_CHAR; 
-        echo <<<HTML
-            <p class="typewriter-v2">$empty
-                <span>$content</span>
-            </p>
-        HTML;
-    }
+            if (!$rss) {
+                throw new Exception('Failed to load RSS feed.');
+            }
 
-    function gradient($ver, $content) {
-        $ver = $ver == -1 ? rand(1, 5) : $ver;
-        echo <<<HTML
-            <h1 class="gradient" id="v{$ver}">$content</h1>
-        HTML;
-    }
+            $posts = [];
+            foreach ($rss->channel->item as $item) {
+                $post = new BlogPost(
+                    (string) $item->title,
+                    (string) $item->description,
+                    (string) $item->author,
+                    (string) $item->pubDate,
+                    (string) $item->category,
+                    substr((string) $item->link, $domainLength), // Remove the domain part from the link
+                    substr((string) $item->thumbnail, $domainLength) // Remove the domain part from the thumbnail URL
+                );
+                $posts[] = $post;
+            }
 
-    function typewriteGradient($ver, $content) {
-        $empty = EMPTY_CHAR; 
-        $ver = $ver == -1 ? rand(1, 5) : $ver;
-        echo <<<HTML
-            <h1 class="typewriter-v2 gradient" id="v{$ver}">$empty
-                <span>$content</span>
-            </h1>
-        HTML;
-    }
-
-    function multiTypewriteGradient($ver, ...$contents) {
-        $empty = EMPTY_CHAR;
-        $ver = $ver == -1 ? rand(1, 5) : $ver;
-        
-        $dataType = '[';
-        $numContents = func_num_args() - 1;
-
-        $i = 1;
-        foreach ($contents as $content) {
-            $end = $i == $numContents ? '"]' : '", ';
-            $dataType .= '"' . $content . $end ;
-            $i++;
+            return $posts;
         }
 
-        echo <<<HTML
-            <h1 class="typewrite gradient" id="v{$ver}" data-type='$dataType' data-period="2000">
-                <span class="wrap">$empty</span>
-            </h1>
-        HTML;
-    }
-    
-    function borderImage($src, $color = "") {
-        $colors = ['pink', 'blue', 'light-blue', 'purple'];
-        $color = $color == "" ? $colors[array_rand($colors)] : $color;
-        echo <<<HTML
-            <img class="page-image interactable offset-border" id="$color" src="$src" alt="">
-        HTML;
-    }
-
-    function pageImage($src) {
-        echo <<<HTML
-            <div class="image-container">
-                <img class="page-image interactable" src="$src" alt="">
-            </div>
-        HTML;
-    }
-
-    function carousel(...$images) {
-        $html = '<div class="carousel">' . PHP_EOL;
-        foreach ($images as $src) {
-            $html .= '    <img class="interactable" src="' . $src . '" alt="">';
+        public static function getPost(string $title) : ?BlogPost {
+            global $allPosts;
+            $allPosts = self::parseRSS();
+            // Loop through the posts to find the post with the given title
+            foreach ($allPosts as $post) {
+                if ($post->title === $title) {
+                    return $post; // Return the post if found
+                }
+            }
+            return null; // Return null if not found
         }
-        $html .= '</div>';
-        echo $html;
+
+        public static function createPostHTML(BlogPost $post) : void {
+            // Return the HTML for the recent post
+            echo str_replace(
+                ['{link}', '{category}', '{title}', '{description}', '{author}', '{pubDate}', '{thumbnail}'],
+                [$post->link, $post->category, $post->title, $post->description, $post->author, $post->pubDate, $post->thumbnail],
+                BLOG_POST
+            );
+        }
     }
+
+    //-----------------------------------------------------------------------------------------------------------------
+
+    class Head {
+
+        public static function new(string $title, string ...$stylesheets) : void {
+
+            // Generate the metadata and stylesheets
+            $stylesheetsHtml = EMPTY_STRING;
+            foreach ($stylesheets as $stylesheet) {
+                $stylesheetsHtml .= self::stylesheet($stylesheet);
+            }
+
+            echo implode(
+                PHP_EOL,
+                [
+                    self::metadata($title),
+                    $stylesheetsHtml
+                ]
+            );
+        }
+
+        static function metadata(string $title) : string {
+            return <<<HTML
+                <base href="/">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>$title</title>
+
+                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+                <link rel="stylesheet" href="assets/devicon/devicon.min.css">
+                <link rel="shortcut icon" href="images/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
+            HTML;
+        }
+
+        static function stylesheet(string $path) : string {
+            if ($path == "blog") {
+                return <<<HTML
+                    <link rel="stylesheet" href="pages/blog/blog-page.css">
+                    <link rel="stylesheet" href="pages/blog/blog-main.css">
+                HTML;
+            }
+            else {
+                return <<<HTML
+                    <link rel="stylesheet" href="$path">
+                HTML;
+            }
+        }
+    }
+
+    //-----------------------------------------------------------------------------------------------------------------
+
+    class Text {
+
+        public static function typewrite(string $textVer, string $content) : string {
+            $empty = EMPTY_CHAR; 
+            return <<<HTML
+                <$textVer class="typewriter-v2">$empty
+                    <span>$content</span>
+                </$textVer>
+            HTML;
+        }
+
+        public static function gradient(string $color, string $headerVer, string $content) : string {
+            $color = $color == -1 ? rand(1, 5) : $color;
+            return <<<HTML
+                <$headerVer class="gradient" id="v{$color}">$content</$headerVer>
+            HTML;
+        }
+
+        public static function typewriteGradient(string $color, string $headerVer, string $content) : string {
+            $empty = EMPTY_CHAR; 
+            $color = $color == -1 ? rand(1, 5) : $color;
+            return <<<HTML
+                <$headerVer class="typewriter-v2 gradient" id="v{$color}">$empty
+                    <span>$content</span>
+                </$headerVer>
+            HTML;
+        }
+
+        public static function multiTypewriteGradient(string $color, string $headerVer, string ...$contents) : string {
+            $empty = EMPTY_CHAR;
+            $color = $color == -1 ? rand(1, 5) : $color;
+            
+            $dataType = '[';
+            $numContents = func_num_args() - 2; // Exclude the first two arguments (color and headerVer)
+
+            $i = 1;
+            foreach ($contents as $content) {
+                $end = $i == $numContents ? '"]' : '", ';
+                $dataType .= '"' . $content . $end ;
+                $i++;
+            }
+
+            return <<<HTML
+                <$headerVer class="typewrite gradient" id="v{$color}" data-type='$dataType' data-period="2000">
+                    <span class="wrap">$empty</span>
+                </$headerVer>
+            HTML;
+        }
+    }
+
+    //-----------------------------------------------------------------------------------------------------------------
+
+    class Image {
+
+        public static function border(string $src, string $color = "") : string {
+            $colors = ['pink', 'blue', 'light-blue', 'purple'];
+            $color = $color == "" ? $colors[array_rand($colors)] : $color;
+            return <<<HTML
+                <img class="page-image interactable offset-border" id="$color" src="$src" alt="">
+            HTML;
+        }
+
+        public static function standard(string $src) : string{
+            return <<<HTML
+                <div class="image-container">
+                    <img class="page-image interactable" src="$src" alt="">
+                </div>
+            HTML;
+        }
+
+        public static function carousel(string ...$images) : string {
+            $html = '<div class="carousel">' . PHP_EOL;
+            foreach ($images as $src) {
+                $html .= '    <img class="interactable" src="' . $src . '" alt="">';
+            }
+            $html .= '</div>';
+            return $html;
+        }
+    }
+
+    //-----------------------------------------------------------------------------------------------------------------
     
-    function googleDrive($id) {
+    function googleDrive(string $id) : string {
         return "https://drive.google.com/thumbnail?id=" . $id . "&sz=w1000";
     }
 
-    function screenshots($img) {
+    function screenshots(string $img) : string {
         return "images/screenshots/" . $img;
     }
 ?>

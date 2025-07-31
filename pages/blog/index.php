@@ -4,9 +4,8 @@
 <head>
     <?php
         require('../partials/server.php');
-        metadata("Blog");
-        stylesheet("pages/blog/blog-main.css");
-        $allPosts = parseRSS("../../");
+        Head::new("Blog", "pages/blog/blog-main.css");
+        $allPosts = Blog::parseRSS("../../");
     ?>
 </head>
 
@@ -14,7 +13,7 @@
     <div class="background">
         <?php 
             circuit("v2");
-            orbs("purple", "light-blue", "pink");
+            orbs(PURPLE, LIGHT_BLUE, PINK);
             getHeader();
         ?>
 
@@ -32,7 +31,7 @@
             <div class="recent">
                 <?php
                     for ($i = 0; $i < 3; $i++) {
-                        createBlogPost($allPosts[$i]);
+                        Blog::createPostHTML($allPosts[$i]);
                     }
                 ?>
             </div>
@@ -44,7 +43,7 @@
             <div class="catalog">
                 <?php
                     foreach ($allPosts as $post) {
-                        createBlogPost($post);
+                        Blog::createPostHTML($post);
                     }
                 ?>
             </div>

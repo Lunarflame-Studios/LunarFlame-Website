@@ -5,8 +5,7 @@
     <?php
         require('../partials/server.php');
         require('about.php');
-        metadata("About Us");
-        stylesheet("pages/about/about.css");
+        Head::new("About Us", "pages/about/about.css");
     ?>
 </head>
 
@@ -14,7 +13,7 @@
     <div class="background">
         <?php
             circuit("v2");
-            orbs("light-blue", "pink", "purple"); 
+            orbs(LIGHT_BLUE, PINK, PURPLE); 
             getHeader();
         ?>
 

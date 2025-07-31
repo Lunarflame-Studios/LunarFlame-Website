@@ -22,10 +22,8 @@
         }
 
         public static function mainContent($showResume = false) {
-            ob_start();
-            typewrite("Hi! I'm a computer Science Major at WPI. I like playing video games and making video games!");
-            $typewrite = ob_get_clean();
 
+            $typewrite = Text::typewrite(DEFAULT_PARAGRAPH, "Hi! I'm a computer Science Major at WPI. I like playing video games and making video games!");
             $socials = implode(PHP_EOL, [
                 self::social("github", "https://github.com/phantomforce260", "github"),
                 self::social("discord", "https://discord.gg/khKCJyjKSm", "discord-alt"),
@@ -138,8 +136,7 @@
         }
 
         static function loadWorlds() {
-            ob_start();
-            carousel(
+            $worlds = Image::carousel(
                 // Horizon
                 googleDrive("1po0KakJbpNqgJ-mXcC3N7iTRi8mqp9EC"),
                 googleDrive("1UbV03CcfifPtxNjDnsnk0HOpgbfK0Zk1"),
@@ -149,7 +146,6 @@
                 googleDrive("1XNHbH6717AyzOsvbv-KXJW-sjUtW2khS"),
                 googleDrive("11N3ghRA_W0hp1Vn3F8HEgDbWgzzRxhs7")
             );
-            $worlds = ob_get_clean();
 
             return <<<HTML
                 <h3 style="color: #C8E9EF;">Worlds</h3>
@@ -159,8 +155,7 @@
         }
 
         static function loadChars() {
-            ob_start();
-            carousel(
+            $chars = Image::carousel(
                 // Soren
                 googleDrive("1lq2jkkx3hPlpzYt9H59Hrk8VMRdIzWZQ"),
                 googleDrive("1b4Tm0db0SWFqx4JvfISenMfQnsqFDpMJ"),
@@ -170,13 +165,11 @@
                 googleDrive("1e7cCGIH9rGb0PUwqZNf3ubRHel4Opjx3"),
                 googleDrive("1pTeYD8FcoA07bwAEtGPIpOPPFkYwyDXW")
             );
-            $chars = ob_get_clean();
 
             return <<<HTML
                 <h3 style="color: #E0E1ED;">Characters</h3>
                 $chars
             HTML;
-
         }
 
         static function loadMisc() {
@@ -193,8 +186,7 @@
         }
 
         public static function loadDev() {
-            ob_start();
-            carousel(
+            $devs = Image::carousel(
                 // Alioth
                 googleDrive("1fwtXeNMFmKErR2picxdYtlpX1IkJToNX"),
                 
@@ -210,7 +202,6 @@
                 // Morgan
                 googleDrive("1WCk7eTBsaoFL7A_cwyyysGHVWzVJhPKb")
             );
-            $devs = ob_get_clean();
 
             return <<<HTML
                 <h3 style="color: #C8E9EF;">In Development</h3>
@@ -220,17 +211,17 @@
         }
 
         static function codeContentInstance($color, $title, $description, $image, $reversed) {
-            ob_start();
-            borderImage($image);
-            $borderImage = ob_get_clean();
             $class = $reversed ? "code-content reverse" : "code-content";
+            $content = implode(PHP_EOL, [
+                Image::border($image),
+                Text::typewrite(DEFAULT_PARAGRAPH, $description)
+            ]);
 
             return <<<HTML
                 <div>
                     <h4 style="color: $color;">$title</h4>
                     <div class="$class">
-                        <p>$description</p>
-                        {$borderImage}
+                        $content
                     </div>
                 </div>
             HTML;

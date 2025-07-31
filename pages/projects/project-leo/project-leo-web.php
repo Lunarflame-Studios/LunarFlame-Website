@@ -4,8 +4,7 @@
 <head>
     <?php
         require('../../partials/server.php');
-        metadata("Project Leo (WebGL)");
-        stylesheet("pages/projects/projects.css");
+        Head::new("Project Leo (WebGL)", "pages/projects/projects.css");
     ?>
 </head>
 

@@ -4,7 +4,7 @@
     <?php
         global $allPosts;
         for ($i = 0; $i < 3; $i++) {
-            createBlogPost($allPosts[$i]);
+            Blog::createPostHTML($allPosts[$i]);
         }
     ?>
 

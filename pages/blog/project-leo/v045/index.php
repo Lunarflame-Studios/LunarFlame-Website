@@ -3,8 +3,8 @@
 
 <head>
     <?php
-        require($partials . '../../../partials/server.php');
-        $currentPost = getPost("Play Project Leo v0.45");
+        require('../../../partials/server.php');
+        $currentPost = Blog::getPost("Play Project Leo v0.45");
         $currentPost->createHead();
     ?>
 </head>
