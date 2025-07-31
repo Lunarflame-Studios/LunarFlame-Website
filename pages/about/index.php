@@ -73,7 +73,7 @@
                                 <img src="images/devs/adri_pfp.jpg" alt="">
                             </div>
 
-                            <a class="hero-btn button raise" href="#">Read More</a>
+                            <a class="hero-btn button raise" href="pages/about/adrian">Read More</a>
                         </div>
                     </div>
 

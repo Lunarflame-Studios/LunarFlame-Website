@@ -9,6 +9,11 @@
     position: relative;
 }
 
+.adri-background hr {
+    margin-top: 6vw;
+    margin-bottom: 6vw;
+}
+
 main {
     background: #3484ADD7;
     margin: 5% 10%;
@@ -75,13 +80,9 @@ main > div > div {
 }
 
 .icon#v1:hover { background: #290053; }
-
 .icon#v2:hover { background: #243363; }
-
 .icon#v3:hover { background: #240054; }
-
 .icon#v4:hover { background: #1E6173; }
-
 .icon#v5:hover { background: #300054; }
 
 .adri-projects {
@@ -94,13 +95,30 @@ main > div > div {
 }
 
 .adri-projects h2 {
-    margin-bottom: 4vw;
+    margin: 2vw 0 8vw;
 }
 
 .adri-projects h3 {
+    font-size: 3vw;
+    margin: 4vw 0;
+}
+
+.adri-background h4 {
     font-size: 2.5vw;
     margin: 4vw 0;
 }
+
+.code-content {
+    display: flex;
+    flex-direction: row;
+    margin: 2vw 5vw;
+}
+
+.code-content.reverse { flex-direction: row-reverse; }
+
+.code-content img { width: 45%; }
+
+.code-content p { margin: 6vw 4vw; }
 
 /* Div container for the profile picture. */
 #profile-pic {

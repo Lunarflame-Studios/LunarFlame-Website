@@ -193,7 +193,6 @@
 
         // Close the wrapper div
         $html .= '</div>' . PHP_EOL;
-
         echo $html;
     }
 
@@ -304,7 +303,7 @@
     
     function borderImage($src, $color = "") {
         $colors = ['pink', 'blue', 'light-blue', 'purple'];
-        $color = $color == "" ? array_rand($colors) : $color;
+        $color = $color == "" ? $colors[array_rand($colors)] : $color;
         echo <<<HTML
             <img class="page-image interactable offset-border" id="$color" src="$src" alt="">
         HTML;

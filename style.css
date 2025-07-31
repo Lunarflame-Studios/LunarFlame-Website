@@ -752,7 +752,7 @@ hr {
 /* Image Border */
 @media(min-width: 701px) {
     .offset-border {
-        --color: #30C0EB; /* the border color */
+        /*--color: #30C0EB; /* the border color */
         --border: 10px;     /* the border thickness */
         --offset: 20px;     /* control the offset */
         --gap: 5px;         /* the gap on hover */

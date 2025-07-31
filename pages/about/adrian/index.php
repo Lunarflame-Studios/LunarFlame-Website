@@ -17,30 +17,20 @@
                 <?php 
                     echo OVERLAY;
                     typewriteGradient(1, "Adrian Cervera");
-                ?>
-
-                <main>
-                    <?php mainContent(); ?>
-                </main>
-
-                <?php
-                    adriSkills();
+                    Adrian::mainContent();
+                    Adrian::skills();
                     typewriteGradient(5, "My Role and Projects");
                 ?>
 
                 <div class="adri-projects">
                     <h2>Project Leo</h2>
-                    <div class="artwork">
-                        <?php 
-                            loadWorlds();
-                            loadChars();
-                            loadMisc();
-                        ?>
-                    </div>
+                    <?php
+                        ProjectLeo::artwork();
+                        ProjectLeo::codeContent();
+                    ?>
 
-                    <div class="code">
-                        <h3 style="color: #C8E9EF;">Code</h3>
-                    </div>
+                    <h2>Website</h2>
+                    <?php Website::codeContent(); ?>
                 </div>
             </section>
             <?php getFooter(); ?>
