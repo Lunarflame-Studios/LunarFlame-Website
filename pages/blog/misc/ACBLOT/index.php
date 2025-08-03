@@ -13,11 +13,7 @@
     <div class="background">
         <?php getHeader(); ?>
         <section class="page-body">
-            <?php
-                echo OVERLAY;
-                $currentPost->createBlogTitle();
-                $currentPost->createSubInfo();
-            ?>
+            <?php $currentPost->createFields(); ?>
 
             <div class="blog-pageBody">
                 <?php $currentPost->createDescription(); ?>

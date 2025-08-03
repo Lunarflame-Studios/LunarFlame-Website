@@ -14,6 +14,12 @@
     margin-bottom: 6vw;
 }
 
+.adri-title h4 {
+    font-size: 2.5vw;
+    color: #C8E9EF;
+    margin: 0;
+}
+
 main {
     background: #3484ADD7;
     margin: 5% 10%;
@@ -86,17 +92,18 @@ main > div > div {
 .icon#v5:hover { background: #300054; }
 
 .adri-projects {
-    padding: 6vw 0;
+    padding: 4vw 0;
     background: linear-gradient(
         transparent 0%, 
         #130A44 10%,
         #040511 90%,
-        transparent 100%);
+        transparent 100%
+    );
 }
 
-.adri-projects h2 {
-    margin: 2vw 0 8vw;
-}
+.adri-projects h1 { margin: 0 0 8vw; }
+
+.adri-projects h2 { margin: 2vw 0 8vw; }
 
 .adri-projects h3 {
     font-size: 3vw;

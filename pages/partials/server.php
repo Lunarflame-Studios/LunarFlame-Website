@@ -75,6 +75,10 @@
         echo Text::multiTypewriteGradient($color, DEFAULT_HEADER, ...$contents);
     }
 
+    function multiTypewrite(string ...$contents) : void {
+        echo Text::multiTypewrite(DEFAULT_PARAGRAPH, ...$contents);
+    }
+
     function borderImage($src, $color = EMPTY_STRING) : void {
         echo Image::border($src, $color);
     }
@@ -154,7 +158,7 @@
             $this->thumbnail = htmlspecialchars($thumbnail);
         }
 
-        function createHead() : void {
+        public function createHead() : void {
             $metadata = Head::metadata($this->title . " - Blog");
             $style = Head::stylesheet("blog");
             echo <<<HTML
@@ -163,7 +167,7 @@
             HTML;
         }
 
-        function createBlogTitle() : void {
+        private function createTitle() : void {
             echo <<<HTML
                 <div class="blog-title">
                     <h1 id="title">$this->title</h1>
@@ -173,22 +177,28 @@
             HTML;
         }
 
-        function createSubInfo() : void {
+        private function createPublishing() : void {
             echo <<<HTML
-                <div class="blog-subInfo">
+                <div class="publishing-data">
                     <h3 id="author">$this->author</h3>
                     <h4 id="date">$this->pubDate</h4>
                 </div>
             HTML;
         }
 
-        function createDescription() : void {
+        public function createDescription() : void {
             $colors = [PINK, BLUE, LIGHT_BLUE, PURPLE];
 
             echo <<<HTML
                 <p id="description">$this->description</p>
                 <img class="page-image interactable offset-border" id="{$colors[array_rand($colors)]}" src="$this->thumbnail" alt="">
             HTML;
+        }
+
+        public function createFields() : void {
+            echo OVERLAY;
+            $this->createTitle();
+            $this->createPublishing();
         }
     }
 
@@ -341,6 +351,25 @@
                 <$headerVer class="typewrite gradient" id="v{$color}" data-type='$dataType' data-period="2000">
                     <span class="wrap">$empty</span>
                 </$headerVer>
+            HTML;
+        }
+
+        public static function multiTypewrite(string $textVer, string ...$contents) : string {
+            $empty = EMPTY_CHAR;
+            $dataType = '[';
+            $numContents = func_num_args() - 1; // Exclude the first argument (textVer)
+
+            $i = 1;
+            foreach ($contents as $content) {
+                $end = $i == $numContents ? '"]' : '", ';
+                $dataType .= '"' . $content . $end ;
+                $i++;
+            }
+
+            return <<<HTML
+                <$textVer class="typewrite" data-type='$dataType' data-period="2000">
+                    <span class="wrap">$empty</span>
+                </$textVer>
             HTML;
         }
     }

@@ -7,6 +7,5 @@
             Blog::createPostHTML($allPosts[$i]);
         }
     ?>
-
     <script src="javascript/blog.js"></script>
 </div>

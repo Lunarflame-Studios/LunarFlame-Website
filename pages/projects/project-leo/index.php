@@ -43,7 +43,7 @@
                 <p>"They call it <strong>Nether.</strong> A monster from between worlds who devours all and leaves nothing in its path. It has infected our galaxy, and we must destroy it."</p>
                 <?php pageImage(screenshots("NetherSpawn.jpg")); ?>
                 <p>Traverse the world of the Lunar City, Horizon. Collect coins and destroy <strong>Nether Spawns.</strong> But be careful; <strong>Nether</strong> is dangerous, and you may find yourself dragged into its world of <strong>darkness</strong> and <strong>corruption...</strong></p>
-                <?php carousel(screenshots("PL_SS_2.png"), screenshots("PL_SS_3.png"), screenshots("images/screenshots/PL_SS_4.png")); ?>
+                <?php carousel(screenshots("PL_SS_2.png"), screenshots("PL_SS_3.png"), screenshots("PL_SS_4.png")); ?>
             </div>
         </section>
         <?php getFooter(); ?>

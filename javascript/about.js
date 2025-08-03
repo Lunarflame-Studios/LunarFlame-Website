@@ -56,7 +56,7 @@ var aboutPageInstance = function(devInfo) {
         }
 
         // Uncomment after dev pages have been created !!
-        devBoxElements[5].href = devInfo[devIndex][10];
+        devBoxElements[5].href = devInfo[devIndex][7];
     }
 
     return {
