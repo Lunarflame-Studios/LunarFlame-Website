@@ -71,7 +71,7 @@
                 precautions before playing this game.</h3>
 
             <iframe frameborder="0" src="https://itch.io/embed-upload/12014743?color=051246" allowfullscreen="" width="1280" height="760">
-                <a href="https://phantomforce.itch.io/project-leo-v05-webgl">Play Project Leo v0.5 (WebGL) on itch.io</a>
+                <a href="https://phantomforce.itch.io/project-leo-v05-webgl">Play Project Leo v0.5.1 (WebGL) on itch.io</a>
             </iframe>
 
             <h3 id="not-available" class="margin-top">Sorry, this WebGL game is not supported on mobile devices and small screens.

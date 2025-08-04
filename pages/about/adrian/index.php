@@ -88,7 +88,6 @@
                     <hr>
                 </div>
 
-
                 <div class="adri-projects">
                     <?php typewriteGradient(5, "My Role and Projects"); ?>
                     <div class="project-leo">
