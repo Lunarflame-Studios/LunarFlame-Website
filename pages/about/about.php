@@ -1,5 +1,5 @@
 <?php
-    function devName($name, $nickname) {
+    function devName(string $name, string $nickname) : string {
         return <<<HTML
             <div class="dev-name">
                 <h2>$name</h2>
@@ -8,7 +8,7 @@
         HTML;
     }
 
-    function profilePic($path) {
+    function profilePic(string $path) : string {
         return <<<HTML
             <div class="profile-pic">
                 <img src="$path" alt="">
@@ -16,7 +16,7 @@
         HTML;
     }
 
-    function devBox($name, $order = "normal") {
+    function devBox(string $name, string $order = "normal") : void {
         $about = explode("\n", file_get_contents($name . "/" . $name . ".about"));
         $elements = $order == "reverse" 
             ? array(profilePic($about[4]), devName($about[0], $about[1]))

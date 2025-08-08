@@ -59,19 +59,19 @@
         require('recent-posts.php');
     }
 
-    function gradient($color, $content) : void {
+    function gradient(int $color, string $content) : void {
         echo Text::gradient($color, DEFAULT_HEADER, $content);
     }
 
-    function typewrite($content) : void {
+    function typewrite(string $content) : void {
         echo Text::typewrite(DEFAULT_PARAGRAPH, $content);
     }
 
-    function typewriteGradient($color, $content) : void {
+    function typewriteGradient(int $color, string $content) : void {
         echo Text::typewriteGradient($color, DEFAULT_HEADER, $content);
     }
 
-    function multiTypewriteGradient(string $color, string ...$contents) : void {
+    function multiTypewriteGradient(int $color, string ...$contents) : void {
         echo Text::multiTypewriteGradient($color, DEFAULT_HEADER, ...$contents);
     }
 
@@ -79,21 +79,21 @@
         echo Text::multiTypewrite(DEFAULT_PARAGRAPH, ...$contents);
     }
 
-    function borderImage($src, $color = EMPTY_STRING) : void {
+    function borderImage(string $src, string $color = EMPTY_STRING) : void {
         echo Image::border($src, $color);
     }
 
-    function pageImage($src) : void {
+    function pageImage(string $src) : void {
         echo Image::standard($src);
     }
 
-    function carousel(...$images) : void {
+    function carousel(string ...$images) : void {
         echo Image::carousel(...$images);
     }
 
     function orbs(string ...$colors) : void {
         // Start the wrapper div
-        $html = '<div id="glow-orbs">' . PHP_EOL;
+        $html = EMPTY_STRING;
         $fileName = "";
 
         // Loop through each color argument
@@ -121,15 +121,18 @@
             }
 
             // Append the orb image tag
-            $html .= '    <img class="orb" id="' . htmlspecialchars($color) . '" src="images/vfx/' . htmlspecialchars($fileName) . '-Glow.png" alt="">' . PHP_EOL;
+            $html .= '<img class="orb" id="' . htmlspecialchars($color) . '" src="images/vfx/' . htmlspecialchars($fileName) . '-Glow.png" alt="">' . PHP_EOL;
         }
 
         // Close the wrapper div
-        $html .= '</div>' . PHP_EOL;
-        echo $html;
+        echo <<<HTML
+            <div id="glow-orbs">
+                $html
+            </div>
+        HTML;
     }
 
-    function circuit($version) {
+    function circuit(string $version) : void {
         echo <<<HTML
             <div>
                 <span class="circuit" id="$version"></span>
@@ -148,7 +151,7 @@
         public string $link;
         public string $thumbnail;
 
-        function __construct($title, $description, $author, $pubDate, $category, $link, $thumbnail) {
+        function __construct(string $title, string $description, string $author, string $pubDate, string $category, string $link, string $thumbnail) {
             $this->title = htmlspecialchars($title);
             $this->description = htmlspecialchars($description);
             $this->author = htmlspecialchars($author);
@@ -378,9 +381,9 @@
 
     class Image {
 
-        public static function border(string $src, string $color = "") : string {
-            $colors = ['pink', 'blue', 'light-blue', 'purple'];
-            $color = $color == "" ? $colors[array_rand($colors)] : $color;
+        public static function border(string $src, string $color = EMPTY_STRING) : string {
+            $colors = [PINK, BLUE, LIGHT_BLUE, PURPLE];
+            $color = $color == EMPTY_STRING ? $colors[array_rand($colors)] : $color;
             return <<<HTML
                 <img class="page-image interactable offset-border" id="$color" src="$src" alt="">
             HTML;

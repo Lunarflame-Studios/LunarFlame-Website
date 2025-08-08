@@ -1,7 +1,5 @@
 <?php
 
-use Dom\HTMLElement;
-
     function devIcon($class) : string {
         $rand = rand(1, 5);
         return <<<HTML
@@ -25,7 +23,7 @@ use Dom\HTMLElement;
 
     class Adrian {
 
-        public static function social($name, $link, $bx) {
+        public static function social($name, $link, $bx) : void {
             echo <<<HTML
                 <li>
                     <a class="icon $name" href="$link" target="_blank">
@@ -35,7 +33,7 @@ use Dom\HTMLElement;
             HTML;
         }
 
-        public static function resume($showResume = false) {
+        public static function resume($showResume = false) : void {
             if ($showResume) {
                 echo <<<HTML
                     <a href=""><h3>View My Resume</h3></a>
