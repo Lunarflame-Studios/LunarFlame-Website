@@ -1,6 +1,6 @@
 /* Main Color Overlay, and Background Image */
 .main-content {
-    background-image: linear-gradient(black, black), url(../images/vfx/Background.png); 
+    background-image: linear-gradient(black, black), url(/assets/images/vfx/Background.png); 
     z-index: 0;
 
     min-height: 100vh;

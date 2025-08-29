@@ -3,7 +3,7 @@
 
 <head>
     <?php 
-        require('pages/partials/server.php');
+        require('assets/partials/server.php');
         Head::new("LunarFlame Studios", "home.css");
     ?>
 </head>
@@ -11,8 +11,9 @@
 <span>
     <?php
         function circle($ver, $src) {
+            $vfx = VFX;
             echo <<<HTML
-                <div class="circle" id="v{$ver}"><img src="images/vfx/{$src}.png" alt=""></div>
+                <div class="circle" id="v{$ver}"><img src="{$vfx}/{$src}.png" alt=""></div>
             HTML;
         }
     ?>
@@ -20,7 +21,7 @@
 
 <body>
     <section class="main-content">
-        <?php echo OVERLAY; ?>
+        <?= OVERLAY; ?>
 
         <span id="fade-out-sub"></span>
 
@@ -29,12 +30,12 @@
         <main>
             <h1 class="light">Welcome to LunarFlame Studios</h1>
             <p>We strive to create fun and innovative stories.</p>
-            <a href="pages/projects/project-leo" class="button pulse hero-btn main">Play Project Leo</a>
+            <a href="<?=PAGE_ROOT?>projects/project-leo" class="button pulse hero-btn main">Play Project Leo</a>
         </main>
 
         <div class="center-container">
             <span id="ui-frame">
-                <img src="images/vfx/UI_Frame.png" alt="">
+                    <img src="<?=VFX?>/UI_Frame.png" alt="">
             </span>
 
             <div id="center-circle">
@@ -56,7 +57,7 @@
 
         <span id="fade-out-all"></span>
     </section>
-    <script src="javascript/home.js" defer></script>
+    <script src="<?=JS?>/home.js" defer></script>
     <?php endPage(); ?>
 </body>
 

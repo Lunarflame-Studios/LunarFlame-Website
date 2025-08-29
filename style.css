@@ -10,7 +10,7 @@
 /* Make Montserrat the default font for all pages. */
 @font-face {
     font-family: montserrat;
-    src: url(../fonts/MontserratAlt1-SemiBold.ttf);
+    src: url(assets/fonts/MontserratAlt1-SemiBold.ttf);
 }
 
 body { background-color: #040511; }
@@ -818,10 +818,6 @@ hr {
             circuit-pulse 28s linear infinite,
             color-swap 55s linear infinite;
     }
-
-    /* maskImage property is set in animations.js*/
-    .circuit#v1 { top: 6%; }
-    .circuit#v2 { top: 7%; }
 }
 
 @media(min-width: 1521px) {
