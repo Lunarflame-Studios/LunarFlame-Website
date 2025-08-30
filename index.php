@@ -20,6 +20,20 @@
 </span>
 
 <body>
+    <style>
+        .main-content {
+            background-image: linear-gradient(black, black), url("/<?=VFX?>/Background.png"); 
+            z-index: 0;
+
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+
     <section class="main-content">
         <?= OVERLAY; ?>
 

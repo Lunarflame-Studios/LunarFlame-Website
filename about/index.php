@@ -11,6 +11,7 @@
 
 <body>
     <style>
+        /* CSS elements that use urls should be placed here to use PHP variables. */
         #frame-outside {
             width: 70%;
             left: 50%;

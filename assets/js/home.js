@@ -1,17 +1,16 @@
 let homePageInstance = function() {
     const header = document.querySelector('.main-content');
-    const defaultBackground = 'assets/images/vfx/Background.png'
-    const imageRootPath = 'assets/images/'
+    const defaultBackground = VFX + 'Background.png'
 
     let backgroundOpacity = 0.8;
     const fadeOutMain = document.querySelector('#fade-out-all');
 
     const imagePaths = [
-        imageRootPath + 'screenshots/PL_SS_1.png', 
-        imageRootPath + 'screenshots/PL_SS_4.png', 
+        SS + 'PL_SS_1.png', 
+        SS + 'PL_SS_4.png', 
         defaultBackground,
-        imageRootPath + 'screenshots/Horizon_Skyline_1.png', 
-        imageRootPath + 'screenshots/PL_SS_5.png', 
+        SS + 'Horizon_Skyline_1.png', 
+        SS + 'PL_SS_5.png', 
         defaultBackground
     ];
 
@@ -83,7 +82,7 @@ let homePageInstance = function() {
     if (fadeOutMain !== null) {
         setTimeout(() => {
             fadeOut(fadeOutMain, 50);
-            header.style.backgroundImage = `url(${imageRootPath}vfx/Background.png)`;
+            header.style.backgroundImage = `url(${VFX}Background.png)`;
         }, 500)
     }
 

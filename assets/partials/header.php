@@ -9,8 +9,6 @@
         top: 7%;
         mask-image: url("<?=VFX?>/Circuit_2.svg");
     }
-
-
 </style>
 
 <header>

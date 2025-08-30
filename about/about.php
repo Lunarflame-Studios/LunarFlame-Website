@@ -1,4 +1,6 @@
 <?php
+    $devData = json_decode(file_get_contents("devs.json"), true);
+
     function devName(string $name, string $nickname) : string {
         return <<<HTML
             <div class="dev-name">
@@ -18,10 +20,34 @@
     }
 
     function devBox(string $name, string $order = "normal") : void {
-        $about = explode("\n", file_get_contents($name . ".about"));
+        global $devData;
+        
+        $id = -1;
+        switch ($name) {
+            case "adrian":
+                $id = 0;
+            break;
+            case "dan":
+                $id = 1;
+            break;
+            case "speedster":
+                $id = 2;
+            break;
+            case "ryan":
+                $id = 3;
+            break;
+        }
+        
+        $about = $devData[$id];
+
         $elements = $order == "reverse" 
-            ? array(profilePic($about[4]), devName($about[0], $about[1]))
-            : array(devName($about[0], $about[1]), profilePic($about[4]));
+            ? array(profilePic($about['profile']), devName($about['name'], $about['nickname']))
+            : array(devName($about['name'], $about['nickname']), profilePic($about['profile']));
+
+        $roles = $about['roles'];
+        $desc = $about['description'];
+        $btn = $about['button'];
+        $link = $about['link'];
 
         echo <<<HTML
             <div class="dev-box $name">
@@ -30,9 +56,9 @@
                         $elements[0]
                         $elements[1]
                     </div>
-                    <h3>$about[2]</h3>
-                    <p>$about[3]</p>
-                    <a class="hero-btn button {$about[6]}" href="$about[7]">Read More</a>
+                    <h3>$roles</h3>
+                    <p>$desc</p>
+                    <a class="hero-btn button {$btn}" href="$link">Read More</a>
                 </div>
             </div>
         HTML;

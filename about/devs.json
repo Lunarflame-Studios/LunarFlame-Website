@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Adrian",
+        "nickname": "Phantom",
+        "roles": "Lead Artist, Lead Programmer",
+        "description": "I've always been a huge believer in the idea that video games are the future of storytelling. I'm a jRPG fiend, some of my favorite titles include Persona, Xenoblade, and Nier. I began this project because I wanted to create my own story to tell to the world.",
+        "profile": "adri_pfp.jpg",
+        "background": "Minimal.jpg",
+        "button": "raise",
+        "link": "https://adrian.lunarflame.dev",
+        "color1": "#3A5A81",
+        "color2": "#773F64",
+        "color3": "#A6294F"
+    },
+    {
+        "name": "Daniel",
+        "nickname": "Kapeepa",
+        "roles": "Lead Musician, Programmer",
+        "description": "Certified learner. I joined the project to get good at programming and music stuff. Like Adrian, I do love me some video games---so much we can learn from them. PM sleeper agent (!)",
+        "profile": "dan_pfp.png",
+        "background": "Nordic.jpg",
+        "button": "offset",
+        "link": "https://kapeepa.lunarflame.dev",
+        "color1": "#1D71F2",
+        "color2": "#19C3FB",
+        "color3": "#1C9CF6"
+    },
+    {
+        "name": "Speedster101",
+        "nickname": "",
+        "roles": "Artist, Programmer",
+        "description": "Growing up on Nintendo consoles and Saturday Morning Cartoons, I've always maintained a love for art and gaming and found joining the Lunarflame team the perfect expression of this interest. Whether it was learning C# or getting to gripes with Unity (I love collision detection), I appreciate how much opportunity being on the team gives me to learn new things and push my ambition and work ethic.",
+        "profile": "speedster_pfp.jpg",
+        "background": "cosmic_cove.png",
+        "button": "slide",
+        "link": "https://lunarflame.dev/about/speedster",
+        "color1": "#72AB94",
+        "color2": "#ffffff",
+        "color3": "#A3D6F0"
+    },
+    {
+        "name": "Ryan",
+        "nickname": "Ry",
+        "roles": "Programmer",
+        "description": "I've always been an avid gamer and fascinated by the design and technical aspects behind it; there was no better project than this one for me to refine my technical skills and express myself in a world of our design.",
+        "profile": "ryan_pfp.jpg",
+        "background": "deep-blue-sky.png",
+        "button": "up",
+        "link": "https://lunarflame.dev/about/ryan",
+        "color1": "#BDFCFE",
+        "color2": "#98F4F4",
+        "color3": "#66D9D1"
+    }
+]

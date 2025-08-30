@@ -1,33 +1,43 @@
 async function loadAllDevs() {
+    try {
+        const response = await fetch("/about/devs.json");
+        if (!response.ok) {
+            throw new Error(`HTTP error. Status: ${response.ok}`);
+        }
 
-    async function getDevInfo(name) {
-        const response = await fetch(`../../about/${name}.about`);
-        const text = await response.text();
-        return text.split("\n");
+        const jsonData = await response.json();
+
+        if (!Array.isArray(jsonData) || typeof jsonData[0] !== 'object') {
+            throw new Error("Invalid JSON structure: expected an array of objects");
+        }
+
+        const keys = Object.keys(jsonData[0]);
+        const result = [];
+
+        for (const item of jsonData) {
+            const row = keys.map(key => String(item[key] ?? ""));
+            result.push(row);
+        }
+
+        return result;
+    } catch (error) {
+        console.log(`Error fetching or processing JSON: ${error}`);
+        return [];
     }
-
-    const devs = await Promise.all([
-        getDevInfo("adrian"),
-        getDevInfo("dan"),
-        getDevInfo("speedster"),
-        getDevInfo("ryan")
-    ]);
-    return devs;
 }
 
 var aboutPageInstance = function(devInfo) {
     const frameBackground = document.querySelector('#frame-inside');
 
-    const uiFrame = '#ui-frame-2 ';
-    const heroBtn = "hero-btn button ";
+    const uiFrame = document.querySelector('#ui-frame-2');
 
     const devBoxElements = [
-        document.querySelector(uiFrame + 'h2'),               /*   Title  */
-        document.querySelector(uiFrame + 'h4'),               /* Nickname */
-        document.querySelector(uiFrame + 'h3'),               /*   Role   */
-        document.querySelector(uiFrame + 'p'),                /*   Quote  */
-        document.querySelector(uiFrame + '.profile-pic img'), /*    PFP   */
-        document.querySelector(uiFrame + 'a')                 /*  Button  */
+        uiFrame.querySelector('h2'),               /*   Title  */
+        uiFrame.querySelector('h4'),               /* Nickname */
+        uiFrame.querySelector('h3'),               /*   Role   */
+        uiFrame.querySelector('p'),                /*   Quote  */
+        uiFrame.querySelector('.profile-pic img'), /*    PFP   */
+        uiFrame.querySelector('a')                 /*  Button  */
     ];
 
     let devIndex = 0;
@@ -47,9 +57,9 @@ var aboutPageInstance = function(devInfo) {
             applyTypewriterEffect(devBoxElements[i], devInfo[devIndex][i], 40);
         }
 
-        devBoxElements[4].src = 'assets/images/devs/' + devInfo[devIndex][4];
-        frameBackground.src = 'assets/images/devs/' + devInfo[devIndex][5];
-        devBoxElements[5].className = heroBtn + devInfo[devIndex][6];
+        devBoxElements[4].src = DEVS + devInfo[devIndex][4];
+        frameBackground.src = DEVS + devInfo[devIndex][5];
+        devBoxElements[5].className = "hero-btn button " + devInfo[devIndex][6];
 
         for (let j = 0; j < 3; j++) {
             devBoxElements[j].style.color = devInfo[devIndex][8 + j];        

@@ -2,7 +2,6 @@
 <span class="pointer"></span>
 
 <div class="js-links">
-    <script src="<?=JS?>/global.js"></script>
     <script src="<?=I_JS?>/tweenmax.min.js"></script>
 
     <script src="<?=JS?>/typewrite.js"></script>
@@ -10,6 +9,11 @@
     <script src="<?=JS?>/cursor.js"></script>
 </div>
 <script>
+    const IMAGE_ROOT = '<?=IMAGE_ROOT?>/';
+    const DEVS = '<?=DEVS?>/';
+    const VFX = '<?=VFX?>/';
+    const SS = '<?=SS?>/';
+
     var navLinks = document.querySelector("header .nav-links");
     var socialLinks = document.querySelector(".social-links");
 

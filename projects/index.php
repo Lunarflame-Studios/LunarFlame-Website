@@ -10,7 +10,7 @@
 
 <body>
     <style>
-        /* Background Image for Project Leo. */
+        /* CSS elements that use urls should be placed here to use PHP variables. */
         #project-leo { 
             background-image: 
                 linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), 
