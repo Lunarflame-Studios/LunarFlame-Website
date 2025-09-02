@@ -30,13 +30,14 @@
 
     // Change this to 'pages/' if necessary.
     define('PAGE_ROOT', '');
+    define('ASSETS', 'assets');
 
-    define('IMAGE_ROOT', 'assets/images');
+    define('IMAGE_ROOT', ASSETS . '/images');
     define('VFX', IMAGE_ROOT . '/vfx');
     define('DEVS', IMAGE_ROOT . '/devs');
     define('SS', IMAGE_ROOT . '/screenshots');
-    define('JS', 'assets/js');
-    define('I_JS', 'assets/importedJS');
+    define('JS', ASSETS . '/js');
+    define('I_JS', ASSETS . '/importedJS');
 
     define('H1', 'h1');
     define('H2', 'h2');
@@ -104,7 +105,7 @@
     function orbs(string ...$colors) : void {
         // Start the wrapper div
         $html = EMPTY_STRING;
-        $fileName = "";
+        $fileName = EMPTY_STRING;
 
         // Loop through each color argument
         foreach ($colors as $color) {
@@ -130,8 +131,13 @@
                     break;
             }
 
+            $color = htmlspecialchars($color);
+            $fileName = htmlspecialchars($fileName);
+            $vfx = VFX;
             // Append the orb image tag
-            $html .= '<img class="orb" id="' . htmlspecialchars($color) . '" src="assets/images/vfx/' . htmlspecialchars($fileName) . '-Glow.png" alt="">' . PHP_EOL;
+            $html .= <<<HTML
+                <img class="orb" id="$color" src="{$vfx}/{$fileName}-Glow.png" alt="">
+            HTML;
         }
 
         // Close the wrapper div
@@ -290,14 +296,15 @@
 
         static function metadata(string $title) : string {
             $imgRoot = IMAGE_ROOT;
+            $assets = ASSETS;
             return <<<HTML
                 <base href="/">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>$title</title>
 
-                <link rel="stylesheet" href="style.css">
-                <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
-                <link rel="stylesheet" href="assets/devicon/devicon.min.css">
+                <link rel="stylesheet" href="{$assets}/style.css">
+                <link rel="stylesheet" href="{$assets}/boxicons/css/boxicons.min.css">
+                <link rel="stylesheet" href="{$assets}/devicon/devicon.min.css">
                 <link rel="shortcut icon" href="{$imgRoot}/LunarFlame-Logo-Simplified.ico" type="image/x-icon"/>
             HTML;
         }

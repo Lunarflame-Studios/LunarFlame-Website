@@ -1,8 +1,8 @@
-var images = document.querySelectorAll(".interactable");
-var overlay = document.getElementById("overlay");
-var zoomIn = document.getElementById("zoom-in");
+const INTERACTABLE = document.querySelectorAll(".interactable");
+let overlay = document.getElementById("overlay");
+let zoomIn = document.getElementById("zoom-in");
 
-images.forEach(function(image) {
+INTERACTABLE.forEach(function(image) {
     image.addEventListener('click', function() {
         zoomIn.src = image.src;
 

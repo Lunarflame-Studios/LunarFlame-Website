@@ -1,6 +1,5 @@
-var pointer = document.querySelector('.pointer');
-
-var panner = document.querySelector('.panner');
+let pointer = document.querySelector('.pointer');
+let panner = document.querySelector('.panner');
 
 window.limit_x = () => window.innerWidth - pointer.offsetWidth;
 
@@ -29,9 +28,9 @@ window.isLeftOutOfScreen = () => getOffset(panner).left > window.innerWidth;
 window.isRightOutOfScreen = () => getOffset(panner).left < 0;
 
 window.addEventListener('mousemove', function(e) {
-    var x = e.clientX + 'px';
-    var y = e.clientY + 'px';
-    var target = e.target;
+    let x = e.clientX + 'px';
+    let y = e.clientY + 'px';
+    let target = e.target;
 
     TweenLite.to(pointer, 0.5, { ease: Back.easeOut.config(1.7), left: x, top: y});
 
@@ -45,17 +44,17 @@ window.addEventListener('mousemove', function(e) {
     }
 });
 
-const cursorColors = ['#FA7FFF', '#8DA0FE', '#14F2E0', '#A818D4', '#9A75F0', '#FFFFFF' ];
+const CURSOR_COLORS = ['#FA7FFF', '#8DA0FE', '#14F2E0', '#A818D4', '#9A75F0', '#FFFFFF' ];
 let colorIndex = 0;
 
 function changeCursorColor() {
     let pointerStyle = pointer.style.cssText;
 
     pointer.style.cssText = pointerStyle.includes("--mouse-color:") 
-        ? pointerStyle.substring(0, 15) + cursorColors[colorIndex] + pointerStyle.substring(15 + cursorColors[colorIndex].length)
-        : `--mouse-color: ${cursorColors[colorIndex]}; ${pointerStyle}`;
+        ? pointerStyle.substring(0, 15) + CURSOR_COLORS[colorIndex] + pointerStyle.substring(15 + CURSOR_COLORS[colorIndex].length)
+        : `--mouse-color: ${CURSOR_COLORS[colorIndex]}; ${pointerStyle}`;
 
-    colorIndex = (colorIndex + 1) % cursorColors.length;
+    colorIndex = (colorIndex + 1) % CURSOR_COLORS.length;
 }
 
 /* --------------------------------------------------------------------------------------------- */

@@ -10,7 +10,7 @@
 /* Make Montserrat the default font for all pages. */
 @font-face {
     font-family: montserrat;
-    src: url(assets/fonts/MontserratAlt1-SemiBold.ttf);
+    src: url(fonts/MontserratAlt1-SemiBold.ttf);
 }
 
 body { background-color: #040511; }

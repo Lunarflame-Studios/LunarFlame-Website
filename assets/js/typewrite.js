@@ -45,7 +45,7 @@ TxtType.prototype.tick = function () {
     }, delta);
 };
 
-const typeWriterColor = 'white';
+const TYPEWRITER_COLOR = 'white';
 
 window.onload = setTimeout(
     function () {
@@ -60,16 +60,15 @@ window.onload = setTimeout(
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = `.typewrite > .wrap { border-right: 0.08em solid ${typeWriterColor}; }`;
+        css.innerHTML = `.typewrite > .wrap { border-right: 0.08em solid ${TYPEWRITER_COLOR}; }`;
         document.body.appendChild(css);
     }, 500);
 
 /* This typewriter should be used for static text or paragraphs. */
 
-const typewriterV2s = document.querySelectorAll('.typewriter-v2');
+const TYPEWRITER_V2S = document.querySelectorAll('.typewriter-v2');
 
 let typeWriterValues = [];
-
 let timeoutId;
 
 function cancelTypewriterEffect(element) {
@@ -105,7 +104,7 @@ function observeTypewriterElements(delay) {
         });
     });
 
-    typewriterV2s.forEach(element => {
+    TYPEWRITER_V2S.forEach(element => {
         observer.observe(element);
     });
 }

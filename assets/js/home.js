@@ -1,38 +1,38 @@
-let homePageInstance = function() {
-    const header = document.querySelector('.main-content');
-    const defaultBackground = VFX + 'Background.png'
+const homePageInstance = function() {
+    const HEADER = document.querySelector('.main-content');
+    const DEFAULT_BACKGROUND = VFX + 'Background.png'
+    const FADE_OUT_MAIN = document.querySelector('#fade-out-all');
 
     let backgroundOpacity = 0.8;
-    const fadeOutMain = document.querySelector('#fade-out-all');
 
-    const imagePaths = [
+    const IMAGE_PATHS = [
         SS + 'PL_SS_1.png', 
         SS + 'PL_SS_4.png', 
-        defaultBackground,
+        DEFAULT_BACKGROUND,
         SS + 'Horizon_Skyline_1.png', 
         SS + 'PL_SS_5.png', 
-        defaultBackground
+        DEFAULT_BACKGROUND
     ];
 
     let currentIndex = 0;
 
-    const fadeInterval = 8000;
-    const fadePauseDuration = 50;
-    const opacityDelta = 0.05;
+    const FADE_INTERVAL = 8000;
+    const FADE_PAUSE = 50;
+    const OPACITY_DELTA = 0.05;
 
     const fadeOutSub = document.querySelector('#fade-out-sub');
 
     let elementOpacity = 0;
 
     function changeBackground() {
-        const blue = imagePaths[currentIndex] === defaultBackground ?  `0, 0, 0, 0` : `5, 18, 70, 0.7`;
-        const purple = imagePaths[currentIndex] === defaultBackground ?  `0, 0, 0, 0` : `59, 4, 70, 0.7`;
+        const BLUE = IMAGE_PATHS[currentIndex] === DEFAULT_BACKGROUND ?  `0, 0, 0, 0` : `5, 18, 70, 0.7`;
+        const PURPLE = IMAGE_PATHS[currentIndex] === DEFAULT_BACKGROUND ?  `0, 0, 0, 0` : `59, 4, 70, 0.7`;
 
-        header.style.backgroundImage = `linear-gradient(rgba(${blue}), rgba(${purple})), url(${rootPath}${imagePaths[currentIndex]})`;
+        HEADER.style.backgroundImage = `linear-gradient(rgba(${BLUE}), rgba(${PURPLE})), url(${IMAGE_PATHS[currentIndex]})`;
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % imagePaths.length;
+        currentIndex = (currentIndex + 1) % IMAGE_PATHS.length;
         changeBackground();
     }
 
@@ -43,14 +43,14 @@ let homePageInstance = function() {
 
         if (targetOpacity == 0 && elementOpacity > 0) {
             setTimeout(() => {
-                elementOpacity -= opacityDelta;
+                elementOpacity -= OPACITY_DELTA;
                 fadeBackground(element, delay, targetOpacity);
             }, delay);
         }
 
         if (targetOpacity == 1 && elementOpacity < 1) {
             setTimeout(() => {
-                elementOpacity += opacityDelta;
+                elementOpacity += OPACITY_DELTA;
                 fadeBackground(element, delay, targetOpacity);
             }, delay);
         }
@@ -79,19 +79,19 @@ let homePageInstance = function() {
         }
     }
 
-    if (fadeOutMain !== null) {
+    if (FADE_OUT_MAIN !== null) {
         setTimeout(() => {
-            fadeOut(fadeOutMain, 50);
-            header.style.backgroundImage = `url(${VFX}Background.png)`;
+            fadeOut(FADE_OUT_MAIN, 50);
+            HEADER.style.backgroundImage = `url(${VFX}Background.png)`;
         }, 500)
     }
 
     /* direction = 1: Fade Out. direction = -1: Fade In.  */
     setTimeout(() => {
         setInterval(() => {
-            fadeBackground(fadeOutSub, fadePauseDuration, 1);
-        }, fadeInterval);
-    }, fadeInterval);
+            fadeBackground(fadeOutSub, FADE_PAUSE, 1);
+        }, FADE_INTERVAL);
+    }, FADE_INTERVAL);
 }
 
-let homePage = homePageInstance();
+const HOME_PAGE = homePageInstance();

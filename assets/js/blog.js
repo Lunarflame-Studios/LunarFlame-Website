@@ -1,9 +1,9 @@
 let blogPageInstance = function() {
     
-    const boxShadowColors = ['#0b54fe', '#fc0fc0', '#a129d7', '#633be7'];
-    const recentBoxes = document.querySelectorAll(".recent .post, .catalog .post");
+    const BOX_SHADOW_COLORS = ['#0b54fe', '#fc0fc0', '#a129d7', '#633be7'];
+    const RECENT_BOXES = document.querySelectorAll(".recent .post, .catalog .post");
 
-    recentBoxes.forEach(function(box) { colorShadow(box) });
+    RECENT_BOXES.forEach(function(box) { colorShadow(box) });
 
     /**
      * @function colorShadow
@@ -25,7 +25,7 @@ let blogPageInstance = function() {
          * @description Returns a random color from the colors array.
          * @returns {string} A random color in the format "#xxxxxx".
          */
-        const getRandomColor = () => boxShadowColors[getRandomIndex(0, boxShadowColors.length - 1)];
+        const getRandomColor = () => BOX_SHADOW_COLORS[getRandomIndex(0, BOX_SHADOW_COLORS.length - 1)];
 
         /**
          * @listens box#mouseenter
