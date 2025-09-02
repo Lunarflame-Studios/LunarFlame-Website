@@ -3,7 +3,7 @@
 
 <head>
     <?php
-        require('../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         require('about.php');
         Head::new("About Us", "about/about.css");
     ?>
@@ -18,7 +18,7 @@
         }
 
         #frame-inside {
-            mask-image: url("../<?=VFX?>/ui-frame-2-fill-in.svg");
+            mask-image: url("<?=VFX?>/ui-frame-2-fill-in.svg");
             mask-size: 90%;
             mask-repeat: no-repeat;
 
@@ -26,7 +26,6 @@
             left: 54%;
             opacity: 0.4;
         }
-
 
         .dev-box.adrian {
             background-image: url("../<?=DEVS?>/Minimal.jpg");

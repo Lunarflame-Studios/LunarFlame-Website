@@ -3,7 +3,7 @@
 
 <head>
     <?php 
-        require('assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         Head::new("LunarFlame Studios", "home.css");
     ?>
 </head>
@@ -22,7 +22,7 @@
 <body>
     <style>
         .main-content {
-            background-image: linear-gradient(black, black), url("/<?=VFX?>/Background.png"); 
+            background-image: linear-gradient(black, black), url("<?=VFX?>/Background.png"); 
             z-index: 0;
 
             min-height: 100vh;

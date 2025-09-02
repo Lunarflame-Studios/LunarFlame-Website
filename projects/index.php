@@ -3,7 +3,7 @@
 
 <head>
     <?php
-        require('../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         Head::new("Projects", "projects/projects.css");
     ?>
 </head>
@@ -14,7 +14,7 @@
         #project-leo { 
             background-image: 
                 linear-gradient(rgba(5, 18, 70, 0.7), rgba(59, 4, 70, 0.7)), 
-                url("../<?=SS?>/PL_SS_5.png"); }
+                url("<?=SS?>/PL_SS_5.png"); }
     </style>
 
     <div class="background">

@@ -3,7 +3,7 @@
 
 <head>
     <?php
-        require('../../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         Head::new("Project Leo (WebGL)", "projects/projects.css");
     ?>
 </head>

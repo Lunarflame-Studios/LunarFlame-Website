@@ -3,7 +3,7 @@
 
 <head>
     <?php
-        require('../../../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         $currentPost = Blog::getPost("Hello World; An Introduction");
         $currentPost->createHead();
     ?>

@@ -3,9 +3,9 @@
 
 <head>
     <?php
-        require('../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         Head::new("Blog", "blog/blog-main.css");
-        $allPosts = Blog::parseRSS("../");
+        $allPosts = Blog::parseRSS();
     ?>
 </head>
 
@@ -23,7 +23,7 @@
             <main>
                 <?php typewriteGradient(1, "Latest Posts"); ?>
 
-                <a id="subscribe" href="rss.xml">
+                <a id="subscribe" href="https://static.lunarflame.dev/rss.xml">
                     <h4>Subscribe!</h4>
                 </a>
             </main>

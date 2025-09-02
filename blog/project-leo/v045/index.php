@@ -3,7 +3,7 @@
 
 <head>
     <?php
-        require('../../../assets/partials/server.php');
+        require('/var/www/static.lunarflame.dev/partials/server.php');
         $currentPost = Blog::getPost("Play Project Leo v0.45");
         $currentPost->createHead();
     ?>
