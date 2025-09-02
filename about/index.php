@@ -28,13 +28,13 @@
         }
 
         .dev-box.adrian {
-            background-image: url("../<?=DEVS?>/Minimal.jpg");
+            background-image: url("<?=DEVS?>/Minimal.jpg");
             right: 7%;
             z-index: 4;
         }
 
         .dev-box.dan {
-            background-image: url("../<?=DEVS?>/Nordic.jpg");
+            background-image: url("<?=DEVS?>/Nordic.jpg");
             z-index: 5;
             left: 5%;
             margin: -6% 0;
@@ -43,7 +43,7 @@
         .dev-box.speedster {
             background-image: 
                 linear-gradient(#72ab948f, #b6ddac83),
-                url("../<?=DEVS?>/cosmic_cove.png");
+                url("<?=DEVS?>/cosmic_cove.png");
 
             z-index: 6;
             margin: -3% 0;
@@ -53,7 +53,7 @@
         .dev-box.ryan {
             background-image: 
                 linear-gradient(#1C48F669, #1D2BF266),
-                url("../<?=DEVS?>/deep-blue-sky.png");
+                url("<?=DEVS?>/deep-blue-sky.png");
             z-index: 7;
             left: 8%;
             margin: -6% 0;
