@@ -101,8 +101,8 @@
                         <img id="abt-outer-circle" src="<?=VFX?>/Outer_Ring_2.png" alt="">
 
                     <div id="ui-frame-2">
-                            <img id="frame-inside" src="<?=DEVS?>/Minimal.jpg" alt="">
-                            <img id="frame-outside" src="<?=VFX?>/UI_Frame_2.png" alt="">
+                        <img id="frame-inside" src="<?=DEVS?>/Minimal.jpg" alt="">
+                        <img id="frame-outside" src="<?=VFX?>/UI_Frame_2.png" alt="">
 
                         <div>
                             <h2>Adrian</h2>
@@ -148,7 +148,7 @@
         function forwardDev() { aboutPage.nextDev(1); }
         function backDev() { aboutPage.nextDev(-1); }
     </script>
-    <script src="<?=JS?>/about.js"></script>
+    <script src="<?=JS?>/about.js" defer></script>
     <?php endPage(); ?>
 </body>
 

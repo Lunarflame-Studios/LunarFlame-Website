@@ -65,10 +65,11 @@
                         <p>The main shopkeeper of Alioth. Will be featured on the new shop UI.</p>
                         <php pageImage(
                             googleDrive("1X7035pQb33dDbVb_7-ua15Uc1EyPV1zG")
-                        ); >-->
-                    </div>
+                        ); >
+                    </div>-->
                 </div>
             </div>
+            <h3>Coming Soon</h3>
 
             <div class="summary">
                 <hr>
@@ -81,8 +82,8 @@
         <?php getFooter(); ?>
     </div>
     <?php endPage(); ?>
-    <script src="<?=JS?>/projectleo.js"></script>
-    <!--<script src="/projects/project-leo/plscript.js"></script>-->
+    <script src="<?=JS?>/projectleo.js" defer></script>
+    <!--<script src="/projects/project-leo/plscript.js" defer></script>-->
 </body>
 
 </html>

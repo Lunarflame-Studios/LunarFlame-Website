@@ -51,7 +51,7 @@
         
         <?php getFooter(); ?>
     </div>
-    <script src="<?=JS?>/blog.js"></script>
+    <script src="<?=JS?>/blog.js" defer></script>
     <?php endPage(); ?>
 </body>
 
