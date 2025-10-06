@@ -23,7 +23,7 @@
             <main>
                 <?php typewriteGradient(1, "Latest Posts"); ?>
 
-                <a id="subscribe" href="https://static.lunarflame.dev/rss.xml">
+                    <a id="subscribe" href="<?=STATIC_URL?>/rss.xml">
                     <h4>Subscribe!</h4>
                 </a>
             </main>

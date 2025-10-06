@@ -54,17 +54,17 @@
 
             <div id="center-circle">
                 <?php 
-                    circle(1, "Inner Circle");
-                    circle(2, "Outer Circle");
-                    circle(3, "Outer Circuits");
+                    circle(1, "Inner_Circle");
+                    circle(2, "Outer_Circle");
+                    circle(3, "Outer_Circuits");
                 ?>
             </div>
 
             <div id="outer-circle">
                 <?php 
-                    circle(4, "Outer Ring");
-                    circle(5, "Outer Ring 2");
-                    circle(6, "Outer Ring 2");
+                    circle(4, "Outer_Ring");
+                    circle(5, "Outer_Ring_2");
+                    circle(6, "Outer_Ring_2");
                 ?>
             </div>
         </div>

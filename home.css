@@ -20,39 +20,43 @@ main {
 
 @media (max-width: 700px) {
 
-    /* (Welcome to LunarFlame Studios)*/
-    main h1 { font-size: 8vw; }
+    main {
+        /* (Welcome to LunarFlame Studios)*/
+        h1 { font-size: 8vw; }
 
-    /*Description*/
-    main p {
-        margin: 10px 0 40px;
-        font-size: 3vw;
-        color: white;
-    }
-
-    /* Link to Project Leo */
-    main a {
-        margin-top: 0;
-        font-size: 6vw;
+        /*Description*/
+        p {
+            margin: 10px 0 40px;
+            font-size: 3vw;
+            color: white;
+        }
+    
+        /* Link to Project Leo */
+        a {
+            margin-top: 0;
+            font-size: 6vw;
+        }
     }
 }
 
 @media(min-width: 701px) {
 
-    /* (Welcome to LunarFlame Studios)*/
-    main h1 { font-size: 3.75vw; }
+    main {
+        /* (Welcome to LunarFlame Studios)*/
+        h1 { font-size: 3.75vw; }
 
-    /*Description*/
-    main p {
-        margin: 10px 0 40px;
-        font-size: 1.5vw;
-        color: white;
-    }
+        /*Description*/
+        p {
+            margin: 10px 0 40px;
+            font-size: 1.5vw;
+            color: white;
+        }
 
-    /* Link to Project Leo */
-    main a {
-        margin-top: 2%;
-        font-size: 2.53vw;
+        /* Link to Project Leo */
+        a {
+            margin-top: 2%;
+            font-size: 2.53vw;
+        }
     }
 }
 

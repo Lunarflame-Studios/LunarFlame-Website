@@ -1,18 +1,20 @@
 /* General About Us Info*/
 
-main > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+main { 
+    > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-main > div hr {
-    position: absolute;
-    top: 50%;
-    left: 11%;
-}
+        hr {
+            position: absolute;
+            top: 50%;
+            left: 11%;
+        }
+    }
 
-main img { width: 45%; }
+    img { width: 45%; }
+}
 
 /* --------------------------------------------------------------------------------------------- */
 
@@ -25,80 +27,93 @@ main img { width: 45%; }
 @media(min-width: 701px) {
     .dev-boxes { display: none; }
 
-    main > div > div {
-        width: 45%;
-        transform: translateY(15%);
-    }
+    main {
+        > div {
 
-    main > div p { margin: 5% 3%; }
+            p { margin: 5% 3%; }
+
+            > div {
+                width: 45%;
+                transform: translateY(15%);
+            }
+        }
+
+        > p {
+            margin: 5% 8%;
+            position: relative;
+            z-index: 1; 
+        }
+    }
 
     /* Container for list of devs */
-    .dev-slideshow > div {
-        padding: 20% 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: -20%;
-    }
+    .dev-slideshow {
+        margin: 10% 0; 
 
-    /* Name */
-    .dev-slideshow > div h2 {
-        color: #3A5A7D;
-        font-size: 3.9vw;
-        position: absolute;
-        bottom: 86%;
-        left: 22%;
-    }
+        > div {
+            padding: 20% 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: -20%;
 
-    /* Roles */
-    .dev-slideshow > div h3 {
-        color: #773F64;
-        font-size: 2vw;
-        position: absolute;
-        top: 82%;
-        left: 22.3%;
-    }
+            /* Name */
+            h2 {
+                color: #3A5A7D;
+                font-size: 3.9vw;
+                position: absolute;
+                bottom: 86%;
+                left: 22%;
+            }
 
-    /* Nicknames */
-    .dev-slideshow > div h4 {
-        color: #A6294F;
-        font-size: 1.7vw;
-        position: absolute;
-        top: 17%;
-        left: 22.3%;
-    }
+            /* Roles */
+            h3 {
+                color: #773F64;
+                font-size: 2vw;
+                position: absolute;
+                top: 82%;
+                left: 22.3%;
+            }
 
-    /* Descriptions */
-    .dev-slideshow > div p {
-        color: white;
-        font-size: 1.25vw;
-        position: absolute;
-        top: 28%;
-        left: 43.3%;
-        width: 33%;
-        text-align: right;
-    }
+            /* Nicknames */
+            h4 {
+                color: #A6294F;
+                font-size: 1.7vw;
+                position: absolute;
+                top: 17%;
+                left: 22.3%;
+            }
 
-    /* Horizontal Line */
-    .dev-slideshow > div hr {
-        width: 8.5vw;
-        border: 3px solid #f3BAFD;
-        position: absolute;
-        top: 10%;
-        left: 67%;
-    }
+            /* Descriptions */
+            p {
+                color: white;
+                font-size: 1.25vw;
+                position: absolute;
+                top: 28%;
+                left: 43.3%;
+                width: 33%;
+                text-align: right;
+            }
 
-    /* Read More Button */
-    .dev-slideshow > div a {
-        position: absolute;
-        top: 80%;
-        left: 60%;
+            /* Horizontal Line */
+            hr {
+                width: 8.5vw;
+                border: 3px solid #f3BAFD;
+                position: absolute;
+                top: 10%;
+                left: 67%;
+            }
+
+            /* Read More Button */
+            a {
+                position: absolute;
+                top: 80%;
+                left: 60%;
+            }
+        }
     }
 
     .button { font-size: 1.5vw; }
-
-    .dev-slideshow { margin: 10% 0; }
 
     /* Div container for the profile picture. */
     .profile-pic {
@@ -110,20 +125,14 @@ main img { width: 45%; }
         border-radius: 50%;
         top: 28%;
         left: 22%;
-    }
 
-    /* Profile Picture Image Element */
-    .profile-pic img {
-        width: auto;
-        height: 120%;
-        left: 50%;
-        top: 47%;
-    }
-
-    main > p { 
-        margin: 5% 8%;
-        position: relative;
-        z-index: 1; 
+        /* Profile Picture Image Element */
+        img {
+            width: auto;
+            height: 120%;
+            left: 50%;
+            top: 47%;
+        }
     }
 
     #left-arrow { left: 3.75%; }
@@ -189,14 +198,14 @@ main img { width: 45%; }
         mask-repeat: no-repeat;
         mask-size: 100%;
         transform-origin: center;
-    }
-
-    #ui-frame-2 img {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
+        img {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .orb#light-blue {
@@ -231,50 +240,54 @@ main img { width: 45%; }
 
 @media(max-width: 700px) {
 
-    main { margin-top: 8%; }
+    main { 
+        margin-top: 8%;
 
-    main > div { padding-bottom: 65%; }
+        p { padding: 0 1%; }
+
+        > div {
+            padding-bottom: 65%;
+
+            > div {
+                position: absolute;
+                background: linear-gradient(-45deg, #0A53F22A, #C600A53E);
+                width: 45%;
+                min-width: 70%;
+                min-height: 36vw;
+                padding: 0 3%;
+                right: 20%;
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+                font-size: 2.4vw;
+                margin: 3% 4%;
+            }
+
+            hr { display: none; }
+
+            h1 {
+                font-size:  6.25vw;
+                padding-left: 4%;
+                margin-left: 1%;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 58vw;
+            left: 36%;
+            width: 60%;
+            height: auto;
+        }
+
+        > p {
+            padding: 8% 8%; 
+        }
+    }
 
     .dev-slideshow { display: none; }
-
-    main p { padding: 0 1%; }
-
-    main > div > div {
-        position: absolute;
-        background: linear-gradient(-45deg, #0A53F22A, #C600A53E);
-        width: 45%;
-        min-width: 70%;
-        min-height: 36vw;
-        padding: 0 3%;
-        right: 20%;
-        text-align: left;
-    }
-
-    main > div p {
-        text-align: left;
-        font-size: 2.4vw;
-        margin: 3% 4%;
-    }
-
-    main > div hr { display: none; }
-
-    main > div h1 {
-        font-size:  6.25vw;
-        padding-left: 4%;
-        margin-left: 1%;
-    }
-
-    main img {
-        position: absolute;
-        top: 58vw;
-        left: 36%;
-        width: 60%;
-        height: auto;
-    }
-
-    main > p { padding: 8% 8%; }
-
-    .dev-box > div { margin: 5% 8%; }
 
     .dev-boxes {
         padding: 10% 0 20%;
@@ -291,13 +304,39 @@ main img { width: 45%; }
         position: relative;
         background-size: cover;
         background-position-x: center;
-    }
 
-    .dev-box > div > div { 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        > div { 
+            margin: 5% 8%; 
+
+            > div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        h2 {
+            font-size: 9vw;
+            padding: 4% 0;
+        }
+
+        h3 {
+            font-size: 4vw;
+            padding-top: 8%;
+        }
+
+        h4 { font-size: 5vw; }
+
+        p {
+            font-size: 3vw;
+            margin: 5% 0 7%;
+        }
+
+        a {
+            font-size: 3vw;
+            padding: 2vw 5.25vw; 
+        }
     }
 
     .profile-pic {
@@ -306,43 +345,21 @@ main img { width: 45%; }
         width: 25vw;
         height: 25vw;
         overflow: hidden;
-    }
 
-    .profile-pic img {
-        width: auto;
-        height: 120%;
-        position: relative;
-    }
-
-    .dev-box h2 {
-        font-size: 9vw;
-        padding: 4% 0;
-    }
-
-    .dev-box h3 {
-        font-size: 4vw;
-        padding-top: 8%;
-    }
-
-    .dev-box h4 { font-size: 5vw; }
-
-    .dev-box p {
-        font-size: 3vw;
-        margin: 5% 0 7%;
-    }
-
-    .dev-box a { 
-        font-size: 3vw;
-        padding: 2vw 5.25vw; 
+        img {
+            width: auto;
+            height: 120%;
+            position: relative;
+        }
     }
 
     /* ----------------------------------------------------------------------------------------- */
 
-    .dev-box.adrian h2 { color: #3A5A7D; }
-
-    .dev-box.adrian h3 { color: #C21471; }
-
-    .dev-box.adrian h4 { color: #A6294F; }
+    .dev-box.adrian {
+        h2 { color: #3A5A7D; }
+        h3 { color: #C21471; }
+        h4 { color: #A6294F; }
+    }
 
     .adrian .profile-pic img { bottom: 12%; }
 
@@ -350,31 +367,30 @@ main img { width: 45%; }
 
     .dan .dev-name { text-align: right; }
 
-    .dev-box.dan h2 { color: #1D71F2; }
-
-    .dev-box.dan h3 { color: #19C3FB; }
-
-    .dev-box.dan h4 { color: #1C9CF6; }
+    .dev-box.dan {
+        h2 { color: #1D71F2; }
+        h3 { color: #19C3FB; }
+        h4 { color: #1C9CF6; }
+        a { left: 50%; }
+    }
 
     .dan .profile-pic img { 
         bottom: 12%;
         right: 3%; 
     }
 
-    .dev-box.dan a { left: 50%; }
-
     /* ----------------------------------------------------------------------------------------- */
 
-    .dev-box.speedster h2 { 
-        color: #131FAA;
-        font-size: 5vw; 
+    .dev-box.speedster {
+        h2 { 
+            color: #131FAA;
+            font-size: 5vw; 
+        }
+
+        h3 { color: #25540d; }
+        h4 { color: white; }
+        p { color: #040b5e; }
     }
-
-    .dev-box.speedster h3 { color: #25540d; }
-
-    .dev-box.speedster h4 { color: white; }
-
-    .dev-box.speedster p { color: #040b5e; }
 
     .speedster .profile-pic img { 
         bottom: 10%;
@@ -385,19 +401,18 @@ main img { width: 45%; }
 
     .ryan .dev-name { text-align: right; }
 
-    .dev-box.ryan h2 { color: #BDFCFE; }
-
-    .dev-box.ryan h3 { color: #66D9D1; }
-
-    .dev-box.ryan h4 { color: #98F4F4; }
+    .dev-box.ryan {
+        h2 { color: #BDFCFE; }
+        h3 { color: #66D9D1; }
+        h4 { color: #98F4F4; }
+        a { left: 50%; }
+    }
 
     .ryan .profile-pic img { 
         bottom: 16%;
         right: 22%;
         height: 145%; 
     }
-
-    .dev-box.ryan a { left: 50%; }
 }
 
 @media(max-width: 400px) {

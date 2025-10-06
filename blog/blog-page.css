@@ -5,12 +5,12 @@
 }
 
 /* Div container for rest of article */
-.blog-pageBody {
+.blog-content {
     text-align: left;
     margin: 5% 10% 5%;
-}
 
-.blog-pageBody p { margin-top: 4%; }
+    p { margin-top: 4%; }
+}
 
 .image-container { 
     text-align: center;
@@ -33,47 +33,55 @@
 .carousel { margin: 4% -12%; }
 
 @media (min-width: 701px) {
-    /* Author */
-    .page-body h3 {
-        margin-top: 16px;
-        font-size: 3vw;
-        color: #d883ff;
-    }
 
-    /* Date */
-    .page-body h4 {
-        margin-top: 2%;
-        font-size: 1.5vw;
-        color: #cbbcff;
-    }
+    .page-body {
 
-    /* Category */
-    .page-body h5 {
-        margin-top: 2vw;
-        font-size: 2.2vw;
-        color: #ed88ff;
+        /* Author */
+        h3 {
+            margin-top: 16px;
+            font-size: 3vw;
+            color: #d883ff;
+        }
+
+        /* Date */
+        h4 {
+            margin-top: 2%;
+            font-size: 1.5vw;
+            color: #cbbcff;
+        }
+
+        /* Category */
+        h5 {
+            margin-top: 2vw;
+            font-size: 2.2vw;
+            color: #ed88ff;
+        }
     }
 }
 
 @media (max-width: 700px) {
-    /*Author*/
-    .page-body h3 {
-        margin-top: 16px;
-        font-size: 6vw;
-        color: #d883ff;
-    }
 
-    /*Date*/
-    .page-body h4 {
-        margin-top: 2%;
-        font-size: 3vw;
-        color: #cbbcff;
-    }
+    .page-body {
 
-    /*Category*/
-    .page-body h5 {
-        margin-top: 4vw;
-        font-size: 5vw;
-        color: #ed88ff;
+        /*Author*/
+        h3 {
+            margin-top: 16px;
+            font-size: 6vw;
+            color: #d883ff;
+        }
+
+        /*Date*/
+        h4 {
+            margin-top: 2%;
+            font-size: 3vw;
+            color: #cbbcff;
+        }
+
+        /*Category*/
+        h5 {
+            margin-top: 4vw;
+            font-size: 5vw;
+            color: #ed88ff;
+        }
     }
 }

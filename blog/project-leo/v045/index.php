@@ -16,7 +16,7 @@
         <section class="page-body">
             <?php $currentPost->createFields(); ?>
 
-            <div class="blog-pageBody">
+            <div class="blog-content">
                 <?php $currentPost->createDescription(); ?>
 
                 <div>

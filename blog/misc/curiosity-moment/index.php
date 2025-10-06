@@ -16,7 +16,7 @@
         <section class="page-body">
             <?php $currentPost->createFields(); ?>
 
-            <div class="blog-pageBody">
+            <div class="blog-content">
                 <?php $currentPost->createDescription(); ?>
                 <div>
                     <h2 class="subheader">1. You are part of the story.</h2>

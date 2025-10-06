@@ -97,8 +97,8 @@
                     <img id="left-arrow" src="<?=VFX?>/Back_Arrow.png" onclick="backDev()" alt="">
                         <img id="left-arrow-circle" src="<?=VFX?>/arrow_circle.png" alt="">
 
-                        <img id="abt-inner-circle" src="<?=VFX?>/Outer Ring.png" alt="">
-                        <img id="abt-outer-circle" src="<?=VFX?>/Outer Ring 2.png" alt="">
+                        <img id="abt-inner-circle" src="<?=VFX?>/Outer_Ring.png" alt="">
+                        <img id="abt-outer-circle" src="<?=VFX?>/Outer_Ring_2.png" alt="">
 
                     <div id="ui-frame-2">
                             <img id="frame-inside" src="<?=DEVS?>/Minimal.jpg" alt="">

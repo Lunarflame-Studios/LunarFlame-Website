@@ -34,6 +34,54 @@ h3 {
 /* Link to the project web version. */
 .widget-container h3:hover { color: #5663f0; }
 
+.updates {
+    > .titles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 2vw;
+    }
+
+    > .content {
+        text-align: left;
+        
+        /* Update Name */
+        h3 {
+            font-size: 3vw;
+            letter-spacing: 0.25vw;
+            color: #C8E9EF;
+        }
+
+        /* Update Date */
+        h4 {
+            font-size: 2vw;
+            color: #B4A0C8;
+        }
+
+        li {
+            list-style-type: circle;
+            color: white;
+        }
+
+        > .changelog-entry, > .dev-entry {
+            padding: 0 10vw;
+            white-space: nowrap;
+        }
+
+        > .changelog-entry { background: linear-gradient(#00184e40, #00184e5e); }
+
+        > .dev-entry {
+            background: linear-gradient(#00184e40, #00184e5e);
+
+            .image-container {
+                text-align: center;
+            }
+        }
+
+        > .changelog-entry:nth-last-child(1), > .dev-entry:nth-last-child(1) { margin-bottom: 5vw; }
+    }
+}
+
 @media(min-width: 701px) {
 
     /* The project download iframe. */

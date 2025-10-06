@@ -16,7 +16,7 @@
         <section class="page-body">
             <?php $currentPost->createFields(); ?>
 
-            <div class="blog-pageBody">
+            <div class="blog-content">
                 <?php $currentPost->createDescription(); ?>
 
                 <p>Our studio began with a simple passion: We wanted to make a great video game. Although our studio began in August 2023, our first project, "Project Leo", began development in December 2021. However, as the project evolved from being developed solo, we felt the need to create a brand to present our work. After some long nights of discussion, we decided on the name "Lunarflame" (We don't actually have any physical studios, it's just part of the name).</p>

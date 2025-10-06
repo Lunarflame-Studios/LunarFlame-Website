@@ -6,68 +6,71 @@
     justify-content: center;
     align-items: center;
     margin: 10vh 0;
-}
 
-/* The container for a single recent blog post. */
-.recent .post {
-    width: 100%;
-    background: linear-gradient(#0c002b9c, #09003f9c);
+    /* The container for a single recent blog post. */
+    .post {
+        width: 100%;
+        background: linear-gradient(#0c002b9c, #09003f9c);
 
-    /* Used to ease in the colored box shadow. */
-    transition: all ease 0.3s;
-}
+        /* Used to ease in the colored box shadow. */
+        transition: all ease 0.3s;
 
-.recent .post #link {
-    text-decoration: none; 
-    padding-bottom: 10vw;
-}
+        #link {
+            text-decoration: none; 
+            padding-bottom: 10vw;
+        }
+    }
 
-/* When hovered over, a recent blog box should adopt a colored box-shadow. */
-.recent .post:hover {
-    background-color: #010116;
-    box-shadow: 0px 0px 50px #ff40c6;
-}
+    /* When hovered over, a recent blog box should adopt a colored box-shadow. */
+    .post:hover {
+        background-color: #010116;
+        box-shadow: 0px 0px 50px #ff40c6;
+    }
 
-/*Since the entire blog box is a link, remove any hyperlink decoration. */
- .catalog .post #link { 
-    text-decoration: none; 
-    height: 48vw;
-}
+    /* A div container for a recent box image. */
+    .thumbnail {
+        max-height: 300px;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+    }
 
-/* A div container for a recent box image. */
-.recent .thumbnail {
-    max-height: 300px;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-}
+    /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
+    .metadata {
+        display: flex;
+        flex-direction: column;
 
-/* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-.recent .metadata {
-    display: flex;
-    flex-direction: column;
-}
+        /* Category */
+        #category {
+            font-size: 2.9vw;
+            color: #ed88ff;
+        }
 
-/* Category */
-.recent .metadata #category {
-    font-size: 2.9vw;
-    color: #ed88ff;
-}
-
-/* Title */
-.recent .metadata #title {
-    font-size: 1.75vw;
-    color: #ad72ff;
-    line-height: 2.1vw;
-    margin: 5px 0px 10px 0px;
+        /* Title */
+        #title {
+            font-size: 1.75vw;
+            color: #ad72ff;
+            line-height: 2.1vw;
+            margin: 5px 0px 10px 0px;
+        }
+    }
 }
 
 /* All Blog Posts ------------------------------------------------------------------------------ */
 
-/* The container for a regular blog post. */
-.catalog .post {
-    background: linear-gradient(#0c002b9c, #09003f9c);
-    transition: all ease 0.3s;
+.catalog {
+
+    /* The container for a regular blog post. */
+    .post {
+        background: linear-gradient(#0c002b9c, #09003f9c);
+        transition: all ease 0.3s;
+
+        /*Since the entire blog box is a link, remove any hyperlink decoration. */
+        #link { 
+            text-decoration: none; 
+            height: 48vw;
+        }
+    }
 }
 
 /* The image for the blog post. */
@@ -78,26 +81,29 @@
     object-position: center;
 }
 
-/* A div container for the author and date of a blog post. */
-.metadata div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.2vw;
-}
+.metadata {
 
-/* Author */
-.metadata #author {
-    color: #f3bafd;
-    font-size: 1.6vw;
-}
+    /* A div container for the author and date of a blog post. */
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2vw;
+    }
 
-/* Date */
-.metadata #pubDate {
-    margin-top: 5%;
-    color: #9192fc;
-    font-size: 1vw;
+    /* Author */
+    #author {
+        color: #f3bafd;
+        font-size: 1.6vw;
+    }
+
+    /* Date */
+    #pubDate {
+        margin-top: 5%;
+        color: #9192fc;
+        font-size: 1vw;
+    }
 }
 
 /* HTML IDs ------------------------------------------------------------------------------------ */
@@ -105,18 +111,20 @@
 /* Subscribe RSS button */
 
 /* Anchor */
-#subscribe { text-decoration: none; }
+#subscribe { 
+    text-decoration: none;
 
-/* Text */
-#subscribe h4 {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: #9192fc;
-    font-size: 2vw;
+    /* Text */
+    h4 {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        color: #9192fc;
+        font-size: 2vw;
+    }
+
+    /* Darken text color on hover */
+    h4:hover { color: #5663f0; }
 }
-
-/* Darken text color on hover */
-#subscribe h4:hover { color: #5663f0; }
 
 #spacing { margin-top: 5%; }
 
@@ -126,35 +134,43 @@
 
     /* Recent Blog Posts ----------------------------------------------------*/
 
-    /* The container for a single recent blog post. */
-    .recent .post {
-        max-width: 38vw;
-        min-height: 70vw;
-        margin: 0% 1%;
+    .recent {
+
+        /* The container for a single recent blog post. */
+        .post {
+            max-width: 38vw;
+            min-height: 70vw;
+            margin: 0% 1%;
+        }
+
+        .metadata {
+
+            /* Category */
+            #category { font-size: 4vw; }
+
+            /* Title */
+            #title {
+                font-size: 3vw;
+                line-height: 3.5vw;
+            }
+        }
     }
 
     /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .metadata { padding: 15px 6px; }
+    .metadata { 
+        padding: 15px 6px; 
 
-    /* Category */
-    .recent .metadata #category { font-size: 4vw; }
+        /* Description */
+        #description { font-size: 2vw; }
 
-    /* Title */
-    .recent .metadata #title {
-        font-size: 3vw;
-        line-height: 3.5vw;
-    }
+        /* Author */
+        #author { font-size: 3vw; }
 
-    /* Description */
-    .metadata #description { font-size: 2vw; }
-
-    /* Author */
-    .metadata #author { font-size: 3vw; }
-
-    /* Date */
-    .metadata #pubDate {
-        margin-top: 1vw;
-        font-size: 2vw;
+        /* Date */
+        #pubDate {
+            margin-top: 1vw;
+            font-size: 2vw;
+        }
     }
 
     /* All Blog Posts ------------------------------------------------------ */
@@ -166,35 +182,38 @@
         margin-top: 50px;
         gap: 15px 0px;
         justify-items: center;
-    }
 
-    /* The container for a regular blog post. */
-    .catalog .post {
-        max-width: 30vw;
-        min-height: 70vw;
-        margin: 0% 0%;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+        /* The container for a regular blog post. */
+        .post {
+            max-width: 30vw;
+            min-height: 70vw;
+            margin: 0% 0%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* A div container for the author and date of a blog post. */
-    .catalog .metadata > div { margin-top: 5vw; }
+        .metadata {
 
-    /*Category*/
-    .catalog .metadata h2 {
-        font-size: 3.5vw;
-        line-height: 4.2vw;
-        margin: 0px 0px 3%;
-    }
+            /* A div container for the author and date of a blog post. */
+            > div { margin-top: 5vw; }
 
-    /*Title*/
-    .catalog .metadata h3 {
-        color: #ad72ff;
-        line-height: 3.6vw;
-        margin: 4% 0px 6%;
-        font-size: 3vw;
+            /*Category*/
+            h2 {
+                font-size: 3.5vw;
+                line-height: 4.2vw;
+                margin: 0px 0px 3%;
+            }
+
+            /*Title*/
+            h3 {
+                color: #ad72ff;
+                line-height: 3.6vw;
+                margin: 4% 0px 6%;
+                font-size: 3vw;
+            }
+        }
     }
 
     /* HTML IDs ------------------------------------------------------------ */
@@ -210,30 +229,35 @@
 
 @media(min-width: 701px) {
     
-    /*Description*/
-    .recent .metadata #description {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 1.25vw;
-    }
-
     /* Recent Blog Posts --------------------------------------------------- */
+    .recent {
 
-    /* The container for a single recent blog post. */
-    .recent .post {
-        padding: 15px;
-        margin: 0% 3%;
+        /* The container for a single recent blog post. */
+        .post {
+            padding: 15px;
+            margin: 0% 3%;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 38vw;
+            }
+        }
+
+        /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
+        .metadata {
+            margin: 10px; 
+
+            /*Description*/
+            #description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.25vw;
+            }
+
+        }
     }
-
-    .recent .post a {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 38vw;
-    }
-
-    /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .metadata { margin: 10px; }
 
     /* All Blog Posts ------------------------------------------------------ */
 
@@ -244,59 +268,59 @@
         justify-items: center;
         gap: 15px;
         margin: 50px 0;
-    }
 
-    /* The container for a regular blog post. */
-    .catalog .post {
-        max-width: 40vw;
-        min-height: 15vw;
-        margin: 2%;
-    }
+        /* The container for a regular blog post. */
+        .post {
+            max-width: 40vw;
+            min-height: 15vw;
+            margin: 2%;
 
-    /* When hovered over, a blog box should adopt a colored box-shadow. */
-    .catalog .post:hover { box-shadow: 0px 0px 40px #ff40c6; }
+            /* The anchor around a blog box*/
+            #link {
+                display: inline-flex;
+                max-width: 40vw;
+                max-height: 18vw;
+            }
+        }
 
-    /* The anchor around a blog box*/
-    .catalog .post #link {
-        display: inline-flex;
-        max-width: 40vw;
-        max-height: 18vw;
-    } 
+        /* When hovered over, a blog box should adopt a colored box-shadow. */
+        .post:hover { box-shadow: 0px 0px 40px #ff40c6; }
 
-    /* A div container for a blog box image. */
-    .catalog .thumbnail {
-        max-width: 14vw;
-        display: flex;
-    }
+        /* A div container for a blog box image. */
+        .thumbnail {
+            max-width: 14vw;
+            display: flex;
+        }
 
-    /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
-    .catalog .metadata {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 8px 20px;
-    }
+        /* A div containing the metadata of a post, such as the author, date, category, title, and description.*/
+        .metadata {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 8px 20px;
 
-    /*Category*/
-    .catalog .metadata #category {
-        font-size: 1.5vw;
-        color: #ed88ff;
-        min-width: 8vw;
-    }
+            /* Category */
+            #category {
+                font-size: 1.5vw;
+                color: #ed88ff;
+                min-width: 8vw;
+            }
 
-    /*Title*/
-    .catalog .metadata #title {
-        font-size: 1.25vw;
-        color: #ad72ff;
-        line-height: 2.1vw;
-        margin: 5px 0px 0px;
-    }
+            /* Title */
+            #title {
+                font-size: 1.25vw;
+                color: #ad72ff;
+                line-height: 2.1vw;
+                margin: 5px 0px 0px;
+            }
 
-    /*Description*/
-    .catalog .metadata #description {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 1vw;
+            /* Description */
+            #description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1vw;
+            }
+        }
     }
 
     .orb#purple {

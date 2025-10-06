@@ -15,7 +15,7 @@
         <section class="page-body">
             <?php $currentPost->createFields(); ?>
 
-            <div class="blog-pageBody">
+            <div class="blog-content">
                 <?php $currentPost->createDescription(); ?>
                 <div>
                     <h2>Why Learn C?</h2>

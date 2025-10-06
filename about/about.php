@@ -1,5 +1,5 @@
 <?php
-    $devData = json_decode(file_get_contents("devs.json"), true);
+    $devData = json_decode(file_get_contents("/var/www/static.lunarflame.dev/xml-json/devs.json"), true);
 
     function devName(string $name, string $nickname) : string {
         return <<<HTML
