@@ -40,6 +40,22 @@ h3 {
         flex-direction: row;
         justify-content: space-evenly;
         padding-bottom: 2vw;
+
+        span {
+            transition: all ease 0.3s;
+            padding: 1vw 2vw;
+            border-radius: 1vw;
+        }
+
+        span:hover {
+            background-color: #2C016B5E;
+            box-shadow: 0px 0px 30px #2C016B5E;
+        }
+
+        span.active {
+            background-color: #080014;
+            box-shadow: 0px 0px 30px #2C016B5E;
+        }
     }
 
     > .content {
@@ -48,37 +64,67 @@ h3 {
         /* Update Name */
         h3 {
             font-size: 3vw;
-            letter-spacing: 0.25vw;
-            color: #C8E9EF;
+            background-image: linear-gradient(
+                to right,
+                #16C9AA,
+                #108EB9,
+                #1734AC,
+                #108EB9,
+                #16C9AA
+            );
+            text-shadow: 0 0 60px #108eb9e3;
         }
 
         /* Update Date */
         h4 {
             font-size: 2vw;
-            color: #B4A0C8;
+            padding-bottom: 2vw;
+
+            background-image: linear-gradient(
+                to right,
+                #B5B8FF,
+                #AA8DFF,
+                #9C67FF,
+                #AA8DFF,
+                #B5B8FF
+            );
+            text-shadow: 0 0 60px #aa8dffe3;
         }
 
         li {
             list-style-type: circle;
             color: white;
+            padding-bottom: 2vw;
         }
 
-        > .changelog-entry, > .dev-entry {
-            padding: 0 10vw;
-            white-space: nowrap;
+        > .changelog-entry {
+
+            h3 { letter-spacing: 0.25vw; }
+
+            p { padding: 0; }
         }
 
-        > .changelog-entry { background: linear-gradient(#00184e40, #00184e5e); }
-
-        > .dev-entry {
-            background: linear-gradient(#00184e40, #00184e5e);
+        > .devlog-entry {
 
             .image-container {
                 text-align: center;
             }
         }
 
-        > .changelog-entry:nth-last-child(1), > .dev-entry:nth-last-child(1) { margin-bottom: 5vw; }
+        > .changelog-entry, > .devlog-entry {
+            padding: 0 10vw;
+            white-space: nowrap;
+        }
+
+        > .changelog-entry:nth-child(odd),
+        > .devlog-entry:nth-child(odd) { background: linear-gradient(to right, #1d129440, #8a2eff5e); }
+
+
+        > .changelog-entry:nth-last-child(1), > .dev-entry:nth-last-child(1) { margin-bottom: 3vw; }
+    }
+
+    > .read-more h3 {
+        padding-bottom: 4vw;
     }
 }
 
