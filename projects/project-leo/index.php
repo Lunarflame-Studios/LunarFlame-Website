@@ -30,7 +30,7 @@
                     <iframe class="widget" frameborder="0" src="https://itch.io/embed/2925472?border_width=4&amp;bg_color=0a0a30&amp;fg_color=ffffff&amp;link_color=8a2be2&amp;border_color=da88eb" width="558" height="173">
                         <a href="https://phantomforce.itch.io/project-leo-v05-download">Project Leo v0.5 (Download) by Phantomforce</a>
                     </iframe>
-                        <a href="<?=PAGE_ROOT?>projects/project-leo/webgl.php">
+                    <a href="<?=PAGE_ROOT?>projects/project-leo/webgl.php">
                         <h3>Or play the Web Version Here!</h3>
                     </a>
 

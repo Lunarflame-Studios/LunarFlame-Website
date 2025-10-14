@@ -106,8 +106,10 @@ h3 {
 
         > .devlog-entry {
 
-            .image-container {
+            .image-container { 
                 text-align: center;
+                padding-bottom: 1vw;
+
             }
         }
 
@@ -123,8 +125,13 @@ h3 {
         > .changelog-entry:nth-last-child(1), > .dev-entry:nth-last-child(1) { margin-bottom: 3vw; }
     }
 
-    > .read-more h3 {
-        padding-bottom: 4vw;
+    > .read-more {
+        a {
+            padding-bottom: 4vw;
+            color: #9192fc;
+        }
+
+        a:hover { color: #5663f0; }
     }
 }
 

@@ -48,9 +48,7 @@
                 <?= OVERLAY; ?>
 
                 <main>
-                    <?php
-                        typewriteGradient(2, "Changelogs");
-                    ?>
+                    <?php typewriteGradient(2, "Changelogs"); ?>
                 </main>
 
                 <div class="updates">
