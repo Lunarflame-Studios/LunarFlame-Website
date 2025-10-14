@@ -15,7 +15,9 @@
             $category = $itemJson["category"];
             $desc = $itemJson["description"];
 
-            $images = Image::carousel(...$itemJson["images"]);
+            $images = count($itemJson["images"]) == 1
+                ? Image::standard($itemJson["images"][0])
+                : Image::carousel(...$itemJson["images"]);
 
             echo <<<HTML
                 <div class="devlog-entry">
