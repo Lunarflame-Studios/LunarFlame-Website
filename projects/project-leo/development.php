@@ -15,9 +15,14 @@
             $category = $itemJson["category"];
             $desc = $itemJson["description"];
 
+            $imageLinks = [];
+            foreach ($itemJson["images"] as $image) {
+                array_push($imageLinks, googleDrive($image));
+            }
+            
             $images = count($itemJson["images"]) == 1
-                ? Image::standard($itemJson["images"][0])
-                : Image::carousel(...$itemJson["images"]);
+                ? Image::standard($imageLinks[0])
+                : Image::carousel(...$imageLinks);
 
             echo <<<HTML
                 <div class="devlog-entry">
